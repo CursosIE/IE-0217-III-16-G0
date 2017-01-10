@@ -2,6 +2,8 @@
 
 Repoitorio del grupo 0 del curso de Estructuras de datos abstractas, III-2016.
 
-Estudiantes:
+**Estudiantes**:
 - Luis Diego Fernández
 - Daniel Jiménez
+
+**Profesor**: Ricardo Román
