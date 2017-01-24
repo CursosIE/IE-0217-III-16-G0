@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include "Celda.h"
+
 using namespace std;
 
 class Controlador {
