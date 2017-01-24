@@ -2,8 +2,7 @@
 #define CELDA_H
 
 
-class Celda
-{
+class Celda {
 public:
     Celda();
 };

@@ -2,8 +2,7 @@
 #define ANIMAL_H
 
 
-class Animal
-{
+class Animal {
 public:
     Animal();
 };

@@ -4,7 +4,9 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    Animal.cpp
+    Animal.cpp \
+    Celda.cpp
 
 HEADERS += \
-    Animal.h
+    Animal.h \
+    Celda.h
