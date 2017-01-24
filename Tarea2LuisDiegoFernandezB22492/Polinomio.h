@@ -11,18 +11,26 @@ private:
     int grado;
 
 public:
+    ///constructor por defecto
     Polinomio();
+
+    ///constructor por conversion
     Polinomio(int grado, double* data);
+
+    ///constructor por copia
     Polinomio(const Polinomio& other);
+
+    ///destructor
     ~Polinomio();
 
+    //sobrecarga de diferentes operadores
     Polinomio operator=(const Polinomio& other);
     Polinomio operator+(const Polinomio& other);
     Polinomio operator-(const Polinomio& other);
     Polinomio operator*(const Polinomio& other);
     Polinomio operator/(const Polinomio& other);
-    void print ();
 
+    void print ();
 };
 
 #endif // POLINOMIO_H

@@ -32,8 +32,6 @@ Polinomio Polinomio::operator=(const Polinomio& other) {
         this->data[index] = other.data[index];
 
     return *this;
-
-    //return Polinomio(other);
 }
 
 Polinomio Polinomio::operator+(const Polinomio& other) {
