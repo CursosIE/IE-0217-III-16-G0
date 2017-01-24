@@ -5,8 +5,10 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     Animal.cpp \
-    Celda.cpp
+    Celda.cpp \
+    Lobo.cpp
 
 HEADERS += \
     Animal.h \
-    Celda.h
+    Celda.h \
+    Lobo.h
