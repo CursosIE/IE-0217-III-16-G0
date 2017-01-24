@@ -1,6 +1,6 @@
 #ifndef ANIMAL_H
 #define ANIMAL_H
-
+#include "Celda.h"
 
 class Animal {
 
@@ -17,8 +17,8 @@ public:
 
     virtual void Mover() = 0;
     virtual void Comer() = 0;
-    virtual void Reproducir() = 0;
-    virtual void Morir() = 0;
+    void Reproducir();
+    void Morir();
 };
 
 #endif // ANIMAL_H

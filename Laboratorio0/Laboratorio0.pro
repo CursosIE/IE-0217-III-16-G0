@@ -6,9 +6,15 @@ CONFIG -= qt
 SOURCES += main.cpp \
     Animal.cpp \
     Celda.cpp \
-    Lobo.cpp
+    Lobo.cpp \
+    Oveja.cpp \
+    Zorro.cpp \
+    Raton.cpp
 
 HEADERS += \
     Animal.h \
     Celda.h \
-    Lobo.h
+    Lobo.h \
+    Oveja.h \
+    Zorro.h \
+    Raton.h

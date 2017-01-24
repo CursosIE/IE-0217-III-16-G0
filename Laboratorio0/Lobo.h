@@ -11,8 +11,6 @@ public:
 
     void Mover();
     void Comer();
-    void Reproducir();
-    void Morir();
 };
 
 #endif // LOBO_H

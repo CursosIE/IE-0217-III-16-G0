@@ -8,3 +8,10 @@ Animal::~Animal(){
 
 }
 
+void Animal::Reproducir() {
+
+}
+
+void Animal::Morir() {
+
+}

@@ -16,10 +16,3 @@ void Lobo::Comer() {
 
 }
 
-void Lobo::Reproducir() {
-
-}
-
-void Lobo::Morir() {
-
-}
