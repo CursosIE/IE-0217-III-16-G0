@@ -1,0 +1,13 @@
+El zacate es una variable tipo int. Su rango va de [0, 100]
+
+Los animales no se van a representar con strings, se van a representar
+con variables tipo int con la siguiente codificacion:
+	Vacio -> 0
+	LM -> 11
+	LH -> 12
+	OM -> 21 
+	OH -> 22
+	ZM -> 31
+	ZH -> 32
+	RM -> 41
+	RH -> 42

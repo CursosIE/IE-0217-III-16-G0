@@ -9,7 +9,8 @@ SOURCES += main.cpp \
     Lobo.cpp \
     Oveja.cpp \
     Zorro.cpp \
-    Raton.cpp
+    Raton.cpp \
+    Controlador.cpp
 
 HEADERS += \
     Animal.h \
@@ -17,4 +18,5 @@ HEADERS += \
     Lobo.h \
     Oveja.h \
     Zorro.h \
-    Raton.h
+    Raton.h \
+    Controlador.h

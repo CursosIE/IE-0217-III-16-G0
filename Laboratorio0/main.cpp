@@ -1,7 +1,6 @@
-#include <iostream>
-
-using namespace std;
+#include "Controlador.h"
 
 int main(int argc, char *argv[]) {
-    return 0;
+    Controlador controlador;
+    return controlador.run();
 }
