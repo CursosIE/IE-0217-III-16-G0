@@ -12,3 +12,7 @@ Celda::Celda(int cantidadZacate, int tipoOcupante) {
 Celda::~Celda() {
 
 }
+
+void Celda::print() {
+
+}
