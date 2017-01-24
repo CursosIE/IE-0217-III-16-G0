@@ -30,8 +30,8 @@ int main() {
     Polinomio* multP0P1 = new Polinomio();
     Polinomio* multP0P2 = new Polinomio();
     Polinomio* multP1P2 = new Polinomio();
-    /*Polinomio* divP3P4 = new Polinomio();
-    Polinomio* divP5P6 = new Polinomio();*/
+    Polinomio* divP3P4 = new Polinomio();
+    Polinomio* divP5P6 = new Polinomio();
 
 
     cout << "P0: " << endl;
@@ -91,13 +91,13 @@ int main() {
     cout << "\nP1 * P2: " << endl;
     multP1P2->print();
 
-    /**divP3P4 = *p3 / *p4;
+    *divP3P4 = *p3 / *p4;
     cout << "\nP3 / P4: " << endl;
     divP3P4->print();
 
     *divP5P6 = *p5 / *p6;
     cout << "\nP5 / P6: " << endl;
-    divP5P6->print();*/
+    divP5P6->print();
 
 
     return 0;

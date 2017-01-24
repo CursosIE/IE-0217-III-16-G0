@@ -103,25 +103,30 @@ Polinomio Polinomio::operator*(const Polinomio& other) {
 }
 
 Polinomio Polinomio::operator/(const Polinomio& other) {
-    /*int resultGrade = other.grado;
-    double restar = 0.0;
-    double resultData [resultGrade + 1];
-    double* temp = this->data;
+    int grado = other.grado;
+    double quotient [grado + 1];
+    double remainder [grado + 1];
 
-    for (int index = 0; index <= resultGrade; ++index)
-        resultData[index] = 0.0;
+    double temp [this->grado + 1];
+    for (int index = 0; index <= this->grado; ++index)
+        temp[index] = this->data[index];
 
+    for (int dividendIndex = 0; dividendIndex <= other.grado; ++dividendIndex) {
+        quotient[grado - dividendIndex] = temp[this->grado - dividendIndex] / other.data[other.grado];
 
-    for (int divideIndex = 0; divideIndex <= this->grado; ++divideIndex) {
-        resultData[resultGrade - divideIndex] = temp[this->grado - divideIndex] / other.data[other.grado];
-        for (int substractIndex = 0; substractIndex < this->grado; ++substractIndex) {
-            restar = (resultData[resultGrade - divideIndex] * other.data[this->grado - substractIndex -2x]);
-            temp[this->grado - substractIndex - 1] = temp[this->grado - substractIndex -1] - restar;
+        for (int remainderIndex = 0; remainderIndex <= other.grado; ++remainderIndex) {
+            remainder[grado - remainderIndex] = quotient[grado - dividendIndex] * other.data[other.grado - remainderIndex];
+        }
+
+        for (int restIndex = 0; restIndex <= other.grado; ++restIndex) {
+            temp[this->grado - restIndex - dividendIndex] = temp[this->grado - restIndex - dividendIndex] - remainder[other.grado - restIndex];
         }
     }
 
-    Polinomio* result = new Polinomio(resultGrade, resultData);
-    return *result;*/
+    Polinomio* semiResult = new Polinomio(grado, quotient);
+    Polinomio* tempo = new Polinomio(this->grado, temp);
+
+    return *semiResult + *tempo;
 }
 
 void Polinomio::print() {

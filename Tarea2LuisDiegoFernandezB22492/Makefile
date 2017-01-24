@@ -1,8 +1,10 @@
-Build:
+all: build run clean
+
+build:
 	g++ -Wall -o main *.cpp
 	
-Run:
+run:
 	./main
 
-Clean:
+clean:
 	rm main
