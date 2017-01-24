@@ -3,3 +3,8 @@
 Animal::Animal() {
 
 }
+
+Animal::~Animal(){
+
+}
+
