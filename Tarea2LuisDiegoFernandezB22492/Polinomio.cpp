@@ -101,6 +101,11 @@ Polinomio Polinomio::operator*(const Polinomio& other) {
 }
 
 Polinomio Polinomio::operator/(const Polinomio& other) {
+    if (other.grado > this->grado) {
+        cout << "No se puede realizar la division..." << endl;
+        return Polinomio();
+    }
+
     int grado = other.grado;
     double quotient [grado + 1];
     double remainder [grado + 1];
