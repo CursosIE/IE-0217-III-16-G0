@@ -19,11 +19,11 @@ void Celda::print() {
         case 0: cout << "Ocupante: vacío" << endl; break;
         case 11: cout << "Ocupante: Lobo" << endl; break;
         case 12: cout << "Ocupante: Loba" << endl; break;
-        case 21: cout << "Ocupante: Oveja macho" << endl; break;
-        case 22: cout << "Ocupante: Oveja hembra" << endl; break;
+        case 21: cout << "Ocupante: Ovejo" << endl; break;
+        case 22: cout << "Ocupante: Oveja" << endl; break;
         case 31: cout << "Ocupante: Zorro" << endl; break;
         case 32: cout << "Ocupante: Zorra" << endl; break;
-        case 41: cout << "Ocupante: Ratón macho" << endl; break;
-        case 42: cout << "Ocupante: Ratón hembra" << endl; break;
+        case 41: cout << "Ocupante: Ratón" << endl; break;
+        case 42: cout << "Ocupante: Ratóna" << endl; break;
     }
 }

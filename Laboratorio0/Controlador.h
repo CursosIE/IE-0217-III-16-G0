@@ -1,6 +1,7 @@
 #ifndef CONTROLADOR_H
 #define CONTROLADOR_H
 
+#include <fstream>
 #include <iostream>
 
 #include "Celda.h"
