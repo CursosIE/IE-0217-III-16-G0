@@ -7,12 +7,12 @@ using namespace std;
 
 class Celda {
 public:
-    int ocupante; // dependiendo del numero entero que tenga va a ser cierto animal, 0 es vacio
+    string ocupante; // el tipo de animal
     int zacate; // el zacate equivale a energia para ovejas y ratones
 
 public:
     Celda();
-    Celda(int cantidadZacate, int tipoOcupante);
+    Celda(int cantidadZacate, string tipoOcupante);
     virtual ~Celda();
 
     void print();
