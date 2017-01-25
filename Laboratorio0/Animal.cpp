@@ -20,7 +20,10 @@ void Animal::Reproducir() {
 }
 
 void Animal::Morir() {
-
+    if(Energia == 0){
+        cout << "Murió: " << this << endl;
+        delete this;
+    }
 }
 
 void Animal::Print() {

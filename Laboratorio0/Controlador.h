@@ -4,6 +4,10 @@
 #include <iostream>
 
 #include "Celda.h"
+#include "Lobo.h"
+#include "Oveja.h"
+#include "Raton.h"
+#include "Zorro.h"
 
 using namespace std;
 
