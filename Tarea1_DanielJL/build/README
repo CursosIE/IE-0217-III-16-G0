@@ -1,0 +1,6 @@
+En esta carpeta se almacenaran los archivos objeto (.o) creados al compilar
+el programa, además del ejecutable. 
+
+Se borrarán de inmedaito si solo se ejecuta "make". Si se ejecuta "make build" 
+permaneceran aca hasta que sean eliminados manualmente o utilizando
+"make clean".
