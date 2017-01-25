@@ -19,7 +19,7 @@ public:
     virtual void Mover() = 0;
     virtual void Comer() = 0;
     void Reproducir();
-    void Morir();
+    bool Morir();
     void Print();
 };
 

@@ -19,11 +19,12 @@ void Animal::Reproducir() {
 
 }
 
-void Animal::Morir() {
+bool Animal::Morir() {
     if(Energia == 0){
         cout << "Murió: " << this << endl;
-        delete this;
+        return 1;
     }
+    return 0;
 }
 
 void Animal::Print() {

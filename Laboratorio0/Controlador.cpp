@@ -11,7 +11,7 @@ Controlador::~Controlador() {
 int Controlador::run() {
     cout << "Bienvenido al  Juego de la Vida! \nMay the odds be in  your favor..!" << endl;
 
-    int columns = 0;
+    /*int columns = 0;
     int rows = 0;
 
     ifstream dataFile;
@@ -26,7 +26,7 @@ int Controlador::run() {
 
     cout << columns << endl;
     cout << rows << endl;
-
+    */
 
     /*Celda*** terreno = new Celda**[columns];
     for (int index = 0; index < columns; ++index) {
@@ -57,10 +57,9 @@ int Controlador::run() {
     cout << endl;
 
     Z1->Energia = 0;
-    Z1->Morir();
-
-    Z1->PrintZorro();
-
+    if(Z1->Morir()){
+        delete Z1;
+    }
 
     return 0;
 }
