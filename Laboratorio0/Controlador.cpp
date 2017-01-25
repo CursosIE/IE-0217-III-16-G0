@@ -13,6 +13,11 @@ int Controlador::run() {
 
     int columns = 0;
     int rows = 0;
+    int zacate = 0;
+    string animal;
+    int posicionColumna = 0;
+    int posicionFila = 0;
+    string line;
 
     ifstream dataFile;
     dataFile.open("datos.txt");
@@ -22,25 +27,31 @@ int Controlador::run() {
         dataFile >> rows;
     }
 
-    dataFile.close();
-
-    cout << columns << endl;
-    cout << rows << endl;
-
-
-    /*Celda*** terreno = new Celda**[columns];
+    Celda*** terreno = new Celda**[columns];
     for (int index = 0; index < columns; ++index) {
         terreno[index] = new Celda*[rows];
     }
 
     for (int colIndex = 0; colIndex < columns; ++colIndex) {
         for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
-            terreno[colIndex][rowIndex] = new Celda(100, 11);
-            terreno[colIndex][rowIndex]->print();
-        }
-    }*/
 
-    Lobo* L1 = new Lobo(12, 13, 1);
+            dataFile >> posicionColumna;
+            dataFile >> posicionFila;
+            dataFile >> zacate;
+            getline(dataFile, animal);
+            if (animal == " ")
+                animal = "Vacío";
+            terreno[posicionColumna][posicionFila] = new Celda(zacate, animal);
+            terreno[posicionColumna][posicionFila]->print();
+        }
+    }
+
+    dataFile.close();
+
+    //Celda* prueba = new Celda(100, "Lobo");
+    //prueba->print();
+
+    /*Lobo* L1 = new Lobo(12, 13, 1);
     L1->PrintLobo();
     cout << endl;
 
@@ -59,7 +70,7 @@ int Controlador::run() {
     Z1->Energia = 0;
     Z1->Morir();
 
-    Z1->PrintZorro();
+    Z1->PrintZorro();*/
 
 
     return 0;
