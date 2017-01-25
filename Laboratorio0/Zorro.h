@@ -7,10 +7,12 @@ class Zorro : public Animal {
 //Metodos
 public:
     Zorro();
+    Zorro(int Fila, int Columna, int Sexo);
     virtual ~Zorro();
 
     void Mover();
     void Comer();
+    void PrintZorro();
 };
 
 #endif // ZORRO_H

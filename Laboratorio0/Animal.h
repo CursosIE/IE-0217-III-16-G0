@@ -13,12 +13,14 @@ public:
 //Funciones
 public:
     Animal();
+    Animal(int Fila, int Columna, int Sexo);
     virtual ~Animal();
 
     virtual void Mover() = 0;
     virtual void Comer() = 0;
     void Reproducir();
     void Morir();
+    void Print();
 };
 
 #endif // ANIMAL_H
