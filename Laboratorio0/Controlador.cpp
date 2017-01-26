@@ -41,7 +41,7 @@ int Controlador::run() {
             getline(dataFile, animal);
             if (animal == " ")
                 animal = "Vacío";
-            terreno[posicionColumna][posicionFila] = new Celda(zacate, animal);
+            terreno[posicionColumna][posicionFila] = new Celda(zacate, animal, posicionColumna, posicionFila);
             terreno[posicionColumna][posicionFila]->print();
         }
     }

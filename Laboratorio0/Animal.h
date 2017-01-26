@@ -1,6 +1,9 @@
 #ifndef ANIMAL_H
 #define ANIMAL_H
-#include "Celda.h"
+
+#include <iostream>
+
+using namespace std;
 
 class Animal {
 
