@@ -9,6 +9,7 @@ Oveja::Oveja(int Fila, int Columna, int Sexo) {
     this->Columna = Columna;
     this->Sexo = Sexo;
     Energia = 75;
+    tipoAnimal = "Oveja";
 }
 
 Oveja::~Oveja() {

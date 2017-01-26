@@ -36,7 +36,6 @@ int Controlador::run() {
     cout << "Estado inicial: " << endl;
     for (int colIndex = 0; colIndex < columns; ++colIndex) {
         for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
-
             dataFile >> posicionColumna;
             dataFile >> posicionFila;
             dataFile >> zacate;
@@ -71,8 +70,10 @@ int Controlador::run() {
         }
         cout << "Final día " << daysIndex << "..! \n" << endl;
     }
-
     cout << endl;
+
+    //Animal* l1 = new Lobo(1, 1, 1);
+    //print<Animal>(*l1);
 
     return 0;
 }

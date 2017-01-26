@@ -9,6 +9,7 @@ Raton::Raton(int Fila, int Columna, int Sexo) {
     this->Columna = Columna;
     this->Sexo = Sexo;
     Energia = 25;
+    tipoAnimal = "Ratón";
 }
 
 Raton::~Raton() {

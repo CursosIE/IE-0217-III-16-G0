@@ -9,6 +9,7 @@ Lobo::Lobo(int Fila, int Columna, int Sexo) {
     this->Columna = Columna;
     this->Sexo = Sexo;
     Energia = 100;
+    tipoAnimal = "Lobo";
 }
 
 Lobo::~Lobo() {

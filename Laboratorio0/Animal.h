@@ -12,6 +12,7 @@ public:
     int Sexo; //Sexo del animal.
     int Energia; //Energia del aimal.
     int Fila, Columna; //Posicion del animal.
+    string tipoAnimal; //se define en las clases hijo, dependiendo de que tipo de animal sea
 
 //Funciones
 public:
