@@ -23,7 +23,7 @@ void Raton::Comer() {
 
 }
 
-void Raton::PrintRaton() {
+/*void Raton::PrintRaton() {
     cout << "Especie: Raton" << endl;
     this->Print();
-}
+}*/

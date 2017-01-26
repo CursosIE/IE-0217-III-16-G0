@@ -12,7 +12,7 @@ public:
 
     void Mover();
     void Comer();
-    void PrintLobo();
+    //void PrintLobo();
 };
 
 #endif // LOBO_H

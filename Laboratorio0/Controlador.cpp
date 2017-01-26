@@ -67,34 +67,5 @@ int Controlador::run() {
 
     cout << endl;
 
-
-    //SE CREA EL TERRENO CON LOS DATOS POR DEFECTO QUE NOS DA EL PROFE QUE ESTAN EN datos.txt
-
-    //Celda* prueba = new Celda(100, "Lobo");
-    //prueba->print();
-
-    /*Lobo* L1 = new Lobo(12, 13, 1);
-    L1->PrintLobo();
-    cout << endl;
-
-    Oveja* O1 = new Oveja(9, 1, 2);
-    O1->PrintOveja();
-    cout << endl;
-
-    Raton* R1 = new Raton(5, 2, 2);
-    R1->PrintRaton();
-    cout << endl;
-
-    Zorro* Z1 = new Zorro(4, 6, 1);
-    Z1->PrintZorro();
-    cout << endl;
-
-    Z1->Energia = 0;
-    if(Z1->Morir())
-        delete Z1;
-
-    */
-
-
     return 0;
 }

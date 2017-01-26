@@ -12,7 +12,7 @@ public:
 
     void Mover();
     void Comer();
-    void PrintZorro();
+    //void PrintZorro();
 };
 
 #endif // ZORRO_H

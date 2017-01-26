@@ -23,8 +23,8 @@ void Lobo::Comer() {
 
 }
 
-void Lobo::PrintLobo() {
+/*void Lobo::PrintLobo() {
     cout << "Especie: Lobo" << endl;
     this->Print();
-}
+}*/
 

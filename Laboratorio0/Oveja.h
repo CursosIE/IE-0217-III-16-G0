@@ -12,7 +12,7 @@ public:
 
     void Mover();
     void Comer();
-    void PrintOveja();
+    //void PrintOveja();
 };
 
 #endif // OVEJA_H

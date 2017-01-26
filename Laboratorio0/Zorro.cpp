@@ -23,9 +23,9 @@ void Zorro::Comer() {
 
 }
 
-void Zorro::PrintZorro() {
+/*void Zorro::PrintZorro() {
     cout << "Especie: Zorro" << endl;
     this->Print();
-}
+}*/
 
 

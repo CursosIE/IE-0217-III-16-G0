@@ -12,13 +12,15 @@ using namespace std;
 
 class Celda {
 public:
+    Animal* animal;
+    int columna;
+    int fila;
     string ocupante; // el tipo de animal
     int zacate; // el zacate equivale a energia para ovejas y ratones
-    Animal* animal;
 
 public:
     Celda();
-    Celda(int cantidadZacate, string tipoOcupante, int fila, int columna);
+    Celda(int cantidadZacate, string tipoOcupante, int columna, int fila);
     virtual ~Celda();
 
     void print();

@@ -23,7 +23,7 @@ void Oveja::Comer() {
 
 }
 
-void Oveja::PrintOveja() {
+/*void Oveja::PrintOveja() {
     cout << "Especie: Oveja" << endl;
     this->Print();
-}
+}*/

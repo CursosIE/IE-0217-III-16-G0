@@ -12,7 +12,7 @@ public:
 
     void Mover();
     void Comer();
-    void PrintRaton();
+    //void PrintRaton();
 };
 
 #endif // RATON_H
