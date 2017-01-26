@@ -9,15 +9,16 @@ Controlador::~Controlador() {
 }
 
 int Controlador::run() {
-    cout << "Bienvenido al  Juego de la Vida! \nMay the odds be in  your favor..!" << endl;
+    cout << "Bienvenido al  Juego de la Vida! \nMay the odds be in  your favor..!\n" << endl;
 
-    int columns = 0;
-    int rows = 0;
-    int zacate = 0;
+    int amountOfDays = 4;
     string animal;
+    int columns = 0;
+    string line;
     int posicionColumna = 0;
     int posicionFila = 0;
-    string line;
+    int rows = 0;
+    int zacate = 0;
 
     ifstream dataFile;
     dataFile.open("datos.txt");
@@ -32,6 +33,7 @@ int Controlador::run() {
         terreno[index] = new Celda*[rows];
     }
 
+    cout << "Estado inicial: " << endl;
     for (int colIndex = 0; colIndex < columns; ++colIndex) {
         for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
 
@@ -45,8 +47,28 @@ int Controlador::run() {
             terreno[posicionColumna][posicionFila]->print();
         }
     }
+    cout << "Final: \n" << endl;
 
     dataFile.close();
+
+
+    //EMPEZAMOS A CORRER LOS DIAS
+    for (int daysIndex = 1; daysIndex <= amountOfDays; ++daysIndex) {
+        cout << "Día " << daysIndex << ": " << endl;
+        for (int colIndex = 0; colIndex < columns; ++colIndex) {
+            for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
+                if (terreno[colIndex][rowIndex]->zacate > 0 && terreno[colIndex][rowIndex]->zacate < 100 && daysIndex %3 == 0)
+                    terreno[colIndex][rowIndex]->zacate += 1;
+                terreno[colIndex][rowIndex]->print();
+            }
+        }
+        cout << "Final día " << daysIndex << "..! \n" << endl;
+    }
+
+    cout << endl;
+
+
+    //SE CREA EL TERRENO CON LOS DATOS POR DEFECTO QUE NOS DA EL PROFE QUE ESTAN EN datos.txt
 
     //Celda* prueba = new Celda(100, "Lobo");
     //prueba->print();
