@@ -11,19 +11,19 @@ Celda::Celda(int cantidadZacate, string tipoOcupante, int fila, int columna) {
     this->columna = columna;
     if(ocupante.compare("LM"))
         animal = new Lobo(fila, columna, 1);
-    if(ocupante.compare("LH"))
+    else if(ocupante.compare("LH"))
         animal = new Lobo(fila, columna, 2);
-    if(ocupante.compare("OM"))
+    else if(ocupante.compare("OM"))
         animal = new Oveja(fila, columna, 1);
-    if(ocupante.compare("OH"))
+    else if(ocupante.compare("OH"))
         animal = new Oveja(fila, columna, 2);
-    if(ocupante.compare("ZM"))
+    else if(ocupante.compare("ZM"))
         animal = new Lobo(fila, columna, 1);
-    if(ocupante.compare("ZH"))
+    else if(ocupante.compare("ZH"))
         animal = new Lobo(fila, columna, 2);
-    if(ocupante.compare("RM"))
+    else if(ocupante.compare("RM"))
         animal = new Lobo(fila, columna, 1);
-    if(ocupante.compare("RH"))
+    else if(ocupante.compare("RH"))
         animal = new Lobo(fila, columna, 2);
 }
 
