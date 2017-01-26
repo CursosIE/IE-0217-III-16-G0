@@ -57,8 +57,15 @@ int Controlador::run() {
         cout << "Día " << daysIndex << ": " << endl;
         for (int colIndex = 0; colIndex < columns; ++colIndex) {
             for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
+                //cada 3 dias el terreno gana 1 de energia
                 if (terreno[colIndex][rowIndex]->zacate > 0 && terreno[colIndex][rowIndex]->zacate < 100 && daysIndex %3 == 0)
                     terreno[colIndex][rowIndex]->zacate += 1;
+                //cada dia los animales pierden 1 de energia
+                if (terreno[colIndex][rowIndex]->ocupante != "Vacío") {
+                    terreno[colIndex][rowIndex]->animal->Energia -= 1;
+                    //si el animal perdio energia y llego a cero, se muere
+                    terreno[colIndex][rowIndex]->animal->Morir();
+                }
                 terreno[colIndex][rowIndex]->print();
             }
         }
