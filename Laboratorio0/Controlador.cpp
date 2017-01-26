@@ -11,7 +11,8 @@ Controlador::~Controlador() {
 int Controlador::run() {
     cout << "Bienvenido al  Juego de la Vida! \nMay the odds be in  your favor..!\n" << endl;
 
-    int amountOfDays = 4;
+    //declaracion de variables de interes
+    int amountOfDays = 10;
     string animal;
     int columns = 0;
     string line;
@@ -20,6 +21,7 @@ int Controlador::run() {
     int rows = 0;
     int zacate = 0;
 
+    //se abre el archivo donde esta el estado inicial
     ifstream dataFile;
     dataFile.open("datos.txt");
 
@@ -28,12 +30,16 @@ int Controlador::run() {
         dataFile >> rows;
     }
 
+    //se crea una matriz de objetos tipo Celda
     Celda*** terreno = new Celda**[columns];
     for (int index = 0; index < columns; ++index) {
         terreno[index] = new Celda*[rows];
     }
 
     cout << "Estado inicial: " << endl;
+
+    //se llena la matriz con inicializaciones de celdas con sus respectivos datos
+    //el estado inicial
     for (int colIndex = 0; colIndex < columns; ++colIndex) {
         for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
             dataFile >> posicionColumna;
@@ -48,8 +54,7 @@ int Controlador::run() {
     }
     cout << "Final: \n" << endl;
 
-    dataFile.close();
-
+    dataFile.close(); //se cierra el archivo ya que no se ocupa mas
 
     //EMPEZAMOS A CORRER LOS DIAS
     for (int daysIndex = 1; daysIndex <= amountOfDays; ++daysIndex) {
