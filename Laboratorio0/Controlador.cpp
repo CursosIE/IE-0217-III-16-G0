@@ -12,7 +12,7 @@ int Controlador::run() {
     cout << "Bienvenido al  Juego de la Vida! \nMay the odds be in  your favor..!\n" << endl;
 
     //declaracion de variables de interes
-    int amountOfDays = 32;
+    int amountOfDays = 35;
     string animal;
     int columns = 0;
     string line;
@@ -52,7 +52,6 @@ int Controlador::run() {
             terreno[posicionColumna][posicionFila]->print();
         }
     }
-    cout << "Final: \n" << endl;
 
     dataFile.close(); //se cierra el archivo ya que no se ocupa mas
 
@@ -61,15 +60,27 @@ int Controlador::run() {
         cout << "Día " << daysIndex << ": " << endl;
         for (int colIndex = 0; colIndex < columns; ++colIndex) {
             for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
-                //cada 3 dias el terreno gana 1 de energia
-                if (terreno[colIndex][rowIndex]->zacate > 0 && terreno[colIndex][rowIndex]->zacate < 100 && daysIndex %3 == 0)
-                    terreno[colIndex][rowIndex]->zacate += 1;
-                //cada dia los animales pierden 1 de energia
+                //cada 3 dias el terreno gana 5 de energia
+                if (terreno[colIndex][rowIndex]->zacate > 0 && daysIndex %3 == 0) {
+                    if (terreno[colIndex][rowIndex]->zacate <= 95)
+                        terreno[colIndex][rowIndex]->zacate += 5;
+                    else {
+                        if (terreno[colIndex][rowIndex]->zacate > 95)
+                            terreno[colIndex][rowIndex]->zacate = 100;
+                    }
+                }
+                //si hay algun animal en el terreno, ejecutamos las acciones de los animales
                 if (terreno[colIndex][rowIndex]->ocupante != "Vacío") {
+                    //Funcion mover
+                    //...
                     //Funcion Comer
                     terreno[colIndex][rowIndex]->animal->Comer(*terreno[colIndex][rowIndex]);
+                    //Funcion reproducir
+                    //...
+                    //al final de cada dia los animales pierden 1 de energia
                     terreno[colIndex][rowIndex]->animal->Energia -= 1;
                     //si el animal perdio energia y llego a cero, se muere
+                    //Funcion morir
                     if(terreno[colIndex][rowIndex]->animal->Morir()){
                         terreno[colIndex][rowIndex]->ocupante = "Vacío";
                         delete terreno[colIndex][rowIndex]->animal;
