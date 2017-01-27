@@ -21,7 +21,7 @@ void Raton::Mover() {
 
 }
 
-void Raton::Comer(Celda &otra) {
+bool Raton::Comer(Celda &otra) {
     if(otra.zacate >= 5){
         otra.zacate -= 5;
         Energia += 5;
@@ -33,6 +33,8 @@ void Raton::Comer(Celda &otra) {
         if(Energia > 25)
             Energia = 25;
     }
+
+    return 0;
 }
 
 /*void Raton::PrintRaton() {

@@ -22,7 +22,7 @@ public:
     virtual ~Animal();
 
     virtual void Mover() = 0;
-    virtual void Comer(Celda &otra) = 0;
+    virtual bool Comer(Celda &otra) = 0;
     void Reproducir();
     bool Morir();
     void Print();

@@ -21,7 +21,7 @@ void Oveja::Mover() {
 
 }
 
-void Oveja::Comer(Celda &otra) {
+bool Oveja::Comer(Celda &otra) {
     if(otra.zacate >= 10){
         otra.zacate -= 10;
         Energia += 10;
@@ -33,6 +33,8 @@ void Oveja::Comer(Celda &otra) {
         if(Energia > 75)
             Energia = 75;
     }
+
+    return 0;
 }
 
 /*void Oveja::PrintOveja() {

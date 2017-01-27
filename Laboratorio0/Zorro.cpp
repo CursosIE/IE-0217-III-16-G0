@@ -1,5 +1,5 @@
 #include "Zorro.h"
-//#include "Celda.h"
+#include "Celda.h"
 
 Zorro::Zorro() {
 
@@ -21,8 +21,12 @@ void Zorro::Mover() {
 
 }
 
-void Zorro::Comer(Celda &otra) {
-
+bool Zorro::Comer(Celda &otra) {
+    if(otra.ocupante.compare(" RM")  == 0 || otra.ocupante.compare(" RH")  == 0) {
+        delete otra.animal;
+        return 1;
+    }else
+        return 0;
 }
 
 /*void Zorro::PrintZorro() {

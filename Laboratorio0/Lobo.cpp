@@ -1,5 +1,5 @@
 #include "Lobo.h"
-//#include "Celda.h"
+#include "Celda.h"
 
 Lobo::Lobo() {
 
@@ -21,7 +21,7 @@ void Lobo::Mover() {
 
 }
 
-void Lobo::Comer(Celda &otra) {
+bool Lobo::Comer(Celda &otra) {
 
 }
 
