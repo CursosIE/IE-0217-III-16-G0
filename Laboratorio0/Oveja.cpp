@@ -21,7 +21,7 @@ void Oveja::Mover() {
 
 }
 
-bool Oveja::Comer(Celda &otra) {
+int Oveja::Comer(Celda &otra, Celda*** terreno) {
     if(otra.zacate >= 10){
         otra.zacate -= 10;
         Energia += 10;

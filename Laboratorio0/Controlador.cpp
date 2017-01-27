@@ -67,7 +67,7 @@ int Controlador::run() {
                 //cada dia los animales pierden 1 de energia
                 if (terreno[colIndex][rowIndex]->ocupante != "Vacío") {
                     //Funcion Comer
-                    terreno[colIndex][rowIndex]->animal->Comer(*terreno[colIndex][rowIndex]);
+                    terreno[colIndex][rowIndex]->animal->Comer(*terreno[colIndex][rowIndex], terreno);
                     terreno[colIndex][rowIndex]->animal->Energia -= 1;
                     //si el animal perdio energia y llego a cero, se muere
                     if(terreno[colIndex][rowIndex]->animal->Morir()){

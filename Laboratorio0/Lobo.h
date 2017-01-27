@@ -11,7 +11,7 @@ public:
     virtual ~Lobo();
 
     void Mover();
-    bool Comer(Celda &otra);
+    int Comer(Celda &otra, Celda*** terreno);
     //void PrintLobo();
 };
 

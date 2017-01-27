@@ -21,7 +21,7 @@ void Raton::Mover() {
 
 }
 
-bool Raton::Comer(Celda &otra) {
+int Raton::Comer(Celda &otra, Celda*** terreno) {
     if(otra.zacate >= 5){
         otra.zacate -= 5;
         Energia += 5;

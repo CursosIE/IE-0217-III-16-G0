@@ -21,10 +21,10 @@ void Zorro::Mover() {
 
 }
 
-bool Zorro::Comer(Celda &otra) {
+int Zorro::Comer(Celda &otra, Celda*** terreno) {
     if(otra.ocupante.compare(" RM")  == 0 || otra.ocupante.compare(" RH")  == 0) {
         delete otra.animal;
-        return 1;
+        return 2;
     }else
         return 0;
 }

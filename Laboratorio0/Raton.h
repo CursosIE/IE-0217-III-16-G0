@@ -11,7 +11,7 @@ public:
     virtual ~Raton();
 
     void Mover();
-    bool Comer(Celda &otra);
+    int Comer(Celda &otra, Celda*** terreno);
     //void PrintRaton();
 };
 
