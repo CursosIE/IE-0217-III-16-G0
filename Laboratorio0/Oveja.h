@@ -11,7 +11,7 @@ public:
     virtual ~Oveja();
 
     void Mover();
-    void Comer();
+    void Comer(Celda &otra);
     //void PrintOveja();
 };
 

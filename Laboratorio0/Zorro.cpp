@@ -1,4 +1,5 @@
 #include "Zorro.h"
+//#include "Celda.h"
 
 Zorro::Zorro() {
 
@@ -20,7 +21,7 @@ void Zorro::Mover() {
 
 }
 
-void Zorro::Comer() {
+void Zorro::Comer(Celda &otra) {
 
 }
 

@@ -2,13 +2,14 @@
 #define CELDA_H
 
 #include <iostream>
-#include "Animal.h"
 #include "Lobo.h"
 #include "Oveja.h"
 #include "Zorro.h"
 #include "Raton.h"
 
 using namespace std;
+
+class Animal;
 
 class Celda {
 public:

@@ -11,7 +11,7 @@ public:
     virtual ~Zorro();
 
     void Mover();
-    void Comer();
+    void Comer(Celda &otra);
     //void PrintZorro();
 };
 

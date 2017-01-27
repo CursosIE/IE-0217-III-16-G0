@@ -5,6 +5,8 @@
 
 using namespace std;
 
+class Celda;
+
 class Animal {
 
 //Atricbutos
@@ -17,11 +19,10 @@ public:
 //Funciones
 public:
     Animal();
-    Animal(int Fila, int Columna, int Sexo);
     virtual ~Animal();
 
     virtual void Mover() = 0;
-    virtual void Comer() = 0;
+    virtual void Comer(Celda &otra) = 0;
     void Reproducir();
     bool Morir();
     void Print();

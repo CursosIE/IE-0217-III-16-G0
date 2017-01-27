@@ -1,4 +1,5 @@
 #include "Raton.h"
+#include "Celda.h"
 
 Raton::Raton() {
 
@@ -20,8 +21,18 @@ void Raton::Mover() {
 
 }
 
-void Raton::Comer() {
-
+void Raton::Comer(Celda &otra) {
+    if(otra.zacate >= 5){
+        otra.zacate -= 5;
+        Energia += 5;
+        if(Energia > 25)
+            Energia = 25;
+    }else{
+        Energia += otra.zacate;
+        otra.zacate = 0;
+        if(Energia > 25)
+            Energia = 25;
+    }
 }
 
 /*void Raton::PrintRaton() {

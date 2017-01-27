@@ -11,7 +11,7 @@ public:
     virtual ~Raton();
 
     void Mover();
-    void Comer();
+    void Comer(Celda &otra);
     //void PrintRaton();
 };
 
