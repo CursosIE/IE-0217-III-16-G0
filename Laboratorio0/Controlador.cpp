@@ -84,7 +84,7 @@ int Controlador::run() {
                 //si hay algun animal en el terreno, ejecutamos las acciones de los animales
                 if (terreno[colIndex][rowIndex]->ocupante != "Vacío") {
                     //Funcion mover
-                    //...
+                    //terreno[colIndex][rowIndex]->animal->Mover(columns, rows, terreno);
                     //Funcion Comer
                     terreno[colIndex][rowIndex]->animal->Comer(columns, rows, terreno);
                     //Funcion reproducir

@@ -10,7 +10,7 @@ public:
     Lobo(int Fila, int Columna, int Sexo);
     virtual ~Lobo();
 
-    void Mover();
+    int Mover(int columns, int rows, Celda*** terreno);
     int Comer(int columns, int rows, Celda*** terreno);
     //void PrintLobo();
 };

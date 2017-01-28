@@ -17,8 +17,34 @@ Lobo::~Lobo() {
 
 }
 
-void Lobo::Mover() {
+int Lobo::Mover(int columns, int rows, Celda*** terreno) {
+    int xActual = this->Columna;
+    int yActual = this->Fila;
+    int yPrevio, xPrevio;
+    int contador = 0;
 
+    for (int xpos = xActual-1; xpos <= xActual+1; ++xpos) {
+        for (int ypos = yActual-1; ypos <= yActual+1; ++ypos) {
+            if (!(xpos == xActual && ypos == yActual)) { //no se mete en si mismo
+                if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows))
+                    if((terreno[ypos][xpos]->ocupante.compare("Vacío") == 0) && ypos != yPrevio && xpos != xPrevio){
+                        terreno[ypos][xpos]->print();
+                        terreno[ypos][xpos]->animal = new Zorro(ypos, xpos, terreno[yActual][xActual]->animal->Sexo);
+                        terreno[ypos][xpos]->ocupante = terreno[yActual][xActual]->ocupante;
+                        delete terreno[yActual][xActual]->animal;
+                        terreno[yActual][xActual]->ocupante = "Vacío";
+                        yPrevio = yActual;
+                        xPrevio = xActual;
+                        yActual = ypos;
+                        xActual = xpos;
+                        contador += 1;
+                        if(contador == 3){
+                            return 0;}
+                    }
+            }
+        }
+    }
+    return 0;
 }
 
 int Lobo::Comer(int columns, int rows, Celda*** terreno) {
