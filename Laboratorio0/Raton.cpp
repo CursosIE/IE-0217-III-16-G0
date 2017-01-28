@@ -21,17 +21,17 @@ void Raton::Mover() {
 
 }
 
-int Raton::Comer(Celda &otra, Celda*** terreno) {
-    if(otra.zacate >= 5){
-        otra.zacate -= 5;
-        Energia += 5;
-        if(Energia > 25)
-            Energia = 25;
+int Raton::Comer(int columns, int rows, Celda*** terreno) {
+    if(terreno[this->Fila][this->Columna]->zacate >= 5){
+        terreno[this->Fila][this->Columna]->zacate -= 5;
+        terreno[this->Fila][this->Columna]->animal->Energia += 5;
+        if(terreno[this->Fila][this->Columna]->animal->Energia > 25)
+            terreno[this->Fila][this->Columna]->animal->Energia = 25;
     }else{
-        Energia += otra.zacate;
-        otra.zacate = 0;
-        if(Energia > 25)
-            Energia = 25;
+        terreno[this->Fila][this->Columna]->animal->Energia += terreno[this->Fila][this->Columna]->zacate;
+        terreno[this->Fila][this->Columna]->zacate = 0;
+        if(terreno[this->Fila][this->Columna]->animal->Energia > 25)
+            terreno[this->Fila][this->Columna]->animal->Energia = 25;
     }
 
     return 0;

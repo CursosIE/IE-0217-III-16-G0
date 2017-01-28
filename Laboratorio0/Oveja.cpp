@@ -21,17 +21,17 @@ void Oveja::Mover() {
 
 }
 
-int Oveja::Comer(Celda &otra, Celda*** terreno) {
-    if(otra.zacate >= 10){
-        otra.zacate -= 10;
-        Energia += 10;
-        if(Energia > 75)
-            Energia = 75;
+int Oveja::Comer(int columns, int rows, Celda*** terreno) {
+    if(terreno[this->Fila][this->Columna]->zacate >= 10){
+        terreno[this->Fila][this->Columna]->zacate -= 10;
+        terreno[this->Fila][this->Columna]->animal->Energia += 10;
+        if(terreno[this->Fila][this->Columna]->animal->Energia > 75)
+            terreno[this->Fila][this->Columna]->animal->Energia = 75;
     }else{
-        Energia += otra.zacate;
-        otra.zacate = 0;
-        if(Energia > 75)
-            Energia = 75;
+        terreno[this->Fila][this->Columna]->animal->Energia += terreno[this->Fila][this->Columna]->zacate;
+        terreno[this->Fila][this->Columna]->zacate = 0;
+        if(terreno[this->Fila][this->Columna]->animal->Energia > 75)
+            terreno[this->Fila][this->Columna]->animal->Energia = 75;
     }
 
     return 0;
