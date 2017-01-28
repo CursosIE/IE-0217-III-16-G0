@@ -23,7 +23,7 @@ public:
 
     virtual void Mover() = 0;
     virtual int Comer(Celda &otra, Celda*** terreno) = 0;
-    void Reproducir();
+    void Reproducir(int columns, int rows, Celda*** terreno);
     bool Morir();
     void Print();
 };

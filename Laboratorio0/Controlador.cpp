@@ -12,7 +12,7 @@ int Controlador::run() {
     cout << "Bienvenido al  Juego de la Vida! \nMay the odds be in  your favor..!\n" << endl;
 
     //declaracion de variables de interes
-    int amountOfDays = 35;
+    int amountOfDays = 1;
     string animal;
     int columns = 0;
     string line;
@@ -53,10 +53,22 @@ int Controlador::run() {
         }
     }
 
+    cout << "ACABA!!!!\n" << endl;
     dataFile.close(); //se cierra el archivo ya que no se ocupa mas
 
+    //terreno[0][0]->animal->Reproducir(columns, rows, terreno);
+    //terreno[0][1]->animal->Reproducir(columns, rows, terreno);
+    //~terreno[0][2]->animal->Reproducir(columns, rows, terreno);
+    terreno[0][2]->print();
+    //~terreno[1][0]->animal->Reproducir(columns, rows, terreno);
+    //terreno[1][1]->animal->Reproducir(columns, rows, terreno);
+    //terreno[1][2]->animal->Reproducir(columns, rows, terreno);
+    //terreno[2][0]->animal->Reproducir(columns, rows, terreno);
+    //terreno[2][1]->animal->Reproducir(columns, rows, terreno);
+    //terreno[2][2]->animal->Reproducir(columns, rows, terreno);
+
     //EMPEZAMOS A CORRER LOS DIAS
-    for (int daysIndex = 1; daysIndex <= amountOfDays; ++daysIndex) {
+    /*for (int daysIndex = 1; daysIndex <= amountOfDays; ++daysIndex) {
         cout << "Día " << daysIndex << ": " << endl;
         for (int colIndex = 0; colIndex < columns; ++colIndex) {
             for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
@@ -74,7 +86,6 @@ int Controlador::run() {
                     //Funcion mover
                     //...
                     //Funcion Comer
-
                     terreno[colIndex][rowIndex]->animal->Comer(*terreno[colIndex][rowIndex], terreno);
                     //Funcion reproducir
                     //...
@@ -91,7 +102,7 @@ int Controlador::run() {
             }
         }
         cout << "Final día " << daysIndex << "..! \n" << endl;
-    }
+    } */
     cout << endl;
 
     //Animal* l1 = new Lobo(1, 1, 1);
