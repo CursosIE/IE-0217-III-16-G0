@@ -62,6 +62,42 @@ int Oveja::Comer(int columns, int rows, Celda*** terreno) {
     return 0;
 }
 
+void Oveja::Reproducir(int columns, int rows, Celda ***terreno) {
+    bool reproduzcase = false;
+
+    for (int xpos = this->Columna-1; xpos <= this->Columna+1; ++xpos) {
+        for (int ypos = this->Fila-1; ypos <= this->Fila+1; ++ypos) {
+            if (!(xpos == this->Columna && ypos == this->Fila)) { //no se mete en si mismo
+                if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows)) {
+                    if (terreno[ypos][xpos]->ocupante.compare("Vacío") != 0) {
+                        if (terreno[ypos][xpos]->animal->tipoAnimal.compare(this->tipoAnimal) == 0) {
+                            if (terreno[ypos][xpos]->animal->Sexo != this->Sexo) {
+                                reproduzcase = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    for (int xpos1 = this->Columna-1; xpos1 <= this->Columna+1; ++xpos1) {
+        for (int ypos1 = this->Fila-1; ypos1 <= this->Fila+1; ++ypos1) {
+            if (!(xpos1 == this->Columna && ypos1 == this->Fila)) { //no se mete en si mismo
+                if ((xpos1 >=  0 && xpos1 < columns) && (ypos1 >=  0 && ypos1 < rows)) {
+                    if (terreno[ypos1][xpos1]->ocupante.compare("Vacío") == 0) {
+                        if(reproduzcase){
+                            terreno[ypos1][xpos1]->animal = new Oveja(ypos1, xpos1, terreno[this->Fila][this->Columna]->animal->Sexo);
+                            terreno[ypos1][xpos1]->ocupante = terreno[this->Fila][this->Columna]->ocupante;
+                            reproduzcase = false;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*void Oveja::PrintOveja() {
     cout << "Especie: Oveja" << endl;
     this->Print();

@@ -12,7 +12,7 @@ int Controlador::run() {
     cout << "Bienvenido al  Juego de la Vida! \nMay the odds be in  your favor..!\n" << endl;
 
     //declaracion de variables de interes
-    int amountOfDays = 1;
+    int amountOfDays = 2;
     string animal;
     int columns = 0;
     string line;

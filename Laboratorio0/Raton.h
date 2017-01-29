@@ -12,6 +12,7 @@ public:
 
     int Mover(int columns, int rows, Celda*** terreno);
     int Comer(int columns, int rows, Celda*** terreno);
+    void Reproducir(int columns, int rows, Celda*** terreno);
     //void PrintRaton();
 };
 
