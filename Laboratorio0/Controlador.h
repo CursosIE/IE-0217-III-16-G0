@@ -18,10 +18,11 @@ class Controlador {
 public:
     Controlador();
     virtual ~Controlador();
-    int run(int amountOfDays, char* fileName);
-    void resetReproduceMark(int columns, int rows, Celda*** terreno);
+    void resetReproduceMark(int columns, int rows, Celda*** terreno); //resetea el atributo alreadyReproduced al final de cada dia
+    int run(int amountOfDays, char* fileName); //corre el juego
 };
 
+//funcion plantilla
 template <typename DataType>
 void print (DataType objeto) {
     cout << &objeto << endl;
@@ -33,6 +34,5 @@ void print (DataType objeto) {
         cout << "Sexo: hembra" << endl;
     cout << "Energía: " << objeto.energia << endl;
 }
-
 
 #endif // CONTROLADOR_H
