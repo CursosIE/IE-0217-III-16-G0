@@ -18,7 +18,8 @@ class Controlador {
 public:
     Controlador();
     virtual ~Controlador();
-    int run();
+    int run(int amountOfDays, char* fileName);
+    void resetReproduceMark(int columns, int rows, Celda*** terreno);
 };
 
 template <typename DataType>

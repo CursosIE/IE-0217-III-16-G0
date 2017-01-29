@@ -1,5 +1,8 @@
 #ifndef LOBO_H
 #define LOBO_H
+
+#include <cstdlib>
+
 #include "Animal.h"
 
 class Lobo : public Animal {

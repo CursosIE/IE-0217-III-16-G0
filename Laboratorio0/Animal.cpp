@@ -2,7 +2,7 @@
 #include "Celda.h"
 
 Animal::Animal() {
-
+    alreadyReproduced = false;
 }
 
 Animal::~Animal(){

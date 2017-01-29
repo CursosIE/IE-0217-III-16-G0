@@ -8,11 +8,11 @@ Controlador::~Controlador() {
 
 }
 
-int Controlador::run() {
+int Controlador::run(int amountOfDays, char* fileName) {
     cout << "Bienvenido al  Juego de la Vida! \nMay the odds be in  your favor..!\n" << endl;
 
     //declaracion de variables de interes
-    int amountOfDays = 2;
+    //int amountOfDays = 5;
     string animal;
     int columns = 0;
     string line;
@@ -23,7 +23,7 @@ int Controlador::run() {
 
     //se abre el archivo donde esta el estado inicial
     ifstream dataFile;
-    dataFile.open("datos.txt");
+    dataFile.open(fileName);
 
     if (dataFile.is_open()) {
         dataFile >> columns;
@@ -36,7 +36,7 @@ int Controlador::run() {
         terreno[index] = new Celda*[rows];
     }
 
-    cout << "Estado inicial: " << endl;
+    cout << "Estado inicial (creción de la Tierra): " << endl;
 
     //se llena la matriz con inicializaciones de celdas con sus respectivos datos
     //el estado inicial
@@ -53,23 +53,11 @@ int Controlador::run() {
         }
     }
 
-    cout << "ACABA!!!!\n" << endl;
     dataFile.close(); //se cierra el archivo ya que no se ocupa mas
-
-    //terreno[0][0]->animal->Reproducir(columns, rows, terreno);
-    //terreno[0][1]->animal->Reproducir(columns, rows, terreno);
-    //~terreno[0][2]->animal->Reproducir(columns, rows, terreno);
-    //terreno[0][2]->print();
-    //~terreno[1][0]->animal->Reproducir(columns, rows, terreno);
-    //terreno[1][1]->animal->Reproducir(columns, rows, terreno);
-    //terreno[1][2]->animal->Reproducir(columns, rows, terreno);
-    //terreno[2][0]->animal->Reproducir(columns, rows, terreno);
-    //terreno[2][1]->animal->Reproducir(columns, rows, terreno);
-    //terreno[2][2]->animal->Reproducir(columns, rows, terreno);
 
     //EMPEZAMOS A CORRER LOS DIAS
     for (int daysIndex = 1; daysIndex <= amountOfDays; ++daysIndex) {
-        cout << "Día " << daysIndex << ": " << endl;
+        cout << "\nInicio día " << daysIndex << ": \n" << endl;
         for (int colIndex = 0; colIndex < columns; ++colIndex) {
             for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
                 //cada 3 dias el terreno gana 5 de energia
@@ -86,7 +74,7 @@ int Controlador::run() {
                     //Funcion mover
                     //terreno[colIndex][rowIndex]->animal->Mover(columns, rows, terreno);
                     //Funcion Comer
-                    //terreno[colIndex][rowIndex]->animal->Comer(columns, rows, terreno);
+                    terreno[colIndex][rowIndex]->animal->Comer(columns, rows, terreno);
                     //Funcion reproducir
                     terreno[colIndex][rowIndex]->animal->Reproducir(columns, rows, terreno);
                     //al final de cada dia los animales pierden 1 de energia
@@ -101,12 +89,19 @@ int Controlador::run() {
                 terreno[colIndex][rowIndex]->print();
             }
         }
+        resetReproduceMark(columns, rows, terreno);
         cout << "Final día " << daysIndex << "..! \n" << endl;
     }
     cout << endl;
 
-    //Animal* l1 = new Lobo(1, 1, 1);
-    //print<Animal>(*l1);
-
     return 0;
+}
+
+void Controlador::resetReproduceMark(int columns, int rows, Celda*** terreno) {
+    for (int colIndex = 0; colIndex < columns; ++colIndex) {
+        for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
+            if (terreno[colIndex][rowIndex]->ocupante.compare("Vacío") != 0)
+                terreno[colIndex][rowIndex]->animal->alreadyReproduced = false;
+        }
+    }
 }

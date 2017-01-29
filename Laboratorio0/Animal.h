@@ -13,8 +13,9 @@ class Animal {
 public:
     int Sexo; //Sexo del animal.
     int Energia; //Energia del aimal.
-    int Fila, Columna; //Posicion del animal.
+    int Fila, Columna; //Posicion del animal. Identificador
     string tipoAnimal; //se define en las clases hijo, dependiendo de que tipo de animal sea
+    bool alreadyReproduced;
 
 //Funciones
 public:
