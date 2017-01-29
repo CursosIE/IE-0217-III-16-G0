@@ -10,6 +10,9 @@ Celda::Celda(int cantidadZacate, string tipoOcupante, int fila, int columna) {
     ocupante = tipoOcupante;
     this->fila = fila;
     this->columna = columna;
+
+    //dependiendo del tipo de animal que diga el archivo de datos
+    //ese tipo de animal es creado
     if(ocupante.compare(" LM") == 0)
         animal = new Lobo(fila, columna, 1);
     else if(ocupante.compare(" LH")  == 0)
@@ -32,10 +35,13 @@ Celda::~Celda() {
 
 }
 
+//se imprime toda la informacion relevane de una celda y de el animal que esta dentro de ella
 void Celda::print() {
     cout << "Posición: [" << fila << ", " << columna << "]" << endl;
     cout << "Nivel zacate: " << zacate << endl;
     cout << "Ocupante: " << ocupante << endl;
+
+    //si la celda no tiene una animal dentro entonces no se imprime la informacion del animal
     if (ocupante != "Vacío")
        animal->Print();
     cout << endl;

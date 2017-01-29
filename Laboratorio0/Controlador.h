@@ -15,6 +15,7 @@ using namespace std;
 
 class Controlador {
 
+//Metodos
 public:
     Controlador();
     virtual ~Controlador();

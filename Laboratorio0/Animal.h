@@ -9,15 +9,15 @@ class Celda;
 
 class Animal {
 
-//Atricbutos
+//Atributos
 public:
-    int Sexo; //Sexo del animal.
+    bool alreadyReproduced; //Bandera para saber si un animal ya se repdodujo en un dia
     int Energia; //Energia del aimal.
     int Fila, Columna; //Posicion del animal. Identificador
+    int Sexo; //Sexo del animal.
     string tipoAnimal; //se define en las clases hijo, dependiendo de que tipo de animal sea
-    bool alreadyReproduced;
 
-//Funciones
+//Metodos
 public:
     Animal();
     virtual ~Animal();
@@ -26,7 +26,7 @@ public:
     virtual int Comer(int columns, int rows, Celda*** terreno) = 0;
     virtual void Reproducir(int columns, int rows, Celda*** terreno) = 0;
     bool Morir();
-    inline bool operator--() {return Morir();}
+    inline bool operator--() {return Morir();} //sobrecarga del operador -- con Morir()
     void Print();
 };
 

@@ -2,6 +2,7 @@
 #define CELDA_H
 
 #include <iostream>
+
 #include "Lobo.h"
 #include "Oveja.h"
 #include "Zorro.h"
@@ -12,6 +13,7 @@ using namespace std;
 class Animal;
 
 class Celda {
+//Atributos
 public:
     Animal* animal;
     int columna;
@@ -19,6 +21,7 @@ public:
     string ocupante; // el tipo de animal
     int zacate; // el zacate equivale a energia para ovejas y ratones
 
+//Metodos
 public:
     Celda();
     Celda(int cantidadZacate, string tipoOcupante, int columna, int fila);
