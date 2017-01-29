@@ -81,7 +81,8 @@ int Controlador::run(int amountOfDays, char* fileName) {
                     terreno[colIndex][rowIndex]->animal->Energia -= 1;
                     //si el animal perdio energia y llego a cero, se muere
                     //Funcion morir
-                    if(terreno[colIndex][rowIndex]->animal->Morir()){
+                    //if(terreno[colIndex][rowIndex]->animal->operator --()){
+                    if(terreno[colIndex][rowIndex]->animal->operator--()){
                         terreno[colIndex][rowIndex]->ocupante = "Vacío";
                         delete terreno[colIndex][rowIndex]->animal;
                     }

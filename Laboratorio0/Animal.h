@@ -26,6 +26,7 @@ public:
     virtual int Comer(int columns, int rows, Celda*** terreno) = 0;
     virtual void Reproducir(int columns, int rows, Celda*** terreno) = 0;
     bool Morir();
+    inline bool operator--() {return Morir();}
     void Print();
 };
 
