@@ -12,7 +12,7 @@ int Controlador::run() {
     cout << "Bienvenido al  Juego de la Vida! \nMay the odds be in  your favor..!\n" << endl;
 
     //declaracion de variables de interes
-    int amountOfDays = 10;
+    int amountOfDays = 1;
     string animal;
     int columns = 0;
     string line;
@@ -86,9 +86,9 @@ int Controlador::run() {
                     //Funcion mover
                     //terreno[colIndex][rowIndex]->animal->Mover(columns, rows, terreno);
                     //Funcion Comer
-                    terreno[colIndex][rowIndex]->animal->Comer(columns, rows, terreno);
+                    //terreno[colIndex][rowIndex]->animal->Comer(columns, rows, terreno);
                     //Funcion reproducir
-                    //...
+                    terreno[colIndex][rowIndex]->animal->Reproducir(columns, rows, terreno);
                     //al final de cada dia los animales pierden 1 de energia
                     terreno[colIndex][rowIndex]->animal->Energia -= 1;
                     //si el animal perdio energia y llego a cero, se muere
