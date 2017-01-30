@@ -1,10 +1,23 @@
+/**
+*@file Zorro.cpp
+*@version 1.0
+*@date 29/01/17
+*@author Luis Diego Fernandez, Daniel Jimenez
+*@title Juego de la vida
+*@brief Clase Zorro
+*/
+
 #include "Zorro.h"
 #include "Celda.h"
 
+/*! \brief Constructor por defecto.
+ */
 Zorro::Zorro() {
 
 }
 
+/*! \brief Constructor para crear un Zorro con datos especificos.
+ */
 Zorro::Zorro(int Fila, int Columna, int Sexo) {
     this->Fila = Fila;
     this->Columna = Columna;
@@ -13,48 +26,85 @@ Zorro::Zorro(int Fila, int Columna, int Sexo) {
     tipoAnimal = "Zorro";
 }
 
+/*! \brief Destructor.
+ */
 Zorro::~Zorro() {
 
 }
 
+/*! \brief Metodo para que el zorro se mueva en el terreno. Es capaz de moverse
+ *         solo un espacio en el terrreno siempre que este desocupado y
+ *         sea aledaño.
+ *
+ *  \param xActual Posicion actual del animal.
+ *  \param yActual Posicion actual del animal.
+ *  \param xPrevio Posicion previa del animal.
+ *  \param yPrevio Posicion previa del animal.
+ *  \param contador Numero de veces que se ha desplzado el animal.
+ */
 int Zorro::Mover(int columns, int rows, Celda*** terreno) {
-    int xActual = this->Columna;
+    int xActual = this->Columna; //Posicion actual del animal.
     int yActual = this->Fila;
-    int yPrevio, xPrevio;
-    int contador = 0;
+    int yPrevio, xPrevio; //Posicion actual del animal.
+    int contador = 0; //Numero de veces que se ha desplazado el animal.
+    int temp;
 
-    for (int xpos = xActual-1; xpos <= xActual+1; ++xpos) {
-        for (int ypos = yActual-1; ypos <= yActual+1; ++ypos) {
-            if (!(xpos == xActual && ypos == yActual)) { //no se mete en si mismo
-                if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows))
-                    if((terreno[ypos][xpos]->ocupante.compare("Vacío") == 0) && ypos != yPrevio && xpos != xPrevio){
-                        terreno[ypos][xpos]->animal = new Zorro(ypos, xpos, terreno[yActual][xActual]->animal->Sexo);
-                        terreno[ypos][xpos]->ocupante = terreno[yActual][xActual]->ocupante;
-                        delete terreno[yActual][xActual]->animal;
-                        terreno[yActual][xActual]->ocupante = "Vacío";
-                        yPrevio = yActual;
-                        xPrevio = xActual;
-                        yActual = ypos;
-                        xActual = xpos;
-                        contador += 1;
-                        if(contador == 2)
-                            return 0;
+    //Verifico que el animal no se haya movido.
+    if(terreno[this->Fila][this->Columna]->animal->alreadyMoved == false) {
+        //Si el animal se mueve se deben empezar de nuevo los ciclos for por lo tanto se utiliza este ciclo while para ello.
+        while (temp) {
+            temp = 0;
+            //Se busca si en las posiciones aledañas si hay algun espacio libre en donde se pueda mover el animal.
+            //Este doble ciclo for esta configurado de manera que se busca alrededor de la celda en la cual se esta
+            //evita tambien salirse de la matriz para no dar errores de segmentacion y evita utilizarse a si misma.
+            for (int xpos = xActual-1; xpos <= xActual+1; ++xpos) {
+                for (int ypos = yActual-1; ypos <= yActual+1; ++ypos) {
+                    if (!(xpos == xActual && ypos == yActual)) { //no se mete en si mismo
+                        if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows))
+                            //Si la celda no tiene animal y ademas no es la posicion previa en la cual estuvo, se mueve.
+                            if((terreno[ypos][xpos]->ocupante.compare("Vacío") == 0) && ypos != yPrevio && xpos != xPrevio){
+                                //Creo el nuevo animal con las mismas caracteristicas que el original.
+                                terreno[ypos][xpos]->animal = new Zorro(ypos, xpos, terreno[yActual][xActual]->animal->Sexo);
+                                terreno[ypos][xpos]->animal->Energia = terreno[yActual][xActual]->animal->Energia;
+                                terreno[ypos][xpos]->ocupante = terreno[yActual][xActual]->ocupante;
+                                //Indico que ya se movio.
+                                terreno[ypos][xpos]->animal->alreadyMoved == true;
+                                //Elimino el animal de la posicion de la cual se esta desplazando para dejar la celda vacia.
+                                delete terreno[yActual][xActual]->animal;
+                                terreno[yActual][xActual]->ocupante = "Vacío";
+                                //Actualizo variables de control.
+                                yPrevio = yActual;
+                                xPrevio = xActual;
+                                yActual = ypos;
+                                xActual = xpos;
+                                contador += 1;
+                                if(contador == 2)
+                                    return 0;
+                            }
                     }
+                }
             }
         }
     }
     return 0;
 }
 
+/// \brief Metodo para Comer. Se alimenta de Ratones que esten en posiciones aledañas, consume 2 puntos
+///        y mata al otro animal. No puede excederse de 50 la energia del Zorro.
 int Zorro::Comer(int columns, int rows, Celda*** terreno) {
+
+    //Se busca si en las posiciones aledañas hay un Raton de cualquier sexo para eliminarlo y subir la energia del Zorro
+    //este doble ciclo for esta configurado de manera que se busca alrededor de la celda en la cual se esta
+    //evita tambien salirse de la matriz para no dar errores de segmentacion y evita utilizarse a si misma
     for (int xpos = this->Columna-1; xpos <= this->Columna+1; ++xpos) {
         for (int ypos = this->Fila-1; ypos <= this->Fila+1; ++ypos) {
             if (!(xpos == this->Columna && ypos == this->Fila)) { //no se mete en si mismo
                 if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows)){
                     if(terreno[ypos][xpos]->ocupante.compare(" RM")  == 0 || terreno[ypos][xpos]->ocupante.compare(" RH")  == 0) {
-                        delete terreno[ypos][xpos]->animal;
-                        terreno[ypos][xpos]->ocupante = "Vacío";
-                        terreno[this->Fila][this->Columna]->animal->Energia += 2;
+                        delete terreno[ypos][xpos]->animal; //Mato al animal.
+                        terreno[ypos][xpos]->ocupante = "Vacío"; //Asigno vacia la celda.
+                        terreno[this->Fila][this->Columna]->animal->Energia += 2; //Aumento energia del zorro
+                        //Verifico que no se pase de 50 la energia.
                         if(terreno[this->Fila][this->Columna]->animal->Energia > 50)
                             terreno[this->Fila][this->Columna]->animal->Energia = 50;
                         return 0;
@@ -67,11 +117,15 @@ int Zorro::Comer(int columns, int rows, Celda*** terreno) {
     return 0;
 }
 
-//Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo
-//si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia
+/// \brief Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie
+///        pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia.
+///
+/// \param reproduzcase Mediante esta variable se informa si hay una pareja disponible.
+/// \param x Posicion del animal con el cual se puede reproducir.
+/// \param y Posicion del animal con el cual se puede reproducir.
 void Zorro::Reproducir(int columns, int rows, Celda ***terreno) {
-    bool reproduzcase = false; //esta variable se va a poner en verdadero si existe una pareja disponeble
-    int x =0, y = 0;
+    bool reproduzcase = false; //Mediante esta variable se informa si hay una pareja disponible.
+    int x =0, y = 0; //Posicion del animal con el cual se puede reproducir.
 
     //en este doble ciclo se busca que haya una pareja disponible y que NO se haya reproducido en el presente dia
     //este doble ciclo for esta configurado de manera que se busca alrededor de la celda en la cual se esta

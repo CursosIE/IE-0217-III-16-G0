@@ -1,10 +1,23 @@
+/**
+*@file Celda.cpp
+*@version 1.0
+*@date 29/01/17
+*@author Luis Diego Fernandez, Daniel Jimenez
+*@title Juego de la vida
+*@brief Clase Celda
+*/
+
 #include "Celda.h"
 #include "Animal.h"
 
+/*! \brief Constructor por defecto.
+ */
 Celda::Celda() {
 
 }
 
+/*! \brief Constructor para crear Celda con datos especificos.
+ */
 Celda::Celda(int cantidadZacate, string tipoOcupante, int fila, int columna) {
     zacate = cantidadZacate;
     ocupante = tipoOcupante;
@@ -31,11 +44,14 @@ Celda::Celda(int cantidadZacate, string tipoOcupante, int fila, int columna) {
         animal = new Raton(fila, columna, 2);
 }
 
+
+/*! \brief Destructor.
+ */
 Celda::~Celda() {
 
 }
 
-//se imprime toda la informacion relevane de una celda y de el animal que esta dentro de ella
+///Se imprime toda la informacion relevane de una celda y de el animal que esta dentro de ella.
 void Celda::print() {
     cout << "Posición: [" << fila << ", " << columna << "]" << endl;
     cout << "Nivel zacate: " << zacate << endl;

@@ -13,13 +13,17 @@ using namespace std;
 class Animal;
 
 class Celda {
+
 //Atributos
 public:
+    ///Animal que se encuetra en la celda.
     Animal* animal;
-    int columna;
-    int fila;
-    string ocupante; // el tipo de animal
-    int zacate; // el zacate equivale a energia para ovejas y ratones
+    ///Posicion de la celda.
+    int columna, fila;
+    ///Tipo de animal que ocupa la celda.
+    string ocupante;
+    ///Cantidad de zacate presente en la celda.
+    int zacate;
 
 //Metodos
 public:
