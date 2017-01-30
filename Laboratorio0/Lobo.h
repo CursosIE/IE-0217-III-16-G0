@@ -15,8 +15,8 @@ public:
     Lobo(int Fila, int Columna, int Sexo);
     virtual ~Lobo();
 
-    int Mover(int columns, int rows, Celda*** terreno);
-    int Comer(int columns, int rows, Celda*** terreno);
+    int operator!(); //metodo mover
+    int operator++(); //metodo de comer
     void operator~(); //metodo reproducir
     //void PrintLobo();
 };

@@ -120,11 +120,11 @@ int Controlador::run(int amountOfDays, char* fileName) {
                     //si hay algun animal en el terreno, ejecutamos las acciones de los animales
                     if (terreno[colIndex][rowIndex]->ocupante != "Vacío") { //revisa que el campo tenga un animal
                         //Funcion mover
-                        //terreno[colIndex][rowIndex]->animal->Mover(columns, rows, terreno);
+                        !(*terreno[colIndex][rowIndex]->animal);
                         //revisa nuevamente que el campo tenga un animal y que no se hayan aplicado los metodos sobre el
                         if (terreno[colIndex][rowIndex]->ocupante != "Vacío" && terreno[colIndex][rowIndex]->animal->allFunctions == false) {
                             //Funcion Comer
-                            //terreno[colIndex][rowIndex]->animal->Comer(columns, rows, terreno);
+                            ++(*terreno[colIndex][rowIndex]->animal);
                             //Funcion reproducir
                             ~(*terreno[colIndex][rowIndex]->animal);
                             //al final de cada dia los animales pierden 1 de energia

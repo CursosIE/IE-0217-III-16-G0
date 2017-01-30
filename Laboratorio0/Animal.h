@@ -31,11 +31,10 @@ public:
     Animal();
     virtual ~Animal();
 
-    virtual int Mover(int columns, int rows, Celda*** terreno) = 0;
-    virtual int Comer(int columns, int rows, Celda*** terreno) = 0;
-    //virtual void Reproducir(int columns, int rows, Celda*** terreno) = 0;
-    virtual void operator~() = 0;
-    bool operator--();
+    virtual int operator!() = 0; //metodo mover
+    virtual int operator++() = 0; //metodo de comer
+    virtual void operator~() = 0; //metodo de reproducir
+    bool operator--(); // metodo de morir
     void Print();
 
 };

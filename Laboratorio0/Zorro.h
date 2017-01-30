@@ -14,8 +14,8 @@ public:
     Zorro(int Fila, int Columna, int Sexo);
     virtual ~Zorro();
 
-    int Mover(int columns, int rows, Celda*** terreno);
-    int Comer(int columns, int rows, Celda*** terreno);
+    int operator!(); //metodo mover
+    int operator++(); //funcion de comer
     void operator~(); //metodo reproducir
     //void PrintZorro();
 };

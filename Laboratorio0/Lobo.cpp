@@ -41,7 +41,7 @@ Lobo::~Lobo() {
  *  \param yPrevio Posicion previa del animal.
  *  \param contador Numero de veces que se ha desplzado el animal.
  */
-int Lobo::Mover(int columns, int rows, Celda*** terreno) {
+int Lobo::operator!() {
     int xActual = this->Columna; //Posicion actual del animal.
     int yActual = this->Fila;
     int yPrevio, xPrevio; //Posicion previa del animal.
@@ -49,7 +49,7 @@ int Lobo::Mover(int columns, int rows, Celda*** terreno) {
     int temp;
 
     //Verifico que el animal no se haya movido.
-    if(terreno[this->Fila][this->Columna]->animal->alreadyMoved == false) {
+    if(Controlador::terreno[this->Fila][this->Columna]->animal->alreadyMoved == false) {
         //Si el animal se mueve se deben empezar de nuevo los ciclos for por lo tanto se utiliza este ciclo while para ello.
         while (temp) {
             temp = 0;
@@ -59,18 +59,18 @@ int Lobo::Mover(int columns, int rows, Celda*** terreno) {
             for (int xpos = xActual-1; xpos <= xActual+1; ++xpos) {
                 for (int ypos = yActual-1; ypos <= yActual+1; ++ypos) {
                     if (!(xpos == xActual && ypos == yActual)) { //no se mete en si mismo
-                        if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows))
+                        if ((xpos >=  0 && xpos < Controlador::columns) && (ypos >=  0 && ypos < Controlador::rows))
                             //Si la celda no tiene animal y ademas no es la posicion previa en la cual estuvo, se mueve.
-                            if((terreno[ypos][xpos]->ocupante.compare("Vacío") == 0) && ypos != yPrevio && xpos != xPrevio){
+                            if((Controlador::terreno[ypos][xpos]->ocupante.compare("Vacío") == 0) && ypos != yPrevio && xpos != xPrevio){
                                 //Creo el nuevo animal con las mismas caracteristicas que el original.
-                                terreno[ypos][xpos]->animal = new Lobo(ypos, xpos, terreno[yActual][xActual]->animal->Sexo);
-                                terreno[ypos][xpos]->animal->Energia = terreno[yActual][xActual]->animal->Energia;
-                                terreno[ypos][xpos]->ocupante = terreno[yActual][xActual]->ocupante;
+                                Controlador::terreno[ypos][xpos]->animal = new Lobo(ypos, xpos, Controlador::terreno[yActual][xActual]->animal->Sexo);
+                                Controlador::terreno[ypos][xpos]->animal->Energia = Controlador::terreno[yActual][xActual]->animal->Energia;
+                                Controlador::terreno[ypos][xpos]->ocupante = Controlador::terreno[yActual][xActual]->ocupante;
                                 //Indico que ya se movio.
-                                terreno[ypos][xpos]->animal->alreadyMoved = true;
+                                Controlador::terreno[ypos][xpos]->animal->alreadyMoved = true;
                                 //Elimino el animal de la posicion de la cual se esta desplazando para dejar la celda vacia.
-                                delete terreno[yActual][xActual]->animal;
-                                terreno[yActual][xActual]->ocupante = "Vacío";
+                                delete Controlador::terreno[yActual][xActual]->animal;
+                                Controlador::terreno[yActual][xActual]->ocupante = "Vacío";
                                 //Actualizo variables de control.
                                 yPrevio = yActual;
                                 xPrevio = xActual;
@@ -93,47 +93,46 @@ int Lobo::Mover(int columns, int rows, Celda*** terreno) {
 /// \brief Metodo para comer. Se alimenta de cualquier otro animal que esten en posiciones aledañas. Recive 10 puntos
 ///        por Ovejas, 5 puntos por Zorros y 2 por ratones. Mata al otro animal. No puede excederse de 100 la energia
 ///        del Zorro. Si hay dos lobos machos alguno de los dos muere.
-int Lobo::Comer(int columns, int rows, Celda*** terreno) {
-
+int Lobo::operator++() {
     //Se busca si en las posiciones aledañas hay un Animal de cualquier especie para eliminarlo y subir la energia del Lobo
     //este doble ciclo for esta configurado de manera que se busca alrededor de la celda en la cual se esta
     //evita tambien salirse de la matriz para no dar errores de segmentacion y evita utilizarse a si misma
     for (int xpos = this->Columna-1; xpos <= this->Columna+1; ++xpos) {
         for (int ypos = this->Fila-1; ypos <= this->Fila+1; ++ypos) {
             if (!(xpos == this->Columna && ypos == this->Fila)) { //no se mete en si mismo
-                if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows)){
+                if ((xpos >=  0 && xpos < Controlador::columns) && (ypos >=  0 && ypos < Controlador::rows)){
                     //Verifico cual tipo de animal es porque la cantidad de puntos que recupera el lobo son diferentes
-                    if(terreno[ypos][xpos]->ocupante.compare(" OM")  == 0 || terreno[ypos][xpos]->ocupante.compare(" OH")  == 0) {
-                        delete terreno[ypos][xpos]->animal; //Mato al animal.
-                        terreno[ypos][xpos]->ocupante = "Vacío"; //Asigno vacia la celda.
-                        terreno[this->Fila][this->Columna]->animal->Energia += 10; //Aumento energia del Lobo.
+                    if(Controlador::terreno[ypos][xpos]->ocupante.compare(" OM")  == 0 || Controlador::terreno[ypos][xpos]->ocupante.compare(" OH")  == 0) {
+                        delete Controlador::terreno[ypos][xpos]->animal; //Mato al animal.
+                        Controlador::terreno[ypos][xpos]->ocupante = "Vacío"; //Asigno vacia la celda.
+                        Controlador::terreno[this->Fila][this->Columna]->animal->Energia += 10; //Aumento energia del Lobo.
                         //Verifico que no se pase de 100 la energia.
-                        if(terreno[this->Fila][this->Columna]->animal->Energia > 100)
-                            terreno[this->Fila][this->Columna]->animal->Energia = 100;
+                        if(Controlador::terreno[this->Fila][this->Columna]->animal->Energia > 100)
+                            Controlador::terreno[this->Fila][this->Columna]->animal->Energia = 100;
                         return 0;
-                    }else if(terreno[ypos][xpos]->ocupante.compare(" ZM")  == 0 || terreno[ypos][xpos]->ocupante.compare(" ZH")  == 0) {
-                        delete terreno[ypos][xpos]->animal;
-                        terreno[ypos][xpos]->ocupante = "Vacío";
-                        terreno[this->Fila][this->Columna]->animal->Energia += 5;
-                        if(terreno[this->Fila][this->Columna]->animal->Energia > 100)
-                            terreno[this->Fila][this->Columna]->animal->Energia = 100;
+                    }else if(Controlador::terreno[ypos][xpos]->ocupante.compare(" ZM")  == 0 || Controlador::terreno[ypos][xpos]->ocupante.compare(" ZH")  == 0) {
+                        delete Controlador::terreno[ypos][xpos]->animal;
+                        Controlador::terreno[ypos][xpos]->ocupante = "Vacío";
+                        Controlador::terreno[this->Fila][this->Columna]->animal->Energia += 5;
+                        if(Controlador::terreno[this->Fila][this->Columna]->animal->Energia > 100)
+                            Controlador::terreno[this->Fila][this->Columna]->animal->Energia = 100;
                         return 0;
-                    }else if(terreno[ypos][xpos]->ocupante.compare(" RM")  == 0 || terreno[ypos][xpos]->ocupante.compare(" RH")  == 0) {
-                        delete terreno[ypos][xpos]->animal;
-                        terreno[ypos][xpos]->ocupante = "Vacío";
-                        terreno[this->Fila][this->Columna]->animal->Energia += 2;
-                        if(terreno[this->Fila][this->Columna]->animal->Energia > 100)
-                            terreno[this->Fila][this->Columna]->animal->Energia = 100;
+                    }else if(Controlador::terreno[ypos][xpos]->ocupante.compare(" RM")  == 0 || Controlador::terreno[ypos][xpos]->ocupante.compare(" RH")  == 0) {
+                        delete Controlador::terreno[ypos][xpos]->animal;
+                        Controlador::terreno[ypos][xpos]->ocupante = "Vacío";
+                        Controlador::terreno[this->Fila][this->Columna]->animal->Energia += 2;
+                        if(Controlador::terreno[this->Fila][this->Columna]->animal->Energia > 100)
+                            Controlador::terreno[this->Fila][this->Columna]->animal->Energia = 100;
                         return 0;
                     //Si se encuentra otro Lobo macho utilizo una función para generar un numero aleatorio y asi decidir cual muere.
-                    }else if(terreno[ypos][xpos]->ocupante.compare(" LM") == 0 && terreno[this->Fila][this->Columna]->ocupante.compare(" LM") == 0){
+                    }else if(Controlador::terreno[ypos][xpos]->ocupante.compare(" LM") == 0 && Controlador::terreno[this->Fila][this->Columna]->ocupante.compare(" LM") == 0){
                         if((rand() % 10) < 5){
-                            delete terreno[ypos][xpos]->animal;
-                            terreno[ypos][xpos]->ocupante = "Vacío";
+                            delete Controlador::terreno[ypos][xpos]->animal;
+                            Controlador::terreno[ypos][xpos]->ocupante = "Vacío";
                             return 0;
                         }else{
-                            delete terreno[this->Fila][this->Columna]->animal;
-                            terreno[this->Columna][this->Fila]->ocupante = "Vacío";
+                            delete Controlador::terreno[this->Fila][this->Columna]->animal;
+                            Controlador::terreno[this->Columna][this->Fila]->ocupante = "Vacío";
                             return 0;
                         }
                     }

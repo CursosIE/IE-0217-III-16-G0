@@ -41,7 +41,7 @@ Zorro::~Zorro() {
  *  \param yPrevio Posicion previa del animal.
  *  \param contador Numero de veces que se ha desplzado el animal.
  */
-int Zorro::Mover(int columns, int rows, Celda*** terreno) {
+int Zorro::operator!() {
     int xActual = this->Columna; //Posicion actual del animal.
     int yActual = this->Fila;
     int yPrevio, xPrevio; //Posicion actual del animal.
@@ -49,7 +49,7 @@ int Zorro::Mover(int columns, int rows, Celda*** terreno) {
     int temp;
 
     //Verifico que el animal no se haya movido.
-    if(terreno[this->Fila][this->Columna]->animal->alreadyMoved == false) {
+    if(Controlador::terreno[this->Fila][this->Columna]->animal->alreadyMoved == false) {
         //Si el animal se mueve se deben empezar de nuevo los ciclos for por lo tanto se utiliza este ciclo while para ello.
         while (temp) {
             temp = 0;
@@ -59,18 +59,18 @@ int Zorro::Mover(int columns, int rows, Celda*** terreno) {
             for (int xpos = xActual-1; xpos <= xActual+1; ++xpos) {
                 for (int ypos = yActual-1; ypos <= yActual+1; ++ypos) {
                     if (!(xpos == xActual && ypos == yActual)) { //no se mete en si mismo
-                        if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows))
+                        if ((xpos >=  0 && xpos < Controlador::columns) && (ypos >=  0 && ypos < Controlador::rows))
                             //Si la celda no tiene animal y ademas no es la posicion previa en la cual estuvo, se mueve.
-                            if((terreno[ypos][xpos]->ocupante.compare("Vacío") == 0) && ypos != yPrevio && xpos != xPrevio){
+                            if((Controlador::terreno[ypos][xpos]->ocupante.compare("Vacío") == 0) && ypos != yPrevio && xpos != xPrevio){
                                 //Creo el nuevo animal con las mismas caracteristicas que el original.
-                                terreno[ypos][xpos]->animal = new Zorro(ypos, xpos, terreno[yActual][xActual]->animal->Sexo);
-                                terreno[ypos][xpos]->animal->Energia = terreno[yActual][xActual]->animal->Energia;
-                                terreno[ypos][xpos]->ocupante = terreno[yActual][xActual]->ocupante;
+                                Controlador::terreno[ypos][xpos]->animal = new Zorro(ypos, xpos, Controlador::terreno[yActual][xActual]->animal->Sexo);
+                                Controlador::terreno[ypos][xpos]->animal->Energia = Controlador::terreno[yActual][xActual]->animal->Energia;
+                                Controlador::terreno[ypos][xpos]->ocupante = Controlador::terreno[yActual][xActual]->ocupante;
                                 //Indico que ya se movio.
-                                terreno[ypos][xpos]->animal->alreadyMoved == true;
+                                Controlador::terreno[ypos][xpos]->animal->alreadyMoved = true;
                                 //Elimino el animal de la posicion de la cual se esta desplazando para dejar la celda vacia.
-                                delete terreno[yActual][xActual]->animal;
-                                terreno[yActual][xActual]->ocupante = "Vacío";
+                                delete Controlador::terreno[yActual][xActual]->animal;
+                                Controlador::terreno[yActual][xActual]->ocupante = "Vacío";
                                 //Actualizo variables de control.
                                 yPrevio = yActual;
                                 xPrevio = xActual;
@@ -90,7 +90,7 @@ int Zorro::Mover(int columns, int rows, Celda*** terreno) {
 
 /// \brief Metodo para Comer. Se alimenta de Ratones que esten en posiciones aledañas, consume 2 puntos
 ///        y mata al otro animal. No puede excederse de 50 la energia del Zorro.
-int Zorro::Comer(int columns, int rows, Celda*** terreno) {
+int Zorro::operator++() {
 
     //Se busca si en las posiciones aledañas hay un Raton de cualquier sexo para eliminarlo y subir la energia del Zorro
     //este doble ciclo for esta configurado de manera que se busca alrededor de la celda en la cual se esta
@@ -98,14 +98,14 @@ int Zorro::Comer(int columns, int rows, Celda*** terreno) {
     for (int xpos = this->Columna-1; xpos <= this->Columna+1; ++xpos) {
         for (int ypos = this->Fila-1; ypos <= this->Fila+1; ++ypos) {
             if (!(xpos == this->Columna && ypos == this->Fila)) { //no se mete en si mismo
-                if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows)){
-                    if(terreno[ypos][xpos]->ocupante.compare(" RM")  == 0 || terreno[ypos][xpos]->ocupante.compare(" RH")  == 0) {
-                        delete terreno[ypos][xpos]->animal; //Mato al animal.
-                        terreno[ypos][xpos]->ocupante = "Vacío"; //Asigno vacia la celda.
-                        terreno[this->Fila][this->Columna]->animal->Energia += 2; //Aumento energia del zorro
+                if ((xpos >=  0 && xpos < Controlador::columns) && (ypos >=  0 && ypos < Controlador::rows)){
+                    if(Controlador::terreno[ypos][xpos]->ocupante.compare(" RM")  == 0 || Controlador::terreno[ypos][xpos]->ocupante.compare(" RH")  == 0) {
+                        delete Controlador::terreno[ypos][xpos]->animal; //Mato al animal.
+                        Controlador::terreno[ypos][xpos]->ocupante = "Vacío"; //Asigno vacia la celda.
+                        Controlador::terreno[this->Fila][this->Columna]->animal->Energia += 2; //Aumento energia del zorro
                         //Verifico que no se pase de 50 la energia.
-                        if(terreno[this->Fila][this->Columna]->animal->Energia > 50)
-                            terreno[this->Fila][this->Columna]->animal->Energia = 50;
+                        if(Controlador::terreno[this->Fila][this->Columna]->animal->Energia > 50)
+                            Controlador::terreno[this->Fila][this->Columna]->animal->Energia = 50;
                         return 0;
                     }
                 }

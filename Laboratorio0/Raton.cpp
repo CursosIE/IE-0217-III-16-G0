@@ -35,27 +35,27 @@ Raton::~Raton() {
  *         solo un espacio en el terrreno siempre que este desocupado y
  *         sea aledaño.
  */
-int Raton::Mover(int columns, int rows, Celda*** terreno) {
+int Raton::operator!() {
     //Verifico que el animal no se haya movido.
-    if(terreno[this->Fila][this->Columna]->animal->alreadyMoved == false) {
+    if(Controlador::terreno[this->Fila][this->Columna]->animal->alreadyMoved == false) {
         //Se busca si en las posiciones aledañas si hay algun espacio libre en donde se pueda mover el animal.
         //Este doble ciclo for esta configurado de manera que se busca alrededor de la celda en la cual se esta
         //evita tambien salirse de la matriz para no dar errores de segmentacion y evita utilizarse a si misma.
         for (int xpos = this->Columna-1; xpos <= this->Columna+1; ++xpos) {
             for (int ypos = this->Fila-1; ypos <= this->Fila+1; ++ypos) {
                 if (!(xpos == this->Columna && ypos == this->Fila)) { //no se mete en si mismo
-                    if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows)) {
+                    if ((xpos >=  0 && xpos < Controlador::columns) && (ypos >=  0 && ypos < Controlador::rows)) {
                         //Si la celda no tiene animal, se mueve.
-                        if(terreno[ypos][xpos]->ocupante.compare("Vacío") == 0){
+                        if(Controlador::terreno[ypos][xpos]->ocupante.compare("Vacío") == 0){
                             //Creo el nuevo animal con las mismas caracteristicas que el original.
-                            terreno[ypos][xpos]->animal = new Raton(ypos, xpos, terreno[this->Fila][this->Columna]->animal->Sexo);
-                            terreno[ypos][xpos]->animal->Energia = terreno[this->Fila][this->Columna]->animal->Energia;
-                            terreno[ypos][xpos]->ocupante = terreno[this->Fila][this->Columna]->ocupante;
+                            Controlador::terreno[ypos][xpos]->animal = new Raton(ypos, xpos, Controlador::terreno[this->Fila][this->Columna]->animal->Sexo);
+                            Controlador::terreno[ypos][xpos]->animal->Energia = Controlador::terreno[this->Fila][this->Columna]->animal->Energia;
+                            Controlador::terreno[ypos][xpos]->ocupante = Controlador::terreno[this->Fila][this->Columna]->ocupante;
                             //Indico que ya se movio.
-                            terreno[ypos][xpos]->animal->alreadyMoved = true;
+                            Controlador::terreno[ypos][xpos]->animal->alreadyMoved = true;
                             //Elimino el animal de la posicion de la cual se esta desplazando para dejar la celda vacia.
-                            delete terreno[this->Fila][this->Columna]->animal;
-                            terreno[this->Fila][this->Columna]->ocupante = "Vacío";
+                            delete Controlador::terreno[this->Fila][this->Columna]->animal;
+                            Controlador::terreno[this->Fila][this->Columna]->ocupante = "Vacío";
                             return 0;
                         }
 
@@ -70,21 +70,21 @@ int Raton::Mover(int columns, int rows, Celda*** terreno) {
 /// \brief Metodo para comer. Se alimenta del zacate, consume 5 puntos del zacate y recupera la misma cantidad.
 ///        En caso de no haber suficiente zacate, consume lo que haya y recupera eso mismo. No puede excederse
 ///        de 25 la energia del Raton.
-int Raton::Comer(int columns, int rows, Celda*** terreno) {
+int Raton::operator++() {
     //Si el zacate tiene mas de 5 puntos, consume 5 y los adquiere el animal.
-    if(terreno[this->Fila][this->Columna]->zacate >= 5){
-        terreno[this->Fila][this->Columna]->zacate -= 5;
-        terreno[this->Fila][this->Columna]->animal->Energia += 5;
+    if(Controlador::terreno[this->Fila][this->Columna]->zacate >= 5){
+        Controlador::terreno[this->Fila][this->Columna]->zacate -= 5;
+        Controlador::terreno[this->Fila][this->Columna]->animal->Energia += 5;
         //Se verifica que no se haya pasado de 25
-        if(terreno[this->Fila][this->Columna]->animal->Energia > 25)
-            terreno[this->Fila][this->Columna]->animal->Energia = 25;
+        if(Controlador::terreno[this->Fila][this->Columna]->animal->Energia > 25)
+            Controlador::terreno[this->Fila][this->Columna]->animal->Energia = 25;
     //En caso de que haya menos que 5 puntos consume la cantidad de puntos que haya nada mas.
     }else{
-        terreno[this->Fila][this->Columna]->animal->Energia += terreno[this->Fila][this->Columna]->zacate;
-        terreno[this->Fila][this->Columna]->zacate = 0;
+        Controlador::terreno[this->Fila][this->Columna]->animal->Energia += Controlador::terreno[this->Fila][this->Columna]->zacate;
+        Controlador::terreno[this->Fila][this->Columna]->zacate = 0;
         //Se verifica que no se haya pasado de 25
-        if(terreno[this->Fila][this->Columna]->animal->Energia > 25)
-            terreno[this->Fila][this->Columna]->animal->Energia = 25;
+        if(Controlador::terreno[this->Fila][this->Columna]->animal->Energia > 25)
+            Controlador::terreno[this->Fila][this->Columna]->animal->Energia = 25;
     }
 
     return 0;

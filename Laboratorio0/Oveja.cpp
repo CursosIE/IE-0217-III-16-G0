@@ -41,7 +41,7 @@ Oveja::~Oveja() {
  *  \param yPrevio Posicion previa del animal.
  *  \param contador Numero de veces que se ha desplzado el animal.
  */
-int Oveja::Mover(int columns, int rows, Celda*** terreno) {
+int Oveja::operator!() {
     int xActual = this->Columna; //Posicion actual del animal.
     int yActual = this->Fila;
     int yPrevio, xPrevio; //Posicion actual del animal.
@@ -49,7 +49,7 @@ int Oveja::Mover(int columns, int rows, Celda*** terreno) {
     int temp;
 
     //Verifico que el animal no se haya movido.
-    if(terreno[this->Fila][this->Columna]->animal->alreadyMoved == false) {
+    if(Controlador::terreno[this->Fila][this->Columna]->animal->alreadyMoved == false) {
         //Si el animal se mueve se deben empezar de nuevo los ciclos for por lo tanto se utiliza este ciclo while para ello.
         while (temp) {
             temp = 0;
@@ -59,18 +59,18 @@ int Oveja::Mover(int columns, int rows, Celda*** terreno) {
             for (int xpos = xActual-1; xpos <= xActual+1; ++xpos) {
                 for (int ypos = yActual-1; ypos <= yActual+1; ++ypos) {
                     if (!(xpos == xActual && ypos == yActual)) { //no se mete en si mismo
-                        if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows))
+                        if ((xpos >=  0 && xpos < Controlador::columns) && (ypos >=  0 && ypos < Controlador::rows))
                             //Si la celda no tiene animal y ademas no es la posicion previa en la cual estuvo, se mueve.
-                            if((terreno[ypos][xpos]->ocupante.compare("Vacío") == 0) && ypos != yPrevio && xpos != xPrevio){
+                            if((Controlador::terreno[ypos][xpos]->ocupante.compare("Vacío") == 0) && ypos != yPrevio && xpos != xPrevio){
                                 //Creo el nuevo animal con las mismas caracteristicas que el original.
-                                terreno[ypos][xpos]->animal = new Oveja(ypos, xpos, terreno[yActual][xActual]->animal->Sexo);
-                                terreno[ypos][xpos]->animal->Energia = terreno[yActual][xActual]->animal->Energia;
-                                terreno[ypos][xpos]->ocupante = terreno[yActual][xActual]->ocupante;
+                                Controlador::terreno[ypos][xpos]->animal = new Oveja(ypos, xpos, Controlador::terreno[yActual][xActual]->animal->Sexo);
+                                Controlador::terreno[ypos][xpos]->animal->Energia = Controlador::terreno[yActual][xActual]->animal->Energia;
+                                Controlador::terreno[ypos][xpos]->ocupante = Controlador::terreno[yActual][xActual]->ocupante;
                                 //Indico que ya se movio.
-                                terreno[ypos][xpos]->animal->alreadyMoved = true;
+                                Controlador::terreno[ypos][xpos]->animal->alreadyMoved = true;
                                 //Elimino el animal de la posicion de la cual se esta desplazando para dejar la celda vacia.
-                                delete terreno[yActual][xActual]->animal;
-                                terreno[yActual][xActual]->ocupante = "Vacío";
+                                delete Controlador::terreno[yActual][xActual]->animal;
+                                Controlador::terreno[yActual][xActual]->ocupante = "Vacío";
                                 //Actualizo variables de control.
                                 yPrevio = yActual;
                                 xPrevio = xActual;
@@ -91,21 +91,21 @@ int Oveja::Mover(int columns, int rows, Celda*** terreno) {
 /// \brief Metodo para comer. Se alimenta del zacate, consume 10 puntos del zacate y recupera la misma cantidad.
 ///        En caso de no haber suficiente zacate, consume lo que haya y recupera eso mismo. No puede excederse
 ///        de 75 la energia de la oveja.
-int Oveja::Comer(int columns, int rows, Celda*** terreno) {
+int Oveja::operator++() {
     //Si el zacate tiene mas de 10 puntos, consume 10 y los adquiere el animal.
-    if(terreno[this->Fila][this->Columna]->zacate >= 10){
-        terreno[this->Fila][this->Columna]->zacate -= 10;
-        terreno[this->Fila][this->Columna]->animal->Energia += 10;
+    if(Controlador::terreno[this->Fila][this->Columna]->zacate >= 10){
+        Controlador::terreno[this->Fila][this->Columna]->zacate -= 10;
+        Controlador::terreno[this->Fila][this->Columna]->animal->Energia += 10;
         //Se verifica que no se haya pasado de 75
-        if(terreno[this->Fila][this->Columna]->animal->Energia > 75)
-            terreno[this->Fila][this->Columna]->animal->Energia = 75;
+        if(Controlador::terreno[this->Fila][this->Columna]->animal->Energia > 75)
+            Controlador::terreno[this->Fila][this->Columna]->animal->Energia = 75;
     //En caso de que haya menos que 10 puntos consume la cantidad de puntos que haya nada mas.
     }else{
-        terreno[this->Fila][this->Columna]->animal->Energia += terreno[this->Fila][this->Columna]->zacate;
-        terreno[this->Fila][this->Columna]->zacate = 0;
+        Controlador::terreno[this->Fila][this->Columna]->animal->Energia += Controlador::terreno[this->Fila][this->Columna]->zacate;
+        Controlador::terreno[this->Fila][this->Columna]->zacate = 0;
         //Se verifica que no se haya pasado de 75
-        if(terreno[this->Fila][this->Columna]->animal->Energia > 75)
-            terreno[this->Fila][this->Columna]->animal->Energia = 75;
+        if(Controlador::terreno[this->Fila][this->Columna]->animal->Energia > 75)
+            Controlador::terreno[this->Fila][this->Columna]->animal->Energia = 75;
     }
 
     return 0;
