@@ -19,7 +19,8 @@ class Controlador {
 public:
     Controlador();
     virtual ~Controlador();
-    void resetReproduceMark(int columns, int rows, Celda*** terreno); //resetea el atributo alreadyReproduced al final de cada dia
+    void printTerreno(int columns, int rows, Celda*** terreno);
+    void resetMarks(int columns, int rows, Celda*** terreno); //resetea el atributo alreadyReproduced al final de cada dia
     int run(int amountOfDays, char* fileName); //corre el juego
 };
 

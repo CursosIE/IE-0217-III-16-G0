@@ -21,6 +21,18 @@ Controlador::~Controlador() {
 
 }
 
+/*! \brief Metodo que imprime el estado del sistema (terreno)
+ *
+ *  \param columns Posicion en la cual se desea crear el animal y establecer los datos a la celda.
+ *  \param rows Posicion en la cual se desea crear el animal y establecer los datos a la celda.
+ *  \param terreno La matriz de celdas con el cual esta basado el juego
+ */
+void Controlador::printTerreno(int columns, int rows, Celda ***terreno) {
+    for (int colIndex = 0; colIndex < columns; ++colIndex)
+        for (int rowIndex = 0; rowIndex < rows; ++rowIndex)
+            terreno[colIndex][rowIndex]->print();
+}
+
 /*! \brief Metodo que ejecuta la logica del juego.
  *
  *  \param animal Almacenar temporalmente el animal que se lee del archivo de texto.
@@ -81,7 +93,10 @@ int Controlador::run(int amountOfDays, char* fileName) {
 
     //EMPEZAMOS A CORRER LOS DIAS
     for (int daysIndex = 1; daysIndex <= amountOfDays; ++daysIndex) {
-        cout << "\nInicio día " << daysIndex << ": \n" << endl;
+        //imprimo el estado del sistema al inicio del dia
+        cout << "\nEstado al inicio del día " << daysIndex << ": \n" << endl;
+        printTerreno(columns, rows, terreno);
+
         //Para estar seguros que cada día se apliquen todos los metodos sobre los animales recorremos la matriz dos veces
         for (int banderaControl = 0; banderaControl < 2; ++banderaControl) {
             for (int colIndex = 0; colIndex < columns; ++colIndex) {
@@ -124,21 +139,18 @@ int Controlador::run(int amountOfDays, char* fileName) {
                 }
             }
         }
-        resetReproduceMark(columns, rows, terreno); //se resetean las marcas de reproduccion cada dia
 
-        //Utilizo dos ciclos anidados para imprimir el terreno al finalizar el dia
-        for (int colIndex = 0; colIndex < columns; ++colIndex)
-            for (int rowIndex = 0; rowIndex < rows; ++rowIndex)
-                terreno[colIndex][rowIndex]->print();
+        resetMarks(columns, rows, terreno); //se resetean las marcas de reproduccion cada dia
 
-        cout << "Final día " << daysIndex << "..! \n" << endl;
+        //imprimo el estado del sistema al final del dia
+        cout << "Estado al final del día " << daysIndex << "..! \n" << endl;
+        printTerreno(columns, rows, terreno);
     }
     cout << endl;
 
 
     //al acabar la ejecucion del juego, al pasar todos los dias hay que liberar toda la memoria dinamica
     //que se utilizo. En este caso hay que liberar todos los animales y las celdas
-
     for (int colIndex = 0; colIndex < columns; ++colIndex) {
         for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
             if(terreno[colIndex][rowIndex]->ocupante != "Vacío")
@@ -157,7 +169,7 @@ int Controlador::run(int amountOfDays, char* fileName) {
 /// \brief Metodo para resetear banderas de control. Cada animal tiene una marca que dice si ya se reprodujo, se movio
 ///        y aplicaron demas metodos cada dia, entonces al finalizar cada dia se resetean las marcas de todos los animales
 ///        para que al dia siguiente puedan ser aplicadas nuevamente.
-void Controlador::resetReproduceMark(int columns, int rows, Celda*** terreno) {
+void Controlador::resetMarks(int columns, int rows, Celda*** terreno) {
     for (int colIndex = 0; colIndex < columns; ++colIndex) {
         for (int rowIndex = 0; rowIndex < rows; ++rowIndex) {
             if (terreno[colIndex][rowIndex]->ocupante.compare("Vacío") != 0) {
