@@ -9,6 +9,10 @@
 
 #include "Controlador.h"
 
+int Controlador::columns;
+int Controlador::rows;
+Celda*** Controlador::terreno;
+
 /*! \brief Constructor por defecto.
  */
 Controlador::Controlador() {
@@ -49,7 +53,7 @@ int Controlador::run(int amountOfDays, char* fileName) {
     //declaracion de variables de interes
     //int amountOfDays = 5; //esta se utilizaba antes de pasarla como argumento, para pruebas
     string animal; //Almacenar temporalmente el animal que se lee del archivo de texto.
-    int columns = 0, rows = 0, zacate = 0; //Posicion en la cual se desea crear el animal y datos de la celda.
+    int zacate = 0; //Posicion en la cual se desea crear el animal y datos de la celda.
     string line; //Variable de utilidad a la hora de leer el archivo de datos.
     int posicionColumna = 0, posicionFila = 0; //Variables para recorrer el terreno.
 
@@ -64,7 +68,7 @@ int Controlador::run(int amountOfDays, char* fileName) {
         dataFile >> rows;
     }
     //se crea una matriz de objetos tipo Celda
-    Celda*** terreno = new Celda**[columns];
+    terreno = new Celda**[columns];
     for (int index = 0; index < columns; ++index) {
         terreno[index] = new Celda*[rows];
     }
@@ -116,19 +120,18 @@ int Controlador::run(int amountOfDays, char* fileName) {
                     //si hay algun animal en el terreno, ejecutamos las acciones de los animales
                     if (terreno[colIndex][rowIndex]->ocupante != "Vacío") { //revisa que el campo tenga un animal
                         //Funcion mover
-                        terreno[colIndex][rowIndex]->animal->Mover(columns, rows, terreno);
+                        //terreno[colIndex][rowIndex]->animal->Mover(columns, rows, terreno);
                         //revisa nuevamente que el campo tenga un animal y que no se hayan aplicado los metodos sobre el
                         if (terreno[colIndex][rowIndex]->ocupante != "Vacío" && terreno[colIndex][rowIndex]->animal->allFunctions == false) {
                             //Funcion Comer
-                            terreno[colIndex][rowIndex]->animal->Comer(columns, rows, terreno);
+                            //terreno[colIndex][rowIndex]->animal->Comer(columns, rows, terreno);
                             //Funcion reproducir
-                            terreno[colIndex][rowIndex]->animal->Reproducir(columns, rows, terreno);
+                            ~(*terreno[colIndex][rowIndex]->animal);
                             //al final de cada dia los animales pierden 1 de energia
                             terreno[colIndex][rowIndex]->animal->Energia -= 1;
                             //si el animal perdio energia y llego a cero, se muere
                             //Funcion morir sobrecargada con el operado --
-                            //if(terreno[colIndex][rowIndex]->animal->operator --()){
-                            if(terreno[colIndex][rowIndex]->animal->operator--()){
+                            if(--(*terreno[colIndex][rowIndex]->animal)){
                                 terreno[colIndex][rowIndex]->ocupante = "Vacío";
                                 delete terreno[colIndex][rowIndex]->animal;
                             }
@@ -162,6 +165,10 @@ int Controlador::run(int amountOfDays, char* fileName) {
     delete terreno; //libero el vector de punteros a celda que se creo
 
     cout << "Finalización del programa..!" << endl;
+
+    //PRUEBA PLANTILLA
+    //Lobo* l1 = new Lobo(1, 1, 1);
+
 
     return 0;
 }

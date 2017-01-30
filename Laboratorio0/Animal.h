@@ -33,9 +33,9 @@ public:
 
     virtual int Mover(int columns, int rows, Celda*** terreno) = 0;
     virtual int Comer(int columns, int rows, Celda*** terreno) = 0;
-    virtual void Reproducir(int columns, int rows, Celda*** terreno) = 0;
-    bool Morir();
-    inline bool operator--() {return Morir();} //sobrecarga del operador -- con Morir()
+    //virtual void Reproducir(int columns, int rows, Celda*** terreno) = 0;
+    virtual void operator~() = 0;
+    bool operator--();
     void Print();
 
 };

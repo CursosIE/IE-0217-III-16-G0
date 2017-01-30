@@ -27,7 +27,7 @@ Animal::~Animal(){
 
 /*! \brief Metodo para determinar si un animal debe morir.
  */
-bool Animal::Morir() {
+bool Animal::operator--() {
     //si un animal se queda sin energia se muere
     if(Energia == 0){
         cout << "Murió: " << this << endl; //mensaje de muerte de un animal

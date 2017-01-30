@@ -8,7 +8,6 @@
 */
 
 #include "Zorro.h"
-#include "Celda.h"
 
 /*! \brief Constructor por defecto.
  */
@@ -123,7 +122,8 @@ int Zorro::Comer(int columns, int rows, Celda*** terreno) {
 /// \param reproduzcase Mediante esta variable se informa si hay una pareja disponible.
 /// \param x Posicion del animal con el cual se puede reproducir.
 /// \param y Posicion del animal con el cual se puede reproducir.
-void Zorro::Reproducir(int columns, int rows, Celda ***terreno) {
+//metodo reproducir
+void Zorro::operator~() {
     bool reproduzcase = false; //Mediante esta variable se informa si hay una pareja disponible.
     int x =0, y = 0; //Posicion del animal con el cual se puede reproducir.
 
@@ -133,12 +133,12 @@ void Zorro::Reproducir(int columns, int rows, Celda ***terreno) {
     for (int xpos = this->Columna-1; xpos <= this->Columna+1; ++xpos) {
         for (int ypos = this->Fila-1; ypos <= this->Fila+1; ++ypos) {
             if (!(xpos == this->Columna && ypos == this->Fila) && !reproduzcase) { //no se mete en si mismo
-                if ((xpos >=  0 && xpos < columns) && (ypos >=  0 && ypos < rows)) { //evita que se salga de la matriz
-                    if (terreno[ypos][xpos]->ocupante.compare("Vacío") != 0) { //si hay un animal en la celda entra
-                        if (terreno[ypos][xpos]->animal->tipoAnimal.compare(this->tipoAnimal) == 0) {//revisa que ambos animales sean del mismo tipo
-                            if (terreno[ypos][xpos]->animal->Sexo != this->Sexo && !terreno[ypos][xpos]->animal->alreadyReproduced) { //revisa que ambos animales sean de distinto sexo
+                if ((xpos >=  0 && xpos < Controlador::columns) && (ypos >=  0 && ypos < Controlador::rows)) { //evita que se salga de la matriz
+                    if (Controlador::terreno[ypos][xpos]->ocupante.compare("Vacío") != 0) { //si hay un animal en la celda entra
+                        if (Controlador::terreno[ypos][xpos]->animal->tipoAnimal.compare(this->tipoAnimal) == 0) {//revisa que ambos animales sean del mismo tipo
+                            if (Controlador::terreno[ypos][xpos]->animal->Sexo != this->Sexo && !Controlador::terreno[ypos][xpos]->animal->alreadyReproduced) { //revisa que ambos animales sean de distinto sexo
                                 reproduzcase = true;//pone la bandera
-                                terreno[ypos][xpos]->animal->alreadyReproduced = true;//marca que el animal target ya se va a reproducir por este dia
+                                Controlador::terreno[ypos][xpos]->animal->alreadyReproduced = true;//marca que el animal target ya se va a reproducir por este dia
                                 //estas posiciones se guardan en caso de que no se encuentro un espacio  para poner la
                                 //cria, entonces se desmarca la pareja para que se pueda reproducir de nuevo
                                 x = xpos;
@@ -155,14 +155,14 @@ void Zorro::Reproducir(int columns, int rows, Celda ***terreno) {
     for (int xpos1 = this->Columna-1; xpos1 <= this->Columna+1; ++xpos1) {
         for (int ypos1 = this->Fila-1; ypos1 <= this->Fila+1; ++ypos1) {
             if (!(xpos1 == this->Columna && ypos1 == this->Fila)) { //no se mete en si mismo
-                if ((xpos1 >=  0 && xpos1 < columns) && (ypos1 >=  0 && ypos1 < rows)) {
-                    if (terreno[ypos1][xpos1]->ocupante.compare("Vacío") == 0) {//busca uno que este vacio
+                if ((xpos1 >=  0 && xpos1 < Controlador::columns) && (ypos1 >=  0 && ypos1 < Controlador::rows)) {
+                    if (Controlador::terreno[ypos1][xpos1]->ocupante.compare("Vacío") == 0) {//busca uno que este vacio
                         if(reproduzcase && !this->alreadyReproduced){
                             //crea un animal nuevo con el sexo del animal ->this
-                            terreno[ypos1][xpos1]->animal = new Zorro(ypos1, xpos1, terreno[this->Fila][this->Columna]->animal->Sexo);
-                            terreno[ypos1][xpos1]->ocupante = terreno[this->Fila][this->Columna]->ocupante;
+                            Controlador::terreno[ypos1][xpos1]->animal = new Zorro(ypos1, xpos1, Controlador::terreno[this->Fila][this->Columna]->animal->Sexo);
+                            Controlador::terreno[ypos1][xpos1]->ocupante = Controlador::terreno[this->Fila][this->Columna]->ocupante;
                             reproduzcase = false;
-                            terreno[this->Fila][this->Columna]->animal->alreadyReproduced = true;
+                            Controlador::terreno[this->Fila][this->Columna]->animal->alreadyReproduced = true;
                         }
                     }
                 }
@@ -170,8 +170,8 @@ void Zorro::Reproducir(int columns, int rows, Celda ***terreno) {
         }
     }
     //en caso de que ->this no haya encontrado campo para poner el hijo, entonces desmarco a la pareja
-    if (!terreno[this->Fila][this->Columna]->animal->alreadyReproduced)
-        terreno[y][x]->animal->alreadyReproduced = false;
+    if (!Controlador::terreno[this->Fila][this->Columna]->animal->alreadyReproduced)
+        Controlador::terreno[y][x]->animal->alreadyReproduced = false;
 }
 
 /*void Zorro::PrintZorro() {

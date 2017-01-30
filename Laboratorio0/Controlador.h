@@ -14,6 +14,11 @@
 using namespace std;
 
 class Controlador {
+//atributos
+public:
+    static int columns;
+    static int rows;
+    static Celda*** terreno;
 
 //Metodos
 public:
