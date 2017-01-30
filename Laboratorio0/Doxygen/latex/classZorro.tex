@@ -1,0 +1,162 @@
+\hypertarget{classZorro}{}\section{Zorro Class Reference}
+\label{classZorro}\index{Zorro@{Zorro}}
+
+
+{\ttfamily \#include $<$Zorro.\+h$>$}
+
+
+
+Inheritance diagram for Zorro\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classZorro__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Zorro\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classZorro__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classZorro_adb6072a36faa243b1c185ec3e566f556}{Zorro} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\hyperlink{classZorro_a16f7f378084d2fa795750d1ff824ca76}{Zorro} (int \hyperlink{classAnimal_ab403adfd13b57143eff123bdd6a2febb}{Fila}, int \hyperlink{classAnimal_a340d64e6e4ffe5f35e0855c63aad1bd3}{Columna}, int \hyperlink{classAnimal_a42b629ae5a7e0c05263a3f6e592ea116}{Sexo})
+\begin{DoxyCompactList}\small\item\em Constructor para crear un \hyperlink{classZorro}{Zorro} con datos especificos. \end{DoxyCompactList}\item 
+virtual \hyperlink{classZorro_a73fe75fd4746a9347da559ffaa741842}{$\sim$\+Zorro} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{classZorro_a2facc3ce009fc8d46ff7cbd93370c06b}{Mover} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+\begin{DoxyCompactList}\small\item\em Metodo para que el zorro se mueva en el terreno. Es capaz de moverse solo un espacio en el terrreno siempre que este desocupado y sea aledaño. \end{DoxyCompactList}\item 
+int \hyperlink{classZorro_aff938c6cbfac969d13261481b6cb4976}{Comer} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+\begin{DoxyCompactList}\small\item\em Metodo para Comer. Se alimenta de Ratones que esten en posiciones aledañas, consume 2 puntos y mata al otro animal. No puede excederse de 50 la energia del \hyperlink{classZorro}{Zorro}. \end{DoxyCompactList}\item 
+void \hyperlink{classZorro_a22664badacda98773684a81b0c6c29a0}{Reproducir} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+\begin{DoxyCompactList}\small\item\em Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Zorro@{Zorro}!Zorro@{Zorro}}
+\index{Zorro@{Zorro}!Zorro@{Zorro}}
+\subsubsection[{\texorpdfstring{Zorro()}{Zorro()}}]{\setlength{\rightskip}{0pt plus 5cm}Zorro\+::\+Zorro (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classZorro_adb6072a36faa243b1c185ec3e566f556}{}\label{classZorro_adb6072a36faa243b1c185ec3e566f556}
+
+
+Constructor por defecto. 
+
+\index{Zorro@{Zorro}!Zorro@{Zorro}}
+\index{Zorro@{Zorro}!Zorro@{Zorro}}
+\subsubsection[{\texorpdfstring{Zorro(int Fila, int Columna, int Sexo)}{Zorro(int Fila, int Columna, int Sexo)}}]{\setlength{\rightskip}{0pt plus 5cm}Zorro\+::\+Zorro (
+\begin{DoxyParamCaption}
+\item[{int}]{Fila, }
+\item[{int}]{Columna, }
+\item[{int}]{Sexo}
+\end{DoxyParamCaption}
+)}\hypertarget{classZorro_a16f7f378084d2fa795750d1ff824ca76}{}\label{classZorro_a16f7f378084d2fa795750d1ff824ca76}
+
+
+Constructor para crear un \hyperlink{classZorro}{Zorro} con datos especificos. 
+
+\index{Zorro@{Zorro}!````~Zorro@{$\sim$\+Zorro}}
+\index{````~Zorro@{$\sim$\+Zorro}!Zorro@{Zorro}}
+\subsubsection[{\texorpdfstring{$\sim$\+Zorro()}{~Zorro()}}]{\setlength{\rightskip}{0pt plus 5cm}Zorro\+::$\sim$\+Zorro (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classZorro_a73fe75fd4746a9347da559ffaa741842}{}\label{classZorro_a73fe75fd4746a9347da559ffaa741842}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Zorro@{Zorro}!Comer@{Comer}}
+\index{Comer@{Comer}!Zorro@{Zorro}}
+\subsubsection[{\texorpdfstring{Comer(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Comer(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}int Zorro\+::\+Comer (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classZorro_aff938c6cbfac969d13261481b6cb4976}{}\label{classZorro_aff938c6cbfac969d13261481b6cb4976}
+
+
+Metodo para Comer. Se alimenta de Ratones que esten en posiciones aledañas, consume 2 puntos y mata al otro animal. No puede excederse de 50 la energia del \hyperlink{classZorro}{Zorro}. 
+
+
+
+Implements \hyperlink{classAnimal_a4ce5ddb28b7784d6ff7293f312fb5d0a}{Animal}.
+
+\index{Zorro@{Zorro}!Mover@{Mover}}
+\index{Mover@{Mover}!Zorro@{Zorro}}
+\subsubsection[{\texorpdfstring{Mover(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Mover(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}int Zorro\+::\+Mover (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classZorro_a2facc3ce009fc8d46ff7cbd93370c06b}{}\label{classZorro_a2facc3ce009fc8d46ff7cbd93370c06b}
+
+
+Metodo para que el zorro se mueva en el terreno. Es capaz de moverse solo un espacio en el terrreno siempre que este desocupado y sea aledaño. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Actual} & Posicion actual del animal. \\
+\hline
+{\em y\+Actual} & Posicion actual del animal. \\
+\hline
+{\em x\+Previo} & Posicion previa del animal. \\
+\hline
+{\em y\+Previo} & Posicion previa del animal. \\
+\hline
+{\em contador} & Numero de veces que se ha desplzado el animal. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAnimal_acfb4b1ab56fbd8d98b9ddc4070df6521}{Animal}.
+
+\index{Zorro@{Zorro}!Reproducir@{Reproducir}}
+\index{Reproducir@{Reproducir}!Zorro@{Zorro}}
+\subsubsection[{\texorpdfstring{Reproducir(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Reproducir(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}void Zorro\+::\+Reproducir (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classZorro_a22664badacda98773684a81b0c6c29a0}{}\label{classZorro_a22664badacda98773684a81b0c6c29a0}
+
+
+Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reproduzcase} & Mediante esta variable se informa si hay una pareja disponible. \\
+\hline
+{\em x} & Posicion del animal con el cual se puede reproducir. \\
+\hline
+{\em y} & Posicion del animal con el cual se puede reproducir. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAnimal_aec115272cec5fc59c1a6944a0ad43fef}{Animal}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Zorro_8h}{Zorro.\+h}\item 
+\hyperlink{Zorro_8cpp}{Zorro.\+cpp}\end{DoxyCompactItemize}

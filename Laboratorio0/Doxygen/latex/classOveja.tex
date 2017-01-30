@@ -1,0 +1,162 @@
+\hypertarget{classOveja}{}\section{Oveja Class Reference}
+\label{classOveja}\index{Oveja@{Oveja}}
+
+
+{\ttfamily \#include $<$Oveja.\+h$>$}
+
+
+
+Inheritance diagram for Oveja\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classOveja__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Oveja\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classOveja__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOveja_a816d51452247a98f55372b7407de0366}{Oveja} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\hyperlink{classOveja_a28cf77d31dc8d1770f52380a1ba1088e}{Oveja} (int \hyperlink{classAnimal_ab403adfd13b57143eff123bdd6a2febb}{Fila}, int \hyperlink{classAnimal_a340d64e6e4ffe5f35e0855c63aad1bd3}{Columna}, int \hyperlink{classAnimal_a42b629ae5a7e0c05263a3f6e592ea116}{Sexo})
+\begin{DoxyCompactList}\small\item\em Constructor para crear una \hyperlink{classOveja}{Oveja} con datos especificos. \end{DoxyCompactList}\item 
+virtual \hyperlink{classOveja_a90e76a79dba9138b13c26ba0b1b3c2cf}{$\sim$\+Oveja} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{classOveja_acd0a8a66853f3b0937b03ccd4d9d4b58}{Mover} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+\begin{DoxyCompactList}\small\item\em Metodo para que la oveja se mueva en el terreno. Es capaz de moverse hasta dos espacios en el terrreno siempre que estan desocupados y sean aledaños. \end{DoxyCompactList}\item 
+int \hyperlink{classOveja_ac22b74a090e0a74a945ff07530192540}{Comer} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+\begin{DoxyCompactList}\small\item\em Metodo para comer. Se alimenta del zacate, consume 10 puntos del zacate y recupera la misma cantidad. En caso de no haber suficiente zacate, consume lo que haya y recupera eso mismo. No puede excederse de 75 la energia de la oveja. \end{DoxyCompactList}\item 
+void \hyperlink{classOveja_af97a947a8b74d64e0fac191aad43e2d7}{Reproducir} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+\begin{DoxyCompactList}\small\item\em Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Oveja@{Oveja}!Oveja@{Oveja}}
+\index{Oveja@{Oveja}!Oveja@{Oveja}}
+\subsubsection[{\texorpdfstring{Oveja()}{Oveja()}}]{\setlength{\rightskip}{0pt plus 5cm}Oveja\+::\+Oveja (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classOveja_a816d51452247a98f55372b7407de0366}{}\label{classOveja_a816d51452247a98f55372b7407de0366}
+
+
+Constructor por defecto. 
+
+\index{Oveja@{Oveja}!Oveja@{Oveja}}
+\index{Oveja@{Oveja}!Oveja@{Oveja}}
+\subsubsection[{\texorpdfstring{Oveja(int Fila, int Columna, int Sexo)}{Oveja(int Fila, int Columna, int Sexo)}}]{\setlength{\rightskip}{0pt plus 5cm}Oveja\+::\+Oveja (
+\begin{DoxyParamCaption}
+\item[{int}]{Fila, }
+\item[{int}]{Columna, }
+\item[{int}]{Sexo}
+\end{DoxyParamCaption}
+)}\hypertarget{classOveja_a28cf77d31dc8d1770f52380a1ba1088e}{}\label{classOveja_a28cf77d31dc8d1770f52380a1ba1088e}
+
+
+Constructor para crear una \hyperlink{classOveja}{Oveja} con datos especificos. 
+
+\index{Oveja@{Oveja}!````~Oveja@{$\sim$\+Oveja}}
+\index{````~Oveja@{$\sim$\+Oveja}!Oveja@{Oveja}}
+\subsubsection[{\texorpdfstring{$\sim$\+Oveja()}{~Oveja()}}]{\setlength{\rightskip}{0pt plus 5cm}Oveja\+::$\sim$\+Oveja (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classOveja_a90e76a79dba9138b13c26ba0b1b3c2cf}{}\label{classOveja_a90e76a79dba9138b13c26ba0b1b3c2cf}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Oveja@{Oveja}!Comer@{Comer}}
+\index{Comer@{Comer}!Oveja@{Oveja}}
+\subsubsection[{\texorpdfstring{Comer(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Comer(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}int Oveja\+::\+Comer (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classOveja_ac22b74a090e0a74a945ff07530192540}{}\label{classOveja_ac22b74a090e0a74a945ff07530192540}
+
+
+Metodo para comer. Se alimenta del zacate, consume 10 puntos del zacate y recupera la misma cantidad. En caso de no haber suficiente zacate, consume lo que haya y recupera eso mismo. No puede excederse de 75 la energia de la oveja. 
+
+
+
+Implements \hyperlink{classAnimal_a4ce5ddb28b7784d6ff7293f312fb5d0a}{Animal}.
+
+\index{Oveja@{Oveja}!Mover@{Mover}}
+\index{Mover@{Mover}!Oveja@{Oveja}}
+\subsubsection[{\texorpdfstring{Mover(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Mover(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}int Oveja\+::\+Mover (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classOveja_acd0a8a66853f3b0937b03ccd4d9d4b58}{}\label{classOveja_acd0a8a66853f3b0937b03ccd4d9d4b58}
+
+
+Metodo para que la oveja se mueva en el terreno. Es capaz de moverse hasta dos espacios en el terrreno siempre que estan desocupados y sean aledaños. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Actual} & Posicion actual del animal. \\
+\hline
+{\em y\+Actual} & Posicion actual del animal. \\
+\hline
+{\em x\+Previo} & Posicion previa del animal. \\
+\hline
+{\em y\+Previo} & Posicion previa del animal. \\
+\hline
+{\em contador} & Numero de veces que se ha desplzado el animal. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAnimal_acfb4b1ab56fbd8d98b9ddc4070df6521}{Animal}.
+
+\index{Oveja@{Oveja}!Reproducir@{Reproducir}}
+\index{Reproducir@{Reproducir}!Oveja@{Oveja}}
+\subsubsection[{\texorpdfstring{Reproducir(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Reproducir(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}void Oveja\+::\+Reproducir (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classOveja_af97a947a8b74d64e0fac191aad43e2d7}{}\label{classOveja_af97a947a8b74d64e0fac191aad43e2d7}
+
+
+Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reproduzcase} & Mediante esta variable se informa si hay una pareja disponible. \\
+\hline
+{\em x} & Posicion del animal con el cual se puede reproducir. \\
+\hline
+{\em y} & Posicion del animal con el cual se puede reproducir. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAnimal_aec115272cec5fc59c1a6944a0ad43fef}{Animal}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Oveja_8h}{Oveja.\+h}\item 
+\hyperlink{Oveja_8cpp}{Oveja.\+cpp}\end{DoxyCompactItemize}

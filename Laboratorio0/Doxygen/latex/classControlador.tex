@@ -1,0 +1,93 @@
+\hypertarget{classControlador}{}\section{Controlador Class Reference}
+\label{classControlador}\index{Controlador@{Controlador}}
+
+
+{\ttfamily \#include $<$Controlador.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classControlador_a17db08229680461d4d1a2110a92ccf78}{Controlador} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+virtual \hyperlink{classControlador_a2f1828135645f009d3772de86f12d507}{$\sim$\+Controlador} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classControlador_ae18001a1939880c3600e323ef4177e3a}{reset\+Reproduce\+Mark} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+\begin{DoxyCompactList}\small\item\em Metodo para resetear banderas de control. Cada animal tiene una marca que dice si ya se reprodujo, se movio y aplicaron demas metodos cada dia, entonces al finalizar cada dia se resetean las marcas de todos los animales para que al dia siguiente puedan ser aplicadas nuevamente. \end{DoxyCompactList}\item 
+int \hyperlink{classControlador_a33ea3e8f5c32cd2fcd962da6e7fadf52}{run} (int amount\+Of\+Days, char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em Metodo que ejecuta la logica del juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Controlador@{Controlador}!Controlador@{Controlador}}
+\index{Controlador@{Controlador}!Controlador@{Controlador}}
+\subsubsection[{\texorpdfstring{Controlador()}{Controlador()}}]{\setlength{\rightskip}{0pt plus 5cm}Controlador\+::\+Controlador (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classControlador_a17db08229680461d4d1a2110a92ccf78}{}\label{classControlador_a17db08229680461d4d1a2110a92ccf78}
+
+
+Constructor por defecto. 
+
+\index{Controlador@{Controlador}!````~Controlador@{$\sim$\+Controlador}}
+\index{````~Controlador@{$\sim$\+Controlador}!Controlador@{Controlador}}
+\subsubsection[{\texorpdfstring{$\sim$\+Controlador()}{~Controlador()}}]{\setlength{\rightskip}{0pt plus 5cm}Controlador\+::$\sim$\+Controlador (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classControlador_a2f1828135645f009d3772de86f12d507}{}\label{classControlador_a2f1828135645f009d3772de86f12d507}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Controlador@{Controlador}!reset\+Reproduce\+Mark@{reset\+Reproduce\+Mark}}
+\index{reset\+Reproduce\+Mark@{reset\+Reproduce\+Mark}!Controlador@{Controlador}}
+\subsubsection[{\texorpdfstring{reset\+Reproduce\+Mark(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{resetReproduceMark(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}void Controlador\+::reset\+Reproduce\+Mark (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)}\hypertarget{classControlador_ae18001a1939880c3600e323ef4177e3a}{}\label{classControlador_ae18001a1939880c3600e323ef4177e3a}
+
+
+Metodo para resetear banderas de control. Cada animal tiene una marca que dice si ya se reprodujo, se movio y aplicaron demas metodos cada dia, entonces al finalizar cada dia se resetean las marcas de todos los animales para que al dia siguiente puedan ser aplicadas nuevamente. 
+
+\index{Controlador@{Controlador}!run@{run}}
+\index{run@{run}!Controlador@{Controlador}}
+\subsubsection[{\texorpdfstring{run(int amount\+Of\+Days, char $\ast$file\+Name)}{run(int amountOfDays, char *fileName)}}]{\setlength{\rightskip}{0pt plus 5cm}int Controlador\+::run (
+\begin{DoxyParamCaption}
+\item[{int}]{amount\+Of\+Days, }
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classControlador_a33ea3e8f5c32cd2fcd962da6e7fadf52}{}\label{classControlador_a33ea3e8f5c32cd2fcd962da6e7fadf52}
+
+
+Metodo que ejecuta la logica del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em animal} & Almacenar temporalmente el animal que se lee del archivo de texto. \\
+\hline
+{\em columns} & Posicion en la cual se desea crear el animal y establecer los datos a la celda. \\
+\hline
+{\em rows} & Posicion en la cual se desea crear el animal y establecer los datos a la celda. \\
+\hline
+{\em zacate} & Nivel de zacate en la celda. \\
+\hline
+{\em line} & Variable de utilidad a la hora de leer el archivo de datos. \\
+\hline
+{\em posicion\+Columna} & Variable para recorrer el terreno. \\
+\hline
+{\em posicion\+Fila} & Variable para recorrer el terreno. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Controlador_8h}{Controlador.\+h}\item 
+\hyperlink{Controlador_8cpp}{Controlador.\+cpp}\end{DoxyCompactItemize}

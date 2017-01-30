@@ -1,0 +1,162 @@
+\hypertarget{classLobo}{}\section{Lobo Class Reference}
+\label{classLobo}\index{Lobo@{Lobo}}
+
+
+{\ttfamily \#include $<$Lobo.\+h$>$}
+
+
+
+Inheritance diagram for Lobo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classLobo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Lobo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classLobo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLobo_a5c6b593887d794ea47abcc7af82a4090}{Lobo} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\hyperlink{classLobo_a2424bb5ebc7f52b2255b53c8d1560413}{Lobo} (int \hyperlink{classAnimal_ab403adfd13b57143eff123bdd6a2febb}{Fila}, int \hyperlink{classAnimal_a340d64e6e4ffe5f35e0855c63aad1bd3}{Columna}, int \hyperlink{classAnimal_a42b629ae5a7e0c05263a3f6e592ea116}{Sexo})
+\begin{DoxyCompactList}\small\item\em Constructor para crear un \hyperlink{classLobo}{Lobo} con datos especificos. \end{DoxyCompactList}\item 
+virtual \hyperlink{classLobo_ac3f55f7ba044fc5a20fbcbeed644ce54}{$\sim$\+Lobo} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{classLobo_af373be32ff2bc56162b7886e3de4b8c5}{Mover} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+\begin{DoxyCompactList}\small\item\em Metodo para que el \hyperlink{classLobo}{Lobo} se mueva en el terreno. Es capaz de moverse hasta tres espacios en el terrreno siempre que estan desocupados y sean aledaños. \end{DoxyCompactList}\item 
+int \hyperlink{classLobo_a6da7977c9f5f955b20919648345ca550}{Comer} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+\begin{DoxyCompactList}\small\item\em Metodo para comer. Se alimenta de cualquier otro animal que esten en posiciones aledañas. Recive 10 puntos por Ovejas, 5 puntos por Zorros y 2 por ratones. Mata al otro animal. No puede excederse de 100 la energia del \hyperlink{classZorro}{Zorro}. Si hay dos lobos machos alguno de los dos muere. \end{DoxyCompactList}\item 
+void \hyperlink{classLobo_a79ea0886836c5c493a8bac08ef32db5c}{Reproducir} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+\begin{DoxyCompactList}\small\item\em Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Lobo@{Lobo}!Lobo@{Lobo}}
+\index{Lobo@{Lobo}!Lobo@{Lobo}}
+\subsubsection[{\texorpdfstring{Lobo()}{Lobo()}}]{\setlength{\rightskip}{0pt plus 5cm}Lobo\+::\+Lobo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLobo_a5c6b593887d794ea47abcc7af82a4090}{}\label{classLobo_a5c6b593887d794ea47abcc7af82a4090}
+
+
+Constructor por defecto. 
+
+\index{Lobo@{Lobo}!Lobo@{Lobo}}
+\index{Lobo@{Lobo}!Lobo@{Lobo}}
+\subsubsection[{\texorpdfstring{Lobo(int Fila, int Columna, int Sexo)}{Lobo(int Fila, int Columna, int Sexo)}}]{\setlength{\rightskip}{0pt plus 5cm}Lobo\+::\+Lobo (
+\begin{DoxyParamCaption}
+\item[{int}]{Fila, }
+\item[{int}]{Columna, }
+\item[{int}]{Sexo}
+\end{DoxyParamCaption}
+)}\hypertarget{classLobo_a2424bb5ebc7f52b2255b53c8d1560413}{}\label{classLobo_a2424bb5ebc7f52b2255b53c8d1560413}
+
+
+Constructor para crear un \hyperlink{classLobo}{Lobo} con datos especificos. 
+
+\index{Lobo@{Lobo}!````~Lobo@{$\sim$\+Lobo}}
+\index{````~Lobo@{$\sim$\+Lobo}!Lobo@{Lobo}}
+\subsubsection[{\texorpdfstring{$\sim$\+Lobo()}{~Lobo()}}]{\setlength{\rightskip}{0pt plus 5cm}Lobo\+::$\sim$\+Lobo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLobo_ac3f55f7ba044fc5a20fbcbeed644ce54}{}\label{classLobo_ac3f55f7ba044fc5a20fbcbeed644ce54}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Lobo@{Lobo}!Comer@{Comer}}
+\index{Comer@{Comer}!Lobo@{Lobo}}
+\subsubsection[{\texorpdfstring{Comer(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Comer(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lobo\+::\+Comer (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLobo_a6da7977c9f5f955b20919648345ca550}{}\label{classLobo_a6da7977c9f5f955b20919648345ca550}
+
+
+Metodo para comer. Se alimenta de cualquier otro animal que esten en posiciones aledañas. Recive 10 puntos por Ovejas, 5 puntos por Zorros y 2 por ratones. Mata al otro animal. No puede excederse de 100 la energia del \hyperlink{classZorro}{Zorro}. Si hay dos lobos machos alguno de los dos muere. 
+
+
+
+Implements \hyperlink{classAnimal_a4ce5ddb28b7784d6ff7293f312fb5d0a}{Animal}.
+
+\index{Lobo@{Lobo}!Mover@{Mover}}
+\index{Mover@{Mover}!Lobo@{Lobo}}
+\subsubsection[{\texorpdfstring{Mover(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Mover(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lobo\+::\+Mover (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLobo_af373be32ff2bc56162b7886e3de4b8c5}{}\label{classLobo_af373be32ff2bc56162b7886e3de4b8c5}
+
+
+Metodo para que el \hyperlink{classLobo}{Lobo} se mueva en el terreno. Es capaz de moverse hasta tres espacios en el terrreno siempre que estan desocupados y sean aledaños. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Actual} & Posicion actual del animal. \\
+\hline
+{\em y\+Actual} & Posicion actual del animal. \\
+\hline
+{\em x\+Previo} & Posicion previa del animal. \\
+\hline
+{\em y\+Previo} & Posicion previa del animal. \\
+\hline
+{\em contador} & Numero de veces que se ha desplzado el animal. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAnimal_acfb4b1ab56fbd8d98b9ddc4070df6521}{Animal}.
+
+\index{Lobo@{Lobo}!Reproducir@{Reproducir}}
+\index{Reproducir@{Reproducir}!Lobo@{Lobo}}
+\subsubsection[{\texorpdfstring{Reproducir(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Reproducir(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}void Lobo\+::\+Reproducir (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLobo_a79ea0886836c5c493a8bac08ef32db5c}{}\label{classLobo_a79ea0886836c5c493a8bac08ef32db5c}
+
+
+Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reproduzcase} & Mediante esta variable se informa si hay una pareja disponible. \\
+\hline
+{\em x} & Posicion del animal con el cual se puede reproducir. \\
+\hline
+{\em y} & Posicion del animal con el cual se puede reproducir. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAnimal_aec115272cec5fc59c1a6944a0ad43fef}{Animal}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Lobo_8h}{Lobo.\+h}\item 
+\hyperlink{Lobo_8cpp}{Lobo.\+cpp}\end{DoxyCompactItemize}

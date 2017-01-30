@@ -1,0 +1,211 @@
+\hypertarget{classAnimal}{}\section{Animal Class Reference}
+\label{classAnimal}\index{Animal@{Animal}}
+
+
+{\ttfamily \#include $<$Animal.\+h$>$}
+
+
+
+Inheritance diagram for Animal\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classAnimal__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAnimal_a1e726a49ec952443190ac62dad22353c}{Animal} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+virtual \hyperlink{classAnimal_a476af25adde5f0dfa688129c8f86fa5c}{$\sim$\+Animal} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classAnimal_acfb4b1ab56fbd8d98b9ddc4070df6521}{Mover} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)=0
+\item 
+virtual int \hyperlink{classAnimal_a4ce5ddb28b7784d6ff7293f312fb5d0a}{Comer} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)=0
+\item 
+virtual void \hyperlink{classAnimal_aec115272cec5fc59c1a6944a0ad43fef}{Reproducir} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)=0
+\item 
+bool \hyperlink{classAnimal_a016406215b6b52da9db042b956bcc3be}{Morir} ()
+\begin{DoxyCompactList}\small\item\em Metodo para determinar si un animal debe morir. \end{DoxyCompactList}\item 
+bool \hyperlink{classAnimal_a7c407c852d55806aa10b2db5844f683d}{operator-\/-\/} ()
+\item 
+void \hyperlink{classAnimal_aa03d8b2c76ee132f3347e7c1323d1473}{Print} ()
+\begin{DoxyCompactList}\small\item\em Esta funcion se llama dentro de la funcion imprimir de celda ya que un atributo de una celda es un animal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classAnimal_ad014642901894565334b8d2bf3713755}{all\+Functions}
+\begin{DoxyCompactList}\small\item\em Bandera para saber si a un animal ya se le aplicaron todos los metodos. \end{DoxyCompactList}\item 
+bool \hyperlink{classAnimal_a1cc0126c23d1245a1f964ce636552bba}{already\+Moved}
+\begin{DoxyCompactList}\small\item\em Bandera para saber si un animal ya se movio en un dia. \end{DoxyCompactList}\item 
+bool \hyperlink{classAnimal_ab08fe103b56326ac66c63b0f38585c4c}{already\+Reproduced}
+\begin{DoxyCompactList}\small\item\em Bandera para saber si un animal ya se repdodujo en un dia. \end{DoxyCompactList}\item 
+int \hyperlink{classAnimal_af1c30573e35f61baa10094579c5e741a}{Energia}
+\begin{DoxyCompactList}\small\item\em Energia del aimal. \end{DoxyCompactList}\item 
+int \hyperlink{classAnimal_ab403adfd13b57143eff123bdd6a2febb}{Fila}
+\begin{DoxyCompactList}\small\item\em Posicion del animal. \end{DoxyCompactList}\item 
+int \hyperlink{classAnimal_a340d64e6e4ffe5f35e0855c63aad1bd3}{Columna}
+\item 
+int \hyperlink{classAnimal_a42b629ae5a7e0c05263a3f6e592ea116}{Sexo}
+\begin{DoxyCompactList}\small\item\em Sexo del animal. \end{DoxyCompactList}\item 
+string \hyperlink{classAnimal_ae7a4f121949d20c359414a3002e7eff7}{tipo\+Animal}
+\begin{DoxyCompactList}\small\item\em Se define en las clases hijo, dependiendo de que tipo de animal que sea. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Animal@{Animal}!Animal@{Animal}}
+\index{Animal@{Animal}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{Animal()}{Animal()}}]{\setlength{\rightskip}{0pt plus 5cm}Animal\+::\+Animal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAnimal_a1e726a49ec952443190ac62dad22353c}{}\label{classAnimal_a1e726a49ec952443190ac62dad22353c}
+
+
+Constructor por defecto. 
+
+\index{Animal@{Animal}!````~Animal@{$\sim$\+Animal}}
+\index{````~Animal@{$\sim$\+Animal}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{$\sim$\+Animal()}{~Animal()}}]{\setlength{\rightskip}{0pt plus 5cm}Animal\+::$\sim$\+Animal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classAnimal_a476af25adde5f0dfa688129c8f86fa5c}{}\label{classAnimal_a476af25adde5f0dfa688129c8f86fa5c}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Animal@{Animal}!Comer@{Comer}}
+\index{Comer@{Comer}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{Comer(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)=0}{Comer(int columns, int rows, Celda ***terreno)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Animal\+::\+Comer (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classAnimal_a4ce5ddb28b7784d6ff7293f312fb5d0a}{}\label{classAnimal_a4ce5ddb28b7784d6ff7293f312fb5d0a}
+
+
+Implemented in \hyperlink{classLobo_a6da7977c9f5f955b20919648345ca550}{Lobo}, \hyperlink{classOveja_ac22b74a090e0a74a945ff07530192540}{Oveja}, \hyperlink{classRaton_aa01334349e5c110c31f32db729d7f4bd}{Raton}, and \hyperlink{classZorro_aff938c6cbfac969d13261481b6cb4976}{Zorro}.
+
+\index{Animal@{Animal}!Morir@{Morir}}
+\index{Morir@{Morir}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{Morir()}{Morir()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Animal\+::\+Morir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAnimal_a016406215b6b52da9db042b956bcc3be}{}\label{classAnimal_a016406215b6b52da9db042b956bcc3be}
+
+
+Metodo para determinar si un animal debe morir. 
+
+\index{Animal@{Animal}!Mover@{Mover}}
+\index{Mover@{Mover}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{Mover(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)=0}{Mover(int columns, int rows, Celda ***terreno)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Animal\+::\+Mover (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classAnimal_acfb4b1ab56fbd8d98b9ddc4070df6521}{}\label{classAnimal_acfb4b1ab56fbd8d98b9ddc4070df6521}
+
+
+Implemented in \hyperlink{classLobo_af373be32ff2bc56162b7886e3de4b8c5}{Lobo}, \hyperlink{classOveja_acd0a8a66853f3b0937b03ccd4d9d4b58}{Oveja}, \hyperlink{classRaton_a0dab97a891533772429b19419d8e727f}{Raton}, and \hyperlink{classZorro_a2facc3ce009fc8d46ff7cbd93370c06b}{Zorro}.
+
+\index{Animal@{Animal}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{operator-\/-\/()}{operator--()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Animal\+::operator-\/-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classAnimal_a7c407c852d55806aa10b2db5844f683d}{}\label{classAnimal_a7c407c852d55806aa10b2db5844f683d}
+\index{Animal@{Animal}!Print@{Print}}
+\index{Print@{Print}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{Print()}{Print()}}]{\setlength{\rightskip}{0pt plus 5cm}void Animal\+::\+Print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAnimal_aa03d8b2c76ee132f3347e7c1323d1473}{}\label{classAnimal_aa03d8b2c76ee132f3347e7c1323d1473}
+
+
+Esta funcion se llama dentro de la funcion imprimir de celda ya que un atributo de una celda es un animal. 
+
+\index{Animal@{Animal}!Reproducir@{Reproducir}}
+\index{Reproducir@{Reproducir}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{Reproducir(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)=0}{Reproducir(int columns, int rows, Celda ***terreno)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Animal\+::\+Reproducir (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classAnimal_aec115272cec5fc59c1a6944a0ad43fef}{}\label{classAnimal_aec115272cec5fc59c1a6944a0ad43fef}
+
+
+Implemented in \hyperlink{classLobo_a79ea0886836c5c493a8bac08ef32db5c}{Lobo}, \hyperlink{classOveja_af97a947a8b74d64e0fac191aad43e2d7}{Oveja}, \hyperlink{classRaton_a0abb2bfb6f1eda254d4e6f02e2f86861}{Raton}, and \hyperlink{classZorro_a22664badacda98773684a81b0c6c29a0}{Zorro}.
+
+
+
+\subsection{Field Documentation}
+\index{Animal@{Animal}!all\+Functions@{all\+Functions}}
+\index{all\+Functions@{all\+Functions}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{all\+Functions}{allFunctions}}]{\setlength{\rightskip}{0pt plus 5cm}bool Animal\+::all\+Functions}\hypertarget{classAnimal_ad014642901894565334b8d2bf3713755}{}\label{classAnimal_ad014642901894565334b8d2bf3713755}
+
+
+Bandera para saber si a un animal ya se le aplicaron todos los metodos. 
+
+\index{Animal@{Animal}!already\+Moved@{already\+Moved}}
+\index{already\+Moved@{already\+Moved}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{already\+Moved}{alreadyMoved}}]{\setlength{\rightskip}{0pt plus 5cm}bool Animal\+::already\+Moved}\hypertarget{classAnimal_a1cc0126c23d1245a1f964ce636552bba}{}\label{classAnimal_a1cc0126c23d1245a1f964ce636552bba}
+
+
+Bandera para saber si un animal ya se movio en un dia. 
+
+\index{Animal@{Animal}!already\+Reproduced@{already\+Reproduced}}
+\index{already\+Reproduced@{already\+Reproduced}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{already\+Reproduced}{alreadyReproduced}}]{\setlength{\rightskip}{0pt plus 5cm}bool Animal\+::already\+Reproduced}\hypertarget{classAnimal_ab08fe103b56326ac66c63b0f38585c4c}{}\label{classAnimal_ab08fe103b56326ac66c63b0f38585c4c}
+
+
+Bandera para saber si un animal ya se repdodujo en un dia. 
+
+\index{Animal@{Animal}!Columna@{Columna}}
+\index{Columna@{Columna}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{Columna}{Columna}}]{\setlength{\rightskip}{0pt plus 5cm}int Animal\+::\+Columna}\hypertarget{classAnimal_a340d64e6e4ffe5f35e0855c63aad1bd3}{}\label{classAnimal_a340d64e6e4ffe5f35e0855c63aad1bd3}
+\index{Animal@{Animal}!Energia@{Energia}}
+\index{Energia@{Energia}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{Energia}{Energia}}]{\setlength{\rightskip}{0pt plus 5cm}int Animal\+::\+Energia}\hypertarget{classAnimal_af1c30573e35f61baa10094579c5e741a}{}\label{classAnimal_af1c30573e35f61baa10094579c5e741a}
+
+
+Energia del aimal. 
+
+\index{Animal@{Animal}!Fila@{Fila}}
+\index{Fila@{Fila}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{Fila}{Fila}}]{\setlength{\rightskip}{0pt plus 5cm}int Animal\+::\+Fila}\hypertarget{classAnimal_ab403adfd13b57143eff123bdd6a2febb}{}\label{classAnimal_ab403adfd13b57143eff123bdd6a2febb}
+
+
+Posicion del animal. 
+
+\index{Animal@{Animal}!Sexo@{Sexo}}
+\index{Sexo@{Sexo}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{Sexo}{Sexo}}]{\setlength{\rightskip}{0pt plus 5cm}int Animal\+::\+Sexo}\hypertarget{classAnimal_a42b629ae5a7e0c05263a3f6e592ea116}{}\label{classAnimal_a42b629ae5a7e0c05263a3f6e592ea116}
+
+
+Sexo del animal. 
+
+\index{Animal@{Animal}!tipo\+Animal@{tipo\+Animal}}
+\index{tipo\+Animal@{tipo\+Animal}!Animal@{Animal}}
+\subsubsection[{\texorpdfstring{tipo\+Animal}{tipoAnimal}}]{\setlength{\rightskip}{0pt plus 5cm}string Animal\+::tipo\+Animal}\hypertarget{classAnimal_ae7a4f121949d20c359414a3002e7eff7}{}\label{classAnimal_ae7a4f121949d20c359414a3002e7eff7}
+
+
+Se define en las clases hijo, dependiendo de que tipo de animal que sea. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Animal_8h}{Animal.\+h}\item 
+\hyperlink{Animal_8cpp}{Animal.\+cpp}\end{DoxyCompactItemize}
