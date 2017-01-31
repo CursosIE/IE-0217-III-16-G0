@@ -146,7 +146,7 @@ int Controlador::run(int amountOfDays, char* fileName) {
         resetMarks(columns, rows, terreno); //se resetean las marcas de reproduccion cada dia
 
         //imprimo el estado del sistema al final del dia
-        cout << "Estado al final del día " << daysIndex << "..! \n" << endl;
+        cout << "Estado al final del día " << daysIndex << ":\n" << endl;
         printTerreno(columns, rows, terreno);
     }
     cout << endl;
