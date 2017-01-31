@@ -24,7 +24,9 @@ Controlador::Controlador() {
 Controlador::~Controlador() {
 
 }
-
+/*! \brief funcion de impresion en plantilla
+ * \param objeto es un objeto de cualquier tipo
+ */
 //funcion plantilla
 template <typename DataType>
 void printTemplate (DataType* objeto) {
@@ -38,6 +40,8 @@ void printTemplate (DataType* objeto) {
     cout << "Energía: " << objeto->Energia << "\n" << endl;
 }
 
+/*! \brief funcion de impresion en plantilla especifico para una celda
+ */
 template<>
 void printTemplate <Celda> (Celda* celda) {
     cout << "Posición: [" << celda->fila << ", " << celda->columna << "]" << endl;
@@ -81,7 +85,7 @@ int Controlador::run(int amountOfDays, char* fileName) {
     ifstream dataFile;
     dataFile.open(fileName);
 
-/*    //se extraen la cantidad de columnas y filas del archivo
+    //se extraen la cantidad de columnas y filas del archivo
     //estas estan en las primeras 2 lineas
     if (dataFile.is_open()) {
         dataFile >> columns;
@@ -185,14 +189,14 @@ int Controlador::run(int amountOfDays, char* fileName) {
     delete terreno; //libero el vector de punteros a celda que se creo
 
     cout << "Finalización del programa..!" << endl;
-   */
 
-    Lobo* l1 = new Lobo(1, 1, 1);
+
+    /*Lobo* l1 = new Lobo(1, 1, 1);
     Zorro* z1 = new Zorro(5, 3, 2);
     Celda* c1 = new Celda(33, "Cachorro de perro", 6, 9);
     printTemplate(l1);
     printTemplate(z1);
-    printTemplate<Celda>(c1);
+    printTemplate<Celda>(c1); */
 
     return 0;
 }
