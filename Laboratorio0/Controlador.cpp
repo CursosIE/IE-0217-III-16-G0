@@ -25,6 +25,26 @@ Controlador::~Controlador() {
 
 }
 
+//funcion plantilla
+template <typename DataType>
+void printTemplate (DataType* objeto) {
+    cout << objeto << endl;
+    cout << "Posicion: [" << objeto->Fila << ", " << objeto->Columna << "]" << endl;
+    cout << "Animal: " << objeto->tipoAnimal << endl;
+    if (objeto->Sexo == 1)
+        cout << "Sexo: macho" << endl;
+    else
+        cout << "Sexo: hembra" << endl;
+    cout << "Energía: " << objeto->Energia << "\n" << endl;
+}
+
+template<>
+void printTemplate <Celda> (Celda* celda) {
+    cout << "Posición: [" << celda->fila << ", " << celda->columna << "]" << endl;
+    cout << "Nivel zacate: " << celda->zacate << endl;
+    cout << "Ocupante: " << celda->ocupante << endl;
+}
+
 /*! \brief Metodo que imprime el estado del sistema (terreno)
  *
  *  \param columns Posicion en la cual se desea crear el animal y establecer los datos a la celda.
@@ -61,7 +81,7 @@ int Controlador::run(int amountOfDays, char* fileName) {
     ifstream dataFile;
     dataFile.open(fileName);
 
-    //se extraen la cantidad de columnas y filas del archivo
+/*    //se extraen la cantidad de columnas y filas del archivo
     //estas estan en las primeras 2 lineas
     if (dataFile.is_open()) {
         dataFile >> columns;
@@ -165,10 +185,14 @@ int Controlador::run(int amountOfDays, char* fileName) {
     delete terreno; //libero el vector de punteros a celda que se creo
 
     cout << "Finalización del programa..!" << endl;
+   */
 
-    //PRUEBA PLANTILLA
-    //Lobo* l1 = new Lobo(1, 1, 1);
-
+    Lobo* l1 = new Lobo(1, 1, 1);
+    Zorro* z1 = new Zorro(5, 3, 2);
+    Celda* c1 = new Celda(33, "Cachorro de perro", 6, 9);
+    printTemplate(l1);
+    printTemplate(z1);
+    printTemplate<Celda>(c1);
 
     return 0;
 }
@@ -187,3 +211,5 @@ void Controlador::resetMarks(int columns, int rows, Celda*** terreno) {
         }
     }
 }
+
+
