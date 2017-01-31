@@ -27,18 +27,16 @@ void selectionSort (char* inputFile) {
     	dataFile >> myVector[index];
 
     dataFile.close();
-    //++size;
 
     //selection sort
-    for (int n = 0; n < size - 1; ++n){
-		for (int m = 0; m < size; ++m) {
+    for (int n = 0; n <= size - 1; ++n){
+		for (int m = 0; m <= size; ++m) {
 			if (myVector[n] < myVector[m]) {
 				temp = myVector[n];
 				myVector[n] = myVector[m];
 				myVector[m] = temp;
 			}
 		}
-
 	}
 
 	//print
