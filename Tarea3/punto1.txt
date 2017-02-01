@@ -2,9 +2,9 @@ SELECTION SORT PSEUDO CODE
 
 temp;
 
-for (int n = 0; n < size - 1; ++n){
+for (int n = 0; n <= size - 1; ++n){
 	temp = n;
-	for (int m = 0; m < size) {
+	for (int m = 0; m <= size) {
 		if (lista[temp] < lista[m])
 			temp = m;
 	}
