@@ -10,7 +10,7 @@ using namespace std;
 
 int binarySearch (int myVector[], int size, int find) {
 	int min = 0;
-	int max = myVector[size-1];
+	int max = size-1;
 	int flag = 0;
 
 	clock_t begin = clock();
@@ -20,7 +20,7 @@ int binarySearch (int myVector[], int size, int find) {
             flag = 1;
             clock_t end = clock();
             cout << 1;
-            cout << "\ntime bs: " << (1000000* (end - begin)) / CLOCKS_PER_SEC << "\u00B5s" << endl;
+            cout << "\ntime: " << (1000* (end - begin)) / CLOCKS_PER_SEC << "ms." << endl;
             return 1;
         }
         else if (myVector[(min + max) / 2] > find)
@@ -31,7 +31,7 @@ int binarySearch (int myVector[], int size, int find) {
        if(max == min + 1) {
         	clock_t end = clock();
         	cout << 0;
-        	cout << "\ntime bs: " << (1000000* (end - begin)) / CLOCKS_PER_SEC << "\u00B5s" << endl;
+        	cout << "\ntime: " << (1000* (end - begin)) / CLOCKS_PER_SEC << "ms." << endl;
         	return 0;
         }
 	}
@@ -62,11 +62,10 @@ void selectionSort (int myVector[], int size) {
 	}
 
 	//cout << "\ntime: " << (1000000 * (end - begin)) / CLOCKS_PER_SEC << "\u00B5s" << endl;
-	//cout << "\ntime ss: " << (1000* (end - begin)) / CLOCKS_PER_SEC << "ms" << endl;
+	cout << "\ntime: " << (1000* (end - begin)) / CLOCKS_PER_SEC << "ms." << endl;
 }
 
 int main(int argc, char *argv[]) {
-	clock_t begin = clock();
 	int find = 0;
 	int size = 0;
     int temp = 0;
@@ -80,8 +79,6 @@ int main(int argc, char *argv[]) {
     	fileName = argv[3];
     	ss = false;
     }
-
-    //cout << "find : " << find << endl;
 
     ifstream dataFile;
 
@@ -105,15 +102,10 @@ int main(int argc, char *argv[]) {
 
     dataFile.close();
 
-    //cout << size << endl;
-
     if (ss)
     	selectionSort(myVector, size);
     else 
     	return binarySearch(myVector, size, find);
-
-    clock_t end = clock();
-    //cout << "\ntime main: " << (1000000 * (end - begin)) / CLOCKS_PER_SEC << "\u00B5s" << endl;
     
     return 0;
 }

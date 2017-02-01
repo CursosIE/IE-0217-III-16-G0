@@ -46,7 +46,7 @@ if (sys.argv[1] == "bs"):
     elapsed_time = time() - start_time
     print BS
     print "\nTime: "
-    print elapsed_time
+    print elapsed_time*1000 , "ms."
 
 if (sys.argv[1] == "ss"):
     datos = open(sys.argv[2], 'r')
@@ -62,4 +62,5 @@ if (sys.argv[1] == "ss"):
     elapsed_time = time() - start_time
     print SS
     print "\nTime: "
-    print elapsed_time
+    print elapsed_time*1000 , "ms."
+
