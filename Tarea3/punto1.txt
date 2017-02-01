@@ -1,14 +1,19 @@
 SELECTION SORT PSEUDO CODE
 
-temp;
+temp
+posmin
 
-for (int n = 0; n <= size - 1; ++n){
-	temp = n;
-	for (int m = 0; m <= size) {
-		if (lista[temp] < lista[m])
-			temp = m;
+for (int n = 0; n < size - 1; ++n){
+	posmin = n
+	for (int m = n + 1; m < size) {
+		if (lista[m] < lista[posmin])
+			posmin = m
 	}
-	swap (lista[temp], lista [n]);
+	if(posmin ! n) {
+		temp = lista[n]
+		lista[n] = lista[posmin]
+		lista[posmin] = temp
+	}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
