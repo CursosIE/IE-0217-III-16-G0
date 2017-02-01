@@ -1,4 +1,5 @@
 import sys
+from time import time
 
 def Selection_Sort(Lista):
     for n in range(0, len(Lista)-1):
@@ -35,7 +36,12 @@ if (sys.argv[1] == "BS"):
     for i in range(0,len(Lista)):
         Lista[i] = int(Lista[i]);
 
-    print Binary_Search(Lista, num)
+    start_time = time()
+    BS = Binary_Search(Lista, num)
+    elapsed_time = time() - start_time
+    print BS
+    print "\nTime: "
+    print elapsed_time
 
 if (sys.argv[1] == "SS"):
     datos = open(sys.argv[2], 'r')
@@ -44,4 +50,9 @@ if (sys.argv[1] == "SS"):
     for i in range(0,len(Lista)):
         Lista[i] = int(Lista[i]);
 
-    print Selection_Sort(Lista)
+    start_time = time()
+    SS = Selection_Sort(Lista)
+    elapsed_time = time() - start_time
+    print SS
+    print "\nTime: "
+    print elapsed_time
