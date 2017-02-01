@@ -2,12 +2,17 @@ import sys
 from time import time
 
 def Selection_Sort(Lista):
+    temp = 0
+    posMin = 0
     for n in range(0, len(Lista)-1):
-        for m in range(0, len(Lista)):
-            if (Lista[n] < Lista[m]):
-                temp = Lista[n]
-                Lista[n] = Lista[m]
-                Lista[m] = temp
+        posMin = n
+        for m in range(n + 1, len(Lista)):
+            if (Lista[m] < Lista[posMin]):
+                posMin = m
+        if(posMin != n):
+            temp = Lista[n]
+            Lista[n] = Lista[posMin]
+            Lista[posMin] = temp
     return Lista
 
 
@@ -27,7 +32,7 @@ def Binary_Search(Lista, NUM):
         if(MAX == MIN + 1):
             return 0
 
-if (sys.argv[1] == "BS"):
+if (sys.argv[1] == "bs"):
     num = int(sys.argv[2])
 
     datos = open(sys.argv[3], 'r')
@@ -43,7 +48,7 @@ if (sys.argv[1] == "BS"):
     print "\nTime: "
     print elapsed_time
 
-if (sys.argv[1] == "SS"):
+if (sys.argv[1] == "ss"):
     datos = open(sys.argv[2], 'r')
     datos = datos.readline()
     Lista = datos.split(' ')
