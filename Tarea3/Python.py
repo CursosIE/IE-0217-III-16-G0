@@ -53,8 +53,10 @@ if (sys.argv[1] == "ss"):
     datos = datos.readline()
     Lista = datos.split(' ')
     for i in range(0,len(Lista)):
-        Lista[i] = int(Lista[i]);
-
+        if(Lista[i] != ""):
+            Lista[i] = int(Lista[i]);
+        else:
+            Lista.pop(i)
     start_time = time()
     SS = Selection_Sort(Lista)
     elapsed_time = time() - start_time
