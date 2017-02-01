@@ -39,8 +39,10 @@ if (sys.argv[1] == "bs"):
     datos = datos.readline()
     Lista = datos.split(' ')
     for i in range(0,len(Lista)):
-        Lista[i] = int(Lista[i]);
-
+        if(Lista[i] != ""):
+            Lista[i] = int(Lista[i]);
+        else:
+            Lista.pop(i)
     start_time = time()
     BS = Binary_Search(Lista, num)
     elapsed_time = time() - start_time
@@ -63,4 +65,3 @@ if (sys.argv[1] == "ss"):
     print SS
     print "\nTime: "
     print elapsed_time*1000 , "ms."
-
