@@ -6,22 +6,20 @@
 
 
 
-Inheritance diagram for Lobo\+:
-\nopagebreak
+Inheritance diagram for Lobo\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=127pt]{classLobo__inherit__graph}
+\includegraphics[width=190pt]{classLobo__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Lobo\+:
-\nopagebreak
+Collaboration diagram for Lobo\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=127pt]{classLobo__coll__graph}
+\includegraphics[width=190pt]{classLobo__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -33,11 +31,11 @@ Collaboration diagram for Lobo\+:
 \begin{DoxyCompactList}\small\item\em Constructor para crear un \hyperlink{classLobo}{Lobo} con datos especificos. \end{DoxyCompactList}\item 
 virtual \hyperlink{classLobo_ac3f55f7ba044fc5a20fbcbeed644ce54}{$\sim$\+Lobo} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
-int \hyperlink{classLobo_af373be32ff2bc56162b7886e3de4b8c5}{Mover} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+int \hyperlink{classLobo_aba92fb0575e359e2d66134ab5754ab0d}{operator!} ()
 \begin{DoxyCompactList}\small\item\em Metodo para que el \hyperlink{classLobo}{Lobo} se mueva en el terreno. Es capaz de moverse hasta tres espacios en el terrreno siempre que estan desocupados y sean aledaños. \end{DoxyCompactList}\item 
-int \hyperlink{classLobo_a6da7977c9f5f955b20919648345ca550}{Comer} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+int \hyperlink{classLobo_aa7387ef43eab75b348d85c142f74b2d3}{operator++} ()
 \begin{DoxyCompactList}\small\item\em Metodo para comer. Se alimenta de cualquier otro animal que esten en posiciones aledañas. Recive 10 puntos por Ovejas, 5 puntos por Zorros y 2 por ratones. Mata al otro animal. No puede excederse de 100 la energia del \hyperlink{classZorro}{Zorro}. Si hay dos lobos machos alguno de los dos muere. \end{DoxyCompactList}\item 
-void \hyperlink{classLobo_a79ea0886836c5c493a8bac08ef32db5c}{Reproducir} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+void \hyperlink{classLobo_a2b4bba4b6d6efa24af4d8e3b986dc7f2}{operator$\sim$} ()
 \begin{DoxyCompactList}\small\item\em Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -81,32 +79,13 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
-\index{Lobo@{Lobo}!Comer@{Comer}}
-\index{Comer@{Comer}!Lobo@{Lobo}}
-\subsubsection[{\texorpdfstring{Comer(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Comer(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lobo\+::\+Comer (
+\index{Lobo@{Lobo}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!Lobo@{Lobo}}
+\subsubsection[{\texorpdfstring{operator"!()}{operator!()}}]{\setlength{\rightskip}{0pt plus 5cm}int Lobo\+::operator! (
 \begin{DoxyParamCaption}
-\item[{int}]{columns, }
-\item[{int}]{rows, }
-\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+{}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLobo_a6da7977c9f5f955b20919648345ca550}{}\label{classLobo_a6da7977c9f5f955b20919648345ca550}
-
-
-Metodo para comer. Se alimenta de cualquier otro animal que esten en posiciones aledañas. Recive 10 puntos por Ovejas, 5 puntos por Zorros y 2 por ratones. Mata al otro animal. No puede excederse de 100 la energia del \hyperlink{classZorro}{Zorro}. Si hay dos lobos machos alguno de los dos muere. 
-
-
-
-Implements \hyperlink{classAnimal_a4ce5ddb28b7784d6ff7293f312fb5d0a}{Animal}.
-
-\index{Lobo@{Lobo}!Mover@{Mover}}
-\index{Mover@{Mover}!Lobo@{Lobo}}
-\subsubsection[{\texorpdfstring{Mover(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Mover(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}int Lobo\+::\+Mover (
-\begin{DoxyParamCaption}
-\item[{int}]{columns, }
-\item[{int}]{rows, }
-\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLobo_af373be32ff2bc56162b7886e3de4b8c5}{}\label{classLobo_af373be32ff2bc56162b7886e3de4b8c5}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLobo_aba92fb0575e359e2d66134ab5754ab0d}{}\label{classLobo_aba92fb0575e359e2d66134ab5754ab0d}
 
 
 Metodo para que el \hyperlink{classLobo}{Lobo} se mueva en el terreno. Es capaz de moverse hasta tres espacios en el terrreno siempre que estan desocupados y sean aledaños. 
@@ -126,17 +105,30 @@ Metodo para que el \hyperlink{classLobo}{Lobo} se mueva en el terreno. Es capaz 
 \end{DoxyParams}
 
 
-Implements \hyperlink{classAnimal_acfb4b1ab56fbd8d98b9ddc4070df6521}{Animal}.
+Implements \hyperlink{classAnimal_abe502d1333df77d245d74cd20190a0aa}{Animal}.
 
-\index{Lobo@{Lobo}!Reproducir@{Reproducir}}
-\index{Reproducir@{Reproducir}!Lobo@{Lobo}}
-\subsubsection[{\texorpdfstring{Reproducir(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Reproducir(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}void Lobo\+::\+Reproducir (
+\index{Lobo@{Lobo}!operator++@{operator++}}
+\index{operator++@{operator++}!Lobo@{Lobo}}
+\subsubsection[{\texorpdfstring{operator++()}{operator++()}}]{\setlength{\rightskip}{0pt plus 5cm}int Lobo\+::operator++ (
 \begin{DoxyParamCaption}
-\item[{int}]{columns, }
-\item[{int}]{rows, }
-\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+{}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLobo_a79ea0886836c5c493a8bac08ef32db5c}{}\label{classLobo_a79ea0886836c5c493a8bac08ef32db5c}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLobo_aa7387ef43eab75b348d85c142f74b2d3}{}\label{classLobo_aa7387ef43eab75b348d85c142f74b2d3}
+
+
+Metodo para comer. Se alimenta de cualquier otro animal que esten en posiciones aledañas. Recive 10 puntos por Ovejas, 5 puntos por Zorros y 2 por ratones. Mata al otro animal. No puede excederse de 100 la energia del \hyperlink{classZorro}{Zorro}. Si hay dos lobos machos alguno de los dos muere. 
+
+
+
+Implements \hyperlink{classAnimal_a66e3bc83959ea5c5d7aa8d85f8ca993c}{Animal}.
+
+\index{Lobo@{Lobo}!operator````~@{operator$\sim$}}
+\index{operator````~@{operator$\sim$}!Lobo@{Lobo}}
+\subsubsection[{\texorpdfstring{operator$\sim$()}{operator~()}}]{\setlength{\rightskip}{0pt plus 5cm}void Lobo\+::operator$\sim$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLobo_a2b4bba4b6d6efa24af4d8e3b986dc7f2}{}\label{classLobo_a2b4bba4b6d6efa24af4d8e3b986dc7f2}
 
 
 Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia. 
@@ -152,7 +144,7 @@ Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de
 \end{DoxyParams}
 
 
-Implements \hyperlink{classAnimal_aec115272cec5fc59c1a6944a0ad43fef}{Animal}.
+Implements \hyperlink{classAnimal_a6539ec18d8975982b65de76d8e5638f0}{Animal}.
 
 
 

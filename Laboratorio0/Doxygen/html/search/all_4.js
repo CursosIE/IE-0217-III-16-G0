@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['lobo',['Lobo',['../classLobo.html',1,'Lobo'],['../classLobo.html#a5c6b593887d794ea47abcc7af82a4090',1,'Lobo::Lobo()'],['../classLobo.html#a2424bb5ebc7f52b2255b53c8d1560413',1,'Lobo::Lobo(int Fila, int Columna, int Sexo)']]],
-  ['lobo_2ecpp',['Lobo.cpp',['../Lobo_8cpp.html',1,'']]],
-  ['lobo_2eh',['Lobo.h',['../Lobo_8h.html',1,'']]]
+  ['fila',['Fila',['../classAnimal.html#ab403adfd13b57143eff123bdd6a2febb',1,'Animal::Fila()'],['../classCelda.html#a58bd35cc52cc550b75a33cdaccdd014b',1,'Celda::fila()']]]
 ];

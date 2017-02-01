@@ -6,22 +6,20 @@
 
 
 
-Inheritance diagram for Raton\+:
-\nopagebreak
+Inheritance diagram for Raton\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=127pt]{classRaton__inherit__graph}
+\includegraphics[width=190pt]{classRaton__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Raton\+:
-\nopagebreak
+Collaboration diagram for Raton\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=127pt]{classRaton__coll__graph}
+\includegraphics[width=190pt]{classRaton__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -33,11 +31,11 @@ Collaboration diagram for Raton\+:
 \begin{DoxyCompactList}\small\item\em Constructor para crear un \hyperlink{classRaton}{Raton} con datos especificos. \end{DoxyCompactList}\item 
 virtual \hyperlink{classRaton_a65e9e02f328adbda8d588548a3b1d76b}{$\sim$\+Raton} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
-int \hyperlink{classRaton_a0dab97a891533772429b19419d8e727f}{Mover} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+int \hyperlink{classRaton_ad50cebe48f49dbadef570d616a0e6aa3}{operator!} ()
 \begin{DoxyCompactList}\small\item\em Metodo para que el raton se mueva en el terreno. Es capaz de moverse solo un espacio en el terrreno siempre que este desocupado y sea aledaño. \end{DoxyCompactList}\item 
-int \hyperlink{classRaton_aa01334349e5c110c31f32db729d7f4bd}{Comer} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+int \hyperlink{classRaton_a64ec37f911376e16802ad5906bb4e27a}{operator++} ()
 \begin{DoxyCompactList}\small\item\em Metodo para comer. Se alimenta del zacate, consume 5 puntos del zacate y recupera la misma cantidad. En caso de no haber suficiente zacate, consume lo que haya y recupera eso mismo. No puede excederse de 25 la energia del \hyperlink{classRaton}{Raton}. \end{DoxyCompactList}\item 
-void \hyperlink{classRaton_a0abb2bfb6f1eda254d4e6f02e2f86861}{Reproducir} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+void \hyperlink{classRaton_a7ec71ea95a98d13bf2cccf108b3c76d6}{operator$\sim$} ()
 \begin{DoxyCompactList}\small\item\em Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -81,49 +79,43 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
-\index{Raton@{Raton}!Comer@{Comer}}
-\index{Comer@{Comer}!Raton@{Raton}}
-\subsubsection[{\texorpdfstring{Comer(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Comer(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}int Raton\+::\+Comer (
+\index{Raton@{Raton}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!Raton@{Raton}}
+\subsubsection[{\texorpdfstring{operator"!()}{operator!()}}]{\setlength{\rightskip}{0pt plus 5cm}int Raton\+::operator! (
 \begin{DoxyParamCaption}
-\item[{int}]{columns, }
-\item[{int}]{rows, }
-\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+{}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRaton_aa01334349e5c110c31f32db729d7f4bd}{}\label{classRaton_aa01334349e5c110c31f32db729d7f4bd}
-
-
-Metodo para comer. Se alimenta del zacate, consume 5 puntos del zacate y recupera la misma cantidad. En caso de no haber suficiente zacate, consume lo que haya y recupera eso mismo. No puede excederse de 25 la energia del \hyperlink{classRaton}{Raton}. 
-
-
-
-Implements \hyperlink{classAnimal_a4ce5ddb28b7784d6ff7293f312fb5d0a}{Animal}.
-
-\index{Raton@{Raton}!Mover@{Mover}}
-\index{Mover@{Mover}!Raton@{Raton}}
-\subsubsection[{\texorpdfstring{Mover(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Mover(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}int Raton\+::\+Mover (
-\begin{DoxyParamCaption}
-\item[{int}]{columns, }
-\item[{int}]{rows, }
-\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRaton_a0dab97a891533772429b19419d8e727f}{}\label{classRaton_a0dab97a891533772429b19419d8e727f}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRaton_ad50cebe48f49dbadef570d616a0e6aa3}{}\label{classRaton_ad50cebe48f49dbadef570d616a0e6aa3}
 
 
 Metodo para que el raton se mueva en el terreno. Es capaz de moverse solo un espacio en el terrreno siempre que este desocupado y sea aledaño. 
 
 
 
-Implements \hyperlink{classAnimal_acfb4b1ab56fbd8d98b9ddc4070df6521}{Animal}.
+Implements \hyperlink{classAnimal_abe502d1333df77d245d74cd20190a0aa}{Animal}.
 
-\index{Raton@{Raton}!Reproducir@{Reproducir}}
-\index{Reproducir@{Reproducir}!Raton@{Raton}}
-\subsubsection[{\texorpdfstring{Reproducir(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{Reproducir(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}void Raton\+::\+Reproducir (
+\index{Raton@{Raton}!operator++@{operator++}}
+\index{operator++@{operator++}!Raton@{Raton}}
+\subsubsection[{\texorpdfstring{operator++()}{operator++()}}]{\setlength{\rightskip}{0pt plus 5cm}int Raton\+::operator++ (
 \begin{DoxyParamCaption}
-\item[{int}]{columns, }
-\item[{int}]{rows, }
-\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+{}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRaton_a0abb2bfb6f1eda254d4e6f02e2f86861}{}\label{classRaton_a0abb2bfb6f1eda254d4e6f02e2f86861}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRaton_a64ec37f911376e16802ad5906bb4e27a}{}\label{classRaton_a64ec37f911376e16802ad5906bb4e27a}
+
+
+Metodo para comer. Se alimenta del zacate, consume 5 puntos del zacate y recupera la misma cantidad. En caso de no haber suficiente zacate, consume lo que haya y recupera eso mismo. No puede excederse de 25 la energia del \hyperlink{classRaton}{Raton}. 
+
+
+
+Implements \hyperlink{classAnimal_a66e3bc83959ea5c5d7aa8d85f8ca993c}{Animal}.
+
+\index{Raton@{Raton}!operator````~@{operator$\sim$}}
+\index{operator````~@{operator$\sim$}!Raton@{Raton}}
+\subsubsection[{\texorpdfstring{operator$\sim$()}{operator~()}}]{\setlength{\rightskip}{0pt plus 5cm}void Raton\+::operator$\sim$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classRaton_a7ec71ea95a98d13bf2cccf108b3c76d6}{}\label{classRaton_a7ec71ea95a98d13bf2cccf108b3c76d6}
 
 
 Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de su misma especie pero de distinto sexo si se reproduce tanto este como la pareja no puede volver a resproducirse durante el dia. 
@@ -139,7 +131,7 @@ Metodo para reproducirse. Solo se puede reproducir con un animal y solo si es de
 \end{DoxyParams}
 
 
-Implements \hyperlink{classAnimal_aec115272cec5fc59c1a6944a0ad43fef}{Animal}.
+Implements \hyperlink{classAnimal_a6539ec18d8975982b65de76d8e5638f0}{Animal}.
 
 
 

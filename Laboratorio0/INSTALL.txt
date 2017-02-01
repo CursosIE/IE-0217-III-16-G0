@@ -1,0 +1,22 @@
+*************************************************************************
+*************************************************************************
+
+			Juego de ecología en C++
+
+	Autores:	
+		Luis Diego Fernandez Coto
+		Daniel Jimenez Leon
+
+*************************************************************************
+*************************************************************************
+
+	Para la compilacion y ejecucion del juego se crea un archivo
+	makefile con un build y clean. Para ejecutar el programa se 
+	debe indicar inicialmente el numero de dias que se desea correr
+	el juego y ademas la ruta donde se ubica el archivo del cual se
+	recopila la informacion de los animales y el ecosistema.
+
+	Se debe correr make build para compilar, posteriormente correr
+	el ejecutable generado con sus respectivos argumentos descritos
+	anteriormente y se puede correr make clean para eliminar el
+	ejecutable generado.

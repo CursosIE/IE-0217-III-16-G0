@@ -1,6 +1,6 @@
 <map id="Animal" name="Animal">
-<area shape="rect" id="node2" href="$classLobo.html" title="Lobo" alt="" coords="5,80,56,107"/>
-<area shape="rect" id="node3" href="$classOveja.html" title="Oveja" alt="" coords="80,80,136,107"/>
-<area shape="rect" id="node4" href="$classRaton.html" title="Raton" alt="" coords="161,80,218,107"/>
-<area shape="rect" id="node5" href="$classZorro.html" title="Zorro" alt="" coords="242,80,294,107"/>
+<area shape="rect" id="node2" href="$classLobo.html" title="{Lobo\n||+ Lobo()\l+ Lobo()\l+ ~Lobo()\l+ operator!()\l+ operator++()\l+ operator~()\l}" alt="" coords="5,321,111,472"/>
+<area shape="rect" id="node3" href="$classOveja.html" title="{Oveja\n||+ Oveja()\l+ Oveja()\l+ ~Oveja()\l+ operator!()\l+ operator++()\l+ operator~()\l}" alt="" coords="135,321,240,472"/>
+<area shape="rect" id="node4" href="$classRaton.html" title="{Raton\n||+ Raton()\l+ Raton()\l+ ~Raton()\l+ operator!()\l+ operator++()\l+ operator~()\l}" alt="" coords="264,321,369,472"/>
+<area shape="rect" id="node5" href="$classZorro.html" title="{Zorro\n||+ Zorro()\l+ Zorro()\l+ ~Zorro()\l+ operator!()\l+ operator++()\l+ operator~()\l}" alt="" coords="393,321,499,472"/>
 </map>

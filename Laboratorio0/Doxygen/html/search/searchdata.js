@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "aceflmoprstz~",
+  0: "acdeflmoprstz~",
   1: "aclorz",
-  2: "aclmorz",
+  2: "acdlmorz",
   3: "aclmoprz~",
-  4: "acefostz"
+  4: "aceforstz"
 };
 
 var indexSectionNames =
@@ -19,7 +19,7 @@ var indexSectionNames =
 var indexSectionLabels =
 {
   0: "All",
-  1: "Data Structures",
+  1: "Classes",
   2: "Files",
   3: "Functions",
   4: "Variables"

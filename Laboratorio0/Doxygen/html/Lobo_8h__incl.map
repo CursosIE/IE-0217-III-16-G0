@@ -1,3 +1,8 @@
 <map id="Lobo.h" name="Lobo.h">
-<area shape="rect" id="node3" href="$Animal_8h.html" title="Animal.h" alt="" coords="89,80,163,107"/>
+<area shape="rect" id="node3" href="$Animal_8h.html" title="Animal.h" alt="" coords="287,379,360,405"/>
+<area shape="rect" id="node5" href="$Celda_8h.html" title="Celda.h" alt="" coords="194,80,261,107"/>
+<area shape="rect" id="node7" href="$Controlador_8h.html" title="Controlador.h" alt="" coords="132,229,232,256"/>
+<area shape="rect" id="node6" href="$Oveja_8h.html" title="Oveja.h" alt="" coords="290,304,357,331"/>
+<area shape="rect" id="node9" href="$Raton_8h.html" title="Raton.h" alt="" coords="5,304,73,331"/>
+<area shape="rect" id="node10" href="$Zorro_8h.html" title="Zorro.h" alt="" coords="220,155,283,181"/>
 </map>

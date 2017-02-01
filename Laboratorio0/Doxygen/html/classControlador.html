@@ -25,7 +25,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Juego de la vida
    </div>
-   <div id="projectbrief">Laboratorio 0: Juego de ecologı́a en C++</div>
+   <div id="projectbrief">Laboratorio 0. Juego de ecología en C++</div>
   </td>
  </tr>
  </tbody>
@@ -39,7 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -61,10 +61,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
-      <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -84,13 +84,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="classControlador-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Controlador Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Controlador_8h_source.html">Controlador.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Controlador:</div>
+<div class="dyncontent">
+<div class="center"><img src="classControlador__coll__graph.png" border="0" usemap="#Controlador_coll__map" alt="Collaboration graph"/></div>
+<map name="Controlador_coll__map" id="Controlador_coll__map">
+<area shape="rect" id="node2" href="classCelda.html" title="{Celda\n|+ columna\l+ fila\l+ ocupante\l+ zacate\l|+ Celda()\l+ Celda()\l+ ~Celda()\l+ print()\l}" alt="" coords="35,336,122,501"/>
+<area shape="rect" id="node3" href="classAnimal.html" title="{Animal\n|+ allFunctions\l+ alreadyMoved\l+ alreadyReproduced\l+ Energia\l+ Fila\l+ Columna\l+ Sexo\l+ tipoAnimal\l|+ Animal()\l+ ~Animal()\l+ operator!()\l+ operator++()\l+ operator~()\l+ operator&#45;&#45;()\l+ Print()\l}" alt="" coords="5,5,152,273"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -100,12 +111,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f1828135645f009d3772de86f12d507"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador.html#a2f1828135645f009d3772de86f12d507">~Controlador</a> ()</td></tr>
 <tr class="memdesc:a2f1828135645f009d3772de86f12d507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a2f1828135645f009d3772de86f12d507">More...</a><br /></td></tr>
 <tr class="separator:a2f1828135645f009d3772de86f12d507"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae18001a1939880c3600e323ef4177e3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador.html#ae18001a1939880c3600e323ef4177e3a">resetReproduceMark</a> (int columns, int rows, <a class="el" href="classCelda.html">Celda</a> ***terreno)</td></tr>
-<tr class="memdesc:ae18001a1939880c3600e323ef4177e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo para resetear banderas de control. Cada animal tiene una marca que dice si ya se reprodujo, se movio y aplicaron demas metodos cada dia, entonces al finalizar cada dia se resetean las marcas de todos los animales para que al dia siguiente puedan ser aplicadas nuevamente.  <a href="#ae18001a1939880c3600e323ef4177e3a">More...</a><br /></td></tr>
-<tr class="separator:ae18001a1939880c3600e323ef4177e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad658c69aebb54cf6b39393350e1b99e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador.html#ad658c69aebb54cf6b39393350e1b99e5">printTerreno</a> (int <a class="el" href="classControlador.html#a2a6b739b562f1c4d295be0e48069c521">columns</a>, int <a class="el" href="classControlador.html#af6022ee9e2d20a9d2469df3e91d78029">rows</a>, <a class="el" href="classCelda.html">Celda</a> ***<a class="el" href="classControlador.html#a70fb7805ac5552e9ee36d7d3d0653fa2">terreno</a>)</td></tr>
+<tr class="memdesc:ad658c69aebb54cf6b39393350e1b99e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que imprime el estado del sistema (terreno)  <a href="#ad658c69aebb54cf6b39393350e1b99e5">More...</a><br /></td></tr>
+<tr class="separator:ad658c69aebb54cf6b39393350e1b99e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b672bdb52609d4ec1debceaed4b57f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador.html#a4b672bdb52609d4ec1debceaed4b57f7">resetMarks</a> (int <a class="el" href="classControlador.html#a2a6b739b562f1c4d295be0e48069c521">columns</a>, int <a class="el" href="classControlador.html#af6022ee9e2d20a9d2469df3e91d78029">rows</a>, <a class="el" href="classCelda.html">Celda</a> ***<a class="el" href="classControlador.html#a70fb7805ac5552e9ee36d7d3d0653fa2">terreno</a>)</td></tr>
+<tr class="memdesc:a4b672bdb52609d4ec1debceaed4b57f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo para resetear banderas de control. Cada animal tiene una marca que dice si ya se reprodujo, se movio y aplicaron demas metodos cada dia, entonces al finalizar cada dia se resetean las marcas de todos los animales para que al dia siguiente puedan ser aplicadas nuevamente.  <a href="#a4b672bdb52609d4ec1debceaed4b57f7">More...</a><br /></td></tr>
+<tr class="separator:a4b672bdb52609d4ec1debceaed4b57f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33ea3e8f5c32cd2fcd962da6e7fadf52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador.html#a33ea3e8f5c32cd2fcd962da6e7fadf52">run</a> (int amountOfDays, char *fileName)</td></tr>
 <tr class="memdesc:a33ea3e8f5c32cd2fcd962da6e7fadf52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que ejecuta la logica del juego.  <a href="#a33ea3e8f5c32cd2fcd962da6e7fadf52">More...</a><br /></td></tr>
 <tr class="separator:a33ea3e8f5c32cd2fcd962da6e7fadf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a2a6b739b562f1c4d295be0e48069c521"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador.html#a2a6b739b562f1c4d295be0e48069c521">columns</a></td></tr>
+<tr class="separator:a2a6b739b562f1c4d295be0e48069c521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6022ee9e2d20a9d2469df3e91d78029"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador.html#af6022ee9e2d20a9d2469df3e91d78029">rows</a></td></tr>
+<tr class="separator:af6022ee9e2d20a9d2469df3e91d78029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70fb7805ac5552e9ee36d7d3d0653fa2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCelda.html">Celda</a> ***&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador.html#a70fb7805ac5552e9ee36d7d3d0653fa2">terreno</a></td></tr>
+<tr class="separator:a70fb7805ac5552e9ee36d7d3d0653fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a17db08229680461d4d1a2110a92ccf78"></a>
@@ -151,12 +174,54 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae18001a1939880c3600e323ef4177e3a"></a>
+<a class="anchor" id="ad658c69aebb54cf6b39393350e1b99e5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Controlador::resetReproduceMark </td>
+          <td class="memname">void Controlador::printTerreno </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>columns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCelda.html">Celda</a> ***&#160;</td>
+          <td class="paramname"><em>terreno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metodo que imprime el estado del sistema (terreno) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">columns</td><td>Posicion en la cual se desea crear el animal y establecer los datos a la celda. </td></tr>
+    <tr><td class="paramname">rows</td><td>Posicion en la cual se desea crear el animal y establecer los datos a la celda. </td></tr>
+    <tr><td class="paramname">terreno</td><td>La matriz de celdas con el cual esta basado el juego </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4b672bdb52609d4ec1debceaed4b57f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controlador::resetMarks </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>columns</em>, </td>
@@ -222,6 +287,67 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a2a6b739b562f1c4d295be0e48069c521"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controlador::columns</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af6022ee9e2d20a9d2469df3e91d78029"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Controlador::rows</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a70fb7805ac5552e9ee36d7d3d0653fa2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCelda.html">Celda</a> *** Controlador::terreno</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

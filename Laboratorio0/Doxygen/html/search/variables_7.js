@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zacate',['zacate',['../classCelda.html#ad5e9456beab1d6fbe306642fe7198043',1,'Celda']]]
+  ['terreno',['terreno',['../classControlador.html#a70fb7805ac5552e9ee36d7d3d0653fa2',1,'Controlador']]],
+  ['tipoanimal',['tipoAnimal',['../classAnimal.html#ae7a4f121949d20c359414a3002e7eff7',1,'Animal']]]
 ];

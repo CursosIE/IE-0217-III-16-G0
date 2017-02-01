@@ -4,6 +4,15 @@
 
 {\ttfamily \#include $<$Controlador.\+h$>$}
 
+
+
+Collaboration diagram for Controlador\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classControlador__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -11,10 +20,21 @@
 \begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
 virtual \hyperlink{classControlador_a2f1828135645f009d3772de86f12d507}{$\sim$\+Controlador} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
-void \hyperlink{classControlador_ae18001a1939880c3600e323ef4177e3a}{reset\+Reproduce\+Mark} (int columns, int rows, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$terreno)
+void \hyperlink{classControlador_ad658c69aebb54cf6b39393350e1b99e5}{print\+Terreno} (int \hyperlink{classControlador_a2a6b739b562f1c4d295be0e48069c521}{columns}, int \hyperlink{classControlador_af6022ee9e2d20a9d2469df3e91d78029}{rows}, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$\hyperlink{classControlador_a70fb7805ac5552e9ee36d7d3d0653fa2}{terreno})
+\begin{DoxyCompactList}\small\item\em Metodo que imprime el estado del sistema (terreno) \end{DoxyCompactList}\item 
+void \hyperlink{classControlador_a4b672bdb52609d4ec1debceaed4b57f7}{reset\+Marks} (int \hyperlink{classControlador_a2a6b739b562f1c4d295be0e48069c521}{columns}, int \hyperlink{classControlador_af6022ee9e2d20a9d2469df3e91d78029}{rows}, \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$\hyperlink{classControlador_a70fb7805ac5552e9ee36d7d3d0653fa2}{terreno})
 \begin{DoxyCompactList}\small\item\em Metodo para resetear banderas de control. Cada animal tiene una marca que dice si ya se reprodujo, se movio y aplicaron demas metodos cada dia, entonces al finalizar cada dia se resetean las marcas de todos los animales para que al dia siguiente puedan ser aplicadas nuevamente. \end{DoxyCompactList}\item 
 int \hyperlink{classControlador_a33ea3e8f5c32cd2fcd962da6e7fadf52}{run} (int amount\+Of\+Days, char $\ast$file\+Name)
 \begin{DoxyCompactList}\small\item\em Metodo que ejecuta la logica del juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classControlador_a2a6b739b562f1c4d295be0e48069c521}{columns}
+\item 
+static int \hyperlink{classControlador_af6022ee9e2d20a9d2469df3e91d78029}{rows}
+\item 
+static \hyperlink{classCelda}{Celda} $\ast$$\ast$$\ast$ \hyperlink{classControlador_a70fb7805ac5552e9ee36d7d3d0653fa2}{terreno}
+\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -43,15 +63,37 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
-\index{Controlador@{Controlador}!reset\+Reproduce\+Mark@{reset\+Reproduce\+Mark}}
-\index{reset\+Reproduce\+Mark@{reset\+Reproduce\+Mark}!Controlador@{Controlador}}
-\subsubsection[{\texorpdfstring{reset\+Reproduce\+Mark(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{resetReproduceMark(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}void Controlador\+::reset\+Reproduce\+Mark (
+\index{Controlador@{Controlador}!print\+Terreno@{print\+Terreno}}
+\index{print\+Terreno@{print\+Terreno}!Controlador@{Controlador}}
+\subsubsection[{\texorpdfstring{print\+Terreno(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{printTerreno(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}void Controlador\+::print\+Terreno (
 \begin{DoxyParamCaption}
 \item[{int}]{columns, }
 \item[{int}]{rows, }
 \item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
 \end{DoxyParamCaption}
-)}\hypertarget{classControlador_ae18001a1939880c3600e323ef4177e3a}{}\label{classControlador_ae18001a1939880c3600e323ef4177e3a}
+)}\hypertarget{classControlador_ad658c69aebb54cf6b39393350e1b99e5}{}\label{classControlador_ad658c69aebb54cf6b39393350e1b99e5}
+
+
+Metodo que imprime el estado del sistema (terreno) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em columns} & Posicion en la cual se desea crear el animal y establecer los datos a la celda. \\
+\hline
+{\em rows} & Posicion en la cual se desea crear el animal y establecer los datos a la celda. \\
+\hline
+{\em terreno} & La matriz de celdas con el cual esta basado el juego \\
+\hline
+\end{DoxyParams}
+\index{Controlador@{Controlador}!reset\+Marks@{reset\+Marks}}
+\index{reset\+Marks@{reset\+Marks}!Controlador@{Controlador}}
+\subsubsection[{\texorpdfstring{reset\+Marks(int columns, int rows, Celda $\ast$$\ast$$\ast$terreno)}{resetMarks(int columns, int rows, Celda ***terreno)}}]{\setlength{\rightskip}{0pt plus 5cm}void Controlador\+::reset\+Marks (
+\begin{DoxyParamCaption}
+\item[{int}]{columns, }
+\item[{int}]{rows, }
+\item[{{\bf Celda} $\ast$$\ast$$\ast$}]{terreno}
+\end{DoxyParamCaption}
+)}\hypertarget{classControlador_a4b672bdb52609d4ec1debceaed4b57f7}{}\label{classControlador_a4b672bdb52609d4ec1debceaed4b57f7}
 
 
 Metodo para resetear banderas de control. Cada animal tiene una marca que dice si ya se reprodujo, se movio y aplicaron demas metodos cada dia, entonces al finalizar cada dia se resetean las marcas de todos los animales para que al dia siguiente puedan ser aplicadas nuevamente. 
@@ -85,6 +127,18 @@ Metodo que ejecuta la logica del juego.
 {\em posicion\+Fila} & Variable para recorrer el terreno. \\
 \hline
 \end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Controlador@{Controlador}!columns@{columns}}
+\index{columns@{columns}!Controlador@{Controlador}}
+\subsubsection[{\texorpdfstring{columns}{columns}}]{\setlength{\rightskip}{0pt plus 5cm}int Controlador\+::columns\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classControlador_a2a6b739b562f1c4d295be0e48069c521}{}\label{classControlador_a2a6b739b562f1c4d295be0e48069c521}
+\index{Controlador@{Controlador}!rows@{rows}}
+\index{rows@{rows}!Controlador@{Controlador}}
+\subsubsection[{\texorpdfstring{rows}{rows}}]{\setlength{\rightskip}{0pt plus 5cm}int Controlador\+::rows\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classControlador_af6022ee9e2d20a9d2469df3e91d78029}{}\label{classControlador_af6022ee9e2d20a9d2469df3e91d78029}
+\index{Controlador@{Controlador}!terreno@{terreno}}
+\index{terreno@{terreno}!Controlador@{Controlador}}
+\subsubsection[{\texorpdfstring{terreno}{terreno}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Celda} $\ast$$\ast$$\ast$ Controlador\+::terreno\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classControlador_a70fb7805ac5552e9ee36d7d3d0653fa2}{}\label{classControlador_a70fb7805ac5552e9ee36d7d3d0653fa2}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

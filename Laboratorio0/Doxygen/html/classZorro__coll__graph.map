@@ -1,3 +1,3 @@
 <map id="Zorro" name="Zorro">
-<area shape="rect" id="node2" href="$classAnimal.html" title="Animal" alt="" coords="5,5,68,32"/>
+<area shape="rect" id="node2" href="$classAnimal.html" title="{Animal\n|+ allFunctions\l+ alreadyMoved\l+ alreadyReproduced\l+ Energia\l+ Fila\l+ Columna\l+ Sexo\l+ tipoAnimal\l|+ Animal()\l+ ~Animal()\l+ operator!()\l+ operator++()\l+ operator~()\l+ operator&#45;&#45;()\l+ Print()\l}" alt="" coords="5,5,152,273"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="Controlador" name="Controlador">
+<area shape="rect" id="node2" href="$classCelda.html" title="{Celda\n|+ columna\l+ fila\l+ ocupante\l+ zacate\l|+ Celda()\l+ Celda()\l+ ~Celda()\l+ print()\l}" alt="" coords="35,336,122,501"/>
+<area shape="rect" id="node3" href="$classAnimal.html" title="{Animal\n|+ allFunctions\l+ alreadyMoved\l+ alreadyReproduced\l+ Energia\l+ Fila\l+ Columna\l+ Sexo\l+ tipoAnimal\l|+ Animal()\l+ ~Animal()\l+ operator!()\l+ operator++()\l+ operator~()\l+ operator&#45;&#45;()\l+ Print()\l}" alt="" coords="5,5,152,273"/>
+</map>
