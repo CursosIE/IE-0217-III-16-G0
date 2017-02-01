@@ -1,5 +1,15 @@
 import sys
 
+def Selection_Sort(Lista):
+    for n in range(0, len(Lista)-1):
+        for m in range(0, len(Lista)):
+            if (Lista[n] < Lista[m]):
+                temp = Lista[n]
+                Lista[n] = Lista[m]
+                Lista[m] = temp
+    return Lista
+
+
 def Binary_Search(Lista, NUM):
     MIN = 0
     MAX = len(Lista)
@@ -28,4 +38,10 @@ if (sys.argv[1] == "BS"):
     print Binary_Search(Lista, num)
 
 if (sys.argv[1] == "SS"):
-    print "No implementado"
+    datos = open(sys.argv[2], 'r')
+    datos = datos.readline()
+    Lista = datos.split(' ')
+    for i in range(0,len(Lista)):
+        Lista[i] = int(Lista[i]);
+
+    print Selection_Sort(Lista)
