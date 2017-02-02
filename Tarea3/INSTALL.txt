@@ -1,7 +1,7 @@
 *************************************************************************
 *************************************************************************
 
-			Tiempos y ordenes de ejecucion
+			Tiempos y ordenes de duracion
 
 	Autores:	
 		Luis Diego Fernandez Coto
