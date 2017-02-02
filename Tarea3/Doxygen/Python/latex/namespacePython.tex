@@ -1,0 +1,88 @@
+\hypertarget{namespacePython}{}\section{Python Namespace Reference}
+\label{namespacePython}\index{Python@{Python}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacePython_a4b1ce01cbdd6805546bc11fbcd7f5332}{Selection\+\_\+\+Sort} (\hyperlink{namespacePython_ae46206c5866c80495e52ee5db73af640}{Lista})
+\begin{DoxyCompactList}\small\item\em Metodo ordena un vector de numeros en orden ascendente utilizando el Selection Sort. \end{DoxyCompactList}\item 
+def \hyperlink{namespacePython_a08edaf56fb0321422e0c5a4f824195cb}{Binary\+\_\+\+Search} (\hyperlink{namespacePython_ae46206c5866c80495e52ee5db73af640}{Lista}, N\+UM)
+\begin{DoxyCompactList}\small\item\em Metodo que hace una busqueda en una lista ordenada del tipo Binary Search. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacePython_a480d858dd0b7f6a09a2c0c1fe831d8da}{num} = int(sys.\+argv\mbox{[}2\mbox{]})
+\item 
+\hyperlink{namespacePython_a6b73bac8be786503797ec7d60767507f}{datos} = open(sys.\+argv\mbox{[}3\mbox{]}, \textquotesingle{}r\textquotesingle{})
+\item 
+\hyperlink{namespacePython_ae46206c5866c80495e52ee5db73af640}{Lista} = datos.\+split(\textquotesingle{} \textquotesingle{})
+\item 
+\hyperlink{namespacePython_a870c37a495c63c0f2740e670128c5e8c}{start\+\_\+time} = time()
+\item 
+\hyperlink{namespacePython_a7ba4f492816e35070eb8a3964d6b428b}{BS} = \hyperlink{namespacePython_a08edaf56fb0321422e0c5a4f824195cb}{Binary\+\_\+\+Search}(\hyperlink{namespacePython_ae46206c5866c80495e52ee5db73af640}{Lista}, \hyperlink{namespacePython_a480d858dd0b7f6a09a2c0c1fe831d8da}{num})
+\item 
+\hyperlink{namespacePython_a9cd322469f48bbf8cbf94cd42f228a23}{elapsed\+\_\+time} = time()-\/\hyperlink{namespacePython_a870c37a495c63c0f2740e670128c5e8c}{start\+\_\+time}
+\item 
+\hyperlink{namespacePython_a24d889ae27972167c55c806c36a907ac}{SS} = \hyperlink{namespacePython_a4b1ce01cbdd6805546bc11fbcd7f5332}{Selection\+\_\+\+Sort}(\hyperlink{namespacePython_ae46206c5866c80495e52ee5db73af640}{Lista})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Python@{Python}!Binary\+\_\+\+Search@{Binary\+\_\+\+Search}}
+\index{Binary\+\_\+\+Search@{Binary\+\_\+\+Search}!Python@{Python}}
+\subsubsection[{\texorpdfstring{Binary\+\_\+\+Search(\+Lista, N\+U\+M)}{Binary_Search(Lista, NUM)}}]{\setlength{\rightskip}{0pt plus 5cm}def Python.\+Binary\+\_\+\+Search (
+\begin{DoxyParamCaption}
+\item[{}]{Lista, }
+\item[{}]{N\+UM}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacePython_a08edaf56fb0321422e0c5a4f824195cb}{}\label{namespacePython_a08edaf56fb0321422e0c5a4f824195cb}
+
+
+Metodo que hace una busqueda en una lista ordenada del tipo Binary Search. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Lista} & Lista en la cual buscar el numero. \\
+\hline
+{\em N\+UM} & Numero que se desa encontrar. \\
+\hline
+\end{DoxyParams}
+\index{Python@{Python}!Selection\+\_\+\+Sort@{Selection\+\_\+\+Sort}}
+\index{Selection\+\_\+\+Sort@{Selection\+\_\+\+Sort}!Python@{Python}}
+\subsubsection[{\texorpdfstring{Selection\+\_\+\+Sort(\+Lista)}{Selection_Sort(Lista)}}]{\setlength{\rightskip}{0pt plus 5cm}def Python.\+Selection\+\_\+\+Sort (
+\begin{DoxyParamCaption}
+\item[{}]{Lista}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacePython_a4b1ce01cbdd6805546bc11fbcd7f5332}{}\label{namespacePython_a4b1ce01cbdd6805546bc11fbcd7f5332}
+
+
+Metodo ordena un vector de numeros en orden ascendente utilizando el Selection Sort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Lista} & Lista en la cual vienen los numeros no ordenados. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{Python@{Python}!BS@{BS}}
+\index{BS@{BS}!Python@{Python}}
+\subsubsection[{\texorpdfstring{BS}{BS}}]{\setlength{\rightskip}{0pt plus 5cm}Python.\+BS = {\bf Binary\+\_\+\+Search}({\bf Lista}, {\bf num})}\hypertarget{namespacePython_a7ba4f492816e35070eb8a3964d6b428b}{}\label{namespacePython_a7ba4f492816e35070eb8a3964d6b428b}
+\index{Python@{Python}!datos@{datos}}
+\index{datos@{datos}!Python@{Python}}
+\subsubsection[{\texorpdfstring{datos}{datos}}]{\setlength{\rightskip}{0pt plus 5cm}Python.\+datos = open(sys.\+argv\mbox{[}3\mbox{]}, \textquotesingle{}r\textquotesingle{})}\hypertarget{namespacePython_a6b73bac8be786503797ec7d60767507f}{}\label{namespacePython_a6b73bac8be786503797ec7d60767507f}
+\index{Python@{Python}!elapsed\+\_\+time@{elapsed\+\_\+time}}
+\index{elapsed\+\_\+time@{elapsed\+\_\+time}!Python@{Python}}
+\subsubsection[{\texorpdfstring{elapsed\+\_\+time}{elapsed_time}}]{\setlength{\rightskip}{0pt plus 5cm}Python.\+elapsed\+\_\+time = time()-\/{\bf start\+\_\+time}}\hypertarget{namespacePython_a9cd322469f48bbf8cbf94cd42f228a23}{}\label{namespacePython_a9cd322469f48bbf8cbf94cd42f228a23}
+\index{Python@{Python}!Lista@{Lista}}
+\index{Lista@{Lista}!Python@{Python}}
+\subsubsection[{\texorpdfstring{Lista}{Lista}}]{\setlength{\rightskip}{0pt plus 5cm}Python.\+Lista = datos.\+split(\textquotesingle{} \textquotesingle{})}\hypertarget{namespacePython_ae46206c5866c80495e52ee5db73af640}{}\label{namespacePython_ae46206c5866c80495e52ee5db73af640}
+\index{Python@{Python}!num@{num}}
+\index{num@{num}!Python@{Python}}
+\subsubsection[{\texorpdfstring{num}{num}}]{\setlength{\rightskip}{0pt plus 5cm}Python.\+num = int(sys.\+argv\mbox{[}2\mbox{]})}\hypertarget{namespacePython_a480d858dd0b7f6a09a2c0c1fe831d8da}{}\label{namespacePython_a480d858dd0b7f6a09a2c0c1fe831d8da}
+\index{Python@{Python}!SS@{SS}}
+\index{SS@{SS}!Python@{Python}}
+\subsubsection[{\texorpdfstring{SS}{SS}}]{\setlength{\rightskip}{0pt plus 5cm}Python.\+SS = {\bf Selection\+\_\+\+Sort}({\bf Lista})}\hypertarget{namespacePython_a24d889ae27972167c55c806c36a907ac}{}\label{namespacePython_a24d889ae27972167c55c806c36a907ac}
+\index{Python@{Python}!start\+\_\+time@{start\+\_\+time}}
+\index{start\+\_\+time@{start\+\_\+time}!Python@{Python}}
+\subsubsection[{\texorpdfstring{start\+\_\+time}{start_time}}]{\setlength{\rightskip}{0pt plus 5cm}Python.\+start\+\_\+time = time()}\hypertarget{namespacePython_a870c37a495c63c0f2740e670128c5e8c}{}\label{namespacePython_a870c37a495c63c0f2740e670128c5e8c}
