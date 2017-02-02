@@ -1,0 +1,37 @@
+*************************************************************************
+*************************************************************************
+
+			Tiempos y ordenes de ejecucion
+
+	Autores:	
+		Luis Diego Fernandez Coto
+		Daniel Jimenez Leon
+
+*************************************************************************
+*************************************************************************
+
+	En el caso de ambos programas, tanto el de Python como el de C++,
+se reciben diferentes argumentos dependiendo de la funcion que se quiera
+del programa.
+
+CASO: SELECTION SORT
+	Si se quiere ordenar una lista utilizando el algoritmo del
+Selection Sort se pasa como primer argumento un "ss" y como segundo
+argumento la ruta del archivo que contiene los numeros que se quieren
+ordenar.
+
+CASO: BINARY SEARCH
+	Si se quiere buscar un numero en especifico dentro de una lista 
+de numeros con el algoritmo de Binary Search, primero se pasa como 
+arhumento un "bs", luego el numero que se quiere buscar y por ultimo
+la ruta del archivo que contiene la lista ordenada de numeros en los
+cuales se va a buscar.
+
+Para correr el programa de Python se escribe en la terminal:
+	root@user:~/path$ python Python.py arg1 arg2 ... argN
+
+Para correr el programa de C++ se debe de compilar primero, entonces
+se escribe en la terminal:
+	root@user:~/path$ g++ -o main  main.cpp
+Para correrlo:
+	root@user~/path$ ./main arg1 arg2 ... argN
