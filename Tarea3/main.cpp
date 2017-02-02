@@ -1,3 +1,10 @@
+/*! \brief Tarea 3. Tiempos y Ordenes de Duracion
+ *  \author Luis Diego Fernandez 
+ *  \author Daniel Jimenez
+ *  \date 1 de Febrero del 2017
+ *  \version 1.0
+ */
+
 #include <cstring>
 #include <ctime>
 #include <fstream>
@@ -28,12 +35,12 @@ int binarySearch (int myVector[], int size, int find) {
             clock_t end = clock(); //se inicia otro clock
             cout << 1;
             //se imprime el tiempo de ejecucion del programa
-            //cout << "\ntime: " << (1000000 * (end - begin)) / CLOCKS_PER_SEC << "\u00B5s" << endl;
-            cout << "\ntime: " << (1000* (end - begin)) / CLOCKS_PER_SEC << "ms." << endl;
+            cout << "\ntime: " << (1000000 * (end - begin)) / CLOCKS_PER_SEC << "\u00B5s" << endl;
             return 1;
-        }
+        }//Si el numero encontrado es mayor que el buscado, se cambia el limite mayor.
         else if (myVector[(min + max) / 2] > find)
             max = (min + max) / 2;
+	//Si el numero encontrado es menor que el buscado, se cambia el limite menor.
         else if (myVector[(min + max) / 2] < find)
             min = (min + max) / 2;
        
@@ -42,8 +49,7 @@ int binarySearch (int myVector[], int size, int find) {
         	clock_t end = clock(); //se inicia otro clock
         	cout << 0;
         	//se imprime el tiempo de ejecucion del programa
-        	//cout << "\ntime: " << (1000000 * (end - begin)) / CLOCKS_PER_SEC << "\u00B5s" << endl;
-        	cout << "\ntime: " << (1000* (end - begin)) / CLOCKS_PER_SEC << "ms." << endl;
+        	cout << "\ntime: " << (1000000 * (end - begin)) / CLOCKS_PER_SEC << "\u00B5s" << endl;
         	return 0;
         }
 	}
