@@ -78,10 +78,9 @@ public class TicTacToe {
         while(!end)
         {
             player *= -1
-            r =  randomInt(0, 3);
-            c =  randomInt(0, 3);
+			pos = getUnusedCell();
             
-            result = move(player, r, c);
+            result = move(player, pos.r, pos.c);
             if(result != 0)
             {
                 print("player " + result + " won.");
