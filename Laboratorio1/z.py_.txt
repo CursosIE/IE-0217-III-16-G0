@@ -1,0 +1,104 @@
+import random
+p = open("palabras.txt", "r")#Abrir archivo
+r = p.readlines()#Crea lista con las palabras del archivo
+print("Welcome")
+user = input("Player name: ")
+
+
+def valStr(avance):
+    l = input("Letter: ").upper()#poner todo en mayuscula
+    if(len(l) > 1 or l == ""): #para q solo se pueda poner una letra y no se pueda poner la misma letra
+        print("Invalid option")
+        return valStr(avance)
+    elif(l in avance):
+        print("You already tried this letter\n")
+        return valStr(avance)       
+    else:
+        return l
+    
+    
+def EscoPala():
+    i = random.choice(r)[:-1] #escoger palabra, menos el espacio
+    if(i == "\n"):
+        EscoPala()
+    else:
+        return i
+    
+    
+def VolJug():#Volver a Jugar
+    res = input("Play Again? (y/n): ")
+    if(res not in "Yy" and res not in "Nn" and res not in "/ff"): #validar q solo se puedea poner n o y maysucula o miniscula
+        print("Invalid option")
+        return VolJug()
+    else:
+        return res
+    
+    
+def comparar(letra, palabra, adi, c):#Encontrar la letra en la palabra
+    if(letra in palabra):
+        enc = palabra.index(letra)
+        c = c + enc
+        adi[c] = letra
+        return comparar(letra, palabra[enc + 1:], adi, c + 1)
+    else:
+        return adi      
+    
+    
+def jugar(user, w, f):
+    print ("Hi " + user + " you have currently ", w, " wins and a winning-streak of ", f, " games") 
+    i = EscoPala()
+    inten = 10 #numero de intentos
+    carac = len(i) * "*" #cambiar la palabra por "*"
+    Ingame(i, inten, list(carac), w, f)  
+    
+    
+def Ingame(i, inten, adi, w, f):#wins and winstreak 
+    avance = ''.join(adi)
+    print(avance)
+    if(inten > 0):
+        if("*" not in avance):
+            w = w + 1
+            f = f + 1
+            print("You Win")
+            res = VolJug()
+            if(res in "Yy"):
+                return jugar(user, w, f)
+            else:
+                return print("Thanks for playing")
+        letra = valStr(avance)
+        if(letra in i):
+            adi = comparar(letra, i, adi, 0)
+            return Ingame(i, inten, adi, w, f)
+        else:
+            inten -= 1
+            print("There are no ", letra, " You have ", inten, " remaining")
+            return Ingame(i, inten, adi, w, f)
+    else:
+        print("You lost")
+        f = 0
+        res = VolJug()
+        if(res in "Yy"):
+            return jugar(user, w, f)
+        elif(res == "/ff"):
+            return print("Surrender")
+        else:
+            return print("Thanks for playing")
+        
+        
+def menu(user):
+    w = 0
+    f = 0
+    jugar(user, w, f)
+    
+    
+menu(user)
+
+    
+    
+    
+
+
+
+
+
+
