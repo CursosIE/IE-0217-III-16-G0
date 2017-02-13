@@ -1,30 +1,43 @@
-B+ Tree:
-
-	-Un arbol B+ es un arbol balanceado en donde todo camino de la raiz a una hoja es del mismo tamanno.
-
-	-Cada nodo que no es una hoja en el arbol tiene un tamanno entre n/2 y n hijos.
-		+Donde n es el orden del arbol.
-			*Orden es la cantidad de elementos que se pueden almacenar por bloque.
-
-	-Para un arbol de orden n hay:
-		+[n/2, n] keys
-		+ index = n+1
-
-	-Beneficios de un arbol B+ sobre otras estructuras de datos para:
-		+Basado en su definicion es fácil mantenerlo balanceado. Por ejemplo, no hay que balancearlo despues de editarlo.
-		+El tiempo de busqueda en un arbol B+ es mucho mas corto que en otros tipos de arboles.
-			*El detalle esta en como definir su tamano para hacerlo tan eficiente.
-
-	-Como los arboles B+ no tienen datos en los nodos interiores, se pueden meter mas llaves en una pagina. Es por esto que la cache va a tener menos misses a la hora de accesar datos de una hoja.
-
-	-A nivel macro en 1 nodo pueden haber cientos, hasta miles de llaves por lo que hace a estos arboles poco profundos y rapidos de recorrer.
-
-	-Dentro de un arbol B+ todas las hojas estan enlazadas como en una lista enlazada.
-		+Como los datos en las hojas estan ordenados, los rangos de busqueda son muy eficientes.
-
 Xq usar un Arbol B+?
 	-La razon principal es por velocidad.
 	-Cuando hablamos de memoria, no todo puede ser almacenado siempre en memoria principal. Es por esto que tenemos que utilizar discos para almacenarla. Si uno observa una jerarquia de memorias en cuanto a su velocidad vemos arriba a los registros, la cache, la memoria principal y luego los discos duros. Es decir el acceso a memoria en un disco duro es muy lento y es por esto que necesitamos encontrar una manera de ordenar la informacion de manera que no se tengan que hacer muchos accesos a memoria.
+		+En disco los datos son almacenados en paginas. Lo que se hace es que las hojas apuntan a pagians de disco.
 		+ Imaginemos tamannos de datos de billones de lineas. Con un arbol tipo B+ se pueden almacenar billones de llaves (con punteros a billones de lineas) a una altura de 3, 4 o 5. Esto significa que para accesar un dato tenemos que hace como mucho 5 accesos al disco, lo cual es un gran ahorro de tiempo comparado con otras estructuras de datos, digamos un arbol binario.
-	
 
+
+B+ Tree:
+	-Estos arboles son mayormente usados para indexar bases de datos, son los ideales.
+	-Este arbol es una generalizacion de un arbol de busqueda binaria, con la diferencia de permite tener muchas llaves por nodo.
+	-Orden es la maxima cantidad de elementos que se pueden almacenar en una hoja.
+
+
+	-Un arbol B+ es un arbol balanceado en donde todo camino de la raiz a una hoja es del mismo tamanno.
+	-Todas las hojas estan en el mismo nivel.
+	-Las llaves en el arbol estan ordenadas.
+	-La raiz debe tener al menos 2 hijos.
+
+
+	-Cada nodo interno en el arbol tiene entre [(n+1)/2, (n+1)] punteros.
+	-Cada nodo interno en el arbol (menos la raiz) tiene entre [n/2, n] llaves de busqueda.
+	-Cada hoja debe de tener entre [n/2, n] punteros.
+	-Las hojas contienen TODAS las llaves. Por lo general las hojas como datos tienen punteros.
+	-Dentro de un arbol B+ todas las hojas estan enlazadas como en una lista enlazada.
+		+Como los datos en las hojas estan ordenados, los rangos de busqueda son muy eficientes.
+
+
+	-Basado en su definicion es fácil mantenerlo balanceado. Por ejemplo, no hay que balancearlo despues de editarlo.
+	-El tiempo de busqueda en un arbol B+ es mucho mas corto que en otros tipos de arboles.
+		+El detalle esta en como definir su tamano para hacerlo tan eficiente.
+	-Como los arboles B+ no tienen datos en los nodos interiores, se pueden meter mas llaves en una pagina. Es por esto que la cache va a tener menos misses a la hora de accesar datos de una hoja.
+		+Los nodos interiores simplemente dirigen hacia la hoja donde se encuentra el dato que queremos.
+	-A nivel macro en 1 nodo pueden haber cientos, hasta miles de llaves por lo que hace a estos arboles poco profundos y rapidos de recorrer.
+
+	
+	-Valores tipicos en practica:
+		+Orden tipico: 200
+		+Fill factor: 66%
+		+Fanout: 133
+
+		+Ejemplo de la cantidad de data pointers para un tamano n:	
+			133^n * 132 
+			+ n=3 approx 310M 

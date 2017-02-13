@@ -1,0 +1,3 @@
+Aho, A & Hopcroft, J & Ullman, J. (1998). Estructuras de datos y algoritmos. México: Editorial Pearson.
+
+Ramakrishnan, R & Gehrke, J. (2003). Database Management Systems. New York, USA: Mc Graw Hill.
