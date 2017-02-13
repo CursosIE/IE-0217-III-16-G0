@@ -5,6 +5,7 @@ Xq usar un Arbol B+?
 		+ Imaginemos tamannos de datos de billones de lineas. Con un arbol tipo B+ se pueden almacenar billones de llaves (con punteros a billones de lineas) a una altura de 3, 4 o 5. Esto significa que para accesar un dato tenemos que hace como mucho 5 accesos al disco, lo cual es un gran ahorro de tiempo comparado con otras estructuras de datos, digamos un arbol binario.
 
 
+
 B+ Tree:
 	-Estos arboles son mayormente usados para indexar bases de datos, son los ideales.
 	-Este arbol es una generalizacion de un arbol de busqueda binaria, con la diferencia de permite tener muchas llaves por nodo.
@@ -41,3 +42,29 @@ B+ Tree:
 		+Ejemplo de la cantidad de data pointers para un tamano n:	
 			133^n * 132 
 			+ n=3 approx 310M 
+
+
+
+Plataforma 
+	-Se va a trabajar sobre Linux.
+	-Se va a utilizar el lenguaje C++ para implementarlo.
+		+Orientado a objetos.
+		+Manejo de memoria.
+		+Trabaja a un bajo/medio nivel.
+		+Con C++ vamos a entender las cosas que pasan y xq pasan.
+
+
+
+Entradas y pruebas
+	-Se va a trabajar con archivos de alguna base de datos o inclusive autogenerados por nosotros.
+	-Objetivo
+		+Implementar un arbol tipo B+
+		+Probar las funcionalidades de agregar datos, de eliminar datos y de buscar datos.
+		+Tomar tiempos de ejecucion para estos.
+		+Realizar pruebas con distintos arichivos, buscar casos limite.
+		+Indexar todo un sistema de archivos al arbol.
+		+Realizar graficas sobre los resultados para poder hacer un posterior analisis.
+		+Se espera comprobar principalmente:
+			*Funcionalidad de la estructura .
+			*Tiempos de ejecucion.
+
