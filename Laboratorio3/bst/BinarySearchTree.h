@@ -81,7 +81,7 @@ class BinarySearchTree {
     }
 
     Data * get(Node<Data>* n) {
-        
+        return n->d;
     }
 
     void set(Node<Data>* n, Data * d) {
@@ -121,7 +121,6 @@ class BinarySearchTree {
             inOrder(n->r, s + "\t");
             inOrder(n->l, s + "\t");
         }
-
     }
 
     Node<Data>* replacementFor(Node<Data>* n) {
