@@ -4,6 +4,7 @@
 #define BINARYSEARCHTREE_H
 
 #include <iostream>
+#include "ListWithPointer.h"
 #include "Node.h"
 
 using namespace std;
@@ -108,16 +109,14 @@ class BinarySearchTree {
         return finding(d, this->root);
     }
 
-    void balance() {
-    }
-
     void printTree() {
         this->inOrder(root, "");
     }
 
     void inOrder(Node<Data>* n, string s) {
         if (n) {
-            cout << s << *(n->d) << "@" << n << endl;
+            //cout << s << *(n->d) << "@" << n << endl;
+            cout << s << *(n->d) << endl;
             inOrder(n->r, s + "\t");
             inOrder(n->l, s + "\t");
         }
@@ -159,6 +158,44 @@ class BinarySearchTree {
 
     preOrder() {
     }*/
+
+    void treeToList(Node<Data>* node, ListWithPointer<Data, Cell<Data> > *list) {
+    	if (node != nullptr) {
+    		treeToList(node->l, list);
+    		list->insert(*(node->d));
+    		treeToList(node->r, list);
+    	}
+    }
+
+    void balance() {
+    	ListWithPointer<Data, Cell<Data> >* list = new ListWithPointer<Data, Cell<Data> >();
+    	int pos;
+
+    	treeToList((this->root), list);
+    	//list->printList();
+    	//cout << list->getDataPos(list->n / 2) << endl;
+
+    	BinarySearchTree<D>* bstBalanced = new BinarySearchTree<D>(new D(list->getDataPos(list->n / 2)));
+
+    	max = (list->n / 2) -1;
+    	min = 0;
+    	while (max != min) {
+    		pos = (max-min)/2;
+    		bstBalanced->insert(new D(list->getDataPos(pos)));
+    		max = pos;
+    	}
+
+
+    	
+
+
+
+
+
+    }
+
+
+
 
 };
 

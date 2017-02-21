@@ -25,10 +25,17 @@ int main(int argc, char** argv) {
     bst1->insert(new D(4));
     bst1->insert(new D(1));
     bst1->insert(new D(2));
+    bst1->insert(new D(5));
+    bst1->insert(new D(6));
+    bst1->insert(new D(7));
+    bst1->insert(new D(8));
+    bst1->insert(new D(0));
 
     bst1->printTree();
 
-    Node<D>* r = bst1->find(new D(666));
+    bst1->balance();
+
+    /*Node<D>* r = bst1->find(new D(666));
     if (r) {
         cout << *(r->d) << endl;
     } else {
@@ -50,7 +57,9 @@ int main(int argc, char** argv) {
     }
 
     bst1->remove(new int(987));
-    bst1->printTree();
+    bst1->printTree(); */
+
+
 
     return 0;
 }
