@@ -183,6 +183,7 @@ class ListWithPointer : public List<D, P> {
         }
     }*/
 
+    //listo
     void sort() {
         cout << "Sorting list:" << endl;
 

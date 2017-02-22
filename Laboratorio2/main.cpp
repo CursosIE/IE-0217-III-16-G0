@@ -13,14 +13,19 @@ int main(int argc, char** argv) {
     cout << "n: " << list->getSize() << endl; //getSize()
     cout << endl;
 
-    list->insert(5);
-    list->insert(11);
+    list->insert(36);
+    list->insert(27);
     list->printList();
     cout << "n: " << list->getSize() << endl; //getSize()
     cout << endl;
 
-    list->insert(27);
-    list->insert(36);
+    list->insert(11);
+    list->insert(5);
+    list->printList(); 
+    cout << "n: " << list->getSize() << endl; //getSize()
+    cout << endl;
+
+    list->sort();
     list->printList(); 
     cout << "n: " << list->getSize() << endl; //getSize()
     cout << endl;
@@ -52,6 +57,8 @@ int main(int argc, char** argv) {
     list->printList(); 
     cout << "n: " << list->getSize() << endl;
     cout << endl;
+
+    list->prev(list->prev((list->prev(*(list->last)))));
 
     list->testAssign();
     list->printList(); 
