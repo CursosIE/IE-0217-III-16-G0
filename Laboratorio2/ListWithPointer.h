@@ -25,6 +25,7 @@ class ListWithPointer : public List<D, P> {
     	emptyList();
     }
 
+    //listo 
     void insert(D data) {
     	cout << "Inserting: " << data << endl;
         P* cell = new P(new D(data), nullptr);
@@ -37,11 +38,9 @@ class ListWithPointer : public List<D, P> {
             this->last = cell;   
         }
         this->n++;
-        /*cout << "First dir: " << &(this->first) << "\nFirst Data: " << *(this->first->data) << endl;
-        cout << "Last dir: " << &(this->last) << "\nLast Data: " << *(this->last->data) << endl;
-        cout << endl;*/
     }
 
+    //listo
     void remove(D data) {
     	if (this->n == 1 && *(this->first->data) == data) {
     		delete first;
@@ -76,7 +75,8 @@ class ListWithPointer : public List<D, P> {
 	    }
     }
 
-    P find(D data) {
+    //listo
+    P& find(D data) {
     	P* temp = this->first;
     	for (int index = 0; index < this->n; ++index) {
     		if (*(temp->data) == data)
@@ -84,14 +84,17 @@ class ListWithPointer : public List<D, P> {
     	}
     }
 
+    //listo
     D& get(P& cell) { 
         return *(cell.data);
     }
 
+    //listo
     int getSize() {
         return this->n;
     } 
 
+    //listo
     void printList() {
         if (this->n == 0)
             cout << "List is empty..!" << endl;
@@ -107,25 +110,29 @@ class ListWithPointer : public List<D, P> {
         }
     }
 
+    //listo
     P& next(P& cell) {
         return *(cell.next);
     }
 
-    P prev(P cell) {
-        /*P temp = this->first;
-        if (&cell == &(this->first))
-            return Cell<D>();
+    //listo
+    P& prev(P& cell) {
+        P* prev = nullptr;
+        P* temp = this->first;
 
-        for (int index = 0; index < this->n; ++index) {
-            if (temp.next->next == cell.next && index < this->n-1)
-                return temp;
-            else {
-                if (&cell == &(this->last))
-                    return temp;
+        if (&cell != (this->first)) {
+            for (int index = 0; index < this->n; ++index) {
+                prev = temp;
+                temp = temp->next;
+                if (*(temp->data) == *(cell.data) && &(temp->next) == &(cell.next)) {
+                    cout << "Previous to: " << *(cell.data) << "\t\tis: " << *(prev->data) << endl;
+                    return *(prev);
+                }
             }
-        }*/
+        }
     }
 
+    //listo
     void emptyList() {
     	cout << "Emptying list..." << endl;
     	erase(this->first);
@@ -139,20 +146,77 @@ class ListWithPointer : public List<D, P> {
     	}
     }
 
+    //listo
     void assign(P& k, D d) {
         *(k.data) = d;
     }
 
     void testAssign () {
+        cout << "Assigning 5 to begining of list:\n";
         assign(*(first), 5);
     }
 
-    void sort() {
+    /*void sort() {
+        cout << "Sorting list:" << endl;
 
+        if (this->first != nullptr) {
+            int posMin = 0;
+            P* current1 = nullptr;
+            P* current2 = nullptr;
+            P* temp = nullptr;
+
+            for (int index = 0; index < this->n -1; ++index) {
+                posMin = index;
+                for (int index2 = index + 1; index2 < this->n; ++index2) {
+                    if (getDataPos(index2) < getDataPos(posMin))
+                        posMin = index2;
+                }
+                if (posMin != index) {
+                    current1 = getNode(index);
+                    current2 = getNode(posMin);
+
+                    temp = getNode(index);
+                    current1 = current2;
+                    current2 = temp;
+                }
+            }
+        }
+    }*/
+
+    void sort() {
+        cout << "Sorting list:" << endl;
+
+        int size = this->n;
+        int i = 0;
+
+        while (size--) {
+            P* current = this->first;
+            P* prev = nullptr;
+            while(current->next != nullptr) {
+                P* after = current->next;
+                if (*(current->data) > *(after->data)) {
+                    current->next = after->next;
+                    after->next = current;
+                    if (prev == nullptr)
+                        first = after;
+                    else
+                        prev->next = after;
+                    prev = after;
+                }
+                else {
+                    prev = current;
+                    current = current->next;
+                }
+            }
+        }
     }
 
-    D getLast() {
-        return *(this->last->data);
+    D& getDataPos(int pos) {
+        P* temp = this->first;
+        for (int index = 0; index < pos; ++index) {
+            temp = &(next(*temp));
+        }
+        return get(*temp);
     }
 
 };
