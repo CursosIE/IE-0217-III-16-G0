@@ -4,17 +4,26 @@
 
 template <typename D, typename P>
 class List {
-public:
-
+   protected:
+    ///Numero de elementos de la lista.
+    int n; 
+   public:
+    /*! \brief Constructor por defecto.
+     */
     List() {
     }
 
-    List(const List& orig) {
+    /*! \brief Constructor por copia.
+     */
+    List(const List& orig) { 
     }
 
+    /*! \brief Destructor.
+     */
     virtual ~List() {
     }
 
+    //declaracion de los metodos virtuales puros
     virtual void insert(D d) = 0; //insertar
     virtual void remove(D d) = 0; //remover
     virtual P& find(D d) = 0; //buscar
@@ -26,10 +35,6 @@ public:
     virtual P& next(P& k) = 0; //siguiente
     virtual P& prev(P& k) = 0; //anterior
     virtual void emptyList() = 0; //vaciar
-    // virtual D getLast() = 0; //devuele el dato de la ultima celda
-
-protected:
-    int n; //num. elementos
 };
 
 #endif /* LISTA_H */
