@@ -4,14 +4,90 @@
 #include "ListWithPointer.h"
 #include "Queue.h"
 #include "Stack.h"
-//#include "ListaConArreglo.h"
+#include "ListWithArray.h"
 
 using namespace std;
 
 int main(int argc, char** argv) {
+
+    ListWithArray<int, MyInt>* array = new ListWithArray<int, MyInt>(5);
+
+    cout << endl << "ListWithArray:\n" << endl;
+
+    array->printList();
+    cout << "n: " << array->getSize() << endl; //getSize()
+    cout << endl;
+
+    array->insert(36);
+    array->insert(11);
+    array->printList();
+    cout << "n: " << array->getSize() << endl; //getSize()
+    cout << endl;
+
+    array->insert(27);
+    array->insert(5);
+    array->printList();
+    cout << "n: " << array->getSize() << endl; //getSize()
+    cout << endl;
+
+    array->sort();
+    array->printList();
+    cout << endl;
+
+    array->find(69);
+    array->find(11);
+    cout << endl;
+
+    array->remove(5);
+    array->printList();
+    cout << "n: " << array->getSize() << endl; //getSize()
+    cout << endl;
+
+    array->remove(27);
+    array->printList();
+    cout << "n: " << array->getSize() << endl; //getSize()
+    cout << endl;
+
+    array->remove(36);
+    array->printList();
+    cout << "n: " << array->getSize() << endl; //getSize()
+    cout << endl;
+
+    array->remove(11);
+    array->printList();
+    cout << "n: " << array->getSize() << endl; //getSize()
+    cout << endl;
+
+    array->insert(66);
+    array->insert(77);
+    array->insert(99);
+    array->printList();
+    cout << "n: " << array->getSize() << endl;
+    cout << endl;
+
+    MyInt* M = new MyInt(1);
+
+    array->prev(*M);
+    cout << endl;
+
+    array->next(*M);
+    cout << endl;
+
+    int a = array->get(*M);
+    cout << "Data in posicion " << M->i << " is: " << a << endl;
+    cout << endl;
+
+    array->emptyList();
+    array->printList();
+    cout << "n: " << array->getSize() << endl << endl;
+
+    cout << "-----------------" << endl;
+    cout << "-----------------" << endl;
+    cout << "-----------------" << endl;
+
     ListWithPointer<int, Cell<int> >* list = new ListWithPointer<int, Cell<int> >();
 
-    cout << endl << "ListWithPointer:\n" << endl; 
+    cout << endl << "ListWithPointer:\n" << endl;
 
     list->printList();
     cout << "n: " << list->getSize() << endl; //getSize()
@@ -25,13 +101,13 @@ int main(int argc, char** argv) {
 
     list->insert(11);
     list->insert(5);
-    list->printList(); 
+    list->printList();
     cout << "n: " << list->getSize() << endl; //getSize()
     cout << endl;
 
     list->sort();
     list->printList();
-    cout << endl; 
+    cout << endl;
 
     list->find(69);
     list->find(11);
@@ -100,6 +176,10 @@ int main(int argc, char** argv) {
     queue->insert(36);
     queue->printList();
     cout << "n: " << queue->getSize() << endl; //getSize()
+    cout << endl;
+
+    queue->find(69);
+    queue->find(11);
     cout << endl;
 
     queue->remove(5);

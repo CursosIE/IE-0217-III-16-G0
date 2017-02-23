@@ -1,0 +1,320 @@
+\hypertarget{classStack}{}\section{Stack$<$ D, P $>$ Class Template Reference}
+\label{classStack}\index{Stack$<$ D, P $>$@{Stack$<$ D, P $>$}}
+
+
+{\ttfamily \#include $<$Stack.\+h$>$}
+
+
+
+Inheritance diagram for Stack$<$ D, P $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classStack__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Stack$<$ D, P $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classStack__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classStack_a6e0f84830cde41cb8d49818842d18d36}{Stack} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. Se crea con los atributos nulos y n en 0. \end{DoxyCompactList}\item 
+virtual \hyperlink{classStack_a063692d7f83addeb743eec7a3f97a957}{$\sim$\+Stack} ()
+\begin{DoxyCompactList}\small\item\em Destructor. L\+Lama al metodo empty\+List. \end{DoxyCompactList}\item 
+void \hyperlink{classStack_a2d8dfebafe6767cd668bcfc64d33bf63}{insert} (D data)
+\begin{DoxyCompactList}\small\item\em Metodo para insertar un dato a una pila. Se crea una nueva celda y se enlaza a la ultima en caso de no haber ninguna se pone como la primera. \end{DoxyCompactList}\item 
+void \hyperlink{classStack_a44889855bb26c4b1e050668959fab5be}{remove} (D data)
+\begin{DoxyCompactList}\small\item\em Metodo para remover una celda de la pila. \end{DoxyCompactList}\item 
+P \& \hyperlink{classStack_a2d24bac6bd65a0c90dd0dbe5c1297c1b}{find} (D data)
+\begin{DoxyCompactList}\small\item\em Metodo para encontrar un dato en la pila. \end{DoxyCompactList}\item 
+D \& \hyperlink{classStack_a488e4c5a68c70b5221df734fd953983f}{get} (P \&cell)
+\item 
+int \hyperlink{classStack_a74fc7e5921dfb247f9ad7052c3c4297a}{get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Metodo para encontrar el tamanno de la pila. \end{DoxyCompactList}\item 
+void \hyperlink{classStack_a89b9967c15c83fe7c257a42e49725881}{print\+List} ()
+\begin{DoxyCompactList}\small\item\em Metodo para imprimir la pila. \end{DoxyCompactList}\item 
+P \& \hyperlink{classStack_aa86ccdcc6e57ade075de6ee51d1e5341}{next} (P \&cell)
+\begin{DoxyCompactList}\small\item\em Metodo para encontrar la celda siguiente a una dada. \end{DoxyCompactList}\item 
+P \& \hyperlink{classStack_a1e45de0c08c059313e99772c9e53820a}{prev} (P \&cell)
+\item 
+P $\ast$ \hyperlink{classStack_a0dfe15196e07fa8418a9f084db6b0173}{prevs} (P \&cell)
+\begin{DoxyCompactList}\small\item\em Metodo para encontrar un puntero a la celda previa a una dada. \end{DoxyCompactList}\item 
+void \hyperlink{classStack_a8d4119c8d4be2822f20a525743aa296e}{empty\+List} ()
+\begin{DoxyCompactList}\small\item\em Metodo para vaciar la pila. \end{DoxyCompactList}\item 
+void \hyperlink{classStack_ac2b9a59269d1ee3f593d42f81cf3a515}{erase} (P $\ast$k)
+\begin{DoxyCompactList}\small\item\em Metodo auxiliar para vaciar la pila. Trabaja recursivamente. \end{DoxyCompactList}\item 
+void \hyperlink{classStack_a8925b69439c6d583cf0a62f9a0cca026}{assign} (P \&k, D d)
+\item 
+void \hyperlink{classStack_a75261d2340f1f7b5e61b3770c0550982}{sort} ()
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+P $\ast$ \hyperlink{classStack_a072f08120143dbc8d868739fc24ae0b2}{first}
+\item 
+P $\ast$ \hyperlink{classStack_ac2caafb876777cbeb9306f9de407e00b}{last}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{Stack()}{Stack()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf Stack}$<$ D, P $>$\+::{\bf Stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStack_a6e0f84830cde41cb8d49818842d18d36}{}\label{classStack_a6e0f84830cde41cb8d49818842d18d36}
+
+
+Constructor por defecto. Se crea con los atributos nulos y n en 0. 
+
+\index{Stack@{Stack}!````~Stack@{$\sim$\+Stack}}
+\index{````~Stack@{$\sim$\+Stack}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{$\sim$\+Stack()}{~Stack()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual {\bf Stack}$<$ D, P $>$\+::$\sim${\bf Stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a063692d7f83addeb743eec7a3f97a957}{}\label{classStack_a063692d7f83addeb743eec7a3f97a957}
+
+
+Destructor. L\+Lama al metodo empty\+List. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Stack@{Stack}!assign@{assign}}
+\index{assign@{assign}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{assign(\+P \&k, D d)}{assign(P &k, D d)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Stack}$<$ D, P $>$\+::assign (
+\begin{DoxyParamCaption}
+\item[{P \&}]{k, }
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a8925b69439c6d583cf0a62f9a0cca026}{}\label{classStack_a8925b69439c6d583cf0a62f9a0cca026}
+
+
+Implements \hyperlink{classList_a413440e7e102c944bec31ad5dce30b27}{List$<$ D, P $>$}.
+
+\index{Stack@{Stack}!empty\+List@{empty\+List}}
+\index{empty\+List@{empty\+List}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{empty\+List()}{emptyList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Stack}$<$ D, P $>$\+::empty\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a8d4119c8d4be2822f20a525743aa296e}{}\label{classStack_a8d4119c8d4be2822f20a525743aa296e}
+
+
+Metodo para vaciar la pila. 
+
+
+
+Implements \hyperlink{classList_a24b4f177a70215980e81ef7b2981fa1e}{List$<$ D, P $>$}.
+
+\index{Stack@{Stack}!erase@{erase}}
+\index{erase@{erase}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{erase(\+P $\ast$k)}{erase(P *k)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Stack}$<$ D, P $>$\+::erase (
+\begin{DoxyParamCaption}
+\item[{P $\ast$}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStack_ac2b9a59269d1ee3f593d42f81cf3a515}{}\label{classStack_ac2b9a59269d1ee3f593d42f81cf3a515}
+
+
+Metodo auxiliar para vaciar la pila. Trabaja recursivamente. 
+
+\index{Stack@{Stack}!find@{find}}
+\index{find@{find}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{find(\+D data)}{find(D data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P\& {\bf Stack}$<$ D, P $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{D}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a2d24bac6bd65a0c90dd0dbe5c1297c1b}{}\label{classStack_a2d24bac6bd65a0c90dd0dbe5c1297c1b}
+
+
+Metodo para encontrar un dato en la pila. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Dato que queremos encontrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia de la cela que contiene dicho dato. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classList_ae117dbe387f64f548fd0bddcc4d536dc}{List$<$ D, P $>$}.
+
+\index{Stack@{Stack}!get@{get}}
+\index{get@{get}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{get(\+P \&cell)}{get(P &cell)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ D\& {\bf Stack}$<$ D, P $>$\+::get (
+\begin{DoxyParamCaption}
+\item[{P \&}]{cell}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a488e4c5a68c70b5221df734fd953983f}{}\label{classStack_a488e4c5a68c70b5221df734fd953983f}
+
+
+Implements \hyperlink{classList_afb5a777f30a186adce69028c387bf413}{List$<$ D, P $>$}.
+
+\index{Stack@{Stack}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{get\+Size()}{getSize()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ int {\bf Stack}$<$ D, P $>$\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a74fc7e5921dfb247f9ad7052c3c4297a}{}\label{classStack_a74fc7e5921dfb247f9ad7052c3c4297a}
+
+
+Metodo para encontrar el tamanno de la pila. 
+
+\begin{DoxyReturn}{Returns}
+Un entero con el numero de elementos que tiene la pila. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classList_af213bbcf13ee436a0f04cde66e337672}{List$<$ D, P $>$}.
+
+\index{Stack@{Stack}!insert@{insert}}
+\index{insert@{insert}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{insert(\+D data)}{insert(D data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Stack}$<$ D, P $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{D}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a2d8dfebafe6767cd668bcfc64d33bf63}{}\label{classStack_a2d8dfebafe6767cd668bcfc64d33bf63}
+
+
+Metodo para insertar un dato a una pila. Se crea una nueva celda y se enlaza a la ultima en caso de no haber ninguna se pone como la primera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & El dato que se quiere insertar. \\
+\hline
+{\em cell} & Celda que se crea para insertar el nuevo dato. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classList_a01f588d87d47f8332928eca38f7b11bb}{List$<$ D, P $>$}.
+
+\index{Stack@{Stack}!next@{next}}
+\index{next@{next}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{next(\+P \&cell)}{next(P &cell)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P\& {\bf Stack}$<$ D, P $>$\+::next (
+\begin{DoxyParamCaption}
+\item[{P \&}]{cell}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_aa86ccdcc6e57ade075de6ee51d1e5341}{}\label{classStack_aa86ccdcc6e57ade075de6ee51d1e5341}
+
+
+Metodo para encontrar la celda siguiente a una dada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & La celda de la cual que quiere la celda siguiente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia de la celda siguiente a cell. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classList_afa9ca2c678bc4f7d15ab0f4ab7c45421}{List$<$ D, P $>$}.
+
+\index{Stack@{Stack}!prev@{prev}}
+\index{prev@{prev}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{prev(\+P \&cell)}{prev(P &cell)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P\& {\bf Stack}$<$ D, P $>$\+::prev (
+\begin{DoxyParamCaption}
+\item[{P \&}]{cell}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a1e45de0c08c059313e99772c9e53820a}{}\label{classStack_a1e45de0c08c059313e99772c9e53820a}
+
+
+Implements \hyperlink{classList_a6c44364a04dff392b76e6a286074f3a1}{List$<$ D, P $>$}.
+
+\index{Stack@{Stack}!prevs@{prevs}}
+\index{prevs@{prevs}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{prevs(\+P \&cell)}{prevs(P &cell)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P$\ast$ {\bf Stack}$<$ D, P $>$\+::prevs (
+\begin{DoxyParamCaption}
+\item[{P \&}]{cell}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classStack_a0dfe15196e07fa8418a9f084db6b0173}{}\label{classStack_a0dfe15196e07fa8418a9f084db6b0173}
+
+
+Metodo para encontrar un puntero a la celda previa a una dada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & La celda de la cual que quiere la celda previa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero a la celda previa a cell. 
+\end{DoxyReturn}
+\index{Stack@{Stack}!print\+List@{print\+List}}
+\index{print\+List@{print\+List}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{print\+List()}{printList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Stack}$<$ D, P $>$\+::print\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a89b9967c15c83fe7c257a42e49725881}{}\label{classStack_a89b9967c15c83fe7c257a42e49725881}
+
+
+Metodo para imprimir la pila. 
+
+
+
+Implements \hyperlink{classList_a8b34931e187e7e6b86aad86510ce4f3b}{List$<$ D, P $>$}.
+
+\index{Stack@{Stack}!remove@{remove}}
+\index{remove@{remove}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{remove(\+D data)}{remove(D data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Stack}$<$ D, P $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{D}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a44889855bb26c4b1e050668959fab5be}{}\label{classStack_a44889855bb26c4b1e050668959fab5be}
+
+
+Metodo para remover una celda de la pila. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Este parametro no importa porque la pila solo puede eliminar una celda, la ultima. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classList_a14fc4e853102018df78db3899aa00d71}{List$<$ D, P $>$}.
+
+\index{Stack@{Stack}!sort@{sort}}
+\index{sort@{sort}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{sort()}{sort()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf Stack}$<$ D, P $>$\+::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classStack_a75261d2340f1f7b5e61b3770c0550982}{}\label{classStack_a75261d2340f1f7b5e61b3770c0550982}
+
+
+Implements \hyperlink{classList_ae3795939f27cf3e688cd470450e0c27a}{List$<$ D, P $>$}.
+
+
+
+\subsection{Field Documentation}
+\index{Stack@{Stack}!first@{first}}
+\index{first@{first}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{first}{first}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P$\ast$ {\bf Stack}$<$ D, P $>$\+::first}\hypertarget{classStack_a072f08120143dbc8d868739fc24ae0b2}{}\label{classStack_a072f08120143dbc8d868739fc24ae0b2}
+\index{Stack@{Stack}!last@{last}}
+\index{last@{last}!Stack@{Stack}}
+\subsubsection[{\texorpdfstring{last}{last}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P$\ast$ {\bf Stack}$<$ D, P $>$\+::last}\hypertarget{classStack_ac2caafb876777cbeb9306f9de407e00b}{}\label{classStack_ac2caafb876777cbeb9306f9de407e00b}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Stack_8h}{Stack.\+h}\end{DoxyCompactItemize}
