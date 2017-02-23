@@ -1,0 +1,228 @@
+\hypertarget{classList}{}\section{List$<$ D, P $>$ Class Template Reference}
+\label{classList}\index{List$<$ D, P $>$@{List$<$ D, P $>$}}
+
+
+{\ttfamily \#include $<$List.\+h$>$}
+
+
+
+Inheritance diagram for List$<$ D, P $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classList__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classList_a3deb54ab4f51c6c39aa4015f258b5812}{List} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\hyperlink{classList_af8bcd7dae1bc30af2158075482c3d8d9}{List} (const \hyperlink{classList}{List} \&orig)
+\begin{DoxyCompactList}\small\item\em Constructor por copia. \end{DoxyCompactList}\item 
+virtual \hyperlink{classList_a624593fb77847bf7ad4cacfba3442471}{$\sim$\+List} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classList_a01f588d87d47f8332928eca38f7b11bb}{insert} (D d)=0
+\item 
+virtual void \hyperlink{classList_a14fc4e853102018df78db3899aa00d71}{remove} (D d)=0
+\item 
+virtual P \& \hyperlink{classList_ae117dbe387f64f548fd0bddcc4d536dc}{find} (D d)=0
+\item 
+virtual D \& \hyperlink{classList_afb5a777f30a186adce69028c387bf413}{get} (P \&k)=0
+\item 
+virtual void \hyperlink{classList_a413440e7e102c944bec31ad5dce30b27}{assign} (P \&k, D d)=0
+\item 
+virtual void \hyperlink{classList_ae3795939f27cf3e688cd470450e0c27a}{sort} ()=0
+\item 
+virtual int \hyperlink{classList_af213bbcf13ee436a0f04cde66e337672}{get\+Size} ()=0
+\item 
+virtual void \hyperlink{classList_a8b34931e187e7e6b86aad86510ce4f3b}{print\+List} ()=0
+\item 
+virtual P \& \hyperlink{classList_afa9ca2c678bc4f7d15ab0f4ab7c45421}{next} (P \&k)=0
+\item 
+virtual P \& \hyperlink{classList_a6c44364a04dff392b76e6a286074f3a1}{prev} (P \&k)=0
+\item 
+virtual void \hyperlink{classList_a24b4f177a70215980e81ef7b2981fa1e}{empty\+List} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classList_aa61221b9bda8b2b56a61bd869daacbfd}{n}
+\begin{DoxyCompactList}\small\item\em Numero de elementos de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{\texorpdfstring{List()}{List()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf List}$<$ D, P $>$\+::{\bf List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_a3deb54ab4f51c6c39aa4015f258b5812}{}\label{classList_a3deb54ab4f51c6c39aa4015f258b5812}
+
+
+Constructor por defecto. 
+
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{\texorpdfstring{List(const List \&orig)}{List(const List &orig)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf List}$<$ D, P $>$\+::{\bf List} (
+\begin{DoxyParamCaption}
+\item[{const {\bf List}$<$ D, P $>$ \&}]{orig}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classList_af8bcd7dae1bc30af2158075482c3d8d9}{}\label{classList_af8bcd7dae1bc30af2158075482c3d8d9}
+
+
+Constructor por copia. 
+
+\index{List@{List}!````~List@{$\sim$\+List}}
+\index{````~List@{$\sim$\+List}!List@{List}}
+\subsubsection[{\texorpdfstring{$\sim$\+List()}{~List()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual {\bf List}$<$ D, P $>$\+::$\sim${\bf List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classList_a624593fb77847bf7ad4cacfba3442471}{}\label{classList_a624593fb77847bf7ad4cacfba3442471}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{List@{List}!assign@{assign}}
+\index{assign@{assign}!List@{List}}
+\subsubsection[{\texorpdfstring{assign(\+P \&k, D d)=0}{assign(P &k, D d)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\+::assign (
+\begin{DoxyParamCaption}
+\item[{P \&}]{k, }
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_a413440e7e102c944bec31ad5dce30b27}{}\label{classList_a413440e7e102c944bec31ad5dce30b27}
+
+
+Implemented in \hyperlink{classListWithPointer_a5703464a7cd48d871e3bb04562a3d351}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classStack_a8925b69439c6d583cf0a62f9a0cca026}{Stack$<$ D, P $>$}, \hyperlink{classQueue_af8e5f753e54a7eb2a770c1bbf0c1d8fe}{Queue$<$ D, P $>$}, and \hyperlink{classListWithArray_ad673838a35904292aca7ef78d64fceca}{List\+With\+Array$<$ D, P $>$}.
+
+\index{List@{List}!empty\+List@{empty\+List}}
+\index{empty\+List@{empty\+List}!List@{List}}
+\subsubsection[{\texorpdfstring{empty\+List()=0}{emptyList()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\+::empty\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_a24b4f177a70215980e81ef7b2981fa1e}{}\label{classList_a24b4f177a70215980e81ef7b2981fa1e}
+
+
+Implemented in \hyperlink{classListWithArray_a2179e228f285cc29b46bd5d13ba0b4ed}{List\+With\+Array$<$ D, P $>$}, \hyperlink{classListWithPointer_aec4f5374971962c79d397bbcd0080199}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classStack_a8d4119c8d4be2822f20a525743aa296e}{Stack$<$ D, P $>$}, and \hyperlink{classQueue_a37e23ca9e4ac29be510833bf6b7f6638}{Queue$<$ D, P $>$}.
+
+\index{List@{List}!find@{find}}
+\index{find@{find}!List@{List}}
+\subsubsection[{\texorpdfstring{find(\+D d)=0}{find(D d)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual P\& {\bf List}$<$ D, P $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_ae117dbe387f64f548fd0bddcc4d536dc}{}\label{classList_ae117dbe387f64f548fd0bddcc4d536dc}
+
+
+Implemented in \hyperlink{classListWithPointer_a28695477b0cfdc456271e31f5e0d6429}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classListWithArray_a83d6be27dd1ace1e409df0ba000c9f39}{List\+With\+Array$<$ D, P $>$}, \hyperlink{classQueue_aefef2f172eaa0606944cdb4cf2fd5c53}{Queue$<$ D, P $>$}, and \hyperlink{classStack_a2d24bac6bd65a0c90dd0dbe5c1297c1b}{Stack$<$ D, P $>$}.
+
+\index{List@{List}!get@{get}}
+\index{get@{get}!List@{List}}
+\subsubsection[{\texorpdfstring{get(\+P \&k)=0}{get(P &k)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual D\& {\bf List}$<$ D, P $>$\+::get (
+\begin{DoxyParamCaption}
+\item[{P \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_afb5a777f30a186adce69028c387bf413}{}\label{classList_afb5a777f30a186adce69028c387bf413}
+
+
+Implemented in \hyperlink{classListWithPointer_af2892238e8faed0b98d2473419a91f62}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classListWithArray_a716a279651d30b3fca9df3506ed77535}{List\+With\+Array$<$ D, P $>$}, \hyperlink{classQueue_a1f2067f6e952bb0cec06087210b5ae2f}{Queue$<$ D, P $>$}, and \hyperlink{classStack_a488e4c5a68c70b5221df734fd953983f}{Stack$<$ D, P $>$}.
+
+\index{List@{List}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!List@{List}}
+\subsubsection[{\texorpdfstring{get\+Size()=0}{getSize()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual int {\bf List}$<$ D, P $>$\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_af213bbcf13ee436a0f04cde66e337672}{}\label{classList_af213bbcf13ee436a0f04cde66e337672}
+
+
+Implemented in \hyperlink{classListWithArray_ae7a071bcdde9ddbf4c40a716f5a09434}{List\+With\+Array$<$ D, P $>$}, \hyperlink{classListWithPointer_ac70c49b5703887fd867e90cdac3c706f}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classQueue_ab2c7217e6737bf579493b321184a2db3}{Queue$<$ D, P $>$}, and \hyperlink{classStack_a74fc7e5921dfb247f9ad7052c3c4297a}{Stack$<$ D, P $>$}.
+
+\index{List@{List}!insert@{insert}}
+\index{insert@{insert}!List@{List}}
+\subsubsection[{\texorpdfstring{insert(\+D d)=0}{insert(D d)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_a01f588d87d47f8332928eca38f7b11bb}{}\label{classList_a01f588d87d47f8332928eca38f7b11bb}
+
+
+Implemented in \hyperlink{classListWithArray_afa0b6d215c2cc1d3fe6b9b48d6b6917d}{List\+With\+Array$<$ D, P $>$}, \hyperlink{classListWithPointer_a726958a731ead3b407d68a7e5a0bce54}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classQueue_a63bd4d9779ddd75b2f78127337fe786a}{Queue$<$ D, P $>$}, and \hyperlink{classStack_a2d8dfebafe6767cd668bcfc64d33bf63}{Stack$<$ D, P $>$}.
+
+\index{List@{List}!next@{next}}
+\index{next@{next}!List@{List}}
+\subsubsection[{\texorpdfstring{next(\+P \&k)=0}{next(P &k)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual P\& {\bf List}$<$ D, P $>$\+::next (
+\begin{DoxyParamCaption}
+\item[{P \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_afa9ca2c678bc4f7d15ab0f4ab7c45421}{}\label{classList_afa9ca2c678bc4f7d15ab0f4ab7c45421}
+
+
+Implemented in \hyperlink{classListWithArray_a65ef8c78e19dfa00e58c3e92f1be6fb1}{List\+With\+Array$<$ D, P $>$}, \hyperlink{classListWithPointer_a3aec82866e03a1f37175c4b0976eeb47}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classQueue_a989738789320704ae2d597e73919aefa}{Queue$<$ D, P $>$}, and \hyperlink{classStack_aa86ccdcc6e57ade075de6ee51d1e5341}{Stack$<$ D, P $>$}.
+
+\index{List@{List}!prev@{prev}}
+\index{prev@{prev}!List@{List}}
+\subsubsection[{\texorpdfstring{prev(\+P \&k)=0}{prev(P &k)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual P\& {\bf List}$<$ D, P $>$\+::prev (
+\begin{DoxyParamCaption}
+\item[{P \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_a6c44364a04dff392b76e6a286074f3a1}{}\label{classList_a6c44364a04dff392b76e6a286074f3a1}
+
+
+Implemented in \hyperlink{classListWithArray_aee46046c55e1e0ee1f37b5e1a7aa0702}{List\+With\+Array$<$ D, P $>$}, \hyperlink{classListWithPointer_a89f1ef1d78fe7f78290eaab585a14cca}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classQueue_a238a908300566b4f9bb379216c7527c6}{Queue$<$ D, P $>$}, and \hyperlink{classStack_a1e45de0c08c059313e99772c9e53820a}{Stack$<$ D, P $>$}.
+
+\index{List@{List}!print\+List@{print\+List}}
+\index{print\+List@{print\+List}!List@{List}}
+\subsubsection[{\texorpdfstring{print\+List()=0}{printList()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\+::print\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_a8b34931e187e7e6b86aad86510ce4f3b}{}\label{classList_a8b34931e187e7e6b86aad86510ce4f3b}
+
+
+Implemented in \hyperlink{classListWithArray_a515ea38cb40ba7b0c9df98825b2dd270}{List\+With\+Array$<$ D, P $>$}, \hyperlink{classListWithPointer_a7079b5f1dbddb87a7e33ffc71ebb7b92}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classQueue_aa461f8fb363f960a6e0eb34b18503eaa}{Queue$<$ D, P $>$}, and \hyperlink{classStack_a89b9967c15c83fe7c257a42e49725881}{Stack$<$ D, P $>$}.
+
+\index{List@{List}!remove@{remove}}
+\index{remove@{remove}!List@{List}}
+\subsubsection[{\texorpdfstring{remove(\+D d)=0}{remove(D d)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_a14fc4e853102018df78db3899aa00d71}{}\label{classList_a14fc4e853102018df78db3899aa00d71}
+
+
+Implemented in \hyperlink{classListWithArray_aaa18e76fc128ca05151178d914901ec3}{List\+With\+Array$<$ D, P $>$}, \hyperlink{classListWithPointer_ab69e83d9e92619be09f9d8dde3e6cad0}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classStack_a44889855bb26c4b1e050668959fab5be}{Stack$<$ D, P $>$}, and \hyperlink{classQueue_aa3d1a6edd30c4a9dda42e586db7f9fff}{Queue$<$ D, P $>$}.
+
+\index{List@{List}!sort@{sort}}
+\index{sort@{sort}!List@{List}}
+\subsubsection[{\texorpdfstring{sort()=0}{sort()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\+::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classList_ae3795939f27cf3e688cd470450e0c27a}{}\label{classList_ae3795939f27cf3e688cd470450e0c27a}
+
+
+Implemented in \hyperlink{classListWithPointer_aa46631b2da29895d1f767626fb591bc8}{List\+With\+Pointer$<$ D, P $>$}, \hyperlink{classStack_a75261d2340f1f7b5e61b3770c0550982}{Stack$<$ D, P $>$}, \hyperlink{classQueue_a896b0e1bcac0d660079eb838c1823446}{Queue$<$ D, P $>$}, and \hyperlink{classListWithArray_a1a0ec4ab4a8fcb1a20568445ad892c9a}{List\+With\+Array$<$ D, P $>$}.
+
+
+
+\subsection{Field Documentation}
+\index{List@{List}!n@{n}}
+\index{n@{n}!List@{List}}
+\subsubsection[{\texorpdfstring{n}{n}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ int {\bf List}$<$ D, P $>$\+::n\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classList_aa61221b9bda8b2b56a61bd869daacbfd}{}\label{classList_aa61221b9bda8b2b56a61bd869daacbfd}
+
+
+Numero de elementos de la lista. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{List_8h}{List.\+h}\end{DoxyCompactItemize}
