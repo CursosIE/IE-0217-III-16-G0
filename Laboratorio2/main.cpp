@@ -159,6 +159,10 @@ int main(int argc, char** argv) {
     cout << "n: " << stack->getSize() << endl; //getSize()
     cout << endl;
 
+    stack->find(69);
+    stack->find(11);
+    cout << endl;
+
     stack->remove(5);
     stack->printList();
     cout << "n: " << stack->getSize() << endl; //getSize()

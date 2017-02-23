@@ -76,8 +76,25 @@ class Stack : public List<D, P> {
         //cout << "Last: " << *(this->last->data) << endl;
     }
 
+    /*! \brief Metodo para encontrar un dato en la pila.
+     *
+     *  \param data Dato que queremos encontrar.
+     *  \return Referencia de la cela que contiene dicho dato.
+     */ 
     P& find(D data) {
+        cout << "Looking for: " << data << " on the stack." << endl;
 
+        P* temp = this->first;
+        for (int index = 0; index < this->n; ++index) {
+            if (*(temp->data) == data){
+                cout << "Number " << data << " was found on the stack!!\n" << endl; //mensaje de exito
+                return *temp;
+            }
+            if (temp->next != nullptr) 
+                temp = &(next(*temp));
+        }
+
+        cout << "Number " << data << " was not found on the stack...\n" << endl; //mensaje que no se encontro
     }
 
     D& get(P& cell) {
@@ -109,8 +126,15 @@ class Stack : public List<D, P> {
         }
     }
 
+    /*! \brief Metodo para encontrar la celda siguiente a una dada.
+     *
+     *  \param cell La celda de la cual que quiere la celda siguiente.
+     *  \return Referencia de la celda siguiente a cell.
+     */ 
     P& next(P& cell) {
-
+        //se evita el caso de la celda last
+        if (&(cell) != &(*(this->last)))
+            return *(cell.next);
     }
 
     P& prev(P& cell) {
