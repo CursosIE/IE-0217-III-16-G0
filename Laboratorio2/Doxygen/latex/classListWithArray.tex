@@ -1,0 +1,333 @@
+\hypertarget{classListWithArray}{}\section{List\+With\+Array$<$ D, P $>$ Class Template Reference}
+\label{classListWithArray}\index{List\+With\+Array$<$ D, P $>$@{List\+With\+Array$<$ D, P $>$}}
+
+
+{\ttfamily \#include $<$List\+With\+Array.\+h$>$}
+
+
+
+Inheritance diagram for List\+With\+Array$<$ D, P $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classListWithArray__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for List\+With\+Array$<$ D, P $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classListWithArray__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classListWithArray_a06f0e8035e9cc43aff4d32c46a00fcf0}{List\+With\+Array} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. Se crea con los atributos nulos y n en 0. \end{DoxyCompactList}\item 
+\hyperlink{classListWithArray_a3a6d11f203fb0f7e458672e85db26b03}{List\+With\+Array} (int t)
+\begin{DoxyCompactList}\small\item\em Constructor para un numero maximo de elementos dados. \end{DoxyCompactList}\item 
+\hyperlink{classListWithArray_a760ab3b39abb104e76a1fdbd2d303cc2}{List\+With\+Array} (const \hyperlink{classListWithArray}{List\+With\+Array} \&orig)
+\begin{DoxyCompactList}\small\item\em Constructor por copia. \end{DoxyCompactList}\item 
+\hyperlink{classListWithArray_a1886482555430b0f3eb5ebe02cbb0c87}{$\sim$\+List\+With\+Array} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classListWithArray_afa0b6d215c2cc1d3fe6b9b48d6b6917d}{insert} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo para insertar un dato a la lista. El dato insertado se hace al final de la lista. \end{DoxyCompactList}\item 
+void \hyperlink{classListWithArray_aaa18e76fc128ca05151178d914901ec3}{remove} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo para remueve un dato de la lista. \end{DoxyCompactList}\item 
+P \& \hyperlink{classListWithArray_a83d6be27dd1ace1e409df0ba000c9f39}{find} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo para encontrar un dato en la lista. \end{DoxyCompactList}\item 
+D \& \hyperlink{classListWithArray_a716a279651d30b3fca9df3506ed77535}{get} (P \&k)
+\begin{DoxyCompactList}\small\item\em Metodo encontrar el dato de la posicion que se pasa como parametro. \end{DoxyCompactList}\item 
+void \hyperlink{classListWithArray_ad673838a35904292aca7ef78d64fceca}{assign} (P \&k, D d)
+\begin{DoxyCompactList}\small\item\em Metodo para assignarle el dato d a la posicion k. \end{DoxyCompactList}\item 
+void \hyperlink{classListWithArray_a1a0ec4ab4a8fcb1a20568445ad892c9a}{sort} ()
+\begin{DoxyCompactList}\small\item\em Metodo para ordenar la lista. Se usa el algoritmo bubble sort. \end{DoxyCompactList}\item 
+int \hyperlink{classListWithArray_ae7a071bcdde9ddbf4c40a716f5a09434}{get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Metodo para encontrar el tamanno de la lista. \end{DoxyCompactList}\item 
+void \hyperlink{classListWithArray_a515ea38cb40ba7b0c9df98825b2dd270}{print\+List} ()
+\begin{DoxyCompactList}\small\item\em Metodo para imprimir la lista. \end{DoxyCompactList}\item 
+P \& \hyperlink{classListWithArray_a65ef8c78e19dfa00e58c3e92f1be6fb1}{next} (P \&k)
+\begin{DoxyCompactList}\small\item\em Metodo para encontrar el dato siguiente a una posicion dada. \end{DoxyCompactList}\item 
+P \& \hyperlink{classListWithArray_aee46046c55e1e0ee1f37b5e1a7aa0702}{prev} (P \&k)
+\begin{DoxyCompactList}\small\item\em Metodo para encontrar el dato anterior a una posicion dada. \end{DoxyCompactList}\item 
+void \hyperlink{classListWithArray_a2179e228f285cc29b46bd5d13ba0b4ed}{empty\+List} ()
+\begin{DoxyCompactList}\small\item\em Metodo para vaciar la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{List\+With\+Array@{List\+With\+Array}!List\+With\+Array@{List\+With\+Array}}
+\index{List\+With\+Array@{List\+With\+Array}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{List\+With\+Array()}{ListWithArray()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf List\+With\+Array}$<$ D, P $>$\+::{\bf List\+With\+Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classListWithArray_a06f0e8035e9cc43aff4d32c46a00fcf0}{}\label{classListWithArray_a06f0e8035e9cc43aff4d32c46a00fcf0}
+
+
+Constructor por defecto. Se crea con los atributos nulos y n en 0. 
+
+\index{List\+With\+Array@{List\+With\+Array}!List\+With\+Array@{List\+With\+Array}}
+\index{List\+With\+Array@{List\+With\+Array}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{List\+With\+Array(int t)}{ListWithArray(int t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf List\+With\+Array}$<$ D, P $>$\+::{\bf List\+With\+Array} (
+\begin{DoxyParamCaption}
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classListWithArray_a3a6d11f203fb0f7e458672e85db26b03}{}\label{classListWithArray_a3a6d11f203fb0f7e458672e85db26b03}
+
+
+Constructor para un numero maximo de elementos dados. 
+
+\index{List\+With\+Array@{List\+With\+Array}!List\+With\+Array@{List\+With\+Array}}
+\index{List\+With\+Array@{List\+With\+Array}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{List\+With\+Array(const List\+With\+Array \&orig)}{ListWithArray(const ListWithArray &orig)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf List\+With\+Array}$<$ D, P $>$\+::{\bf List\+With\+Array} (
+\begin{DoxyParamCaption}
+\item[{const {\bf List\+With\+Array}$<$ D, P $>$ \&}]{orig}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classListWithArray_a760ab3b39abb104e76a1fdbd2d303cc2}{}\label{classListWithArray_a760ab3b39abb104e76a1fdbd2d303cc2}
+
+
+Constructor por copia. 
+
+\index{List\+With\+Array@{List\+With\+Array}!````~List\+With\+Array@{$\sim$\+List\+With\+Array}}
+\index{````~List\+With\+Array@{$\sim$\+List\+With\+Array}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{$\sim$\+List\+With\+Array()}{~ListWithArray()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf List\+With\+Array}$<$ D, P $>$\+::$\sim${\bf List\+With\+Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classListWithArray_a1886482555430b0f3eb5ebe02cbb0c87}{}\label{classListWithArray_a1886482555430b0f3eb5ebe02cbb0c87}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{List\+With\+Array@{List\+With\+Array}!assign@{assign}}
+\index{assign@{assign}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{assign(\+P \&k, D d)}{assign(P &k, D d)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Array}$<$ D, P $>$\+::assign (
+\begin{DoxyParamCaption}
+\item[{P \&}]{k, }
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_ad673838a35904292aca7ef78d64fceca}{}\label{classListWithArray_ad673838a35904292aca7ef78d64fceca}
+
+
+Metodo para assignarle el dato d a la posicion k. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & El dato que se quiere asignar. \\
+\hline
+{\em k} & Posicion a la que se le quiere asignar este dato. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classList_a413440e7e102c944bec31ad5dce30b27}{List$<$ D, P $>$}.
+
+\index{List\+With\+Array@{List\+With\+Array}!empty\+List@{empty\+List}}
+\index{empty\+List@{empty\+List}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{empty\+List()}{emptyList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Array}$<$ D, P $>$\+::empty\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_a2179e228f285cc29b46bd5d13ba0b4ed}{}\label{classListWithArray_a2179e228f285cc29b46bd5d13ba0b4ed}
+
+
+Metodo para vaciar la lista. 
+
+
+
+Implements \hyperlink{classList_a24b4f177a70215980e81ef7b2981fa1e}{List$<$ D, P $>$}.
+
+\index{List\+With\+Array@{List\+With\+Array}!find@{find}}
+\index{find@{find}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{find(\+D d)}{find(D d)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P\& {\bf List\+With\+Array}$<$ D, P $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_a83d6be27dd1ace1e409df0ba000c9f39}{}\label{classListWithArray_a83d6be27dd1ace1e409df0ba000c9f39}
+
+
+Metodo para encontrar un dato en la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Dato que queremos encontrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia de la posicion que contiene dicho dato. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classList_ae117dbe387f64f548fd0bddcc4d536dc}{List$<$ D, P $>$}.
+
+\index{List\+With\+Array@{List\+With\+Array}!get@{get}}
+\index{get@{get}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{get(\+P \&k)}{get(P &k)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ D\& {\bf List\+With\+Array}$<$ D, P $>$\+::get (
+\begin{DoxyParamCaption}
+\item[{P \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_a716a279651d30b3fca9df3506ed77535}{}\label{classListWithArray_a716a279651d30b3fca9df3506ed77535}
+
+
+Metodo encontrar el dato de la posicion que se pasa como parametro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & La celda de la cual ocupamos encontrar el dato. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia del dato que contiene la posicion. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classList_afb5a777f30a186adce69028c387bf413}{List$<$ D, P $>$}.
+
+\index{List\+With\+Array@{List\+With\+Array}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{get\+Size()}{getSize()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ int {\bf List\+With\+Array}$<$ D, P $>$\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_ae7a071bcdde9ddbf4c40a716f5a09434}{}\label{classListWithArray_ae7a071bcdde9ddbf4c40a716f5a09434}
+
+
+Metodo para encontrar el tamanno de la lista. 
+
+\begin{DoxyReturn}{Returns}
+Un entero con el numero de elementos que tiene la lista. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classList_af213bbcf13ee436a0f04cde66e337672}{List$<$ D, P $>$}.
+
+\index{List\+With\+Array@{List\+With\+Array}!insert@{insert}}
+\index{insert@{insert}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{insert(\+D d)}{insert(D d)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Array}$<$ D, P $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_afa0b6d215c2cc1d3fe6b9b48d6b6917d}{}\label{classListWithArray_afa0b6d215c2cc1d3fe6b9b48d6b6917d}
+
+
+Metodo para insertar un dato a la lista. El dato insertado se hace al final de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & El dato que se quiere insertar. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classList_a01f588d87d47f8332928eca38f7b11bb}{List$<$ D, P $>$}.
+
+\index{List\+With\+Array@{List\+With\+Array}!next@{next}}
+\index{next@{next}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{next(\+P \&k)}{next(P &k)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P\& {\bf List\+With\+Array}$<$ D, P $>$\+::next (
+\begin{DoxyParamCaption}
+\item[{P \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_a65ef8c78e19dfa00e58c3e92f1be6fb1}{}\label{classListWithArray_a65ef8c78e19dfa00e58c3e92f1be6fb1}
+
+
+Metodo para encontrar el dato siguiente a una posicion dada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & La posicion de la cual se quiere el dato siguiente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia de la posicion siguiente. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classList_afa9ca2c678bc4f7d15ab0f4ab7c45421}{List$<$ D, P $>$}.
+
+\index{List\+With\+Array@{List\+With\+Array}!prev@{prev}}
+\index{prev@{prev}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{prev(\+P \&k)}{prev(P &k)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P\& {\bf List\+With\+Array}$<$ D, P $>$\+::prev (
+\begin{DoxyParamCaption}
+\item[{P \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_aee46046c55e1e0ee1f37b5e1a7aa0702}{}\label{classListWithArray_aee46046c55e1e0ee1f37b5e1a7aa0702}
+
+
+Metodo para encontrar el dato anterior a una posicion dada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & La posicion de la cual se quiere el dato anterior. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia de la posicion anterior. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classList_a6c44364a04dff392b76e6a286074f3a1}{List$<$ D, P $>$}.
+
+\index{List\+With\+Array@{List\+With\+Array}!print\+List@{print\+List}}
+\index{print\+List@{print\+List}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{print\+List()}{printList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Array}$<$ D, P $>$\+::print\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_a515ea38cb40ba7b0c9df98825b2dd270}{}\label{classListWithArray_a515ea38cb40ba7b0c9df98825b2dd270}
+
+
+Metodo para imprimir la lista. 
+
+
+
+Implements \hyperlink{classList_a8b34931e187e7e6b86aad86510ce4f3b}{List$<$ D, P $>$}.
+
+\index{List\+With\+Array@{List\+With\+Array}!remove@{remove}}
+\index{remove@{remove}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{remove(\+D d)}{remove(D d)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Array}$<$ D, P $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_aaa18e76fc128ca05151178d914901ec3}{}\label{classListWithArray_aaa18e76fc128ca05151178d914901ec3}
+
+
+Metodo para remueve un dato de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & El dato que debe contener la cela a eliminar. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classList_a14fc4e853102018df78db3899aa00d71}{List$<$ D, P $>$}.
+
+\index{List\+With\+Array@{List\+With\+Array}!sort@{sort}}
+\index{sort@{sort}!List\+With\+Array@{List\+With\+Array}}
+\subsubsection[{\texorpdfstring{sort()}{sort()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Array}$<$ D, P $>$\+::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithArray_a1a0ec4ab4a8fcb1a20568445ad892c9a}{}\label{classListWithArray_a1a0ec4ab4a8fcb1a20568445ad892c9a}
+
+
+Metodo para ordenar la lista. Se usa el algoritmo bubble sort. 
+
+
+
+Implements \hyperlink{classList_ae3795939f27cf3e688cd470450e0c27a}{List$<$ D, P $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ListWithArray_8h}{List\+With\+Array.\+h}\end{DoxyCompactItemize}
