@@ -15,18 +15,22 @@ class Stack : public List<D, P> {
    	P* last;
 
    public:
+    /*! \brief Constructor por defecto. Se crea con los atributos nulos y n en 0.
+     */
     Stack() {
         this->n = 0;
         this->first = nullptr;
         this->last = nullptr;
     }
 
+    /*! \brief Destructor. LLama al metodo emptyList.
+     */
     virtual ~Stack() {
     	emptyList();
     }
 
-    /*! \brief Metodo para insertar un dato a la lista. Se crea una nueva celda y se enlaza a las anteriores
-     *         en caso de no haber ninguna se pone como la primera. El dato insertado se hace al final de la lista.
+    /*! \brief Metodo para insertar un dato a una pila. Se crea una nueva celda y se enlaza a la ultima
+     *         en caso de no haber ninguna se pone como la primera. 
      *
      *  \param data El dato que se quiere insertar.
      *  \param cell Celda que se crea para insertar el nuevo dato.
@@ -50,6 +54,10 @@ class Stack : public List<D, P> {
         this->n++; //aumenta el contador de elementos de la lista
     }
 
+    /*! \brief Metodo para remover una celda de la pila.
+     *
+     *  \param data Este parametro no importa porque la pila solo puede eliminar una celda, la ultima.
+     */ 
     void remove(D data) {
         cout << "Removing" << endl;
     	if (this->n == 1) {
@@ -76,17 +84,23 @@ class Stack : public List<D, P> {
       
     }
 
+    /*! \brief Metodo para encontrar el tamanno de la pila.
+     *
+     *  \return Un entero con el numero de elementos que tiene la pila.
+     */ 
     int getSize() {
         return this->n;
     }
 
+    /*! \brief Metodo para imprimir la pila.
+     */ 
     void printList() {
         if (this->n == 0)
-            cout << "Stack is empty..!" << endl;
+            cout << "Stack is empty..!" << endl; //se indica que la pila esta vacia.
         else {
             P* temp = this->last;
 
-            cout << "Printing stack:\nIn/Out -> <- ";
+            cout << "Printing stack:\nIn/Out -> <- "; //mensaje de impresion de la pila/
             for (int index = 0; index < this->n; ++index) {
                 cout << *(temp->data) << "  ";
                 temp = prevs(*(temp));
@@ -100,21 +114,14 @@ class Stack : public List<D, P> {
     }
 
     P& prev(P& cell) {
-        P* prev = nullptr;
-        P* temp = this->first;
 
-        if (&cell != (this->first)) {
-            for (int index = 0; index < this->n; ++index) {
-                prev = temp;
-                temp = temp->next;
-                //se busca la celda previa
-                if (*(temp->data) == *(cell.data) && &(temp->next) == &(cell.next)) {
-                    return *(prev);
-                }
-            }
-        }
     }
 
+    /*! \brief Metodo para encontrar un puntero a la celda previa a una dada.
+     *
+     *  \param cell La celda de la cual que quiere la celda previa.
+     *  \return Puntero a la celda previa a cell.
+     */ 
     P* prevs(P& cell) {
         P* prev = nullptr;
         P* temp = this->first;
@@ -131,12 +138,16 @@ class Stack : public List<D, P> {
         }
     }
 
+    /*! \brief Metodo para vaciar la pila.
+     */ 
     void emptyList() {
     	cout << "Emptying stack..." << endl;
     	erase(this->first);
     	this->n = 0;
     }
 
+    /*! \brief Metodo auxiliar para vaciar la pila. Trabaja recursivamente.
+     */ 
     void erase(P* k) {
     	if (k->data != nullptr && k->next != nullptr) {
     		erase(k->next);
@@ -151,8 +162,5 @@ class Stack : public List<D, P> {
     void sort() {
 
     }
-
-
-
 };
 #endif // STACK_H
