@@ -1,0 +1,18 @@
+*************************************************************************
+*************************************************************************
+
+			Estructuras de datos lineales en C++
+
+	Autores:	
+		Luis Diego Fernandez Coto
+		Daniel Jimenez Leon
+
+*************************************************************************
+*************************************************************************
+
+	Para la compilacion y ejecucion de este programa se crea
+	un aricho Makefile con un build, run y clean. Para ejecutar
+	el programa se debe escribir en la terminal make build para 
+	compilar, posteriormente correr el ejecutable generado con
+	make run y por ultimo hace un make clean o simplemente es-
+	cribir make en la terminal.
