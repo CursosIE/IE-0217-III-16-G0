@@ -35,8 +35,7 @@ int main(int argc, char** argv) {
 
     list->find(69);
     list->find(11);
-    cout << endl;
-
+    
     list->remove(5);
     list->printList();
     cout << "n: " << list->getSize() << endl; //getSize()
@@ -161,7 +160,6 @@ int main(int argc, char** argv) {
 
     stack->find(69);
     stack->find(11);
-    cout << endl;
 
     stack->remove(5);
     stack->printList();

@@ -1,0 +1,33 @@
+*************************************************************************
+*************************************************************************
+
+			Estructuras de datos lineales en C++
+
+	Autores:	
+		Luis Diego Fernandez Coto
+		Daniel Jimenez Leon
+
+*************************************************************************
+*************************************************************************
+
+	Universidad de Costa Rica
+	Estructuras Abstractas de Datos y Algoritmos
+	Prof: Ricardo Román Brenes
+	Asignacion: Laboratorio 0
+
+*************************************************************************
+*************************************************************************
+
+	El presente trabajo trata sobre la implementacion de una clase
+	abstracta llama List.h que tiene 11 metodos virtuales puros que
+	tenemos que implementar en 4 clases que heredan de ella: lista 
+	con arreglos, lista con punteros, cola y pila. Se implementan
+	estas clases como plantillas en los archivos ListWithArrays.h,
+	ListWithPointers.h, Queue.h y Stack.h. Para las ultimas 2 estruc-
+	turas no se implementaron todos los metodos ya que estas por de-
+	finicion no los tienen.
+
+
+*************************************************************************
+*************************************************************************
+		     23 de Febrero del 2017

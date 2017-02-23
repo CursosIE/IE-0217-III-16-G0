@@ -56,7 +56,7 @@ class ListWithPointer : public List<D, P> {
         this->n++; //aumenta el contador de elementos de la lista
     }
 
-    /*! \brief Metodo para remueve una celda de la lista.
+    /*! \brief Metodo para remover una celda de la lista.
      *
      *  \param data El dato que debe contener la cela a eliminar.
      */ 
