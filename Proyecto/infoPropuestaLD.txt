@@ -1,8 +1,16 @@
+Sistemas de archivos
+	-Los métodos y estructuras de datos que un sistema operativo utiliza para seguir la pista de los archivos de un disco o partición.
+		+Un archivo  es un conjunto independiente de datos.
+		+Toda la información en una computadora por ejemplo esta agrupada en forma de archivos.
+	-La manera en la que se organizan los archivos en el disco.
+	-Construir un sistema de archivos:
+		+Iniciar la estructura de datos en el disco.
+
+
 Xq usar un Arbol B+?
 	-La razon principal es por velocidad.
 	-Cuando hablamos de memoria, no todo puede ser almacenado siempre en memoria principal. Es por esto que tenemos que utilizar discos para almacenarla. Si uno observa una jerarquia de memorias en cuanto a su velocidad vemos arriba a los registros, la cache, la memoria principal y luego los discos duros. Es decir el acceso a memoria en un disco duro es muy lento y es por esto que necesitamos encontrar una manera de ordenar la informacion de manera que no se tengan que hacer muchos accesos a memoria.
 		+En disco los datos son almacenados en paginas. Lo que se hace es que las hojas apuntan a pagians de disco.
-		+ Imaginemos tamannos de datos de billones de lineas. Con un arbol tipo B+ se pueden almacenar billones de llaves (con punteros a billones de lineas) a una altura de 3, 4 o 5. Esto significa que para accesar un dato tenemos que hace como mucho 5 accesos al disco, lo cual es un gran ahorro de tiempo comparado con otras estructuras de datos, digamos un arbol binario.
 
 
 
@@ -13,6 +21,7 @@ B+ Tree:
 
 
 	-Un arbol B+ es un arbol balanceado en donde todo camino de la raiz a una hoja es del mismo tamanno.
+		+Que la diferencia entre los subnodos de la izq y los de la derecha es de max 1
 	-Todas las hojas estan en el mismo nivel.
 	-Las llaves en el arbol estan ordenadas.
 	-La raiz debe tener al menos 2 hijos.
@@ -33,6 +42,7 @@ B+ Tree:
 		+Los nodos interiores simplemente dirigen hacia la hoja donde se encuentra el dato que queremos.
 	-A nivel macro en 1 nodo pueden haber cientos, hasta miles de llaves por lo que hace a estos arboles poco profundos y rapidos de recorrer.
 
+	-Imaginemos tamannos de datos de billones de lineas. Con un arbol tipo B+ se pueden almacenar billones de llaves (con punteros a billones de lineas) a una altura de 3, 4 o 5. Esto significa que para accesar un dato tenemos que hace como mucho 5 accesos al disco, lo cual es un gran ahorro de tiempo comparado con otras estructuras de datos, digamos un arbol binario.
 	
 	-Valores tipicos en practica:
 		+Orden tipico: 200
@@ -50,21 +60,24 @@ Plataforma
 	-Se va a utilizar el lenguaje C++ para implementarlo.
 		+Orientado a objetos.
 		+Manejo de memoria.
-		+Trabaja a un bajo/medio nivel.
 		+Con C++ vamos a entender las cosas que pasan y xq pasan.
 
 
 
 Entradas y pruebas
-	-Se va a trabajar con archivos de alguna base de datos o inclusive autogenerados por nosotros.
 	-Objetivo
 		+Implementar un arbol tipo B+
+		+Realizar pruebas con distintos arichivos.
+		+Se va a trabajar con archivos de alguna base de datos o inclusive autogenerados por nosotros.
 		+Probar las funcionalidades de agregar datos, de eliminar datos y de buscar datos.
 		+Tomar tiempos de ejecucion para estos.
-		+Realizar pruebas con distintos arichivos, buscar casos limite.
 		+Indexar todo un sistema de archivos al arbol.
 		+Realizar graficas sobre los resultados para poder hacer un posterior analisis.
 		+Se espera comprobar principalmente:
 			*Funcionalidad de la estructura .
 			*Tiempos de ejecucion.
 
+
+
+1-> 8'55"
+2->
