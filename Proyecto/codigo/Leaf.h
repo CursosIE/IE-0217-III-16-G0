@@ -11,25 +11,24 @@ public:
 
     D* arrayData;
 
-    Node() {
-        order = 0;
-        arrayKeys = nullptr;
-        arrayPtrs = nullptr;
-        arrayData = nullptr;
+    Leaf() {
+        this->order = 0;
+        this->arrayKeys = nullptr;
+        this->arrayPtrs = nullptr;
+        this->arrayData = nullptr;
     }
 
-    Node(int order) {
+    Leaf(int order) {
         this->order = order;
-        arrayKeys = nullptr
-        arrayPtrs = nullptr;
-        arrayData = new D[order];
+        this->arrayKeys = nullptr;
+        this->arrayPtrs = nullptr;
+        this->arrayData = new D[order];
     }
 
-    virtual ~Node() {
-        delete[] arrayData;
+    virtual ~Leaf() {
+        delete[] this->arrayData;
     }
 
 };
 
 #endif /* LEAF_H */
-
