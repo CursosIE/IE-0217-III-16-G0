@@ -5,11 +5,11 @@
 using namespace std;
 //BST node
 
-template <typename D>
-class Leaf : public Node<D> {
+template <typename Data>
+class Leaf : public Node<Data> {
 public:
 
-    D* arrayData;
+    Data* arrayData;
 
     Leaf() {
         this->order = 0;
@@ -22,7 +22,7 @@ public:
         this->order = order;
         this->arrayKeys = nullptr;
         this->arrayPtrs = nullptr;
-        this->arrayData = new D[order];
+        this->arrayData = new Data[order];
     }
 
     virtual ~Leaf() {

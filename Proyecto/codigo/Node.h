@@ -5,13 +5,13 @@
 using namespace std;
 //B+Tree node
 
-template <typename D>
+template <typename Data>
 class Node {
 public:
 
     int order;
     int* arrayKeys;
-    Node<D>* arrayPtrs;
+    Node<Data>* arrayPtrs;
 
     Node() {
         order = 0;
@@ -22,11 +22,12 @@ public:
     Node(int order) {
         this->order = order;
         arrayKeys = new int[order];
-        arrayPtrs = new Node<D>[order + 1];
+        arrayPtrs = new Node<Data>[order + 1];
     }
 
     virtual ~Node() {
-
+        delete[] arrayKeys;
+        delete[] arrayPtrs;
     }
 
 };
