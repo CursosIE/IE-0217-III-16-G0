@@ -11,7 +11,7 @@ public:
 
     int order;
     int* arrayKeys;
-    Node<Data>* arrayPtrs;
+    Node<Data>** arrayPtrs;
 
     Node() {
         order = 0;
@@ -22,7 +22,7 @@ public:
     Node(int order) {
         this->order = order;
         arrayKeys = new int[order];
-        arrayPtrs = new Node<Data>[order + 1];
+        arrayPtrs = new Node<Data>*[order + 1];
     }
 
     virtual ~Node() {
@@ -33,4 +33,3 @@ public:
 };
 
 #endif /* NODE_H */
-

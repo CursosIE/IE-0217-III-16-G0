@@ -12,7 +12,7 @@ template <typename Data>
 class BPlusTree {
    public:
     Node<Data>* root;
-    int levels; 
+    int levels;
     int order;
 
    public:
@@ -37,21 +37,20 @@ class BPlusTree {
 
     }
 
-    void fillTree (int order, int levels, Node<Data>* array) {
+    void fillTree (int order, int levels, Node<Data>** array) {
         if (levels != 1) {
             for (int index = 0; index < order + 1; ++index) {
                 array[index] = new Node<Data>(order);
-                fillInnerNodes(order, levels - 1, array[index]->arrayPtrs);
+                fillTree(order, levels - 1, array[index]->arrayPtrs);
             }
         }
         else {
            for (int index = 0; index < order + 1; ++index) {
                 array[index] = new Leaf<Data>(order);
-            } 
+            }
         }
     }
 
 };
 
 #endif /* BPLUSTREE_H */
-
