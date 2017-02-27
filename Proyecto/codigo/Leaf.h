@@ -26,7 +26,7 @@ public:
         this->father = nullptr;
         this->isLeaf = 1;
         this->order = order;
-        this->arrayKeys = nullptr;
+        this->arrayKeys = new int[order];
         this->arrayPtrs = nullptr;
         this->arrayData = new Data[order];
     }
@@ -35,7 +35,7 @@ public:
         this->father = father;
         this->isLeaf = 1;
         this->order = order;
-        this->arrayKeys = nullptr;
+        this->arrayKeys = new int[order];
         this->arrayPtrs = nullptr;
         this->arrayData = new Data[order];
     }
