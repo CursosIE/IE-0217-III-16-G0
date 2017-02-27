@@ -1,6 +1,7 @@
 #ifndef BPLUSTREE_H
 #define BPLUSTREE_H
 
+#include <cmath> 
 #include <iostream>
 
 #include "Node.h"
@@ -23,21 +24,17 @@ class BPlusTree {
         this->order = 0;
     }
 
-    BPlusTree(int order, int levels) {
+    BPlusTree(int order) {
+        this->levels = 0;
         this->order = order;
-        this->levels = levels;
-        this->root = new Node<Data>(order);
-        fillTree(order, levels - 1, this->root->arrayPtrs);
-    }
-
-    BPlusTree(const BPlusTree& orig) {
+        this->root = new Leaf<Data>(order);
     }
 
     virtual ~BPlusTree() {
 
     }
 
-    void fillTree (int order, int levels, Node<Data>** array) {
+    /*void fillTree (int order, int levels, Node<Data>** array) {
         if (levels != 1) {
             for (int index = 0; index < order + 1; ++index) {
                 array[index] = new Node<Data>(order);
@@ -49,7 +46,106 @@ class BPlusTree {
                 array[index] = new Leaf<Data>(order);
             }
         }
+    }*/
+
+    void insert (int key) {
+        if (this->root->elements == 0) {
+            this->root->arrayKeys[0] = key;
+            this->root->elements += 1;
+        }
+        else if (this->levels == 0 && this->root->elements < order) {
+            this->root->arrayKeys[this->root->elements] = key;
+            this->root->elements += 1;
+            sort(this->root->arrayKeys, this->root->elements); 
+        }
+        else {
+            //CASO CUANDO ROOT ESTA LLENO Y HAY QUE HACER SPLIT
+
+        }
     }
+
+    void auxInsert(int key, Node<Data>* node) {
+        int midKey;
+
+        if (!node->isLeaf) {
+            auxInsert(key, node->arrayPtrs[pointerToGo(key, node)]);
+        }
+        else {
+            //LLEGO A UNA HOJA
+            if (node->elements < order) {
+                node->arrayKeys[node->elements] = key;
+                node->elements += 1;
+                sort(node->arrayKeys, node->elements);
+            }
+            else {
+                //SPLIT
+                midKey = midKey(node->arrayKeys, key);
+            }
+        }
+    }
+
+    int pointerToGo(int key, Node<Data>* node) {
+        for (int index = 0; index < node->elements; ++index) {
+            if (node->arrayKeys[index] > key)
+                return index;
+        }
+        return node->elements;
+    }
+
+    int midKey(int* keys, int newKey) {
+        int* array [order];
+        for (int index = 0; index <= order; ++index) {
+            if (index != order)
+                array[index] = keys[index];
+            else
+                array[index] = newKey;
+        }
+        
+        sort(array, order + 1);
+
+        return array[ceil(order / 2)];
+    }
+
+    void newRoot(int key, Node<Data>* left, Node<Data>* right) {
+        Node<Data>* node = new Node<Data>(this->order);
+        node->arrayKeys[0] = key;
+        node->arrayPtrs[0] = left;
+        node->arrayPtrs[1] = right;
+        this->root = node;
+    }
+
+    void sort (int* array, int size) {
+        int temp = 0;
+        int posMin = 0;
+        //primer for de ordenamiento
+        for (int n = 0; n < size - 1; n++){
+            posMin = n;
+            //segundo for de ordenamiento
+            for (int m = n + 1; m < size; m++) {
+                if (array[m] < array[posMin]) 
+                    posMin = m;
+            }
+            //intercambio de valores en caso de que haya que ordenar
+            if (posMin != n) {
+                temp = array[n];
+                array[n] = array[posMin];
+                array[posMin] = temp;
+            }
+        }
+    }
+
+    // *Node find (Data& data) {
+    //     return tree_search(this->root, data);
+    // }
+
+    // Node<Data>* treeSearch (Node<Data>* node, Data data) {
+    //     if (node->isLeaf) 
+    //         return node;
+    //     else {
+
+    //     }
+    // }
+
 
 };
 

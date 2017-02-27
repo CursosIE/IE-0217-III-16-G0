@@ -2,6 +2,8 @@
 #define LEAF_H
 
 #include <iostream>
+
+#include "Node.h"
 using namespace std;
 //BST node
 
@@ -12,13 +14,26 @@ public:
     Data* arrayData;
 
     Leaf() {
+        this->father = nullptr;
         this->order = 0;
         this->arrayKeys = nullptr;
         this->arrayPtrs = nullptr;
         this->arrayData = nullptr;
+        this->isLeaf = 1;
     }
 
     Leaf(int order) {
+        this->father = nullptr;
+        this->isLeaf = 1;
+        this->order = order;
+        this->arrayKeys = nullptr;
+        this->arrayPtrs = nullptr;
+        this->arrayData = new Data[order];
+    }
+
+    Leaf(int order, Node<Data>* father) {
+        this->father = father;
+        this->isLeaf = 1;
         this->order = order;
         this->arrayKeys = nullptr;
         this->arrayPtrs = nullptr;
