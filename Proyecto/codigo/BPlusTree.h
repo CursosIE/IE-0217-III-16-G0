@@ -62,8 +62,7 @@ class BPlusTree {
         }
         else {
             //CASO CUANDO ROOT ESTA LLENO Y HAY QUE HACER SPLIT
-
-
+            auxInsert(key, root);
         }
     }
 
@@ -104,24 +103,40 @@ class BPlusTree {
             newNode = new Leaf<Data>(this->order);
             newNode->arrayKeys = rightSplit;
             newNode->elements = ceil((this->order + 1) / 2);
+            //Revisar que pasa si es el root y no tiene padre.
             newNode->father = node->father;
         }
         else {
             newNode = new Node<Data>(this->order);
             newNode->arrayKeys = rightSplit;
             newNode->elements = ceil((this->order + 1) / 2);
+            //Revisar que pasa si es el root y no tiene padre.
             newNode->father = node->father;
         }
         node->arrayKeys = leftSplit;
         node->elements = floor((this->order + 1) / 2);
 
         //HASTA AQUI TENEMOS LOS 2 VECTORES SPLITEADOS
-        if (node->father->elements < this->order) {
-            insertSortAndMvPointers(node->father, arrayWNewKey[ceil((this->order + 1) / 2)], node, newNode);
+
+        //Reviso si estoy haciendo split al root, para crear un root nuevo.
+        if(node == this->root) {
+            levels += 1;
+            Node<Data>* newRoot = new Node<Data>(this->order);
+            newRoot->arrayKeys[0] = arrayWNewKey[ceil((this->order + 1) / 2)];
+            newRoot->elements += 1;
+            newRoot->arrayPtrs[0] = node;
+            newRoot->arrayPtrs[1] = newNode;
+            this->root = newRoot;
+            node->father = newRoot;
+            newNode->father = newRoot;
+        } else {
+            if (node->father->elements < this->order) {
+                insertSortAndMvPointers(node->father, arrayWNewKey[ceil((this->order + 1) / 2)], node, newNode);
+            } else {
+                split (arrayWNewKey[ceil((this->order + 1) / 2)], node->father);
+                fixPointers(node->father, node, newNode);
+            }
         }
-        else
-            split (arrayWNewKey[ceil((this->order + 1) / 2)], node->father);
-            fixPointers(node->father, node, newNode);
     }
 
     void insertSortAndMvPointers(Node<Data>* node, int key, Node<Data>* left, Node<Data>* right) {
