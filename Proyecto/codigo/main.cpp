@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
 	tree->insert(71);
 	cout << "\n" << endl;
 	cout << "\n" << endl;
-	tree->insert(85);
+	tree->insert(1);
 	cout << endl;
 	tree->printTree();
 

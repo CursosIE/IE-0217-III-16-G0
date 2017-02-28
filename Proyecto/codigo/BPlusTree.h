@@ -243,7 +243,7 @@ class BPlusTree {
     }
 
     void insertSortAndMvPointers(Node<Data>* node, int key, Node<Data>* left, Node<Data>* right) {
-        node->father->arrayKeys[node->elements] = key;
+        node->father->arrayKeys[node->father->elements] = key;
         node->father->elements += 1;
         cout << "Voy para specialSort" << endl;
         cout << this->root << endl;
@@ -319,6 +319,9 @@ class BPlusTree {
     }
 
     void specialSort (int* array, Node<Data>** arrayPtrs, Node<Data>* left, Node<Data>* right, int size) {
+        cout << "Array: ";
+        for (int index = 0; index < size; ++index)
+            cout << array[index];
         bool estabaOrdenado = true;
         cout << "Empieza specialSort..!" << endl;
 
@@ -355,11 +358,14 @@ class BPlusTree {
                 array[n] = array[posMin];
                 array[posMin] = temp;
                 //cambio punteros
-                for (int index = posMin + 2; index < size + 1; ++index)
+                cout << "size: " << size << endl;
+                cout << "posMin: " << posMin << endl;
+                cout << "n: " << n << endl;
+                for (int index = n + 2; index < size + 1; ++index)
                     arrayPtrs[index] = arrayPtrs[index - 1];
 
-                arrayPtrs[posMin] = left;
-                arrayPtrs[posMin + 1] = right;
+                arrayPtrs[n] = left;
+                arrayPtrs[n + 1] = right;
             }
         }
         if (estabaOrdenado)
