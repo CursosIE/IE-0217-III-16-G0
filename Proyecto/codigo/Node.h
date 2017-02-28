@@ -24,6 +24,7 @@ public:
         this->arrayPtrs = nullptr;
         right = nullptr;
         isLeaf = 0;
+        this->elements = 0;
     }
 
     Node(int order) {
@@ -31,7 +32,13 @@ public:
         this->order = order;
         arrayKeys = new int[order];
         arrayPtrs = new Node<Data>*[order + 1];
+        for (int index = 0; index < order + 1; ++index) {
+            arrayPtrs[index] = nullptr;
+            if (index < order)
+                arrayKeys[index] = -1;
+        }
         isLeaf = 0;
+        this->elements = 0;
     }
 
     Node(int order, Node<Data>* father) {

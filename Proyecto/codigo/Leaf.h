@@ -29,6 +29,8 @@ public:
         this->arrayKeys = new int[order];
         this->arrayPtrs = nullptr;
         this->arrayData = new Data[order];
+        for (int index = 0; index < order; ++index) 
+                this->arrayKeys[index] = -1;
     }
 
     Leaf(int order, Node<Data>* father) {
