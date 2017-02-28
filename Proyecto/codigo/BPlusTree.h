@@ -67,13 +67,13 @@ class BPlusTree {
     }
 
     void auxInsert(int key, Node<Data>* node) {
-        //cout << "LLegó a auxInsert..!" << endl;
+        cout << "LLegó a auxInsert..!" << endl;
 
         if (!node->isLeaf) {
             auxInsert(key, node->arrayPtrs[pointerToGo(key, node)]);
         }
         else {
-            //cout << "Entró a el ELSE que dice que ES una hoja..!" << endl;
+            cout << "Entró a el ELSE que dice que ES una hoja..!" << endl;
             //LLEGO A UNA HOJA
             if (node->elements < order) {
                 node->arrayKeys[node->elements] = key;
@@ -81,7 +81,7 @@ class BPlusTree {
                 sort(node->arrayKeys, node->elements);
             }
             else {
-                //cout << "Vamos a hacer SPLIT!!!" << endl;
+                cout << "Vamos a hacer SPLIT!!!" << endl;
                 //SPLIT
                 split(key, node);
             }
@@ -101,7 +101,6 @@ class BPlusTree {
         
 
         Node<Data>* newNode;
-        //cout << "Pasó midKey..!" << endl;
 
         int* leftSplit = new int[this->order];
         int* rightSplit = new int[this->order];
@@ -117,10 +116,10 @@ class BPlusTree {
             else
                 rightSplit[index - ((order + 1) / 2)] = arrayWNewKey[index];
         }
-        //cout << "Hizo el for después de leftSplit y rightSplit" << endl;
+        cout << "Hizo el for después de leftSplit y rightSplit" << endl;
 
         // //////////////////////////////
-        // cout << "left: ";
+        // cout << "leftSplit: ";
         // for (int index = 0; index < this->order; ++index) {
         //     cout << leftSplit[index] << "  "; 
         // }
@@ -128,7 +127,7 @@ class BPlusTree {
         // ///////////////////////////////
 
         // //////////////////////////////
-        // cout << "right: ";
+        // cout << "rightSplit: ";
         // for (int index = 0; index < this->order; ++index) {
         //     cout << rightSplit[index] << "  "; 
         // }
@@ -151,21 +150,43 @@ class BPlusTree {
             if (node != this->root)
                 newNode->father = node->father;
         }
-        //cout << "Hizo el nuevo nodo..!" << endl;
+        cout << "Hizo el nuevo nodo u hoja..!" << endl;
         node->arrayKeys = leftSplit;
         node->elements = (int)floor((this->order + 1) / 2);
 
+        cout << "right elements: " << newNode->elements << endl;
+        cout << "left elements: " << node->elements << endl;
+
         fixNewNodePointers(node, newNode);
 
-        //cout << "Corrió fixNewNodePointers!!" << endl;
+        cout << "right elements: " << newNode->elements << endl;
+        cout << "left elements: " << node->elements << endl;
+
+        // //////////////////////////////
+        // cout << "node: ";
+        // for (int index = 0; index < this->order; ++index) {
+        //     cout << node->arrayKeys[index] << "  "; 
+        // }
+        // cout << endl;
+        // ///////////////////////////////
+        // //////////////////////////////
+        // cout << "newNode: ";
+        // for (int index = 0; index < this->order; ++index) {
+        //     cout << newNode->arrayKeys[index] << "  "; 
+        // }
+        // cout << endl;
+        // ///////////////////////////////
+
+        cout << "Corrió fixNewNodePointers!!" << endl;
 
         //HASTA AQUI TENEMOS LOS 2 VECTORES SPLITEADOS
 
         //Revisar los elementos de node y newNode.        
 
         //Reviso si estoy haciendo split al root, para crear un root nuevo.
+
         if(node == this->root) {
-            //cout << "Entró al: if(node == this->root) //line 135" << endl;
+            cout << "Entró al: if(node == this->root) //line 135" << endl;
             this->levels += 1;
             Node<Data>* newRoot = new Node<Data>(this->order);
 
@@ -196,7 +217,10 @@ class BPlusTree {
 
         } else {
             if (node->father->elements < this->order) {
-                insertSortAndMvPointers(node->father, arrayWNewKey[(int)ceil((this->order + 1) / 2)], node, newNode);
+                cout << "Entró al  if (node->father->elements < this->order).." << endl;
+                cout << "Voy para  insertSortAndMvPointers" << endl;
+                insertSortAndMvPointers(node, arrayWNewKey[(int)ceil((this->order + 1) / 2)], node, newNode);
+                cout << "Hizo insertSortAndMvPointers" << endl;
             } else {
                 split (arrayWNewKey[(int)ceil((this->order + 1) / 2)], node->father);
                 fixPointers(node->father, node, newNode);
@@ -219,8 +243,11 @@ class BPlusTree {
     }
 
     void insertSortAndMvPointers(Node<Data>* node, int key, Node<Data>* left, Node<Data>* right) {
-        node->arrayKeys[node->elements] = key;
-        node->elements += 1;
+        node->father->arrayKeys[node->elements] = key;
+        node->father->elements += 1;
+        cout << "Voy para specialSort" << endl;
+        cout << this->root << endl;
+        cout << node->father << endl;
         specialSort(node->father->arrayKeys, node->father->arrayPtrs, left, right, node->father->elements);
     }
 
@@ -279,7 +306,7 @@ class BPlusTree {
             posMin = n;
             //segundo for de ordenamiento
             for (int m = n + 1; m < size; m++) {
-                if (array[m] < array[posMin])
+                if (array[m] < array[posMin] && array[m] > -1 && array[posMin] > -1)
                     posMin = m;
             }
             //intercambio de valores en caso de que haya que ordenar
@@ -291,7 +318,25 @@ class BPlusTree {
         }
     }
 
-    void specialSort (int* array, Node<Data>** arrayPtrs, Node<Data>* left, Node<Data>* rigth, int size) {
+    void specialSort (int* array, Node<Data>** arrayPtrs, Node<Data>* left, Node<Data>* right, int size) {
+        bool estabaOrdenado = true;
+        cout << "Empieza specialSort..!" << endl;
+
+        //////////////////////////////
+        cout << "left: ";
+        for (int index = 0; index < this->order; ++index) {
+            cout << left->arrayKeys[index] << "  "; 
+        }
+        cout << endl;
+        ///////////////////////////////
+        //////////////////////////////
+        cout << "right: ";
+        for (int index = 0; index < this->order; ++index) {
+            cout << right->arrayKeys[index] << "  "; 
+        }
+        cout << endl;
+        ///////////////////////////////
+
         int temp = 0;
         int posMin = 0;
         //primer for de ordenamiento
@@ -299,11 +344,13 @@ class BPlusTree {
             posMin = n;
             //segundo for de ordenamiento
             for (int m = n + 1; m < size; m++) {
-                if (array[m] < array[posMin])
+                if (array[m] < array[posMin]  && array[m] > -1 && array[posMin] > -1)
                     posMin = m;
             }
             //intercambio de valores en caso de que haya que ordenar
             if (posMin != n) {
+                estabaOrdenado = false;
+                cout << "Entró al  if (posMin != n)" << endl;
                 temp = array[n];
                 array[n] = array[posMin];
                 array[posMin] = temp;
@@ -312,9 +359,11 @@ class BPlusTree {
                     arrayPtrs[index] = arrayPtrs[index - 1];
 
                 arrayPtrs[posMin] = left;
-                arrayPtrs[posMin + 1] = rigth;
+                arrayPtrs[posMin + 1] = right;
             }
         }
+        if (estabaOrdenado)
+            arrayPtrs[size] = right;
     }
 
     void printTree () {

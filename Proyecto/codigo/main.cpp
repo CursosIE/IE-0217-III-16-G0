@@ -18,7 +18,9 @@ int main(int argc, char** argv) {
 	tree->insert(100);
 	tree->insert(12);
 	tree->insert(71);
-	//tree->insert(85);
+	cout << "\n" << endl;
+	cout << "\n" << endl;
+	tree->insert(85);
 	cout << endl;
 	tree->printTree();
 
