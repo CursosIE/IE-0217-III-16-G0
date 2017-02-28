@@ -1,7 +1,7 @@
 #ifndef BPLUSTREE_H
 #define BPLUSTREE_H
 
-#include <cmath> 
+#include <cmath>
 #include <iostream>
 
 #include "Node.h"
@@ -58,7 +58,7 @@ class BPlusTree {
         else if (this->levels == 0 && this->root->elements < order) {
             this->root->arrayKeys[this->root->elements] = key;
             this->root->elements += 1;
-            sort(this->root->arrayKeys, this->root->elements); 
+            sort(this->root->arrayKeys, this->root->elements);
         }
         else {
             //CASO CUANDO ROOT ESTA LLENO Y HAY QUE HACER SPLIT
@@ -121,8 +121,7 @@ class BPlusTree {
         }
         else
             split (arrayWNewKey[ceil((this->order + 1) / 2)], node->father);
-            //Arreglar los punteros de los nodos que quedan perdidos.
-
+            fixPointers(node->father, node, newNode);
     }
 
     void insertSortAndMvPointers(Node<Data>* node, int key, Node<Data>* left, Node<Data>* right) {
@@ -148,11 +147,21 @@ class BPlusTree {
             else
                 array[index] = newKey;
         }
-        
+
         sort(array, order + 1);
 
         //return array[ceil(order / 2)];
         return array;
+    }
+
+    void fixPointers(Node<Data>* node, Node<Data>* left, Node<Data>* right) {
+        for (int index = 0; index < this->order; index++) {
+            if (node->arrayKeys[index] == right->arrayKeys[0]) {
+                node->arrayPtrs[index] = left;
+                node->arrayPtrs[index + 1] = right;
+                return;
+            }
+        }
     }
 
     void newRoot(int key, Node<Data>* left, Node<Data>* right) {
@@ -171,7 +180,7 @@ class BPlusTree {
             posMin = n;
             //segundo for de ordenamiento
             for (int m = n + 1; m < size; m++) {
-                if (array[m] < array[posMin]) 
+                if (array[m] < array[posMin])
                     posMin = m;
             }
             //intercambio de valores en caso de que haya que ordenar
@@ -192,7 +201,7 @@ class BPlusTree {
             posMin = n;
             //segundo for de ordenamiento
             for (int m = n + 1; m < size; m++) {
-                if (array[m] < array[posMin]) 
+                if (array[m] < array[posMin])
                     posMin = m;
             }
             //intercambio de valores en caso de que haya que ordenar
@@ -201,9 +210,9 @@ class BPlusTree {
                 array[n] = array[posMin];
                 array[posMin] = temp;
                 //cambio punteros
-                for (int index = posMin + 2; index < size + 1; ++index) 
+                for (int index = posMin + 2; index < size + 1; ++index)
                     arrayPtrs[index] = arrayPtrs[index - 1];
-                
+
                 arrayPtrs[posMin] = left;
                 arrayPtrs[posMin + 1] = rigth;
             }
@@ -215,7 +224,7 @@ class BPlusTree {
     // }
 
     // Node<Data>* treeSearch (Node<Data>* node, Data data) {
-    //     if (node->isLeaf) 
+    //     if (node->isLeaf)
     //         return node;
     //     else {
 
