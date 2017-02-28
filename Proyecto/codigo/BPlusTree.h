@@ -171,9 +171,14 @@ class BPlusTree {
 
     void fixPointers(Node<Data>* node, Node<Data>* left, Node<Data>* right) {
         for (int index = 0; index < this->order; index++) {
-            if (node->arrayKeys[index] == right->arrayKeys[0]) {
-                node->arrayPtrs[index] = left;
-                node->arrayPtrs[index + 1] = right;
+            if (node->arrayKeys[index] >= right->arrayKeys[0]) {
+                if(node->arrayKeys[index] == right->arrayKeys[0]) {
+                    node->arrayPtrs[index] = left;
+                    node->arrayPtrs[index + 1] = right;
+                } else {
+                    node->arrayPtrs[index - 1] = left;
+                    node->arrayPtrs[index] = right;
+                }
                 return;
             }
         }
