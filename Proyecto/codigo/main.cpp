@@ -12,7 +12,14 @@ int main(int argc, char** argv) {
 
 	BPlusTree<Data>* tree = new BPlusTree<Data>(3);
 
-	tree->insert(85);
+	for (int index = 0; index < 100000000; ++index)
+		tree->insert(index + 1 + (index * 3));
+
+	//tree->printTree();
+
+	tree->find(2097145); //no funca, este es root
+
+	/*tree->insert(85);
 	tree->insert(150);
 	tree->insert(35);
 	tree->insert(20);
@@ -38,7 +45,7 @@ int main(int argc, char** argv) {
 	tree->find(50);
 	tree->find(47);
 	tree->find(60);
-	cout << endl; 
+	cout << endl; */
 
     return 0;
 }
