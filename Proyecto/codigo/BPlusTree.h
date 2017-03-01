@@ -135,21 +135,17 @@ class BPlusTree {
         // ///////////////////////////////
 
         //si lo que se splitea es una hoja o un nodo interno
-        if (node->isLeaf) {
+        if (node->isLeaf) 
             newNode = new Leaf<Data>(this->order);
-            newNode->arrayKeys = rightSplit;
-            newNode->elements = (int)ceil((this->order + 1) / 2);
-            //Revisar que pasa si es el root y no tiene padre.
-            if (node != this->root)
-                newNode->father = node->father;
-        }
-        else {
+        else 
             newNode = new Node<Data>(this->order);
-            newNode->arrayKeys = rightSplit;
-            newNode->elements = (int)ceil((this->order + 1) / 2);
-            if (node != this->root)
-                newNode->father = node->father;
-        }
+
+        newNode->arrayKeys = rightSplit;
+        newNode->elements = (int)ceil((this->order + 1) / 2);
+        //Revisar que pasa si es el root y no tiene padre.
+        if (node != this->root)
+            newNode->father = node->father;
+
         //cout << "Hizo el nuevo nodo u hoja..!" << endl;
         node->arrayKeys = leftSplit;
         node->elements = (int)floor((this->order + 1) / 2);
@@ -222,8 +218,21 @@ class BPlusTree {
                 insertSortAndMvPointers(node, arrayWNewKey[(int)ceil((this->order + 1) / 2)], node, newNode);
                 // cout << "Hizo insertSortAndMvPointers" << endl;
             } else {
-                split (arrayWNewKey[(int)ceil((this->order + 1) / 2)], node->father);
+                split(arrayWNewKey[(int)ceil((this->order + 1) / 2)], node->father);
                 fixPointers(node->father, node, newNode);
+            }
+        }
+        fatherPtrs(newNode);
+    }
+
+    void fatherPtrs(Node<Data>* node) { //ese node va a ser newNode
+        if (node->arrayPtrs != nullptr) {
+            for(int index = 0; index < node->elements + 1; ++index) {
+                if (node->arrayPtrs[index] != nullptr) {
+                    //cout << "Father: " << node->arrayPtrs[index]->father 
+                    //<< "   Son: " << node->arrayPtrs[index] << endl;
+                    node->arrayPtrs[index]->father = node;
+                }
             }
         }
     }
@@ -418,24 +427,27 @@ class BPlusTree {
     }
 
     void find (int key) {
-        auxFind(key, this->root);
+        if (!auxFind(key, this->root))
+            cout << key << " Was NOT found!!!" << endl;
+        else
+            cout << key << " Was found!!!" << endl;
     }
 
-    void auxFind (int key, Node<Data>* node) {
+    bool auxFind (int key, Node<Data>* node) { 
         if (node->isLeaf) {
             for (int index = 0; index < node->elements; ++index) {
                 if (key == node->arrayKeys[index]) 
-                    cout << key << " Was found!!!" << endl;
+                    return 1;
+                else
+                    return 0;
             }
         }
         else {
             for (int index = 0; index < node->elements; ++index) {
                 if (node->arrayKeys[index] > key)
-                    auxFind(key, node->arrayPtrs[index]);
-
-                else if (index == node->elements -1)
-                    auxFind(key, node->arrayPtrs[index + 1]);
+                    return auxFind(key, node->arrayPtrs[index]);
             }
+            return auxFind(key, node->arrayPtrs[node->elements]);
         }
     }
 };
