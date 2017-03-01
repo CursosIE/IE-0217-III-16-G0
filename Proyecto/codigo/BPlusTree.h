@@ -387,8 +387,8 @@ class BPlusTree {
 
     void auxPrint(Node<Data>* node, int level) {
         if (node->isLeaf) {
-            cout << "Father: " << node->father << endl;
             cout << "Level: " << level << endl;
+            cout << "Father: " << node->father << endl;
             cout << node << ":  ";
             for (int keysIndex = 0; keysIndex < node->elements; ++keysIndex){
                 cout << node->arrayKeys[keysIndex] << "  ";
@@ -401,11 +401,11 @@ class BPlusTree {
                     auxPrint(node->arrayPtrs[index], level + 1);  
             }
 
+            cout << "Level: " << level << endl;
             if (node != this->root)
                 cout << "Father: " << node->father << endl;
             else
                 cout << "Root: " << endl;
-            cout << "Level: " << level << endl;
             cout << node << ":  ";
             for (int keysIndex = 0; keysIndex < node->elements; ++keysIndex){
                     cout << node->arrayKeys[keysIndex] << "  ";
