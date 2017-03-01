@@ -382,13 +382,14 @@ class BPlusTree {
     }
 
     void printTree () {
-        auxPrint(this->root, 1);
+        auxPrint(this->root, 1, -1);
     }
 
-    void auxPrint(Node<Data>* node, int level) {
+    void auxPrint(Node<Data>* node, int level, int index) {
         if (node->isLeaf) {
             cout << "Level: " << level << endl;
             cout << "Father: " << node->father << endl;
+            cout << "Father index ptr: " << index << endl;
             cout << node << ":  ";
             for (int keysIndex = 0; keysIndex < node->elements; ++keysIndex){
                 cout << node->arrayKeys[keysIndex] << "  ";
@@ -398,12 +399,14 @@ class BPlusTree {
         else {
             for (int index = 0; index < node->elements + 1; ++index) {
                 if (node->arrayPtrs[index] != nullptr)
-                    auxPrint(node->arrayPtrs[index], level + 1);  
+                    auxPrint(node->arrayPtrs[index], level + 1, index);  
             }
 
             cout << "Level: " << level << endl;
-            if (node != this->root)
+            if (node != this->root){
                 cout << "Father: " << node->father << endl;
+                cout << "Father index ptr: " << index << endl;
+            }
             else
                 cout << "Root: " << endl;
             cout << node << ":  ";
@@ -414,6 +417,32 @@ class BPlusTree {
         }
     }
 
+    void find (int key) {
+        if (auxFind(key, this->root))
+            cout << key << " Was found!!!" << endl;
+        else 
+            cout << key << " Was NOT found!!!" << endl;
+    }
+
+    bool auxFind (int key, Node<Data>* node) {
+        if (node->isLeaf) {
+            for (int index = 0; index < node->elements; ++index) {
+                if (key == node->arrayKeys[index]) 
+                    return true;
+            }
+        }
+        else {
+            for (int index = 0; index < node->elements; ++index) {
+                if (node->arrayKeys[index] > key)
+                    if (auxFind(key, node->arrayPtrs[index]))
+                        return true;
+                else if (index == node->elements -1)
+                    if (auxFind(key, node->arrayPtrs[index + 1]))
+                        return true;
+            }
+        }
+        return false;
+    }
 };
 
 #endif /* BPLUSTREE_H */
