@@ -12,15 +12,17 @@ int main(int argc, char** argv) {
 
 	BPlusTree<Data>* tree = new BPlusTree<Data>(3);
 
-	tree->insert(11);
-	tree->insert(69);
-	tree->insert(5);
-	tree->insert(100);
-	tree->insert(12);
-	tree->insert(71);
-	cout << "\n" << endl;
-	cout << "\n" << endl;
-	tree->insert(1);
+	tree->insert(85);
+	tree->insert(150);
+	tree->insert(35);
+	tree->insert(20);
+	tree->insert(45);
+	tree->insert(200);
+	tree->insert(90);
+	tree->insert(50);
+	tree->insert(47);
+	tree->insert(60);
+
 	cout << endl;
 	tree->printTree();
 
