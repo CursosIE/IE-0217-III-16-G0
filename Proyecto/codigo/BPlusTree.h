@@ -396,6 +396,8 @@ class BPlusTree {
 
     void auxPrint(Node<Data>* node, int level, int index) {
         if (node->isLeaf) {
+            cout << "Leaf!!" << endl;
+            cout << "Elements: " << node->elements << endl;
             cout << "Level: " << level << endl;
             cout << "Father: " << node->father << endl;
             cout << "Father index ptr: " << index << endl;
@@ -413,11 +415,13 @@ class BPlusTree {
 
             cout << "Level: " << level << endl;
             if (node != this->root){
+                cout << "Node!!" << endl;
                 cout << "Father: " << node->father << endl;
                 cout << "Father index ptr: " << index << endl;
             }
             else
                 cout << "Root: " << endl;
+            cout << "Elements: " << node->elements << endl;
             cout << node << ":  ";
             for (int keysIndex = 0; keysIndex < node->elements; ++keysIndex){
                     cout << node->arrayKeys[keysIndex] << "  ";
@@ -436,11 +440,11 @@ class BPlusTree {
     bool auxFind (int key, Node<Data>* node) { 
         if (node->isLeaf) {
             for (int index = 0; index < node->elements; ++index) {
+                //cout << "Elements: " << node->elements << endl;
                 if (key == node->arrayKeys[index]) 
-                    return 1;
-                else
-                    return 0;
+                    return 1;  
             }
+            return 0;
         }
         else {
             for (int index = 0; index < node->elements; ++index) {
