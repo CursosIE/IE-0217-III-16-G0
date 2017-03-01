@@ -418,30 +418,25 @@ class BPlusTree {
     }
 
     void find (int key) {
-        if (auxFind(key, this->root))
-            cout << key << " Was found!!!" << endl;
-        else 
-            cout << key << " Was NOT found!!!" << endl;
+        auxFind(key, this->root);
     }
 
-    bool auxFind (int key, Node<Data>* node) {
+    void auxFind (int key, Node<Data>* node) {
         if (node->isLeaf) {
             for (int index = 0; index < node->elements; ++index) {
                 if (key == node->arrayKeys[index]) 
-                    return true;
+                    cout << key << " Was found!!!" << endl;
             }
         }
         else {
             for (int index = 0; index < node->elements; ++index) {
                 if (node->arrayKeys[index] > key)
-                    if (auxFind(key, node->arrayPtrs[index]))
-                        return true;
+                    auxFind(key, node->arrayPtrs[index]);
+
                 else if (index == node->elements -1)
-                    if (auxFind(key, node->arrayPtrs[index + 1]))
-                        return true;
+                    auxFind(key, node->arrayPtrs[index + 1]);
             }
         }
-        return false;
     }
 };
 
