@@ -4,7 +4,7 @@
 // #include "Node.h"
 // #include "Leaf.h"
 
-#define Data int
+#define Data long long int
 
 using namespace std;
 
@@ -12,12 +12,23 @@ int main(int argc, char** argv) {
 
 	BPlusTree<Data>* tree = new BPlusTree<Data>(3);
 
+	clock_t insertBegin = clock();
 	for (int index = 0; index < 100000000; ++index)
 		tree->insert(index + 1 + (index * 3));
 
-	//tree->printTree();
+	clock_t insertEnd = clock();
 
-	tree->find(2097145); //no funca, este es root
+	clock_t printBegin = clock();
+	tree->printTree();
+	clock_t printEnd = clock();
+	
+	// clock_t findBegin = clock();
+	// tree->find(2097); //no funca, este es root
+	// clock_t findEnd = clock();
+
+	cout << "\nInsert time: " << (1000* (insertEnd - insertBegin)) / CLOCKS_PER_SEC << "ms." << endl;
+	cout << "\nPrint time: " << (1000* (printEnd - printBegin)) / CLOCKS_PER_SEC << "ms." << endl;
+	//cout << "\nFind time: " << (1000* (findEnd - findBegin)) / CLOCKS_PER_SEC << "ms." << endl;
 
 	/*tree->insert(85);
 	tree->insert(150);
