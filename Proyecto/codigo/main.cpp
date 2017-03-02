@@ -12,17 +12,15 @@ int main(int argc, char** argv) {
 
 	BPlusTree<Data>* tree = new BPlusTree<Data>(3);
 
-	// clock_t insertBegin = clock();
-	cout << "Inserting: ";
+	// // clock_t insertAk7Begin = clock();
+	// cout << "Inserting: ";
 	for (int index = 0; index < 100; ++index) {
-		cout << index + 1 + (index * 3) << "  ";
+		//cout << index + 1 + (index * 3) << "  ";
 		tree->insert(index + 1 + (index * 3));
 	}
-	cout << "\n" << endl;
+	// cout << "\n" << endl;
 
-	tree->printTree();
-
-	// // clock_t insertEnd = clock();
+	// // clock_t insertAk7End = clock();
 
 	// // clock_t printBegin = clock();
 	// tree->printTree();
@@ -42,24 +40,48 @@ int main(int argc, char** argv) {
 
 	//tree->find(2097145);
 
-	// cout << "\nInsert time: " << (1000* (insertEnd - insertBegin)) / CLOCKS_PER_SEC << "ms." << endl;
+	// cout << "\nInsert time: " << (1000* (insertAk7End - insertAk7Begin)) / CLOCKS_PER_SEC << "ms." << endl;
 	// cout << "\nPrint time: " << (1000* (printEnd - printBegin)) / CLOCKS_PER_SEC << "ms." << endl;
 	//cout << "\nFind time: " << (1000* (findEnd - findBegin)) / CLOCKS_PER_SEC << "ms." << endl;
 
-	// tree->insert(85);
-	// tree->insert(150);
-	// tree->insert(35);
-	// tree->insert(20);
-	// tree->insert(45);
-	// tree->insert(200);
-	// tree->insert(90);
-	// tree->insert(50);
-	// tree->insert(47);
-	// tree->insert(60);
-	// tree->insert(220);
-	// tree->insert(250); 	
-	// tree->insert(300);
-	// tree->insert(350);
+	// tree->insertAk7(85);//
+	// tree->insertAk7(150);//
+	// tree->insertAk7(35);
+	// tree->insertAk7(20);//
+	// tree->insertAk7(45);
+	// tree->insertAk7(200);//
+	// tree->insertAk7(23);//
+	// tree->insertAk7(99);//
+	// tree->insertAk7(1);//
+	// tree->insertAk7(50);//
+	// tree->insertAk7(90);//
+	// tree->insertAk7(250);//
+	// tree->insertAk7(47);//
+	// // tree->insertAk7(46);
+	// // tree->insertAk7(53);//
+	// // tree->insertAk7(333);//
+	// // tree->insertAk7(88);//
+	// // tree->insertAk7(31);//
+	// // tree->insertAk7(2);//
+	// // tree->insertAk7(999);//
+	// // tree->insertAk7(71);
+	// //tree->insertAk7(54);//
+	// //tree->insertAk7(9);//
+	// //tree->insertAk7(19);//
+	// //tree->insertAk7(83);
+	// //tree->insertAk7(44);//
+
+
+	tree->printTree();
+
+	// tree->insertAk7(90);
+	// tree->insertAk7(50);
+	// tree->insertAk7(47);
+	// tree->insertAk7(60);
+	// tree->insertAk7(220);
+	// tree->insertAk7(250); 	
+	// tree->insertAk7(300);
+	// tree->insertAk7(350);
 
 	// cout << endl;
 	// tree->printTree();
