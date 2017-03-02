@@ -57,19 +57,19 @@ int main(int argc, char** argv) {
 	tree->insertAk7(90);//
 	tree->insertAk7(250);//
 	tree->insertAk7(47);//
-	//tree->insertAk7(46);
-	// // tree->insertAk7(53);//
-	// // tree->insertAk7(333);//
-	// // tree->insertAk7(88);//
-	// // tree->insertAk7(31);//
-	// // tree->insertAk7(2);//
-	// // tree->insertAk7(999);//
-	// // tree->insertAk7(71);
-	// //tree->insertAk7(54);//
-	// //tree->insertAk7(9);//
-	// //tree->insertAk7(19);//
-	// //tree->insertAk7(83);
-	// //tree->insertAk7(44);//
+	tree->insertAk7(46);
+	tree->insertAk7(53);//
+	tree->insertAk7(333);//
+	tree->insertAk7(88);//
+	tree->insertAk7(31);//
+	tree->insertAk7(2);//
+	tree->insertAk7(999);//
+	tree->insertAk7(71);
+	tree->insertAk7(54);//
+	tree->insertAk7(9);//
+	tree->insertAk7(19);//
+	tree->insertAk7(83);
+	tree->insertAk7(44);//
 
 
 	tree->printTree();

@@ -339,6 +339,7 @@ class BPlusTree {
                     }
                     else {
                         if (old->arrayKeys[oldIndex] == -1) {
+                            old->arrayPtrs[oldIndex] = old->arrayPtrs[ptrIndex]; //agregamos esta union.
                             continu = 1;
                             ptrIndex -= 1;
                             break;
@@ -350,11 +351,13 @@ class BPlusTree {
                 for (int oldIndex = 0; oldIndex < this->order; ++oldIndex) {
                     if (old->arrayPtrs[ptrIndex]->arrayKeys[0] < newOne->arrayKeys[oldIndex]) {
                         newOne->arrayPtrs[oldIndex] = old->arrayPtrs[ptrIndex];
-                        old->arrayPtrs[ptrIndex] = nullptr;
+                        if (ptrIndex > old->elements)
+                            old->arrayPtrs[ptrIndex] = nullptr; //Debo hacer nulo a partir del +1
                         break;
                     }
                     else {
                         if (newOne->arrayKeys[oldIndex] == -1) {
+                            newOne->arrayPtrs[oldIndex] = old->arrayPtrs[ptrIndex];
                             ptrIndex == this->order + 1;
                             break;
                         }
