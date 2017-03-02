@@ -358,7 +358,7 @@ class BPlusTree {
                     else {
                         if (newOne->arrayKeys[oldIndex] == -1) {
                             newOne->arrayPtrs[oldIndex] = old->arrayPtrs[ptrIndex];
-                            ptrIndex == this->order + 1;
+                            //ptrIndex == this->order + 1;
                             break;
                         }
                     }
@@ -735,10 +735,11 @@ class BPlusTree {
     }
 
     void find (int key) {
-        if (!auxFind(key, this->root))
-            cout << key << " Was NOT found!!!" << endl;
-        else
-            cout << key << " Was found!!!" << endl;
+        auxFind(key, this->root);
+        // if (!auxFind(key, this->root))
+        //     cout << key << " Was NOT found!!!" << endl;
+        // else
+        //     cout << key << " Was found!!!" << endl;
     }
 
     bool auxFind (int key, Node<Data>* node) { 
