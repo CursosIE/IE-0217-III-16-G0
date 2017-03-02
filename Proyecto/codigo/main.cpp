@@ -14,10 +14,10 @@ int main(int argc, char** argv) {
 
 	// // clock_t insertAk7Begin = clock();
 	// cout << "Inserting: ";
-	for (int index = 0; index < 100; ++index) {
-		//cout << index + 1 + (index * 3) << "  ";
-		tree->insert(index + 1 + (index * 3));
-	}
+	// for (int index = 0; index < 100; ++index) {
+	// 	//cout << index + 1 + (index * 3) << "  ";
+	// 	tree->insert(index + 1 + (index * 3));
+	// }
 	// cout << "\n" << endl;
 
 	// // clock_t insertAk7End = clock();
@@ -44,20 +44,20 @@ int main(int argc, char** argv) {
 	// cout << "\nPrint time: " << (1000* (printEnd - printBegin)) / CLOCKS_PER_SEC << "ms." << endl;
 	//cout << "\nFind time: " << (1000* (findEnd - findBegin)) / CLOCKS_PER_SEC << "ms." << endl;
 
-	// tree->insertAk7(85);//
-	// tree->insertAk7(150);//
-	// tree->insertAk7(35);
-	// tree->insertAk7(20);//
-	// tree->insertAk7(45);
-	// tree->insertAk7(200);//
-	// tree->insertAk7(23);//
-	// tree->insertAk7(99);//
-	// tree->insertAk7(1);//
-	// tree->insertAk7(50);//
-	// tree->insertAk7(90);//
-	// tree->insertAk7(250);//
-	// tree->insertAk7(47);//
-	// // tree->insertAk7(46);
+	tree->insertAk7(85);//
+	tree->insertAk7(150);//
+	tree->insertAk7(35);
+	tree->insertAk7(20);//
+	tree->insertAk7(45);
+	tree->insertAk7(200);//
+	tree->insertAk7(23);//
+	tree->insertAk7(99);//
+	tree->insertAk7(1);//
+	tree->insertAk7(50);//
+	tree->insertAk7(90);//
+	tree->insertAk7(250);//
+	tree->insertAk7(47);//
+	//tree->insertAk7(46);
 	// // tree->insertAk7(53);//
 	// // tree->insertAk7(333);//
 	// // tree->insertAk7(88);//
@@ -73,6 +73,8 @@ int main(int argc, char** argv) {
 
 
 	tree->printTree();
+	cout << tree->root->arrayPtrs[1] << endl;
+	cout << tree->root->arrayPtrs[1]->arrayPtrs[1]->father << endl;
 
 	// tree->insertAk7(90);
 	// tree->insertAk7(50);

@@ -8,6 +8,7 @@ using namespace std;
 template <typename Data>
 class Node {
 public:
+    Node<Data>* next;
     int elements;
     int order;
     int isLeaf;

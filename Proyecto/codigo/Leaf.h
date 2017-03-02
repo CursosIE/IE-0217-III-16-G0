@@ -12,8 +12,10 @@ class Leaf : public Node<Data> {
 public:
 
     Data* arrayData;
+    //Leaf<Data>* next;
 
     Leaf() {
+        this->next = nullptr;
         this->father = nullptr;
         this->order = 0;
         this->arrayKeys = nullptr;
@@ -23,6 +25,7 @@ public:
     }
 
     Leaf(int order) {
+        this->next = nullptr;
         this->father = nullptr;
         this->isLeaf = 1;
         this->order = order;
