@@ -48,6 +48,213 @@ class BPlusTree {
         }
     }*/
 
+    void insertak7 (int key) {
+        auxInsertak7(key, this->root);
+    }
+
+    void auxInsertak7 (int key, Node<Data>* node) {
+        if(node->isLeaf == 1){ //pregunto si es una HOJA
+            if (node->elements < this->order) { //caso en que haya campo en la hoja
+                node->arrayKeys[node->elements] = key;
+                node->elements += 1;
+                sort(node->arrayKeys, node->elements);
+            }
+            else {
+                splitAk7(node, key);
+            }
+        }
+        else {
+            //caso en que sea un NODO
+        }
+    }
+
+    void splitAk7 (Node<Data>* node, int key, Node<Data>* oldSon, Node<Data>* newSon) {
+        int* arrayToSplit = arrayToSplit(node, key);
+
+        int* leftSplit = new int[this->order];
+        int* rightSplit = new int[this->order];
+
+        for (int index = 0; index < this->order; ++ index) {
+            leftSplit[index] = -1;
+            rightSplit[index] = -1;
+        }
+
+        //llena leftSplit y rightSplit
+        for (int index = 0; index < this->order + 1; ++ index) {
+            if (index < (order + 1) / 2)
+                leftSplit[index] = arrayToSplit[index];
+            else 
+                rightSplit[index - ((order + 1) / 2)] = arrayToSplit[index];
+        }
+
+        //si es una hoja que no quede en el medio
+        if (node->isLeaf == 0)
+            deleteFirstElement(rightSplit, this->order);
+
+        //creamos la nueva hoja o nodo, donde va a ir rightSplit
+        if (node->isLeaf == 1)
+            Leaf<Data>* newNode = new Leaf(this->order);
+        else
+            Node<Data>* newNode = new Node(this->order);
+
+        //le decimos a newNode quien es su padre
+        newNode->father = node->father;
+
+        //asignamos las keys correctas a los nodos
+        node->arrayKeys = leftSplit;
+        newNode->arrayKeys = rightSplit;
+        
+        //asignamos la cantidad de elementos
+        node->elements = amountElements(node->arrayKeys, this->order);
+        newNode->elements = amountElements(newNode->arrayKeys, this->order);
+
+        if(node->isLeaf == 0) {
+            //arreglar los punteros
+            assignDownwardPtrs(node, newNode, oldSon, newSon, oldKey);
+            //papas
+            fatherPtrs(node);
+            fatherPtrs(newNode);
+        }
+
+        if(node->father->elements < this->order){
+            node->father->arrayKeys[node->father->elements] = arrayToSplit[(int)floor((this->order + 1) / 2)];
+            node->father->elements += 1;
+            specialSortAk7(node->father->arrayKeys, node->father->arrayPtrs, node, newNode, node->father->elements);
+        }
+        else 
+            splitAk7(node->father, arrayToSplit[(int)floor((this->order + 1) / 2), node, newNode);
+            
+        delete[] arrayToSplit;
+    }
+
+    void specialSort (int* array, Node<Data>** arrayPtrs, Node<Data>* left, Node<Data>* right, int size) {
+        Node<Data>* temp1;
+        int toFind = array[size - 1];
+
+        bool estabaOrdenado = true;
+
+        int temp = 0;
+        int posMin = 0;
+        //primer for de ordenamiento
+        for (int n = 0; n < size - 1; n++){
+            posMin = n;
+            //segundo for de ordenamiento
+            for (int m = n + 1; m < size; m++) {
+                if (array[m] < array[posMin]  && array[m] > -1 && array[posMin] > -1)
+                    posMin = m;
+            }
+            //intercambio de valores en caso de que haya que ordenar
+            if (posMin != n) {
+                estabaOrdenado = false;
+                temp = array[n];
+                array[n] = array[posMin];
+                array[posMin] = temp;
+                
+                temp1= arrayPtrs[posMin + 1];
+                arrayPtrs[posMin + 1] = arrayPtrs[n + 1];
+                arrayPtrs[n + 1] = temp1;  
+            }
+        }
+        if (estabaOrdenado)
+            arrayPtrs[size] = right;
+        else {
+            for (int index = 0; index < size; ++index) {
+                if (array[index] == toFind) {
+                    arrayPtrs[index] = left;
+                    arrayPtrs[index + 1] = right;
+                }
+            }
+        }
+    }
+
+    void fatherPtrs(Node<Data>* node) { //ese node va a ser newNode
+        if (node->arrayPtrs != nullptr) {
+            for(int index = 0; index < node->elements + 1; ++index) {
+                if (node->arrayPtrs[index] != nullptr) {
+                    //cout << "Father: " << node->arrayPtrs[index]->father 
+                    //<< "   Son: " << node->arrayPtrs[index] << endl;
+                    node->arrayPtrs[index]->father = node;
+                }
+            }
+        }
+    }
+
+    void assignDownwardPtrs(Node<Data>* old, Node<Data>* newOne, Node<Data>* oldSon, Node<Data>* newSon, int key) {
+        for (int ptrIndex = 0; ptrIndex < this->order + 1; ++ ptrIndex) {
+            for (int oldIndex = 0; oldIndex < this->order; ++oldIndex) {
+                if (old->arrayPtrs[ptrIndex]->arrayKeys[0] >= old->arrayKeys[oldIndex]) {
+                    if (old->arrayKeys[oldIndex] == -1) {
+                        old->arrayPtrs[oldIndex] = old->arrayPtrs[ptrIndex];
+                        break;
+                    }
+                    else {
+                        old->arrayPtrs[oldIndex] = old->arrayPtrs[ptrIndex];
+                        break;
+                    }
+                }
+            }
+
+            for (int oldIndex = 0; oldIndex < this->order; ++oldIndex) {
+                if (old->arrayPtrs[ptrIndex]->arrayKeys[0] >= newOne->arrayKeys[oldIndex]) {
+                    if (newOne->arrayKeys[oldIndex] == -1) {
+                        newOne->arrayPtrs[oldIndex] = old->arrayPtrs[ptrIndex];
+                        break;
+                    }
+                    else {
+                        newOne->arrayPtrs[oldIndex] = old->arrayPtrs[ptrIndex];
+                        break;
+                    }
+                }
+            }
+
+        }
+
+        int keyPosition;
+        if (old->arrayKeys[node->elements - 1] < key){
+            keyPosition = positionOfKey(key, newOne);
+            newOne->arrayPtrs[keyPosition + 1] = newSon;
+        }
+        else{
+            keyPosition = positionOfKey(key, old);
+            old->arrayPtrs[keyPosition + 1] = newSon;
+        }
+    }
+
+    int positionOfKey (int key, Node<Data>* node) {
+        for(int index = 0; index < node->elements; ++index) {
+            if (node->arrayKeys[index] = key)
+                return index;
+        }
+        return -1;
+    }
+
+    int amountElements (int* array, int size) {
+        int result = 0;
+        for (int index = 0; index < size; ++index) {
+            if (array[index] != -1)
+                result += 1;
+        }
+        return result;
+    }
+
+    void deleteFirstElement(int* array, int  size) {
+        for (int index = 0; index < size - 1; ++index)
+            array[index] = array[index + 1];
+        array[size - 1] = -1;
+    }
+
+    int* arrayToSplit(Node<Data>* node, int key) {
+        int* array = new int[this->order + 1];
+        for (int index = 0; index < this->order + 1; ++index) {
+            if (index < order)
+                array[index] = node->arrayKeys[index];
+            else
+                array[index] = key;
+        }
+        sort(array, order + 1);
+        return array;
+    }
+
     void insert (int key) {
         //caso cuando root esta vacio
         if (this->root->elements == 0) {
@@ -113,8 +320,14 @@ class BPlusTree {
         for (int index = 0; index < order + 1; ++index){
             if (index < (order + 1) / 2)
                 leftSplit[index] = arrayWNewKey[index];
-            else
-                rightSplit[index - ((order + 1) / 2)] = arrayWNewKey[index];
+            else {
+                if (node->isLeaf)
+                    rightSplit[index - ((order + 1) / 2)] = arrayWNewKey[index];
+                else {
+                    rightSplit[index - ((order + 1) / 2)] = arrayWNewKey[index + 1];
+                    index += 1;
+                }
+            }
         }
         //cout << "Hizo el for después de leftSplit y rightSplit" << endl;
 
@@ -135,13 +348,17 @@ class BPlusTree {
         // ///////////////////////////////
 
         //si lo que se splitea es una hoja o un nodo interno
-        if (node->isLeaf) 
+        if (node->isLeaf){ 
             newNode = new Leaf<Data>(this->order);
-        else 
+            newNode->elements = (int)ceil((this->order + 1) / 2);
+        }
+        else {
             newNode = new Node<Data>(this->order);
+            newNode->elements = (int)ceil((this->order + 1) / 2) - 1;
+        }
 
         newNode->arrayKeys = rightSplit;
-        newNode->elements = (int)ceil((this->order + 1) / 2);
+        
         //Revisar que pasa si es el root y no tiene padre.
         if (node != this->root)
             newNode->father = node->father;
@@ -225,18 +442,6 @@ class BPlusTree {
         fatherPtrs(newNode);
     }
 
-    void fatherPtrs(Node<Data>* node) { //ese node va a ser newNode
-        if (node->arrayPtrs != nullptr) {
-            for(int index = 0; index < node->elements + 1; ++index) {
-                if (node->arrayPtrs[index] != nullptr) {
-                    //cout << "Father: " << node->arrayPtrs[index]->father 
-                    //<< "   Son: " << node->arrayPtrs[index] << endl;
-                    node->arrayPtrs[index]->father = node;
-                }
-            }
-        }
-    }
-
     void fixNewNodePointers (Node<Data>* old, Node<Data>* newOne) {
         for (int index = 0; index < this->order + 1; ++index) {
             //cout << index << "  " << endl;
@@ -244,7 +449,7 @@ class BPlusTree {
             if (index >= old->elements) {
                 //cout << "index - old->elements + 1 = " <<index - old->elements + 1 << endl;
                 if (old->arrayPtrs != nullptr) {
-                    newOne->arrayPtrs[index - old->elements + 1] = old->arrayPtrs[index];
+                    newOne->arrayPtrs[index - old->elements] = old->arrayPtrs[index];
                     old->arrayPtrs[index] = nullptr;
                 }
             }
@@ -270,15 +475,15 @@ class BPlusTree {
 
     //@return array ordered array with new key
     int* midKey(int* keys, int newKey) {
-        int* array = new int[order];
-        for (int index = 0; index <= order; ++index) {
+        int* array = new int[this->order + 1];
+        for (int index = 0; index < this->order + 1; ++index) {
             if (index != order)
                 array[index] = keys[index];
             else
                 array[index] = newKey;
         }
 
-        sort(array, order + 1);
+        sort(array, this->order + 1);
 
         //return array[ceil(order / 2)];
         return array;
@@ -323,69 +528,6 @@ class BPlusTree {
                 temp = array[n];
                 array[n] = array[posMin];
                 array[posMin] = temp;
-            }
-        }
-    }
-
-    void specialSort (int* array, Node<Data>** arrayPtrs, Node<Data>* left, Node<Data>* right, int size) {
-        Node<Data>* temp1;
-        int toFind = array[size - 1];
-        //cout << "Array: ";
-        // for (int index = 0; index < size; ++index)
-        //     cout << array[index];
-        bool estabaOrdenado = true;
-        //cout << "Empieza specialSort..!" << endl;
-
-        // //////////////////////////////
-        // cout << "left: ";
-        // for (int index = 0; index < this->order; ++index) {
-        //     cout << left->arrayKeys[index] << "  "; 
-        // }
-        // cout << endl;
-        // ///////////////////////////////
-        // //////////////////////////////
-        // cout << "right: ";
-        // for (int index = 0; index < this->order; ++index) {
-        //     cout << right->arrayKeys[index] << "  "; 
-        // }
-        // cout << endl;
-        // ///////////////////////////////
-
-        int temp = 0;
-        int posMin = 0;
-        //primer for de ordenamiento
-        for (int n = 0; n < size - 1; n++){
-            posMin = n;
-            //segundo for de ordenamiento
-            for (int m = n + 1; m < size; m++) {
-                if (array[m] < array[posMin]  && array[m] > -1 && array[posMin] > -1)
-                    posMin = m;
-            }
-            //intercambio de valores en caso de que haya que ordenar
-            if (posMin != n) {
-                estabaOrdenado = false;
-                //cout << "Entró al  if (posMin != n)" << endl;
-                temp = array[n];
-                array[n] = array[posMin];
-                array[posMin] = temp;
-                //cambio punteros
-                // cout << "size: " << size << endl;
-                // cout << "posMin: " << posMin << endl;
-                // cout << "n: " << n << endl;
-                
-                temp1= arrayPtrs[posMin + 1];
-                arrayPtrs[posMin + 1] = arrayPtrs[n + 1];
-                arrayPtrs[n + 1] = temp1;  
-            }
-        }
-        if (estabaOrdenado)
-            arrayPtrs[size] = right;
-        else {
-            for (int index = 0; index < size; ++index) {
-                if (array[index] == toFind) {
-                    arrayPtrs[index] = left;
-                    arrayPtrs[index + 1] = right;
-                }
             }
         }
     }

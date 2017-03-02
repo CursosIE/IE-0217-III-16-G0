@@ -13,18 +13,26 @@ int main(int argc, char** argv) {
 	BPlusTree<Data>* tree = new BPlusTree<Data>(3);
 
 	// clock_t insertBegin = clock();
-	for (int index = 0; index < 10; ++index)
+	cout << "Inserting: ";
+	for (int index = 0; index < 100; ++index) {
+		cout << index + 1 + (index * 3) << "  ";
 		tree->insert(index + 1 + (index * 3));
+	}
+	cout << "\n" << endl;
 
-	// clock_t insertEnd = clock();
-
-	// clock_t printBegin = clock();
 	tree->printTree();
-	// clock_t printEnd = clock();
 
-	tree->find(25);
-	tree->find(37);
-	tree->find(73);
+	// // clock_t insertEnd = clock();
+
+	// // clock_t printBegin = clock();
+	// tree->printTree();
+	// // clock_t printEnd = clock();
+
+	// // tree->find(25);
+	//tree->find(1);
+	//tree->find(2);
+	//tree->find(129);
+	// tree->find(73);
 
 
 	
@@ -48,6 +56,10 @@ int main(int argc, char** argv) {
 	// tree->insert(50);
 	// tree->insert(47);
 	// tree->insert(60);
+	// tree->insert(220);
+	// tree->insert(250); 	
+	// tree->insert(300);
+	// tree->insert(350);
 
 	// cout << endl;
 	// tree->printTree();
