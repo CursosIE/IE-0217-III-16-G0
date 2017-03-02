@@ -180,7 +180,7 @@ class BPlusTree {
     }
 
     void splitAk7 (Node<Data>* node, int key, Node<Data>* oldSon, Node<Data>* newSon) {
-        cout << "Entro a SplitAk7.." << endl;
+        //cout << "Entro a SplitAk7.." << endl;
         int* arrayToSplit = arrayToSplitFunc(node, key);
 
         int* leftSplit = new int[this->order];
@@ -201,12 +201,12 @@ class BPlusTree {
                 rightSplit[index - ((order + 1) / 2)] = arrayToSplit[index];
         }
 
-        cout << "llena left y right" << endl;
+        //cout << "llena left y right" << endl;
 
         //si es una hoja que no quede en el medio
         if (node->isLeaf == 0) {
             deleteFirstElement(rightSplit, this->order);
-            cout << "deleteFirstElement" << endl;
+            //cout << "deleteFirstElement" << endl;
         }
 
         //creamos la nueva hoja o nodo, donde va a ir rightSplit
@@ -226,7 +226,7 @@ class BPlusTree {
         //asignamos la cantidad de elementos
         node->elements = amountElements(node->arrayKeys, this->order);
         newNode->elements = amountElements(newNode->arrayKeys, this->order);
-        cout << "amountElements" << endl;
+        //cout << "amountElements" << endl;
 
 
         //cout << node->isLeaf << endl;
@@ -234,15 +234,15 @@ class BPlusTree {
         if(node->isLeaf == 0) {
             //arreglar los punteros
             assignDownwardPtrs(node, newNode, oldSon, newSon, key);
-            cout << "assignDownwardPtrs" << endl;
+            //cout << "assignDownwardPtrs" << endl;
             //papas
             fatherPtrs(node);
             fatherPtrs(newNode);
-            cout << "fathers..." << endl;
+            //cout << "fathers..." << endl;
         }
 
         if(node == this->root) {
-            cout << "Entró al: if(node == this->root) //line 135" << endl;
+            //cout << "Entró al: if(node == this->root) //line 135" << endl;
             this->levels += 1;
             Node<Data>* newRoot = new Node<Data>(this->order);
 
@@ -254,19 +254,19 @@ class BPlusTree {
             this->root = newRoot;
             this->root->arrayPtrs[0]->father = this->root;
             this->root->arrayPtrs[1]->father = this->root;
-            cout << "Salió al: if(node == this->root) //line 135" << endl;
+            //cout << "Salió al: if(node == this->root) //line 135" << endl;
         }
         else {
-            cout << "antes del if" << endl;
+            //cout << "antes del if" << endl;
             if(node->father->elements < this->order){
                 node->father->arrayKeys[node->father->elements] = arrayToSplit[(int)floor((this->order + 1) / 2)];
                 node->father->elements += 1;
-                cout << node->father->arrayKeys << endl;
-                cout << node->father->arrayPtrs << endl;
-                cout << node << endl;
-                cout << newNode << endl;
+                //cout << node->father->arrayKeys << endl;
+                //cout << node->father->arrayPtrs << endl;
+                //cout << node << endl;
+                //cout << newNode << endl;
                 specialSort(node->father->arrayKeys, node->father->arrayPtrs, node, newNode, node->father->elements);
-                cout << "specialSort" << endl;
+                //cout << "specialSort" << endl;
             }
             else 
                 splitAk7(node->father, arrayToSplit[(int)floor((this->order + 1) / 2)], node, newNode);
@@ -274,7 +274,7 @@ class BPlusTree {
     }
 
     void specialSort (int* array, Node<Data>** arrayPtrs, Node<Data>* left, Node<Data>* right, int size) {
-        cout << "Se metio a specialSort" << endl;
+        //cout << "Se metio a specialSort" << endl;
         Node<Data>* temp1;
         int toFind = array[size - 1];
 

@@ -1,0 +1,5258 @@
+g++ -std=c++11 -o main *.cpp -Wall
+./main
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161c1b0
+Father index ptr: 0
+0x161c030:  1  5  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161c1b0
+Father index ptr: 1
+0x161c120:  9  13  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161c1b0
+Father index ptr: 2
+0x161c2b0:  17  21  
+
+Level: 6
+Node!!
+Father: 0x161c620
+Father index ptr: 0
+Elements: 2
+0x161c1b0:  9  17  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161c580
+Father index ptr: 0
+0x161c3a0:  25  29  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161c580
+Father index ptr: 1
+0x161c490:  33  37  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161c580
+Father index ptr: 2
+0x161c720:  41  45  
+
+Level: 6
+Node!!
+Father: 0x161c620
+Father index ptr: 1
+Elements: 2
+0x161c580:  33  41  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161c9f0
+Father index ptr: 0
+0x161c810:  49  53  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161c9f0
+Father index ptr: 1
+0x161c900:  57  61  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161c9f0
+Father index ptr: 2
+0x161caf0:  65  69  
+
+Level: 6
+Node!!
+Father: 0x161c620
+Father index ptr: 2
+Elements: 2
+0x161c9f0:  57  65  
+
+Level: 5
+Node!!
+Father: 0x161d330
+Father index ptr: 0
+Elements: 2
+0x161c620:  25  49  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161cdc0
+Father index ptr: 0
+0x161cbe0:  73  77  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161cdc0
+Father index ptr: 1
+0x161ccd0:  81  85  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161cdc0
+Father index ptr: 2
+0x161cec0:  89  93  
+
+Level: 6
+Node!!
+Father: 0x161d290
+Father index ptr: 0
+Elements: 2
+0x161cdc0:  81  89  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161d190
+Father index ptr: 0
+0x161cfb0:  97  101  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161d190
+Father index ptr: 1
+0x161d0a0:  105  109  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161d190
+Father index ptr: 2
+0x161d430:  113  117  
+
+Level: 6
+Node!!
+Father: 0x161d290
+Father index ptr: 1
+Elements: 2
+0x161d190:  105  113  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161d700
+Father index ptr: 0
+0x161d520:  121  125  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161d700
+Father index ptr: 1
+0x161d610:  129  133  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161d700
+Father index ptr: 2
+0x161d800:  137  141  
+
+Level: 6
+Node!!
+Father: 0x161d290
+Father index ptr: 2
+Elements: 2
+0x161d700:  129  137  
+
+Level: 5
+Node!!
+Father: 0x161d330
+Father index ptr: 1
+Elements: 2
+0x161d290:  97  121  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161dad0
+Father index ptr: 0
+0x161d8f0:  145  149  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161dad0
+Father index ptr: 1
+0x161d9e0:  153  157  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161dad0
+Father index ptr: 2
+0x161dbd0:  161  165  
+
+Level: 6
+Node!!
+Father: 0x161dfa0
+Father index ptr: 0
+Elements: 2
+0x161dad0:  153  161  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161dea0
+Father index ptr: 0
+0x161dcc0:  169  173  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161dea0
+Father index ptr: 1
+0x161ddb0:  177  181  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161dea0
+Father index ptr: 2
+0x161e0a0:  185  189  
+
+Level: 6
+Node!!
+Father: 0x161dfa0
+Father index ptr: 1
+Elements: 2
+0x161dea0:  177  185  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161e370
+Father index ptr: 0
+0x161e190:  193  197  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161e370
+Father index ptr: 1
+0x161e280:  201  205  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161e370
+Father index ptr: 2
+0x161e470:  209  213  
+
+Level: 6
+Node!!
+Father: 0x161dfa0
+Father index ptr: 2
+Elements: 2
+0x161e370:  201  209  
+
+Level: 5
+Node!!
+Father: 0x161d330
+Father index ptr: 2
+Elements: 2
+0x161dfa0:  169  193  
+
+Level: 4
+Node!!
+Father: 0x161fa20
+Father index ptr: 0
+Elements: 2
+0x161d330:  73  145  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161e740
+Father index ptr: 0
+0x161e560:  217  221  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161e740
+Father index ptr: 1
+0x161e650:  225  229  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161e740
+Father index ptr: 2
+0x161e840:  233  237  
+
+Level: 6
+Node!!
+Father: 0x161ec10
+Father index ptr: 0
+Elements: 2
+0x161e740:  225  233  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161eb10
+Father index ptr: 0
+0x161e930:  241  245  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161eb10
+Father index ptr: 1
+0x161ea20:  249  253  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161eb10
+Father index ptr: 2
+0x161ed10:  257  261  
+
+Level: 6
+Node!!
+Father: 0x161ec10
+Father index ptr: 1
+Elements: 2
+0x161eb10:  249  257  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161efe0
+Father index ptr: 0
+0x161ee00:  265  269  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161efe0
+Father index ptr: 1
+0x161eef0:  273  277  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161efe0
+Father index ptr: 2
+0x161f0e0:  281  285  
+
+Level: 6
+Node!!
+Father: 0x161ec10
+Father index ptr: 2
+Elements: 2
+0x161efe0:  273  281  
+
+Level: 5
+Node!!
+Father: 0x161f980
+Father index ptr: 0
+Elements: 2
+0x161ec10:  241  265  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161f3b0
+Father index ptr: 0
+0x161f1d0:  289  293  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161f3b0
+Father index ptr: 1
+0x161f2c0:  297  301  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161f3b0
+Father index ptr: 2
+0x161f4b0:  305  309  
+
+Level: 6
+Node!!
+Father: 0x161f880
+Father index ptr: 0
+Elements: 2
+0x161f3b0:  297  305  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161f780
+Father index ptr: 0
+0x161f5a0:  313  317  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161f780
+Father index ptr: 1
+0x161f690:  321  325  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161f780
+Father index ptr: 2
+0x161fb20:  329  333  
+
+Level: 6
+Node!!
+Father: 0x161f880
+Father index ptr: 1
+Elements: 2
+0x161f780:  321  329  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161fdf0
+Father index ptr: 0
+0x161fc10:  337  341  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161fdf0
+Father index ptr: 1
+0x161fd00:  345  349  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x161fdf0
+Father index ptr: 2
+0x161fef0:  353  357  
+
+Level: 6
+Node!!
+Father: 0x161f880
+Father index ptr: 2
+Elements: 2
+0x161fdf0:  345  353  
+
+Level: 5
+Node!!
+Father: 0x161f980
+Father index ptr: 1
+Elements: 2
+0x161f880:  313  337  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16201c0
+Father index ptr: 0
+0x161ffe0:  361  365  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16201c0
+Father index ptr: 1
+0x16200d0:  369  373  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16201c0
+Father index ptr: 2
+0x16202c0:  377  381  
+
+Level: 6
+Node!!
+Father: 0x1620690
+Father index ptr: 0
+Elements: 2
+0x16201c0:  369  377  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1620590
+Father index ptr: 0
+0x16203b0:  385  389  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1620590
+Father index ptr: 1
+0x16204a0:  393  397  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1620590
+Father index ptr: 2
+0x1620790:  401  405  
+
+Level: 6
+Node!!
+Father: 0x1620690
+Father index ptr: 1
+Elements: 2
+0x1620590:  393  401  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1620a60
+Father index ptr: 0
+0x1620880:  409  413  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1620a60
+Father index ptr: 1
+0x1620970:  417  421  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1620a60
+Father index ptr: 2
+0x1620b60:  425  429  
+
+Level: 6
+Node!!
+Father: 0x1620690
+Father index ptr: 2
+Elements: 2
+0x1620a60:  417  425  
+
+Level: 5
+Node!!
+Father: 0x161f980
+Father index ptr: 2
+Elements: 2
+0x1620690:  385  409  
+
+Level: 4
+Node!!
+Father: 0x161fa20
+Father index ptr: 1
+Elements: 2
+0x161f980:  289  361  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1620e30
+Father index ptr: 0
+0x1620c50:  433  437  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1620e30
+Father index ptr: 1
+0x1620d40:  441  445  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1620e30
+Father index ptr: 2
+0x1620f30:  449  453  
+
+Level: 6
+Node!!
+Father: 0x1621300
+Father index ptr: 0
+Elements: 2
+0x1620e30:  441  449  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1621200
+Father index ptr: 0
+0x1621020:  457  461  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1621200
+Father index ptr: 1
+0x1621110:  465  469  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1621200
+Father index ptr: 2
+0x1621400:  473  477  
+
+Level: 6
+Node!!
+Father: 0x1621300
+Father index ptr: 1
+Elements: 2
+0x1621200:  465  473  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16216d0
+Father index ptr: 0
+0x16214f0:  481  485  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16216d0
+Father index ptr: 1
+0x16215e0:  489  493  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16216d0
+Father index ptr: 2
+0x16217d0:  497  501  
+
+Level: 6
+Node!!
+Father: 0x1621300
+Father index ptr: 2
+Elements: 2
+0x16216d0:  489  497  
+
+Level: 5
+Node!!
+Father: 0x1622070
+Father index ptr: 0
+Elements: 2
+0x1621300:  457  481  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1621aa0
+Father index ptr: 0
+0x16218c0:  505  509  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1621aa0
+Father index ptr: 1
+0x16219b0:  513  517  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1621aa0
+Father index ptr: 2
+0x1621ba0:  521  525  
+
+Level: 6
+Node!!
+Father: 0x1621f70
+Father index ptr: 0
+Elements: 2
+0x1621aa0:  513  521  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1621e70
+Father index ptr: 0
+0x1621c90:  529  533  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1621e70
+Father index ptr: 1
+0x1621d80:  537  541  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1621e70
+Father index ptr: 2
+0x1622170:  545  549  
+
+Level: 6
+Node!!
+Father: 0x1621f70
+Father index ptr: 1
+Elements: 2
+0x1621e70:  537  545  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1622440
+Father index ptr: 0
+0x1622260:  553  557  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1622440
+Father index ptr: 1
+0x1622350:  561  565  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1622440
+Father index ptr: 2
+0x1622540:  569  573  
+
+Level: 6
+Node!!
+Father: 0x1621f70
+Father index ptr: 2
+Elements: 2
+0x1622440:  561  569  
+
+Level: 5
+Node!!
+Father: 0x1622070
+Father index ptr: 1
+Elements: 2
+0x1621f70:  529  553  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1622810
+Father index ptr: 0
+0x1622630:  577  581  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1622810
+Father index ptr: 1
+0x1622720:  585  589  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1622810
+Father index ptr: 2
+0x1622910:  593  597  
+
+Level: 6
+Node!!
+Father: 0x1622ce0
+Father index ptr: 0
+Elements: 2
+0x1622810:  585  593  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1622be0
+Father index ptr: 0
+0x1622a00:  601  605  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1622be0
+Father index ptr: 1
+0x1622af0:  609  613  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1622be0
+Father index ptr: 2
+0x1622de0:  617  621  
+
+Level: 6
+Node!!
+Father: 0x1622ce0
+Father index ptr: 1
+Elements: 2
+0x1622be0:  609  617  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16230b0
+Father index ptr: 0
+0x1622ed0:  625  629  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16230b0
+Father index ptr: 1
+0x1622fc0:  633  637  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16230b0
+Father index ptr: 2
+0x16231b0:  641  645  
+
+Level: 6
+Node!!
+Father: 0x1622ce0
+Father index ptr: 2
+Elements: 2
+0x16230b0:  633  641  
+
+Level: 5
+Node!!
+Father: 0x1622070
+Father index ptr: 2
+Elements: 2
+0x1622ce0:  601  625  
+
+Level: 4
+Node!!
+Father: 0x161fa20
+Father index ptr: 2
+Elements: 2
+0x1622070:  505  577  
+
+Level: 3
+Node!!
+Father: 0x1626eb0
+Father index ptr: 0
+Elements: 2
+0x161fa20:  217  433  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1623480
+Father index ptr: 0
+0x16232a0:  649  653  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1623480
+Father index ptr: 1
+0x1623390:  657  661  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1623480
+Father index ptr: 2
+0x1623580:  665  669  
+
+Level: 6
+Node!!
+Father: 0x1623950
+Father index ptr: 0
+Elements: 2
+0x1623480:  657  665  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1623850
+Father index ptr: 0
+0x1623670:  673  677  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1623850
+Father index ptr: 1
+0x1623760:  681  685  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1623850
+Father index ptr: 2
+0x1623a50:  689  693  
+
+Level: 6
+Node!!
+Father: 0x1623950
+Father index ptr: 1
+Elements: 2
+0x1623850:  681  689  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1623d20
+Father index ptr: 0
+0x1623b40:  697  701  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1623d20
+Father index ptr: 1
+0x1623c30:  705  709  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1623d20
+Father index ptr: 2
+0x1623e20:  713  717  
+
+Level: 6
+Node!!
+Father: 0x1623950
+Father index ptr: 2
+Elements: 2
+0x1623d20:  705  713  
+
+Level: 5
+Node!!
+Father: 0x16246c0
+Father index ptr: 0
+Elements: 2
+0x1623950:  673  697  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16240f0
+Father index ptr: 0
+0x1623f10:  721  725  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16240f0
+Father index ptr: 1
+0x1624000:  729  733  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16240f0
+Father index ptr: 2
+0x16241f0:  737  741  
+
+Level: 6
+Node!!
+Father: 0x16245c0
+Father index ptr: 0
+Elements: 2
+0x16240f0:  729  737  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16244c0
+Father index ptr: 0
+0x16242e0:  745  749  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16244c0
+Father index ptr: 1
+0x16243d0:  753  757  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16244c0
+Father index ptr: 2
+0x16247c0:  761  765  
+
+Level: 6
+Node!!
+Father: 0x16245c0
+Father index ptr: 1
+Elements: 2
+0x16244c0:  753  761  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1624a90
+Father index ptr: 0
+0x16248b0:  769  773  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1624a90
+Father index ptr: 1
+0x16249a0:  777  781  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1624a90
+Father index ptr: 2
+0x1624b90:  785  789  
+
+Level: 6
+Node!!
+Father: 0x16245c0
+Father index ptr: 2
+Elements: 2
+0x1624a90:  777  785  
+
+Level: 5
+Node!!
+Father: 0x16246c0
+Father index ptr: 1
+Elements: 2
+0x16245c0:  745  769  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1624e60
+Father index ptr: 0
+0x1624c80:  793  797  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1624e60
+Father index ptr: 1
+0x1624d70:  801  805  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1624e60
+Father index ptr: 2
+0x1624f60:  809  813  
+
+Level: 6
+Node!!
+Father: 0x1625330
+Father index ptr: 0
+Elements: 2
+0x1624e60:  801  809  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625230
+Father index ptr: 0
+0x1625050:  817  821  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625230
+Father index ptr: 1
+0x1625140:  825  829  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625230
+Father index ptr: 2
+0x1625430:  833  837  
+
+Level: 6
+Node!!
+Father: 0x1625330
+Father index ptr: 1
+Elements: 2
+0x1625230:  825  833  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625700
+Father index ptr: 0
+0x1625520:  841  845  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625700
+Father index ptr: 1
+0x1625610:  849  853  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625700
+Father index ptr: 2
+0x1625800:  857  861  
+
+Level: 6
+Node!!
+Father: 0x1625330
+Father index ptr: 2
+Elements: 2
+0x1625700:  849  857  
+
+Level: 5
+Node!!
+Father: 0x16246c0
+Father index ptr: 2
+Elements: 2
+0x1625330:  817  841  
+
+Level: 4
+Node!!
+Father: 0x1626e10
+Father index ptr: 0
+Elements: 2
+0x16246c0:  721  793  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625ad0
+Father index ptr: 0
+0x16258f0:  865  869  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625ad0
+Father index ptr: 1
+0x16259e0:  873  877  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625ad0
+Father index ptr: 2
+0x1625bd0:  881  885  
+
+Level: 6
+Node!!
+Father: 0x1625fa0
+Father index ptr: 0
+Elements: 2
+0x1625ad0:  873  881  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625ea0
+Father index ptr: 0
+0x1625cc0:  889  893  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625ea0
+Father index ptr: 1
+0x1625db0:  897  901  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1625ea0
+Father index ptr: 2
+0x16260a0:  905  909  
+
+Level: 6
+Node!!
+Father: 0x1625fa0
+Father index ptr: 1
+Elements: 2
+0x1625ea0:  897  905  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1626370
+Father index ptr: 0
+0x1626190:  913  917  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1626370
+Father index ptr: 1
+0x1626280:  921  925  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1626370
+Father index ptr: 2
+0x1626470:  929  933  
+
+Level: 6
+Node!!
+Father: 0x1625fa0
+Father index ptr: 2
+Elements: 2
+0x1626370:  921  929  
+
+Level: 5
+Node!!
+Father: 0x1626d10
+Father index ptr: 0
+Elements: 2
+0x1625fa0:  889  913  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1626740
+Father index ptr: 0
+0x1626560:  937  941  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1626740
+Father index ptr: 1
+0x1626650:  945  949  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1626740
+Father index ptr: 2
+0x1626840:  953  957  
+
+Level: 6
+Node!!
+Father: 0x1626c10
+Father index ptr: 0
+Elements: 2
+0x1626740:  945  953  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1626b10
+Father index ptr: 0
+0x1626930:  961  965  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1626b10
+Father index ptr: 1
+0x1626a20:  969  973  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1626b10
+Father index ptr: 2
+0x1626fb0:  977  981  
+
+Level: 6
+Node!!
+Father: 0x1626c10
+Father index ptr: 1
+Elements: 2
+0x1626b10:  969  977  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627280
+Father index ptr: 0
+0x16270a0:  985  989  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627280
+Father index ptr: 1
+0x1627190:  993  997  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627280
+Father index ptr: 2
+0x1627380:  1001  1005  
+
+Level: 6
+Node!!
+Father: 0x1626c10
+Father index ptr: 2
+Elements: 2
+0x1627280:  993  1001  
+
+Level: 5
+Node!!
+Father: 0x1626d10
+Father index ptr: 1
+Elements: 2
+0x1626c10:  961  985  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627650
+Father index ptr: 0
+0x1627470:  1009  1013  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627650
+Father index ptr: 1
+0x1627560:  1017  1021  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627650
+Father index ptr: 2
+0x1627750:  1025  1029  
+
+Level: 6
+Node!!
+Father: 0x1627b20
+Father index ptr: 0
+Elements: 2
+0x1627650:  1017  1025  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627a20
+Father index ptr: 0
+0x1627840:  1033  1037  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627a20
+Father index ptr: 1
+0x1627930:  1041  1045  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627a20
+Father index ptr: 2
+0x1627c20:  1049  1053  
+
+Level: 6
+Node!!
+Father: 0x1627b20
+Father index ptr: 1
+Elements: 2
+0x1627a20:  1041  1049  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627ef0
+Father index ptr: 0
+0x1627d10:  1057  1061  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627ef0
+Father index ptr: 1
+0x1627e00:  1065  1069  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1627ef0
+Father index ptr: 2
+0x1627ff0:  1073  1077  
+
+Level: 6
+Node!!
+Father: 0x1627b20
+Father index ptr: 2
+Elements: 2
+0x1627ef0:  1065  1073  
+
+Level: 5
+Node!!
+Father: 0x1626d10
+Father index ptr: 2
+Elements: 2
+0x1627b20:  1033  1057  
+
+Level: 4
+Node!!
+Father: 0x1626e10
+Father index ptr: 1
+Elements: 2
+0x1626d10:  937  1009  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16282c0
+Father index ptr: 0
+0x16280e0:  1081  1085  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16282c0
+Father index ptr: 1
+0x16281d0:  1089  1093  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16282c0
+Father index ptr: 2
+0x16283c0:  1097  1101  
+
+Level: 6
+Node!!
+Father: 0x1628790
+Father index ptr: 0
+Elements: 2
+0x16282c0:  1089  1097  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1628690
+Father index ptr: 0
+0x16284b0:  1105  1109  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1628690
+Father index ptr: 1
+0x16285a0:  1113  1117  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1628690
+Father index ptr: 2
+0x1628890:  1121  1125  
+
+Level: 6
+Node!!
+Father: 0x1628790
+Father index ptr: 1
+Elements: 2
+0x1628690:  1113  1121  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1628b60
+Father index ptr: 0
+0x1628980:  1129  1133  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1628b60
+Father index ptr: 1
+0x1628a70:  1137  1141  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1628b60
+Father index ptr: 2
+0x1628c60:  1145  1149  
+
+Level: 6
+Node!!
+Father: 0x1628790
+Father index ptr: 2
+Elements: 2
+0x1628b60:  1137  1145  
+
+Level: 5
+Node!!
+Father: 0x1629500
+Father index ptr: 0
+Elements: 2
+0x1628790:  1105  1129  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1628f30
+Father index ptr: 0
+0x1628d50:  1153  1157  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1628f30
+Father index ptr: 1
+0x1628e40:  1161  1165  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1628f30
+Father index ptr: 2
+0x1629030:  1169  1173  
+
+Level: 6
+Node!!
+Father: 0x1629400
+Father index ptr: 0
+Elements: 2
+0x1628f30:  1161  1169  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1629300
+Father index ptr: 0
+0x1629120:  1177  1181  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1629300
+Father index ptr: 1
+0x1629210:  1185  1189  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1629300
+Father index ptr: 2
+0x1629600:  1193  1197  
+
+Level: 6
+Node!!
+Father: 0x1629400
+Father index ptr: 1
+Elements: 2
+0x1629300:  1185  1193  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16298d0
+Father index ptr: 0
+0x16296f0:  1201  1205  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16298d0
+Father index ptr: 1
+0x16297e0:  1209  1213  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16298d0
+Father index ptr: 2
+0x16299d0:  1217  1221  
+
+Level: 6
+Node!!
+Father: 0x1629400
+Father index ptr: 2
+Elements: 2
+0x16298d0:  1209  1217  
+
+Level: 5
+Node!!
+Father: 0x1629500
+Father index ptr: 1
+Elements: 2
+0x1629400:  1177  1201  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1629ca0
+Father index ptr: 0
+0x1629ac0:  1225  1229  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1629ca0
+Father index ptr: 1
+0x1629bb0:  1233  1237  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1629ca0
+Father index ptr: 2
+0x1629da0:  1241  1245  
+
+Level: 6
+Node!!
+Father: 0x162a170
+Father index ptr: 0
+Elements: 2
+0x1629ca0:  1233  1241  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162a070
+Father index ptr: 0
+0x1629e90:  1249  1253  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162a070
+Father index ptr: 1
+0x1629f80:  1257  1261  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162a070
+Father index ptr: 2
+0x162a270:  1265  1269  
+
+Level: 6
+Node!!
+Father: 0x162a170
+Father index ptr: 1
+Elements: 2
+0x162a070:  1257  1265  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162a540
+Father index ptr: 0
+0x162a360:  1273  1277  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162a540
+Father index ptr: 1
+0x162a450:  1281  1285  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162a540
+Father index ptr: 2
+0x162a640:  1289  1293  
+
+Level: 6
+Node!!
+Father: 0x162a170
+Father index ptr: 2
+Elements: 2
+0x162a540:  1281  1289  
+
+Level: 5
+Node!!
+Father: 0x1629500
+Father index ptr: 2
+Elements: 2
+0x162a170:  1249  1273  
+
+Level: 4
+Node!!
+Father: 0x1626e10
+Father index ptr: 2
+Elements: 2
+0x1629500:  1153  1225  
+
+Level: 3
+Node!!
+Father: 0x1626eb0
+Father index ptr: 1
+Elements: 2
+0x1626e10:  865  1081  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162a910
+Father index ptr: 0
+0x162a730:  1297  1301  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162a910
+Father index ptr: 1
+0x162a820:  1305  1309  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162a910
+Father index ptr: 2
+0x162aa10:  1313  1317  
+
+Level: 6
+Node!!
+Father: 0x162ade0
+Father index ptr: 0
+Elements: 2
+0x162a910:  1305  1313  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ace0
+Father index ptr: 0
+0x162ab00:  1321  1325  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ace0
+Father index ptr: 1
+0x162abf0:  1329  1333  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ace0
+Father index ptr: 2
+0x162aee0:  1337  1341  
+
+Level: 6
+Node!!
+Father: 0x162ade0
+Father index ptr: 1
+Elements: 2
+0x162ace0:  1329  1337  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162b1b0
+Father index ptr: 0
+0x162afd0:  1345  1349  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162b1b0
+Father index ptr: 1
+0x162b0c0:  1353  1357  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162b1b0
+Father index ptr: 2
+0x162b2b0:  1361  1365  
+
+Level: 6
+Node!!
+Father: 0x162ade0
+Father index ptr: 2
+Elements: 2
+0x162b1b0:  1353  1361  
+
+Level: 5
+Node!!
+Father: 0x162bb50
+Father index ptr: 0
+Elements: 2
+0x162ade0:  1321  1345  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162b580
+Father index ptr: 0
+0x162b3a0:  1369  1373  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162b580
+Father index ptr: 1
+0x162b490:  1377  1381  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162b580
+Father index ptr: 2
+0x162b680:  1385  1389  
+
+Level: 6
+Node!!
+Father: 0x162ba50
+Father index ptr: 0
+Elements: 2
+0x162b580:  1377  1385  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162b950
+Father index ptr: 0
+0x162b770:  1393  1397  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162b950
+Father index ptr: 1
+0x162b860:  1401  1405  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162b950
+Father index ptr: 2
+0x162bc50:  1409  1413  
+
+Level: 6
+Node!!
+Father: 0x162ba50
+Father index ptr: 1
+Elements: 2
+0x162b950:  1401  1409  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162bf20
+Father index ptr: 0
+0x162bd40:  1417  1421  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162bf20
+Father index ptr: 1
+0x162be30:  1425  1429  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162bf20
+Father index ptr: 2
+0x162c020:  1433  1437  
+
+Level: 6
+Node!!
+Father: 0x162ba50
+Father index ptr: 2
+Elements: 2
+0x162bf20:  1425  1433  
+
+Level: 5
+Node!!
+Father: 0x162bb50
+Father index ptr: 1
+Elements: 2
+0x162ba50:  1393  1417  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162c2f0
+Father index ptr: 0
+0x162c110:  1441  1445  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162c2f0
+Father index ptr: 1
+0x162c200:  1449  1453  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162c2f0
+Father index ptr: 2
+0x162c3f0:  1457  1461  
+
+Level: 6
+Node!!
+Father: 0x162c7c0
+Father index ptr: 0
+Elements: 2
+0x162c2f0:  1449  1457  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162c6c0
+Father index ptr: 0
+0x162c4e0:  1465  1469  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162c6c0
+Father index ptr: 1
+0x162c5d0:  1473  1477  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162c6c0
+Father index ptr: 2
+0x162c8c0:  1481  1485  
+
+Level: 6
+Node!!
+Father: 0x162c7c0
+Father index ptr: 1
+Elements: 2
+0x162c6c0:  1473  1481  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162cb90
+Father index ptr: 0
+0x162c9b0:  1489  1493  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162cb90
+Father index ptr: 1
+0x162caa0:  1497  1501  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162cb90
+Father index ptr: 2
+0x162cc90:  1505  1509  
+
+Level: 6
+Node!!
+Father: 0x162c7c0
+Father index ptr: 2
+Elements: 2
+0x162cb90:  1497  1505  
+
+Level: 5
+Node!!
+Father: 0x162bb50
+Father index ptr: 2
+Elements: 2
+0x162c7c0:  1465  1489  
+
+Level: 4
+Node!!
+Father: 0x162e2a0
+Father index ptr: 0
+Elements: 2
+0x162bb50:  1369  1441  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162cf60
+Father index ptr: 0
+0x162cd80:  1513  1517  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162cf60
+Father index ptr: 1
+0x162ce70:  1521  1525  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162cf60
+Father index ptr: 2
+0x162d060:  1529  1533  
+
+Level: 6
+Node!!
+Father: 0x162d430
+Father index ptr: 0
+Elements: 2
+0x162cf60:  1521  1529  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162d330
+Father index ptr: 0
+0x162d150:  1537  1541  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162d330
+Father index ptr: 1
+0x162d240:  1545  1549  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162d330
+Father index ptr: 2
+0x162d530:  1553  1557  
+
+Level: 6
+Node!!
+Father: 0x162d430
+Father index ptr: 1
+Elements: 2
+0x162d330:  1545  1553  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162d800
+Father index ptr: 0
+0x162d620:  1561  1565  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162d800
+Father index ptr: 1
+0x162d710:  1569  1573  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162d800
+Father index ptr: 2
+0x162d900:  1577  1581  
+
+Level: 6
+Node!!
+Father: 0x162d430
+Father index ptr: 2
+Elements: 2
+0x162d800:  1569  1577  
+
+Level: 5
+Node!!
+Father: 0x162e1a0
+Father index ptr: 0
+Elements: 2
+0x162d430:  1537  1561  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162dbd0
+Father index ptr: 0
+0x162d9f0:  1585  1589  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162dbd0
+Father index ptr: 1
+0x162dae0:  1593  1597  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162dbd0
+Father index ptr: 2
+0x162dcd0:  1601  1605  
+
+Level: 6
+Node!!
+Father: 0x162e0a0
+Father index ptr: 0
+Elements: 2
+0x162dbd0:  1593  1601  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162dfa0
+Father index ptr: 0
+0x162ddc0:  1609  1613  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162dfa0
+Father index ptr: 1
+0x162deb0:  1617  1621  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162dfa0
+Father index ptr: 2
+0x162e3a0:  1625  1629  
+
+Level: 6
+Node!!
+Father: 0x162e0a0
+Father index ptr: 1
+Elements: 2
+0x162dfa0:  1617  1625  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162e670
+Father index ptr: 0
+0x162e490:  1633  1637  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162e670
+Father index ptr: 1
+0x162e580:  1641  1645  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162e670
+Father index ptr: 2
+0x162e770:  1649  1653  
+
+Level: 6
+Node!!
+Father: 0x162e0a0
+Father index ptr: 2
+Elements: 2
+0x162e670:  1641  1649  
+
+Level: 5
+Node!!
+Father: 0x162e1a0
+Father index ptr: 1
+Elements: 2
+0x162e0a0:  1609  1633  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ea40
+Father index ptr: 0
+0x162e860:  1657  1661  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ea40
+Father index ptr: 1
+0x162e950:  1665  1669  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ea40
+Father index ptr: 2
+0x162eb40:  1673  1677  
+
+Level: 6
+Node!!
+Father: 0x162ef10
+Father index ptr: 0
+Elements: 2
+0x162ea40:  1665  1673  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ee10
+Father index ptr: 0
+0x162ec30:  1681  1685  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ee10
+Father index ptr: 1
+0x162ed20:  1689  1693  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ee10
+Father index ptr: 2
+0x162f010:  1697  1701  
+
+Level: 6
+Node!!
+Father: 0x162ef10
+Father index ptr: 1
+Elements: 2
+0x162ee10:  1689  1697  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162f2e0
+Father index ptr: 0
+0x162f100:  1705  1709  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162f2e0
+Father index ptr: 1
+0x162f1f0:  1713  1717  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162f2e0
+Father index ptr: 2
+0x162f3e0:  1721  1725  
+
+Level: 6
+Node!!
+Father: 0x162ef10
+Father index ptr: 2
+Elements: 2
+0x162f2e0:  1713  1721  
+
+Level: 5
+Node!!
+Father: 0x162e1a0
+Father index ptr: 2
+Elements: 2
+0x162ef10:  1681  1705  
+
+Level: 4
+Node!!
+Father: 0x162e2a0
+Father index ptr: 1
+Elements: 2
+0x162e1a0:  1585  1657  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162f6b0
+Father index ptr: 0
+0x162f4d0:  1729  1733  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162f6b0
+Father index ptr: 1
+0x162f5c0:  1737  1741  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162f6b0
+Father index ptr: 2
+0x162f7b0:  1745  1749  
+
+Level: 6
+Node!!
+Father: 0x162fb80
+Father index ptr: 0
+Elements: 2
+0x162f6b0:  1737  1745  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162fa80
+Father index ptr: 0
+0x162f8a0:  1753  1757  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162fa80
+Father index ptr: 1
+0x162f990:  1761  1765  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162fa80
+Father index ptr: 2
+0x162fc80:  1769  1773  
+
+Level: 6
+Node!!
+Father: 0x162fb80
+Father index ptr: 1
+Elements: 2
+0x162fa80:  1761  1769  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ff50
+Father index ptr: 0
+0x162fd70:  1777  1781  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ff50
+Father index ptr: 1
+0x162fe60:  1785  1789  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x162ff50
+Father index ptr: 2
+0x1630050:  1793  1797  
+
+Level: 6
+Node!!
+Father: 0x162fb80
+Father index ptr: 2
+Elements: 2
+0x162ff50:  1785  1793  
+
+Level: 5
+Node!!
+Father: 0x16308f0
+Father index ptr: 0
+Elements: 2
+0x162fb80:  1753  1777  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1630320
+Father index ptr: 0
+0x1630140:  1801  1805  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1630320
+Father index ptr: 1
+0x1630230:  1809  1813  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1630320
+Father index ptr: 2
+0x1630420:  1817  1821  
+
+Level: 6
+Node!!
+Father: 0x16307f0
+Father index ptr: 0
+Elements: 2
+0x1630320:  1809  1817  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16306f0
+Father index ptr: 0
+0x1630510:  1825  1829  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16306f0
+Father index ptr: 1
+0x1630600:  1833  1837  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16306f0
+Father index ptr: 2
+0x16309f0:  1841  1845  
+
+Level: 6
+Node!!
+Father: 0x16307f0
+Father index ptr: 1
+Elements: 2
+0x16306f0:  1833  1841  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1630cc0
+Father index ptr: 0
+0x1630ae0:  1849  1853  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1630cc0
+Father index ptr: 1
+0x1630bd0:  1857  1861  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1630cc0
+Father index ptr: 2
+0x1630dc0:  1865  1869  
+
+Level: 6
+Node!!
+Father: 0x16307f0
+Father index ptr: 2
+Elements: 2
+0x1630cc0:  1857  1865  
+
+Level: 5
+Node!!
+Father: 0x16308f0
+Father index ptr: 1
+Elements: 2
+0x16307f0:  1825  1849  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631090
+Father index ptr: 0
+0x1630eb0:  1873  1877  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631090
+Father index ptr: 1
+0x1630fa0:  1881  1885  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631090
+Father index ptr: 2
+0x1631190:  1889  1893  
+
+Level: 6
+Node!!
+Father: 0x1631560
+Father index ptr: 0
+Elements: 2
+0x1631090:  1881  1889  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631460
+Father index ptr: 0
+0x1631280:  1897  1901  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631460
+Father index ptr: 1
+0x1631370:  1905  1909  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631460
+Father index ptr: 2
+0x1631660:  1913  1917  
+
+Level: 6
+Node!!
+Father: 0x1631560
+Father index ptr: 1
+Elements: 2
+0x1631460:  1905  1913  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631930
+Father index ptr: 0
+0x1631750:  1921  1925  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631930
+Father index ptr: 1
+0x1631840:  1929  1933  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631930
+Father index ptr: 2
+0x1631a30:  1937  1941  
+
+Level: 6
+Node!!
+Father: 0x1631560
+Father index ptr: 2
+Elements: 2
+0x1631930:  1929  1937  
+
+Level: 5
+Node!!
+Father: 0x16308f0
+Father index ptr: 2
+Elements: 2
+0x1631560:  1897  1921  
+
+Level: 4
+Node!!
+Father: 0x162e2a0
+Father index ptr: 2
+Elements: 2
+0x16308f0:  1801  1873  
+
+Level: 3
+Node!!
+Father: 0x1626eb0
+Father index ptr: 2
+Elements: 2
+0x162e2a0:  1513  1729  
+
+Level: 2
+Node!!
+Father: 0x163cc20
+Father index ptr: 0
+Elements: 2
+0x1626eb0:  649  1297  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631d00
+Father index ptr: 0
+0x1631b20:  1945  1949  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631d00
+Father index ptr: 1
+0x1631c10:  1953  1957  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1631d00
+Father index ptr: 2
+0x1631e00:  1961  1965  
+
+Level: 6
+Node!!
+Father: 0x16321d0
+Father index ptr: 0
+Elements: 2
+0x1631d00:  1953  1961  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16320d0
+Father index ptr: 0
+0x1631ef0:  1969  1973  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16320d0
+Father index ptr: 1
+0x1631fe0:  1977  1981  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16320d0
+Father index ptr: 2
+0x16322d0:  1985  1989  
+
+Level: 6
+Node!!
+Father: 0x16321d0
+Father index ptr: 1
+Elements: 2
+0x16320d0:  1977  1985  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16325a0
+Father index ptr: 0
+0x16323c0:  1993  1997  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16325a0
+Father index ptr: 1
+0x16324b0:  2001  2005  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16325a0
+Father index ptr: 2
+0x16326a0:  2009  2013  
+
+Level: 6
+Node!!
+Father: 0x16321d0
+Father index ptr: 2
+Elements: 2
+0x16325a0:  2001  2009  
+
+Level: 5
+Node!!
+Father: 0x1632f40
+Father index ptr: 0
+Elements: 2
+0x16321d0:  1969  1993  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1632970
+Father index ptr: 0
+0x1632790:  2017  2021  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1632970
+Father index ptr: 1
+0x1632880:  2025  2029  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1632970
+Father index ptr: 2
+0x1632a70:  2033  2037  
+
+Level: 6
+Node!!
+Father: 0x1632e40
+Father index ptr: 0
+Elements: 2
+0x1632970:  2025  2033  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1632d40
+Father index ptr: 0
+0x1632b60:  2041  2045  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1632d40
+Father index ptr: 1
+0x1632c50:  2049  2053  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1632d40
+Father index ptr: 2
+0x1633040:  2057  2061  
+
+Level: 6
+Node!!
+Father: 0x1632e40
+Father index ptr: 1
+Elements: 2
+0x1632d40:  2049  2057  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1633310
+Father index ptr: 0
+0x1633130:  2065  2069  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1633310
+Father index ptr: 1
+0x1633220:  2073  2077  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1633310
+Father index ptr: 2
+0x1633410:  2081  2085  
+
+Level: 6
+Node!!
+Father: 0x1632e40
+Father index ptr: 2
+Elements: 2
+0x1633310:  2073  2081  
+
+Level: 5
+Node!!
+Father: 0x1632f40
+Father index ptr: 1
+Elements: 2
+0x1632e40:  2041  2065  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16336e0
+Father index ptr: 0
+0x1633500:  2089  2093  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16336e0
+Father index ptr: 1
+0x16335f0:  2097  2101  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16336e0
+Father index ptr: 2
+0x16337e0:  2105  2109  
+
+Level: 6
+Node!!
+Father: 0x1633bb0
+Father index ptr: 0
+Elements: 2
+0x16336e0:  2097  2105  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1633ab0
+Father index ptr: 0
+0x16338d0:  2113  2117  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1633ab0
+Father index ptr: 1
+0x16339c0:  2121  2125  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1633ab0
+Father index ptr: 2
+0x1633cb0:  2129  2133  
+
+Level: 6
+Node!!
+Father: 0x1633bb0
+Father index ptr: 1
+Elements: 2
+0x1633ab0:  2121  2129  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1633f80
+Father index ptr: 0
+0x1633da0:  2137  2141  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1633f80
+Father index ptr: 1
+0x1633e90:  2145  2149  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1633f80
+Father index ptr: 2
+0x1634080:  2153  2157  
+
+Level: 6
+Node!!
+Father: 0x1633bb0
+Father index ptr: 2
+Elements: 2
+0x1633f80:  2145  2153  
+
+Level: 5
+Node!!
+Father: 0x1632f40
+Father index ptr: 2
+Elements: 2
+0x1633bb0:  2113  2137  
+
+Level: 4
+Node!!
+Father: 0x1635690
+Father index ptr: 0
+Elements: 2
+0x1632f40:  2017  2089  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634350
+Father index ptr: 0
+0x1634170:  2161  2165  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634350
+Father index ptr: 1
+0x1634260:  2169  2173  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634350
+Father index ptr: 2
+0x1634450:  2177  2181  
+
+Level: 6
+Node!!
+Father: 0x1634820
+Father index ptr: 0
+Elements: 2
+0x1634350:  2169  2177  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634720
+Father index ptr: 0
+0x1634540:  2185  2189  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634720
+Father index ptr: 1
+0x1634630:  2193  2197  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634720
+Father index ptr: 2
+0x1634920:  2201  2205  
+
+Level: 6
+Node!!
+Father: 0x1634820
+Father index ptr: 1
+Elements: 2
+0x1634720:  2193  2201  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634bf0
+Father index ptr: 0
+0x1634a10:  2209  2213  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634bf0
+Father index ptr: 1
+0x1634b00:  2217  2221  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634bf0
+Father index ptr: 2
+0x1634cf0:  2225  2229  
+
+Level: 6
+Node!!
+Father: 0x1634820
+Father index ptr: 2
+Elements: 2
+0x1634bf0:  2217  2225  
+
+Level: 5
+Node!!
+Father: 0x1635590
+Father index ptr: 0
+Elements: 2
+0x1634820:  2185  2209  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634fc0
+Father index ptr: 0
+0x1634de0:  2233  2237  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634fc0
+Father index ptr: 1
+0x1634ed0:  2241  2245  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1634fc0
+Father index ptr: 2
+0x16350c0:  2249  2253  
+
+Level: 6
+Node!!
+Father: 0x1635490
+Father index ptr: 0
+Elements: 2
+0x1634fc0:  2241  2249  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1635390
+Father index ptr: 0
+0x16351b0:  2257  2261  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1635390
+Father index ptr: 1
+0x16352a0:  2265  2269  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1635390
+Father index ptr: 2
+0x1635790:  2273  2277  
+
+Level: 6
+Node!!
+Father: 0x1635490
+Father index ptr: 1
+Elements: 2
+0x1635390:  2265  2273  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1635a60
+Father index ptr: 0
+0x1635880:  2281  2285  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1635a60
+Father index ptr: 1
+0x1635970:  2289  2293  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1635a60
+Father index ptr: 2
+0x1635b60:  2297  2301  
+
+Level: 6
+Node!!
+Father: 0x1635490
+Father index ptr: 2
+Elements: 2
+0x1635a60:  2289  2297  
+
+Level: 5
+Node!!
+Father: 0x1635590
+Father index ptr: 1
+Elements: 2
+0x1635490:  2257  2281  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1635e30
+Father index ptr: 0
+0x1635c50:  2305  2309  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1635e30
+Father index ptr: 1
+0x1635d40:  2313  2317  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1635e30
+Father index ptr: 2
+0x1635f30:  2321  2325  
+
+Level: 6
+Node!!
+Father: 0x1636300
+Father index ptr: 0
+Elements: 2
+0x1635e30:  2313  2321  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1636200
+Father index ptr: 0
+0x1636020:  2329  2333  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1636200
+Father index ptr: 1
+0x1636110:  2337  2341  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1636200
+Father index ptr: 2
+0x1636400:  2345  2349  
+
+Level: 6
+Node!!
+Father: 0x1636300
+Father index ptr: 1
+Elements: 2
+0x1636200:  2337  2345  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16366d0
+Father index ptr: 0
+0x16364f0:  2353  2357  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16366d0
+Father index ptr: 1
+0x16365e0:  2361  2365  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16366d0
+Father index ptr: 2
+0x16367d0:  2369  2373  
+
+Level: 6
+Node!!
+Father: 0x1636300
+Father index ptr: 2
+Elements: 2
+0x16366d0:  2361  2369  
+
+Level: 5
+Node!!
+Father: 0x1635590
+Father index ptr: 2
+Elements: 2
+0x1636300:  2329  2353  
+
+Level: 4
+Node!!
+Father: 0x1635690
+Father index ptr: 1
+Elements: 2
+0x1635590:  2233  2305  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1636aa0
+Father index ptr: 0
+0x16368c0:  2377  2381  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1636aa0
+Father index ptr: 1
+0x16369b0:  2385  2389  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1636aa0
+Father index ptr: 2
+0x1636ba0:  2393  2397  
+
+Level: 6
+Node!!
+Father: 0x1636f70
+Father index ptr: 0
+Elements: 2
+0x1636aa0:  2385  2393  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1636e70
+Father index ptr: 0
+0x1636c90:  2401  2405  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1636e70
+Father index ptr: 1
+0x1636d80:  2409  2413  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1636e70
+Father index ptr: 2
+0x1637070:  2417  2421  
+
+Level: 6
+Node!!
+Father: 0x1636f70
+Father index ptr: 1
+Elements: 2
+0x1636e70:  2409  2417  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1637340
+Father index ptr: 0
+0x1637160:  2425  2429  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1637340
+Father index ptr: 1
+0x1637250:  2433  2437  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1637340
+Father index ptr: 2
+0x1637440:  2441  2445  
+
+Level: 6
+Node!!
+Father: 0x1636f70
+Father index ptr: 2
+Elements: 2
+0x1637340:  2433  2441  
+
+Level: 5
+Node!!
+Father: 0x1637ce0
+Father index ptr: 0
+Elements: 2
+0x1636f70:  2401  2425  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1637710
+Father index ptr: 0
+0x1637530:  2449  2453  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1637710
+Father index ptr: 1
+0x1637620:  2457  2461  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1637710
+Father index ptr: 2
+0x1637810:  2465  2469  
+
+Level: 6
+Node!!
+Father: 0x1637be0
+Father index ptr: 0
+Elements: 2
+0x1637710:  2457  2465  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1637ae0
+Father index ptr: 0
+0x1637900:  2473  2477  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1637ae0
+Father index ptr: 1
+0x16379f0:  2481  2485  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1637ae0
+Father index ptr: 2
+0x1637de0:  2489  2493  
+
+Level: 6
+Node!!
+Father: 0x1637be0
+Father index ptr: 1
+Elements: 2
+0x1637ae0:  2481  2489  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16380b0
+Father index ptr: 0
+0x1637ed0:  2497  2501  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16380b0
+Father index ptr: 1
+0x1637fc0:  2505  2509  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16380b0
+Father index ptr: 2
+0x16381b0:  2513  2517  
+
+Level: 6
+Node!!
+Father: 0x1637be0
+Father index ptr: 2
+Elements: 2
+0x16380b0:  2505  2513  
+
+Level: 5
+Node!!
+Father: 0x1637ce0
+Father index ptr: 1
+Elements: 2
+0x1637be0:  2473  2497  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1638480
+Father index ptr: 0
+0x16382a0:  2521  2525  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1638480
+Father index ptr: 1
+0x1638390:  2529  2533  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1638480
+Father index ptr: 2
+0x1638580:  2537  2541  
+
+Level: 6
+Node!!
+Father: 0x1638950
+Father index ptr: 0
+Elements: 2
+0x1638480:  2529  2537  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1638850
+Father index ptr: 0
+0x1638670:  2545  2549  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1638850
+Father index ptr: 1
+0x1638760:  2553  2557  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1638850
+Father index ptr: 2
+0x1638a50:  2561  2565  
+
+Level: 6
+Node!!
+Father: 0x1638950
+Father index ptr: 1
+Elements: 2
+0x1638850:  2553  2561  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1638d20
+Father index ptr: 0
+0x1638b40:  2569  2573  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1638d20
+Father index ptr: 1
+0x1638c30:  2577  2581  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1638d20
+Father index ptr: 2
+0x1638e20:  2585  2589  
+
+Level: 6
+Node!!
+Father: 0x1638950
+Father index ptr: 2
+Elements: 2
+0x1638d20:  2577  2585  
+
+Level: 5
+Node!!
+Father: 0x1637ce0
+Father index ptr: 2
+Elements: 2
+0x1638950:  2545  2569  
+
+Level: 4
+Node!!
+Father: 0x1635690
+Father index ptr: 2
+Elements: 2
+0x1637ce0:  2449  2521  
+
+Level: 3
+Node!!
+Father: 0x163cb80
+Father index ptr: 0
+Elements: 2
+0x1635690:  2161  2377  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16390f0
+Father index ptr: 0
+0x1638f10:  2593  2597  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16390f0
+Father index ptr: 1
+0x1639000:  2601  2605  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16390f0
+Father index ptr: 2
+0x16391f0:  2609  2613  
+
+Level: 6
+Node!!
+Father: 0x16395c0
+Father index ptr: 0
+Elements: 2
+0x16390f0:  2601  2609  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16394c0
+Father index ptr: 0
+0x16392e0:  2617  2621  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16394c0
+Father index ptr: 1
+0x16393d0:  2625  2629  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16394c0
+Father index ptr: 2
+0x16396c0:  2633  2637  
+
+Level: 6
+Node!!
+Father: 0x16395c0
+Father index ptr: 1
+Elements: 2
+0x16394c0:  2625  2633  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1639990
+Father index ptr: 0
+0x16397b0:  2641  2645  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1639990
+Father index ptr: 1
+0x16398a0:  2649  2653  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1639990
+Father index ptr: 2
+0x1639a90:  2657  2661  
+
+Level: 6
+Node!!
+Father: 0x16395c0
+Father index ptr: 2
+Elements: 2
+0x1639990:  2649  2657  
+
+Level: 5
+Node!!
+Father: 0x163a330
+Father index ptr: 0
+Elements: 2
+0x16395c0:  2617  2641  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1639d60
+Father index ptr: 0
+0x1639b80:  2665  2669  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1639d60
+Father index ptr: 1
+0x1639c70:  2673  2677  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1639d60
+Father index ptr: 2
+0x1639e60:  2681  2685  
+
+Level: 6
+Node!!
+Father: 0x163a230
+Father index ptr: 0
+Elements: 2
+0x1639d60:  2673  2681  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163a130
+Father index ptr: 0
+0x1639f50:  2689  2693  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163a130
+Father index ptr: 1
+0x163a040:  2697  2701  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163a130
+Father index ptr: 2
+0x163a430:  2705  2709  
+
+Level: 6
+Node!!
+Father: 0x163a230
+Father index ptr: 1
+Elements: 2
+0x163a130:  2697  2705  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163a700
+Father index ptr: 0
+0x163a520:  2713  2717  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163a700
+Father index ptr: 1
+0x163a610:  2721  2725  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163a700
+Father index ptr: 2
+0x163a800:  2729  2733  
+
+Level: 6
+Node!!
+Father: 0x163a230
+Father index ptr: 2
+Elements: 2
+0x163a700:  2721  2729  
+
+Level: 5
+Node!!
+Father: 0x163a330
+Father index ptr: 1
+Elements: 2
+0x163a230:  2689  2713  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163aad0
+Father index ptr: 0
+0x163a8f0:  2737  2741  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163aad0
+Father index ptr: 1
+0x163a9e0:  2745  2749  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163aad0
+Father index ptr: 2
+0x163abd0:  2753  2757  
+
+Level: 6
+Node!!
+Father: 0x163afa0
+Father index ptr: 0
+Elements: 2
+0x163aad0:  2745  2753  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163aea0
+Father index ptr: 0
+0x163acc0:  2761  2765  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163aea0
+Father index ptr: 1
+0x163adb0:  2769  2773  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163aea0
+Father index ptr: 2
+0x163b0a0:  2777  2781  
+
+Level: 6
+Node!!
+Father: 0x163afa0
+Father index ptr: 1
+Elements: 2
+0x163aea0:  2769  2777  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163b370
+Father index ptr: 0
+0x163b190:  2785  2789  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163b370
+Father index ptr: 1
+0x163b280:  2793  2797  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163b370
+Father index ptr: 2
+0x163b470:  2801  2805  
+
+Level: 6
+Node!!
+Father: 0x163afa0
+Father index ptr: 2
+Elements: 2
+0x163b370:  2793  2801  
+
+Level: 5
+Node!!
+Father: 0x163a330
+Father index ptr: 2
+Elements: 2
+0x163afa0:  2761  2785  
+
+Level: 4
+Node!!
+Father: 0x163ca80
+Father index ptr: 0
+Elements: 2
+0x163a330:  2665  2737  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163b740
+Father index ptr: 0
+0x163b560:  2809  2813  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163b740
+Father index ptr: 1
+0x163b650:  2817  2821  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163b740
+Father index ptr: 2
+0x163b840:  2825  2829  
+
+Level: 6
+Node!!
+Father: 0x163bc10
+Father index ptr: 0
+Elements: 2
+0x163b740:  2817  2825  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163bb10
+Father index ptr: 0
+0x163b930:  2833  2837  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163bb10
+Father index ptr: 1
+0x163ba20:  2841  2845  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163bb10
+Father index ptr: 2
+0x163bd10:  2849  2853  
+
+Level: 6
+Node!!
+Father: 0x163bc10
+Father index ptr: 1
+Elements: 2
+0x163bb10:  2841  2849  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163bfe0
+Father index ptr: 0
+0x163be00:  2857  2861  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163bfe0
+Father index ptr: 1
+0x163bef0:  2865  2869  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163bfe0
+Father index ptr: 2
+0x163c0e0:  2873  2877  
+
+Level: 6
+Node!!
+Father: 0x163bc10
+Father index ptr: 2
+Elements: 2
+0x163bfe0:  2865  2873  
+
+Level: 5
+Node!!
+Father: 0x163c980
+Father index ptr: 0
+Elements: 2
+0x163bc10:  2833  2857  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163c3b0
+Father index ptr: 0
+0x163c1d0:  2881  2885  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163c3b0
+Father index ptr: 1
+0x163c2c0:  2889  2893  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163c3b0
+Father index ptr: 2
+0x163c4b0:  2897  2901  
+
+Level: 6
+Node!!
+Father: 0x163c880
+Father index ptr: 0
+Elements: 2
+0x163c3b0:  2889  2897  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163c780
+Father index ptr: 0
+0x163c5a0:  2905  2909  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163c780
+Father index ptr: 1
+0x163c690:  2913  2917  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163c780
+Father index ptr: 2
+0x163cd20:  2921  2925  
+
+Level: 6
+Node!!
+Father: 0x163c880
+Father index ptr: 1
+Elements: 2
+0x163c780:  2913  2921  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163cff0
+Father index ptr: 0
+0x163ce10:  2929  2933  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163cff0
+Father index ptr: 1
+0x163cf00:  2937  2941  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163cff0
+Father index ptr: 2
+0x163d0f0:  2945  2949  
+
+Level: 6
+Node!!
+Father: 0x163c880
+Father index ptr: 2
+Elements: 2
+0x163cff0:  2937  2945  
+
+Level: 5
+Node!!
+Father: 0x163c980
+Father index ptr: 1
+Elements: 2
+0x163c880:  2905  2929  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163d3c0
+Father index ptr: 0
+0x163d1e0:  2953  2957  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163d3c0
+Father index ptr: 1
+0x163d2d0:  2961  2965  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163d3c0
+Father index ptr: 2
+0x163d4c0:  2969  2973  
+
+Level: 6
+Node!!
+Father: 0x163d890
+Father index ptr: 0
+Elements: 2
+0x163d3c0:  2961  2969  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163d790
+Father index ptr: 0
+0x163d5b0:  2977  2981  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163d790
+Father index ptr: 1
+0x163d6a0:  2985  2989  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163d790
+Father index ptr: 2
+0x163d990:  2993  2997  
+
+Level: 6
+Node!!
+Father: 0x163d890
+Father index ptr: 1
+Elements: 2
+0x163d790:  2985  2993  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163dc60
+Father index ptr: 0
+0x163da80:  3001  3005  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163dc60
+Father index ptr: 1
+0x163db70:  3009  3013  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163dc60
+Father index ptr: 2
+0x163dd60:  3017  3021  
+
+Level: 6
+Node!!
+Father: 0x163d890
+Father index ptr: 2
+Elements: 2
+0x163dc60:  3009  3017  
+
+Level: 5
+Node!!
+Father: 0x163c980
+Father index ptr: 2
+Elements: 2
+0x163d890:  2977  3001  
+
+Level: 4
+Node!!
+Father: 0x163ca80
+Father index ptr: 1
+Elements: 2
+0x163c980:  2881  2953  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163e030
+Father index ptr: 0
+0x163de50:  3025  3029  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163e030
+Father index ptr: 1
+0x163df40:  3033  3037  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163e030
+Father index ptr: 2
+0x163e130:  3041  3045  
+
+Level: 6
+Node!!
+Father: 0x163e500
+Father index ptr: 0
+Elements: 2
+0x163e030:  3033  3041  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163e400
+Father index ptr: 0
+0x163e220:  3049  3053  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163e400
+Father index ptr: 1
+0x163e310:  3057  3061  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163e400
+Father index ptr: 2
+0x163e600:  3065  3069  
+
+Level: 6
+Node!!
+Father: 0x163e500
+Father index ptr: 1
+Elements: 2
+0x163e400:  3057  3065  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163e8d0
+Father index ptr: 0
+0x163e6f0:  3073  3077  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163e8d0
+Father index ptr: 1
+0x163e7e0:  3081  3085  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163e8d0
+Father index ptr: 2
+0x163e9d0:  3089  3093  
+
+Level: 6
+Node!!
+Father: 0x163e500
+Father index ptr: 2
+Elements: 2
+0x163e8d0:  3081  3089  
+
+Level: 5
+Node!!
+Father: 0x163f270
+Father index ptr: 0
+Elements: 2
+0x163e500:  3049  3073  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163eca0
+Father index ptr: 0
+0x163eac0:  3097  3101  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163eca0
+Father index ptr: 1
+0x163ebb0:  3105  3109  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163eca0
+Father index ptr: 2
+0x163eda0:  3113  3117  
+
+Level: 6
+Node!!
+Father: 0x163f170
+Father index ptr: 0
+Elements: 2
+0x163eca0:  3105  3113  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163f070
+Father index ptr: 0
+0x163ee90:  3121  3125  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163f070
+Father index ptr: 1
+0x163ef80:  3129  3133  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163f070
+Father index ptr: 2
+0x163f370:  3137  3141  
+
+Level: 6
+Node!!
+Father: 0x163f170
+Father index ptr: 1
+Elements: 2
+0x163f070:  3129  3137  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163f640
+Father index ptr: 0
+0x163f460:  3145  3149  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163f640
+Father index ptr: 1
+0x163f550:  3153  3157  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163f640
+Father index ptr: 2
+0x163f740:  3161  3165  
+
+Level: 6
+Node!!
+Father: 0x163f170
+Father index ptr: 2
+Elements: 2
+0x163f640:  3153  3161  
+
+Level: 5
+Node!!
+Father: 0x163f270
+Father index ptr: 1
+Elements: 2
+0x163f170:  3121  3145  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163fa10
+Father index ptr: 0
+0x163f830:  3169  3173  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163fa10
+Father index ptr: 1
+0x163f920:  3177  3181  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163fa10
+Father index ptr: 2
+0x163fb10:  3185  3189  
+
+Level: 6
+Node!!
+Father: 0x163fee0
+Father index ptr: 0
+Elements: 2
+0x163fa10:  3177  3185  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163fde0
+Father index ptr: 0
+0x163fc00:  3193  3197  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163fde0
+Father index ptr: 1
+0x163fcf0:  3201  3205  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x163fde0
+Father index ptr: 2
+0x163ffe0:  3209  3213  
+
+Level: 6
+Node!!
+Father: 0x163fee0
+Father index ptr: 1
+Elements: 2
+0x163fde0:  3201  3209  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16402b0
+Father index ptr: 0
+0x16400d0:  3217  3221  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16402b0
+Father index ptr: 1
+0x16401c0:  3225  3229  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16402b0
+Father index ptr: 2
+0x16403b0:  3233  3237  
+
+Level: 6
+Node!!
+Father: 0x163fee0
+Father index ptr: 2
+Elements: 2
+0x16402b0:  3225  3233  
+
+Level: 5
+Node!!
+Father: 0x163f270
+Father index ptr: 2
+Elements: 2
+0x163fee0:  3193  3217  
+
+Level: 4
+Node!!
+Father: 0x163ca80
+Father index ptr: 2
+Elements: 2
+0x163f270:  3097  3169  
+
+Level: 3
+Node!!
+Father: 0x163cb80
+Father index ptr: 1
+Elements: 2
+0x163ca80:  2809  3025  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1640680
+Father index ptr: 0
+0x16404a0:  3241  3245  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1640680
+Father index ptr: 1
+0x1640590:  3249  3253  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1640680
+Father index ptr: 2
+0x1640780:  3257  3261  
+
+Level: 6
+Node!!
+Father: 0x1640b50
+Father index ptr: 0
+Elements: 2
+0x1640680:  3249  3257  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1640a50
+Father index ptr: 0
+0x1640870:  3265  3269  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1640a50
+Father index ptr: 1
+0x1640960:  3273  3277  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1640a50
+Father index ptr: 2
+0x1640c50:  3281  3285  
+
+Level: 6
+Node!!
+Father: 0x1640b50
+Father index ptr: 1
+Elements: 2
+0x1640a50:  3273  3281  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1640f20
+Father index ptr: 0
+0x1640d40:  3289  3293  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1640f20
+Father index ptr: 1
+0x1640e30:  3297  3301  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1640f20
+Father index ptr: 2
+0x1641020:  3305  3309  
+
+Level: 6
+Node!!
+Father: 0x1640b50
+Father index ptr: 2
+Elements: 2
+0x1640f20:  3297  3305  
+
+Level: 5
+Node!!
+Father: 0x16418c0
+Father index ptr: 0
+Elements: 2
+0x1640b50:  3265  3289  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16412f0
+Father index ptr: 0
+0x1641110:  3313  3317  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16412f0
+Father index ptr: 1
+0x1641200:  3321  3325  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16412f0
+Father index ptr: 2
+0x16413f0:  3329  3333  
+
+Level: 6
+Node!!
+Father: 0x16417c0
+Father index ptr: 0
+Elements: 2
+0x16412f0:  3321  3329  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16416c0
+Father index ptr: 0
+0x16414e0:  3337  3341  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16416c0
+Father index ptr: 1
+0x16415d0:  3345  3349  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16416c0
+Father index ptr: 2
+0x16419c0:  3353  3357  
+
+Level: 6
+Node!!
+Father: 0x16417c0
+Father index ptr: 1
+Elements: 2
+0x16416c0:  3345  3353  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1641c90
+Father index ptr: 0
+0x1641ab0:  3361  3365  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1641c90
+Father index ptr: 1
+0x1641ba0:  3369  3373  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1641c90
+Father index ptr: 2
+0x1641d90:  3377  3381  
+
+Level: 6
+Node!!
+Father: 0x16417c0
+Father index ptr: 2
+Elements: 2
+0x1641c90:  3369  3377  
+
+Level: 5
+Node!!
+Father: 0x16418c0
+Father index ptr: 1
+Elements: 2
+0x16417c0:  3337  3361  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642060
+Father index ptr: 0
+0x1641e80:  3385  3389  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642060
+Father index ptr: 1
+0x1641f70:  3393  3397  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642060
+Father index ptr: 2
+0x1642160:  3401  3405  
+
+Level: 6
+Node!!
+Father: 0x1642530
+Father index ptr: 0
+Elements: 2
+0x1642060:  3393  3401  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642430
+Father index ptr: 0
+0x1642250:  3409  3413  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642430
+Father index ptr: 1
+0x1642340:  3417  3421  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642430
+Father index ptr: 2
+0x1642630:  3425  3429  
+
+Level: 6
+Node!!
+Father: 0x1642530
+Father index ptr: 1
+Elements: 2
+0x1642430:  3417  3425  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642900
+Father index ptr: 0
+0x1642720:  3433  3437  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642900
+Father index ptr: 1
+0x1642810:  3441  3445  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642900
+Father index ptr: 2
+0x1642a00:  3449  3453  
+
+Level: 6
+Node!!
+Father: 0x1642530
+Father index ptr: 2
+Elements: 2
+0x1642900:  3441  3449  
+
+Level: 5
+Node!!
+Father: 0x16418c0
+Father index ptr: 2
+Elements: 2
+0x1642530:  3409  3433  
+
+Level: 4
+Node!!
+Father: 0x1644010
+Father index ptr: 0
+Elements: 2
+0x16418c0:  3313  3385  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642cd0
+Father index ptr: 0
+0x1642af0:  3457  3461  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642cd0
+Father index ptr: 1
+0x1642be0:  3465  3469  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1642cd0
+Father index ptr: 2
+0x1642dd0:  3473  3477  
+
+Level: 6
+Node!!
+Father: 0x16431a0
+Father index ptr: 0
+Elements: 2
+0x1642cd0:  3465  3473  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16430a0
+Father index ptr: 0
+0x1642ec0:  3481  3485  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16430a0
+Father index ptr: 1
+0x1642fb0:  3489  3493  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16430a0
+Father index ptr: 2
+0x16432a0:  3497  3501  
+
+Level: 6
+Node!!
+Father: 0x16431a0
+Father index ptr: 1
+Elements: 2
+0x16430a0:  3489  3497  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1643570
+Father index ptr: 0
+0x1643390:  3505  3509  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1643570
+Father index ptr: 1
+0x1643480:  3513  3517  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1643570
+Father index ptr: 2
+0x1643670:  3521  3525  
+
+Level: 6
+Node!!
+Father: 0x16431a0
+Father index ptr: 2
+Elements: 2
+0x1643570:  3513  3521  
+
+Level: 5
+Node!!
+Father: 0x1643f10
+Father index ptr: 0
+Elements: 2
+0x16431a0:  3481  3505  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1643940
+Father index ptr: 0
+0x1643760:  3529  3533  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1643940
+Father index ptr: 1
+0x1643850:  3537  3541  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1643940
+Father index ptr: 2
+0x1643a40:  3545  3549  
+
+Level: 6
+Node!!
+Father: 0x1643e10
+Father index ptr: 0
+Elements: 2
+0x1643940:  3537  3545  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1643d10
+Father index ptr: 0
+0x1643b30:  3553  3557  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1643d10
+Father index ptr: 1
+0x1643c20:  3561  3565  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1643d10
+Father index ptr: 2
+0x1644110:  3569  3573  
+
+Level: 6
+Node!!
+Father: 0x1643e10
+Father index ptr: 1
+Elements: 2
+0x1643d10:  3561  3569  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16443e0
+Father index ptr: 0
+0x1644200:  3577  3581  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16443e0
+Father index ptr: 1
+0x16442f0:  3585  3589  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16443e0
+Father index ptr: 2
+0x16444e0:  3593  3597  
+
+Level: 6
+Node!!
+Father: 0x1643e10
+Father index ptr: 2
+Elements: 2
+0x16443e0:  3585  3593  
+
+Level: 5
+Node!!
+Father: 0x1643f10
+Father index ptr: 1
+Elements: 2
+0x1643e10:  3553  3577  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16447b0
+Father index ptr: 0
+0x16445d0:  3601  3605  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16447b0
+Father index ptr: 1
+0x16446c0:  3609  3613  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16447b0
+Father index ptr: 2
+0x16448b0:  3617  3621  
+
+Level: 6
+Node!!
+Father: 0x1644c80
+Father index ptr: 0
+Elements: 2
+0x16447b0:  3609  3617  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1644b80
+Father index ptr: 0
+0x16449a0:  3625  3629  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1644b80
+Father index ptr: 1
+0x1644a90:  3633  3637  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1644b80
+Father index ptr: 2
+0x1644d80:  3641  3645  
+
+Level: 6
+Node!!
+Father: 0x1644c80
+Father index ptr: 1
+Elements: 2
+0x1644b80:  3633  3641  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1645050
+Father index ptr: 0
+0x1644e70:  3649  3653  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1645050
+Father index ptr: 1
+0x1644f60:  3657  3661  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1645050
+Father index ptr: 2
+0x1645150:  3665  3669  
+
+Level: 6
+Node!!
+Father: 0x1644c80
+Father index ptr: 2
+Elements: 2
+0x1645050:  3657  3665  
+
+Level: 5
+Node!!
+Father: 0x1643f10
+Father index ptr: 2
+Elements: 2
+0x1644c80:  3625  3649  
+
+Level: 4
+Node!!
+Father: 0x1644010
+Father index ptr: 1
+Elements: 2
+0x1643f10:  3529  3601  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1645420
+Father index ptr: 0
+0x1645240:  3673  3677  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1645420
+Father index ptr: 1
+0x1645330:  3681  3685  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1645420
+Father index ptr: 2
+0x1645520:  3689  3693  
+
+Level: 6
+Node!!
+Father: 0x16458f0
+Father index ptr: 0
+Elements: 2
+0x1645420:  3681  3689  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16457f0
+Father index ptr: 0
+0x1645610:  3697  3701  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16457f0
+Father index ptr: 1
+0x1645700:  3705  3709  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16457f0
+Father index ptr: 2
+0x16459f0:  3713  3717  
+
+Level: 6
+Node!!
+Father: 0x16458f0
+Father index ptr: 1
+Elements: 2
+0x16457f0:  3705  3713  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1645cc0
+Father index ptr: 0
+0x1645ae0:  3721  3725  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1645cc0
+Father index ptr: 1
+0x1645bd0:  3729  3733  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1645cc0
+Father index ptr: 2
+0x1645dc0:  3737  3741  
+
+Level: 6
+Node!!
+Father: 0x16458f0
+Father index ptr: 2
+Elements: 2
+0x1645cc0:  3729  3737  
+
+Level: 5
+Node!!
+Father: 0x1646660
+Father index ptr: 0
+Elements: 2
+0x16458f0:  3697  3721  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646090
+Father index ptr: 0
+0x1645eb0:  3745  3749  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646090
+Father index ptr: 1
+0x1645fa0:  3753  3757  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646090
+Father index ptr: 2
+0x1646190:  3761  3765  
+
+Level: 6
+Node!!
+Father: 0x1646560
+Father index ptr: 0
+Elements: 2
+0x1646090:  3753  3761  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646460
+Father index ptr: 0
+0x1646280:  3769  3773  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646460
+Father index ptr: 1
+0x1646370:  3777  3781  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646460
+Father index ptr: 2
+0x1646760:  3785  3789  
+
+Level: 6
+Node!!
+Father: 0x1646560
+Father index ptr: 1
+Elements: 2
+0x1646460:  3777  3785  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646a30
+Father index ptr: 0
+0x1646850:  3793  3797  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646a30
+Father index ptr: 1
+0x1646940:  3801  3805  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646a30
+Father index ptr: 2
+0x1646b30:  3809  3813  
+
+Level: 6
+Node!!
+Father: 0x1646560
+Father index ptr: 2
+Elements: 2
+0x1646a30:  3801  3809  
+
+Level: 5
+Node!!
+Father: 0x1646660
+Father index ptr: 1
+Elements: 2
+0x1646560:  3769  3793  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646e00
+Father index ptr: 0
+0x1646c20:  3817  3821  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646e00
+Father index ptr: 1
+0x1646d10:  3825  3829  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1646e00
+Father index ptr: 2
+0x1646f00:  3833  3837  
+
+Level: 6
+Node!!
+Father: 0x16472d0
+Father index ptr: 0
+Elements: 2
+0x1646e00:  3825  3833  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16471d0
+Father index ptr: 0
+0x1646ff0:  3841  3845  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16471d0
+Father index ptr: 1
+0x16470e0:  3849  3853  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16471d0
+Father index ptr: 2
+0x16473d0:  3857  3861  
+
+Level: 6
+Node!!
+Father: 0x16472d0
+Father index ptr: 1
+Elements: 2
+0x16471d0:  3849  3857  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16476a0
+Father index ptr: 0
+0x16474c0:  3865  3869  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16476a0
+Father index ptr: 1
+0x16475b0:  3873  3877  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16476a0
+Father index ptr: 2
+0x16477a0:  3881  3885  
+
+Level: 6
+Node!!
+Father: 0x16472d0
+Father index ptr: 2
+Elements: 2
+0x16476a0:  3873  3881  
+
+Level: 5
+Node!!
+Father: 0x1646660
+Father index ptr: 2
+Elements: 2
+0x16472d0:  3841  3865  
+
+Level: 4
+Node!!
+Father: 0x1644010
+Father index ptr: 2
+Elements: 2
+0x1646660:  3745  3817  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1647a70
+Father index ptr: 0
+0x1647890:  3889  3893  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1647a70
+Father index ptr: 1
+0x1647980:  3897  3901  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1647a70
+Father index ptr: 2
+0x1647b70:  3905  3909  
+
+Level: 6
+Node!!
+Father: 0x1647f40
+Father index ptr: 0
+Elements: 2
+0x1647a70:  3897  3905  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1647e40
+Father index ptr: 0
+0x1647c60:  3913  3917  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1647e40
+Father index ptr: 1
+0x1647d50:  3921  3925  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1647e40
+Father index ptr: 2
+0x1648040:  3929  3933  
+
+Level: 6
+Node!!
+Father: 0x1647f40
+Father index ptr: 1
+Elements: 2
+0x1647e40:  3921  3929  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1648310
+Father index ptr: 0
+0x1648130:  3937  3941  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1648310
+Father index ptr: 1
+0x1648220:  3945  3949  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1648310
+Father index ptr: 2
+0x1648410:  3953  3957  
+
+Level: 6
+Node!!
+Father: 0x1647f40
+Father index ptr: 2
+Elements: 2
+0x1648310:  3945  3953  
+
+Level: 5
+Node!!
+Father: 0x1648cb0
+Father index ptr: 0
+Elements: 2
+0x1647f40:  3913  3937  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16486e0
+Father index ptr: 0
+0x1648500:  3961  3965  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16486e0
+Father index ptr: 1
+0x16485f0:  3969  3973  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x16486e0
+Father index ptr: 2
+0x16487e0:  3977  3981  
+
+Level: 6
+Node!!
+Father: 0x1648bb0
+Father index ptr: 0
+Elements: 2
+0x16486e0:  3969  3977  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1648ab0
+Father index ptr: 0
+0x16488d0:  3985  3989  
+
+Leaf!!
+Elements: 2
+Level: 7
+Father: 0x1648ab0
+Father index ptr: 1
+0x16489c0:  3993  3997  
+
+Level: 6
+Node!!
+Father: 0x1648bb0
+Father index ptr: 1
+Elements: 1
+0x1648ab0:  3993  
+
+Level: 5
+Node!!
+Father: 0x1648cb0
+Father index ptr: 1
+Elements: 1
+0x1648bb0:  3985  
+
+Level: 4
+Node!!
+Father: 0x1644010
+Father index ptr: 3
+Elements: 1
+0x1648cb0:  3961  
+
+Level: 3
+Node!!
+Father: 0x163cb80
+Father index ptr: 2
+Elements: 3
+0x1644010:  3457  3673  3889  
+
+Level: 2
+Node!!
+Father: 0x163cc20
+Father index ptr: 1
+Elements: 2
+0x163cb80:  2593  3241  
+
+Level: 1
+Root: 
+Elements: 1
+0x163cc20:  1945  
+
+rm main
