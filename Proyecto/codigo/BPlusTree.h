@@ -467,10 +467,10 @@ class BPlusTree {
 
     void find (int key) {
         auxFind(key, this->root);
-        if (!auxFind(key, this->root))
-            cout << key << " Was NOT found!!!" << endl;
-        else
-            cout << key << " Was found!!!" << endl;
+        // if (!auxFind(key, this->root))
+        //     cout << key << " Was NOT found!!!" << endl;
+        // else
+        //     cout << key << " Was found!!!" << endl;
     }
 
     bool auxFind (int key, Node<Data>* node) {
