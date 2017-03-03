@@ -8,22 +8,18 @@ using namespace std;
 template <typename Data>
 class Node {
 public:
-    Node<Data>* next;
     int elements;
     int order;
     int isLeaf;
     int* arrayKeys;
     Node<Data>** arrayPtrs;
     Node<Data>* father;
-    Node<Data>* right;
-
 
     Node() {
         order = 0;
         this->father = nullptr;
         this->arrayKeys = nullptr;
         this->arrayPtrs = nullptr;
-        right = nullptr;
         isLeaf = 0;
         this->elements = 0;
     }
@@ -53,8 +49,6 @@ public:
     virtual ~Node() {
         delete[] arrayKeys;
         delete[] arrayPtrs;
-        delete father;
-        delete right;
     }
 
 };
