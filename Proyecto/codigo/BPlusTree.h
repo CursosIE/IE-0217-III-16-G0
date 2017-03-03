@@ -15,6 +15,7 @@ class BPlusTree {
     Node<Data>* root;
     int levels;
     int order;
+    int treeElements;
 
    public:
 
@@ -22,11 +23,13 @@ class BPlusTree {
         root = nullptr;
         this->levels = 0;
         this->order = 0;
+        this->treeElements = 0;
     }
 
     BPlusTree(int order) {
         this->levels = 0;
         this->order = order;
+        this->treeElements = 0;
         this->root = new Leaf<Data>(order);
     }
 
@@ -54,12 +57,15 @@ class BPlusTree {
 
     void auxInsertAk7 (int key, Node<Data>* node) {
         if(node->isLeaf == 1){ //pregunto si es una HOJA
+            //if (!isRepeated(node, key)) {
             if (node->elements < this->order) { //caso en que haya campo en la hoja
                 node->arrayKeys[node->elements] = key;
                 node->elements += 1;
+                this->treeElements += 1;
                 sort(node->arrayKeys, node->elements);
             }
             else {
+                this->treeElements += 1;
                 splitAk7(node, key, nullptr, nullptr);
             }
         }
@@ -67,6 +73,15 @@ class BPlusTree {
             //cout << "pointerToGo: " << pointerToGo(key, node) << endl;
             auxInsertAk7(key, node->arrayPtrs[pointerToGo(key, node)]);
         }
+        //}
+    }
+
+    bool isRepeated(Node<Data>* node, int key) {
+        for (int index =0; index < node->elements; ++index) {
+            if (node->arrayKeys[index] == key)
+                return true;
+        }
+        return false;
     }
 
     void splitAk7 (Node<Data>* node, int key, Node<Data>* oldSon, Node<Data>* newSon) {
@@ -415,18 +430,18 @@ class BPlusTree {
     }
 
     void sortWithMinusOne(int* array, int size) {
-    	int temp = 0;
-    	for (int index = 0; index < size; index++) {
-    		if(array[index] == -1) {
-    			temp = index;
-    			for (int indexMove = index; indexMove < size - 1; indexMove++) {
-    				temp = array[indexMove + 1];
-    				array[indexMove + 1] = array[indexMove];
-    				array[indexMove] = temp;
-    			}
-    			break;
-    		}
-    	}
+        int temp = 0;
+        for (int index = 0; index < size; index++) {
+            if(array[index] == -1) {
+                temp = index;
+                for (int indexMove = index; indexMove < size - 1; indexMove++) {
+                    temp = array[indexMove + 1];
+                    array[indexMove + 1] = array[indexMove];
+                    array[indexMove] = temp;
+                }
+                break;
+            }
+        }
     }
 
     void printTree () {
@@ -469,12 +484,9 @@ class BPlusTree {
         }
     }
 
-    void find (int key) {
-        auxFind(key, this->root);
-        // if (!auxFind(key, this->root))
-        //     cout << key << " Was NOT found!!!" << endl;
-        // else
-        //     cout << key << " Was found!!!" << endl;
+    bool find (int key) {
+        // auxFind(key, this->root);
+        return auxFind(key, this->root);
     }
 
     bool auxFind (int key, Node<Data>* node) {
