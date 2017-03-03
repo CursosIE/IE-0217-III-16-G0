@@ -31,7 +31,21 @@ class BPlusTree {
     }
 
     virtual ~BPlusTree() {
+        auxDestructor(this->root);
         delete root;
+    }
+
+    void auxDestructor (Node<Data>* node) {
+        for (int index = 0; index < node->elements; ++index) {
+            if(node->arrayPtrs[index] != nullptr){
+                if (node->arrayPtrs[index]->isLeaf)
+                    delete node->arrayPtrs[index];
+                else {
+                    auxDestructor(node->arrayPtrs[index]);
+                    delete node->arrayPtrs[index];
+                }
+            }   
+        }
     }
 
     void insertAk7 (int key) {
@@ -96,6 +110,7 @@ class BPlusTree {
             newNode->father = node->father;
 
         //asignamos las keys correctas a los nodos
+        delete[] node->arrayKeys;
         node->arrayKeys = leftSplit;
         newNode->arrayKeys = rightSplit;
 
@@ -136,6 +151,7 @@ class BPlusTree {
             //cout << "antes del if" << endl;
             if(node->father->elements < this->order){
                 node->father->arrayKeys[node->father->elements] = arrayToSplit[(int)floor((this->order + 1) / 2)];
+                delete[] arrayToSplit;
                 node->father->elements += 1;
                 //cout << node->father->arrayKeys << endl;
                 //cout << node->father->arrayPtrs << endl;
