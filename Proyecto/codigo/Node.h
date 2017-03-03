@@ -16,7 +16,7 @@ public:
     Node<Data>** arrayPtrs;
     Node<Data>* father;
     Node<Data>* right;
-    
+
 
     Node() {
         order = 0;
@@ -53,6 +53,8 @@ public:
     virtual ~Node() {
         delete[] arrayKeys;
         delete[] arrayPtrs;
+        delete father;
+        delete right;
     }
 
 };
