@@ -332,13 +332,18 @@ class BPlusTree {
             for(int index = 0; index < node->elements; index++) {
                 if(node->arrayKeys[index] == key) {
                     if(node->elements-1 > this->order/2) {
-                        node->arrayKeys[index] == -1;
+                        node->arrayKeys[index] = -1;
                         sortWithMinusOne(node->arrayKeys, this->order);
+                        node->elements -= 1;
                         if(index == 0)
                             deleteFromFather(node->father, key, node->arrayKeys[0]);
                         break;
                     } else {
-                        merge(key, node);
+                        Node<Data>* Sibling = findMySibling(node, node->arrayKeys[0]);
+                        if(Sibling->elements - 1 > this->order/2)
+                            keyFromSibling(key, node, Sibling);
+                        else
+                            merge(key, node);
                     }
                 }
             }
@@ -346,22 +351,21 @@ class BPlusTree {
     }
 
     void merge(int key, Node<Data>* node) {
-        Node<Data>* Sibling = findMySibling(node, node->arrayKeys[0]);
 
-        //Reviso si mi hermano tiene elementos de sobra y le quito el mayor.
-        //Borro el key que.
-        //Ordeno.
-        //Actualizo los valores de los keys hacia arriba.
-        if(Sibling->elements - 1 > this->order/2) {
+    }
+
+    void keyFromSibling(int key, Node<Data>* node, Node<Data>* Sibling) {
             int siblingKey = Sibling->arrayKeys[Sibling->elements - 1];
+            Sibling->arrayKeys[Sibling->elements - 1] = -1;
+            Sibling->elements -= 1;
             for (int index = 0; index < node->elements; index++) {
                 if(node->arrayKeys[index] == key) {
-                    node->arrayKeys[index] == siblingKey;
+                    int tempKey = node->arrayKeys[0];
+                    node->arrayKeys[index] = siblingKey;
                     sort(node->arrayKeys, this->order);
+                    deleteFromFather(node->father, tempKey, node->arrayKeys[0]);
                 }
             }
-        }
-        
     }
 
     Node<Data>* findMySibling(Node<Data>* node, int key) {
@@ -369,8 +373,8 @@ class BPlusTree {
             Node<Data>* fatherSibling;
 
             for (int index = 0; index < node->father->elements; index++) {
-                if(node->father->arrayKeys(index) == key)
-                    return node->father->arrayPtrs(index);
+                if(node->father->arrayKeys[index] == key)
+                    return node->father->arrayPtrs[index];
             }
 
             fatherSibling = findMySibling(node->father, key);
