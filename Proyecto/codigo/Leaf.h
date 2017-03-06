@@ -1,3 +1,12 @@
+/**
+*@file Node.h
+*@version 1.0
+*@date 6/03/17
+*@author Luis Diego Fernandez, Daniel Jimenez
+*@title Arbol B+
+*@brief Clase Hoja 
+*/
+
 #ifndef LEAF_H
 #define LEAF_H
 
@@ -5,14 +14,16 @@
 
 #include "Node.h"
 using namespace std;
-//BST node
 
+//se crea la clase como una plantilla
 template <typename Data>
 class Leaf : public Node<Data> {
 public:
 
-    Data* arrayData;
+    Data* arrayData; //arreglo de datos
 
+    /*! \brief Constructor por defecto.
+     */
     Leaf() {
         this->father = nullptr;
         this->order = 0;
@@ -22,6 +33,8 @@ public:
         this->isLeaf = 1;
     }
 
+    /*! \brief Constructor para crear una Hoja de un tamanno pre establecido.
+     */
     Leaf(int order) {
         this->father = nullptr;
         this->isLeaf = 1;
@@ -33,6 +46,8 @@ public:
                 this->arrayKeys[index] = -1;
     }
 
+    /*! \brief Constructor por copia.
+     */
     Leaf(int order, Node<Data>* father) {
         this->father = father;
         this->isLeaf = 1;
@@ -42,6 +57,8 @@ public:
         this->arrayData = new Data[order];
     }
 
+    /*! \brief Destructor.
+     */
     virtual ~Leaf() {
         delete[] this->arrayKeys;
         delete[] this->arrayData;
