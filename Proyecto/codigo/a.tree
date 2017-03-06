@@ -1,74 +1,41 @@
 g++ -std=c++11 -o main *.cpp -Wall
 ./main
-Leaf!!
-Elements: 3
-Level: 3
-Father: 0x21261a0
-Father index ptr: 0
-0x2126040:  1  3  21  
+First tree: 
+Finding number 1932...
+Number 1932 was found!!
 
-Leaf!!
-Elements: 2
-Level: 3
-Father: 0x21261a0
-Father index ptr: 1
-0x21263b0:  29  35  
+Finding number 9829552...
+Number 9829552 was NOT found!!
 
-Leaf!!
-Elements: 3
-Level: 3
-Father: 0x2126470
-Father index ptr: 2
-0x2126120:  44  55  61  
+Finding number 783015...
+Number 783015 was found!!
 
-Level: 2
-Node!!
-Father: 0x2126500
-Father index ptr: 0
-Elements: 2
-0x21261a0:  29  44  
 
-Leaf!!
-Elements: 3
-Level: 3
-Father: 0x2126470
-Father index ptr: 0
-0x2126120:  44  55  61  
+Second tree: 
+Finding number 1932...
+Number 1932 was found!!
+Finding time: 3 µs.
 
-Leaf!!
-Elements: 2
-Level: 3
-Father: 0x2126470
-Father index ptr: 1
-0x21265d0:  73  82  
+Finding number 9829552...
+Number 9829552 was NOT found!!
+Finding time: 2 µs.
 
-Leaf!!
-Elements: 2
-Level: 3
-Father: 0x2126470
-Father index ptr: 2
-0x2126310:  150  201  
+Finding number 783015...
+Number 783015 was found!!
+Finding time: 2 µs.
 
-Leaf!!
-Elements: 2
-Level: 3
-Father: 0x2126470
-Father index ptr: 3
-0x2126670:  277  300  
-
-Level: 2
-Node!!
-Father: 0x2126500
-Father index ptr: 1
-Elements: 3
-0x2126470:  73  150  277  
-
-Level: 1
-Root: 
-Elements: 1
-0x2126500:  88  
-
+First tree:
 Order: 3
-Elements: 16
-Levels: 2
+Elements: 1000000
+Levels: 12
+
+Second tree:
+Order: 50
+Elements: 1000000
+Levels: 4
+
+
+First tree insrtion time: 491ms
+
+Second tree insrtion time: 2859ms
 rm main
