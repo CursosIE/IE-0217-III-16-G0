@@ -1,3 +1,12 @@
+/**
+*@file Node.h
+*@version 1.0
+*@date 6/03/17
+*@author Luis Diego Fernandez, Daniel Jimenez
+*@title Arbol B+
+*@brief Clase main
+*/
+
 #include <cmath>
 #include <cstdlib>
 #include <iostream>
@@ -10,57 +19,56 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
-	//prueba 1, 16 entradas
-	// int order = 3;
-	// int n = 10;
-	// BPlusTree<Data>* tree = new BPlusTree<Data>(order);
+	// PRUEBA 1, 17 entradas
+	int order = 3; 
+	BPlusTree<Data>* tree = new BPlusTree<Data>(order); 
 
-	// tree->insertAk7(1);
-	// tree->insertAk7(3);
-	// tree->insertAk7(21);
-	// tree->insertAk7(29);
-	// tree->insertAk7(35);
-	// tree->insertAk7(44);
-	// tree->insertAk7(55);
-	// tree->insertAk7(61);
-	// tree->insertAk7(73);
-	// tree->insertAk7(82);
-	// tree->insertAk7(88);
-	// tree->insertAk7(111);
-	// tree->insertAk7(150);
-	// tree->insertAk7(201);
-	// tree->insertAk7(277);
-	// tree->insertAk7(288);
-	// tree->insertAk7(300);
+	tree->insertAk7(1);
+	tree->insertAk7(3);
+	tree->insertAk7(21);
+	tree->insertAk7(29);
+	tree->insertAk7(35);
+	tree->insertAk7(44);
+	tree->insertAk7(55);
+	tree->insertAk7(61);
+	tree->insertAk7(73);
+	tree->insertAk7(82);
+	tree->insertAk7(88);
+	tree->insertAk7(111);
+	tree->insertAk7(150);
+	tree->insertAk7(201);
+	tree->insertAk7(277);
+	tree->insertAk7(288);
+	tree->insertAk7(300);
+
+	tree->printTree();
+
+	cout << "Finding number 288..." << endl;
+	if (tree->find(288))
+		cout << "Number 288 was found!!" << endl;
+	else
+		cout << "Number 288 was NOT found!!" << endl;
+
+	cout << "\n//////////\n" << endl;
+
+	tree->deleteAk7(288);
+
+	tree->printTree();
+
+	cout << "Finding number 288..." << endl;
+	if (tree->find(288))
+		cout << "Number 288 was found!!" << endl;
+	else
+		cout << "Number 288 was NOT found!!" << endl;
 
 	// tree->printTree();
-
-	// cout << "Finding number 288..." << endl;
-	// if (tree->find(288))
-	// 	cout << "Number 288 was found!!" << endl;
-	// else
-	// 	cout << "Number 288 was NOT found!!" << endl;
-
-	// cout << "\n//////////\n" << endl;
-
-	// tree->deleteAk7(288);
-
-	// tree->printTree();
-
-	// cout << "Finding number 288..." << endl;
-	// if (tree->find(288))
-	// 	cout << "Number 288 was found!!" << endl;
-	// else
-	// 	cout << "Number 288 was NOT found!!" << endl;
-
-	// // tree->printTree();
-	// cout << endl;
-	// cout << "Order: " << order << endl;
-	// cout << "Elements: " << tree->treeElements << endl;
-	// cout << "Levels: " << tree->levels << endl;
+	cout << endl;
+	cout << "Order: " << order << endl;
+	cout << "Elements: " << tree->treeElements << endl;
+	cout << "Levels: " << tree->levels << endl;
 
 
-	//prueba 2 insercion de 1 millon de numeros e impresion
+	// PRUEBA 2 insercion de 1 millon de numeros e impresion
 	// int order = 3;
 	// BPlusTree<Data>* tree = new BPlusTree<Data>(order);
 	// clock_t beginInsert1 = clock();
