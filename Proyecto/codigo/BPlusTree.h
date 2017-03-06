@@ -67,7 +67,7 @@ class BPlusTree {
                     auxDestructor(node->arrayPtrs[index]);
                     delete node->arrayPtrs[index];
                 }
-            }   
+            }
         }
     }
 
@@ -93,7 +93,7 @@ class BPlusTree {
                 sort(node->arrayKeys, node->elements); //ordeno el nodo
             }
             else {
-                this->treeElements += 1; //aumento la cantidad de elementos del arobl en 1, xq al entrar aqui va a insertar 
+                this->treeElements += 1; //aumento la cantidad de elementos del arobl en 1, xq al entrar aqui va a insertar
                 splitAk7(node, key, nullptr, nullptr); //divido el nodo
             }
         }
@@ -117,7 +117,7 @@ class BPlusTree {
 
         Node<Data>* newNode; //nuevo nodo que se crea
 
-        //se llenan los vectores de -1 por control, porque por se un dato primitivo 
+        //se llenan los vectores de -1 por control, porque por se un dato primitivo
         //no se pueden llenar de nulos o.O
         for (int index = 0; index < this->order; ++ index) {
             leftSplit[index] = -1;
@@ -157,7 +157,7 @@ class BPlusTree {
         node->elements = amountElements(node->arrayKeys, this->order);
         newNode->elements = amountElements(newNode->arrayKeys, this->order);
 
-        if(node->isLeaf == 0) { 
+        if(node->isLeaf == 0) {
             //arreglar los punteros hacia abajo
             assignDownwardPtrs(node, newNode, oldSon, newSon, key);
             //asignar padres correctamente
@@ -165,15 +165,15 @@ class BPlusTree {
             fatherPtrs(newNode);
         }
 
-        //en caso de que el nodo dividido fuer la raiz hay que trabajarla un poco 
+        //en caso de que el nodo dividido fuer la raiz hay que trabajarla un poco
         if(node == this->root) {
             this->levels += 1; //aumentar la cantidad de niveles del arbol en 1
             Node<Data>* newRoot = new Node<Data>(this->order); //crear una nuveva raiz
 
             newRoot->arrayKeys[0] = arrayToSplit[(int)floor((this->order + 1) / 2)]; //meterle la llave correspondiente
-            newRoot->elements += 1; 
+            newRoot->elements += 1;
             //ponerle los hijos
-            newRoot->arrayPtrs[0] = node; 
+            newRoot->arrayPtrs[0] = node;
             newRoot->arrayPtrs[1] = newNode;
 
             this->root = newRoot; //decirle que es la raiz
@@ -213,7 +213,7 @@ class BPlusTree {
      *  \return Arreglo de enteros que hay que dividir.
      */
     int* arrayToSplitFunc(Node<Data>* node, int key) {
-        int* array = new int[this->order + 1]; //crea un arreglo con un campo para una llave mas 
+        int* array = new int[this->order + 1]; //crea un arreglo con un campo para una llave mas
         //agrega la llave al final del arreglo de llaves del nodo
         for (int index = 0; index < this->order + 1; ++index) {
             if (index < order)
@@ -221,7 +221,7 @@ class BPlusTree {
             else
                 array[index] = key;
         }
-        sort(array, order + 1); //ordena el arreglo 
+        sort(array, order + 1); //ordena el arreglo
         return array;
     }
 
@@ -411,14 +411,14 @@ class BPlusTree {
     }
 
     /*! \brief Metodo que elimina un dato del arbol.
-     *  \param key Llave que se va a eliminar. 
+     *  \param key Llave que se va a eliminar.
      */
     void deleteAk7(int key) {
         auxDelete(key, this->root);
     }
 
     /*! \brief Metodo auxiliar que elimina un dato del arbol.
-     *  \param key Llave que se va a eliminar. 
+     *  \param key Llave que se va a eliminar.
      *  \param node Nodo en el que se verifica si la llave esta para eliminar.
      */
     void auxDelete(int key, Node<Data>* node) {
@@ -426,56 +426,66 @@ class BPlusTree {
             auxDelete(key, node->arrayPtrs[pointerToGo(key, node)]);
         else {
             for(int index = 0; index < node->elements; index++) {
-                if(node->arrayKeys[index] == key) {
-                    if(node->elements-1 > this->order/2) {
+                if(node->arrayKeys[index] == key) { //Reviso si la llave esta en el arbol, si no esta sale de la funcion.
+                    if(node->elements-1 > this->order/2) { //Reviso si al eliminar la llave no queda el nodo/hoja desbalanceado.
                         node->arrayKeys[index] = -1;
-                        sortWithMinusOne(node->arrayKeys, this->order);
-                        node->elements -= 1;
-                        if(index == 0)
+                        sortWithMinusOne(node->arrayKeys, this->order); //Ordeno el arreglo que queda.
+                        node->elements -= 1; //Bajo los elementos.
+                        if(index == 0) //Si elimine el primer elemento lo elimino del padre.
                             deleteFromFather(node->father, key, node->arrayKeys[0]);
                         break;
-                    } else {
+                    } else { //Si no puedo simplemente eliminar la llave del arbol, reviso si tengo que hacer un merge o puedo pedir al hermano.
                         Node<Data>* Sibling = findMySibling(node, node->arrayKeys[0]);
                         if(Sibling->elements - 1 > this->order/2)
                             keyFromSibling(key, node, Sibling);
                         else
-                            merge(key, node);
+                            merge(key);
                     }
                 }
             }
         }
     }
 
-
-    void merge(int key, Node<Data>* node) {
-
+    /*! \brief Metodo para unir dos nodos u hojas.
+     *  \param key Llave que se va a eliminar.*/
+    void merge(int key) {
+            //Por falta de tiempo no se logro implementar.
     }
 
-
+    /*! \brief Metodo que busca el elemento del hermano a obtener y lo coloca en el nodo en cuestion.
+     *  \param key Llave que se va a eliminar.
+     *  \param node Nodo en el que se encuentra la llave.
+     *  \param Sibling Nodo hermano del cual se tomara la llave.
+     */
     void keyFromSibling(int key, Node<Data>* node, Node<Data>* Sibling) {
             int siblingKey = Sibling->arrayKeys[Sibling->elements - 1];
             Sibling->arrayKeys[Sibling->elements - 1] = -1;
             Sibling->elements -= 1;
             for (int index = 0; index < node->elements; index++) {
-                if(node->arrayKeys[index] == key) {
+                if(node->arrayKeys[index] == key) { //Busco la posicion donde esta la llave que quiero eliminar y pongo ahi la llave le hermano.
                     int tempKey = node->arrayKeys[0];
                     node->arrayKeys[index] = siblingKey;
-                    sort(node->arrayKeys, this->order);
-                    deleteFromFather(node->father, tempKey, node->arrayKeys[0]);
+                    sort(node->arrayKeys, this->order); //Ordeno el arreglo
+                    deleteFromFather(node->father, tempKey, node->arrayKeys[0]); //Elimino la llave y actulizo los valores del padre.
                 }
             }
     }
 
+    /*! \brief Metodo que devuelve el nodo hermano.
+     *  \param key Llave que se va a eliminar.
+     *  \param node Nodo en el que se busca al hermano.
+     *  \return Nodo hermano.
+     */
     Node<Data>* findMySibling(Node<Data>* node, int key) {
-        if(this->root != node){
+        if(this->root != node){ //Debo buscar siempre y cuando no sea root.
             Node<Data>* fatherSibling;
 
-            for (int index = 0; index < node->father->elements; index++) {
+            for (int index = 0; index < node->father->elements; index++) { //Busco en el padre la llave que quiero eliminar.
                 if(node->father->arrayKeys[index] == key)
-                    return node->father->arrayPtrs[index];
+                    return node->father->arrayPtrs[index]; //Si la encuentro retorno el nodo apuntado por el index en el vector de punteros.
             }
 
-            fatherSibling = findMySibling(node->father, key);
+            fatherSibling = findMySibling(node->father, key); //Si no lo encuentro vuelvo a llamar la funcion con el padre del nodo.
 
             if(fatherSibling != nullptr)
                 return fatherSibling->arrayPtrs[fatherSibling->elements];
@@ -485,23 +495,33 @@ class BPlusTree {
             return nullptr;
     }
 
+    /*! \brief Metodo que borra la llave del padre.
+     *  \param key Llave que se va a eliminar.
+     *  \param newKey Llave con la cual debe ser remplazada la eliminada.
+     *  \param node Nodo en el cual debe de buscar la llave.
+     */
     void deleteFromFather(Node<Data>* node, int key, int newKey) {
         for(int index = 0; index < node->elements; index++) {
-            if(node->arrayKeys[index] == key) {
+            if(node->arrayKeys[index] == key) {//Cuando encuentra la llave la remplaza por la nueva.
                 node->arrayKeys[index] = newKey;
                 return;
             }
         }
-        if(this->root != node)
+        if(this->root != node) //Si no encontre la llave y aun no he llegado al root busco en el padre de node.
             deleteFromFather(node->father, key, newKey);
     }
 
+
+    /*! \brief Metodo para ordenar un arreglo con un menos uno entre las llaves.
+     *  \param array Arreglo a ordenar.
+     *  \param size Tamaño del arreglo.
+     */
     void sortWithMinusOne(int* array, int size) {
         int temp = 0;
         for (int index = 0; index < size; index++) {
-            if(array[index] == -1) {
+            if(array[index] == -1) { //Busco la posicion del menos 1.
                 temp = index;
-                for (int indexMove = index; indexMove < size - 1; indexMove++) {
+                for (int indexMove = index; indexMove < size - 1; indexMove++) {//Al econtrarla muevo todos los valores hacia atras un espacio, para dejar el menos uno al final.
                     temp = array[indexMove + 1];
                     array[indexMove + 1] = array[indexMove];
                     array[indexMove] = temp;
