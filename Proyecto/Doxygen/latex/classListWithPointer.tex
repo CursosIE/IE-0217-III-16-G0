@@ -1,0 +1,254 @@
+\hypertarget{classListWithPointer}{}\section{List\+With\+Pointer$<$ D, P $>$ Class Template Reference}
+\label{classListWithPointer}\index{List\+With\+Pointer$<$ D, P $>$@{List\+With\+Pointer$<$ D, P $>$}}
+
+
+{\ttfamily \#include $<$List\+With\+Pointer.\+h$>$}
+
+
+
+Inheritance diagram for List\+With\+Pointer$<$ D, P $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classListWithPointer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for List\+With\+Pointer$<$ D, P $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classListWithPointer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classListWithPointer_a53b1284b13bf834bc5fc1eb27368a283}{List\+With\+Pointer} ()
+\item 
+virtual \hyperlink{classListWithPointer_ac0567286c62e3521fa5130f95010e779}{$\sim$\+List\+With\+Pointer} ()
+\item 
+void \hyperlink{classListWithPointer_a726958a731ead3b407d68a7e5a0bce54}{insert} (D data)
+\item 
+void \hyperlink{classListWithPointer_ab69e83d9e92619be09f9d8dde3e6cad0}{remove} (D data)
+\item 
+P \hyperlink{classListWithPointer_a2bb95a28a394bffd52a7f962cdde14dd}{find} (D data)
+\item 
+D \& \hyperlink{classListWithPointer_af2892238e8faed0b98d2473419a91f62}{get} (P \&cell)
+\item 
+int \hyperlink{classListWithPointer_ac70c49b5703887fd867e90cdac3c706f}{get\+Size} ()
+\item 
+void \hyperlink{classListWithPointer_a7079b5f1dbddb87a7e33ffc71ebb7b92}{print\+List} ()
+\item 
+P \& \hyperlink{classListWithPointer_a3aec82866e03a1f37175c4b0976eeb47}{next} (P \&cell)
+\item 
+P \hyperlink{classListWithPointer_ab3b37e6a31e0837884b91df6da682cc8}{prev} (P cell)
+\item 
+void \hyperlink{classListWithPointer_aec4f5374971962c79d397bbcd0080199}{empty\+List} ()
+\item 
+void \hyperlink{classListWithPointer_a0727a8a01df92681f13a74acd8dc2247}{erase} (P $\ast$k)
+\item 
+void \hyperlink{classListWithPointer_a5703464a7cd48d871e3bb04562a3d351}{assign} (P \&k, D d)
+\item 
+void \hyperlink{classListWithPointer_ab9cc0d6da9b9e1d40bb57c664a6477cd}{test\+Assign} ()
+\item 
+void \hyperlink{classListWithPointer_aa46631b2da29895d1f767626fb591bc8}{sort} ()
+\item 
+D \hyperlink{classListWithPointer_a6b404e952a0b924fc60f7d576a368421}{get\+Last} ()
+\item 
+D \hyperlink{classListWithPointer_a3fa92037b76b6fd3fb8c9702244eb7fb}{get\+Data\+Pos} (int pos)
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+P $\ast$ \hyperlink{classListWithPointer_a4d39ded7ea1ef992576f70a933414e12}{first}
+\item 
+P $\ast$ \hyperlink{classListWithPointer_a639d3b9eba9d217b59b19aaa59b291a7}{last}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{List\+With\+Pointer@{List\+With\+Pointer}!List\+With\+Pointer@{List\+With\+Pointer}}
+\index{List\+With\+Pointer@{List\+With\+Pointer}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{List\+With\+Pointer()}{ListWithPointer()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf List\+With\+Pointer}$<$ D, P $>$\+::{\bf List\+With\+Pointer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classListWithPointer_a53b1284b13bf834bc5fc1eb27368a283}{}\label{classListWithPointer_a53b1284b13bf834bc5fc1eb27368a283}
+\index{List\+With\+Pointer@{List\+With\+Pointer}!````~List\+With\+Pointer@{$\sim$\+List\+With\+Pointer}}
+\index{````~List\+With\+Pointer@{$\sim$\+List\+With\+Pointer}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{$\sim$\+List\+With\+Pointer()}{~ListWithPointer()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual {\bf List\+With\+Pointer}$<$ D, P $>$\+::$\sim${\bf List\+With\+Pointer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_ac0567286c62e3521fa5130f95010e779}{}\label{classListWithPointer_ac0567286c62e3521fa5130f95010e779}
+
+
+\subsection{Member Function Documentation}
+\index{List\+With\+Pointer@{List\+With\+Pointer}!assign@{assign}}
+\index{assign@{assign}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{assign(\+P \&k, D d)}{assign(P &k, D d)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Pointer}$<$ D, P $>$\+::assign (
+\begin{DoxyParamCaption}
+\item[{P \&}]{k, }
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_a5703464a7cd48d871e3bb04562a3d351}{}\label{classListWithPointer_a5703464a7cd48d871e3bb04562a3d351}
+
+
+Implements \hyperlink{classList_a413440e7e102c944bec31ad5dce30b27}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!empty\+List@{empty\+List}}
+\index{empty\+List@{empty\+List}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{empty\+List()}{emptyList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Pointer}$<$ D, P $>$\+::empty\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_aec4f5374971962c79d397bbcd0080199}{}\label{classListWithPointer_aec4f5374971962c79d397bbcd0080199}
+
+
+Implements \hyperlink{classList_a24b4f177a70215980e81ef7b2981fa1e}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!erase@{erase}}
+\index{erase@{erase}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{erase(\+P $\ast$k)}{erase(P *k)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Pointer}$<$ D, P $>$\+::erase (
+\begin{DoxyParamCaption}
+\item[{P $\ast$}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classListWithPointer_a0727a8a01df92681f13a74acd8dc2247}{}\label{classListWithPointer_a0727a8a01df92681f13a74acd8dc2247}
+\index{List\+With\+Pointer@{List\+With\+Pointer}!find@{find}}
+\index{find@{find}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{find(\+D data)}{find(D data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P {\bf List\+With\+Pointer}$<$ D, P $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{D}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_a2bb95a28a394bffd52a7f962cdde14dd}{}\label{classListWithPointer_a2bb95a28a394bffd52a7f962cdde14dd}
+
+
+Implements \hyperlink{classList_a2b40d6fffc7b2fb5138b648f52c839ee}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!get@{get}}
+\index{get@{get}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{get(\+P \&cell)}{get(P &cell)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ D\& {\bf List\+With\+Pointer}$<$ D, P $>$\+::get (
+\begin{DoxyParamCaption}
+\item[{P \&}]{cell}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_af2892238e8faed0b98d2473419a91f62}{}\label{classListWithPointer_af2892238e8faed0b98d2473419a91f62}
+
+
+Implements \hyperlink{classList_afb5a777f30a186adce69028c387bf413}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!get\+Data\+Pos@{get\+Data\+Pos}}
+\index{get\+Data\+Pos@{get\+Data\+Pos}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{get\+Data\+Pos(int pos)}{getDataPos(int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ D {\bf List\+With\+Pointer}$<$ D, P $>$\+::get\+Data\+Pos (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classListWithPointer_a3fa92037b76b6fd3fb8c9702244eb7fb}{}\label{classListWithPointer_a3fa92037b76b6fd3fb8c9702244eb7fb}
+\index{List\+With\+Pointer@{List\+With\+Pointer}!get\+Last@{get\+Last}}
+\index{get\+Last@{get\+Last}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{get\+Last()}{getLast()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ D {\bf List\+With\+Pointer}$<$ D, P $>$\+::get\+Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classListWithPointer_a6b404e952a0b924fc60f7d576a368421}{}\label{classListWithPointer_a6b404e952a0b924fc60f7d576a368421}
+\index{List\+With\+Pointer@{List\+With\+Pointer}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{get\+Size()}{getSize()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ int {\bf List\+With\+Pointer}$<$ D, P $>$\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_ac70c49b5703887fd867e90cdac3c706f}{}\label{classListWithPointer_ac70c49b5703887fd867e90cdac3c706f}
+
+
+Implements \hyperlink{classList_af213bbcf13ee436a0f04cde66e337672}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!insert@{insert}}
+\index{insert@{insert}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{insert(\+D data)}{insert(D data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Pointer}$<$ D, P $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{D}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_a726958a731ead3b407d68a7e5a0bce54}{}\label{classListWithPointer_a726958a731ead3b407d68a7e5a0bce54}
+
+
+Implements \hyperlink{classList_a01f588d87d47f8332928eca38f7b11bb}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!next@{next}}
+\index{next@{next}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{next(\+P \&cell)}{next(P &cell)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P\& {\bf List\+With\+Pointer}$<$ D, P $>$\+::next (
+\begin{DoxyParamCaption}
+\item[{P \&}]{cell}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_a3aec82866e03a1f37175c4b0976eeb47}{}\label{classListWithPointer_a3aec82866e03a1f37175c4b0976eeb47}
+
+
+Implements \hyperlink{classList_afa9ca2c678bc4f7d15ab0f4ab7c45421}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!prev@{prev}}
+\index{prev@{prev}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{prev(\+P cell)}{prev(P cell)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P {\bf List\+With\+Pointer}$<$ D, P $>$\+::prev (
+\begin{DoxyParamCaption}
+\item[{P}]{cell}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_ab3b37e6a31e0837884b91df6da682cc8}{}\label{classListWithPointer_ab3b37e6a31e0837884b91df6da682cc8}
+
+
+Implements \hyperlink{classList_acc1831ae92a288345ef20cb29f3846b2}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!print\+List@{print\+List}}
+\index{print\+List@{print\+List}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{print\+List()}{printList()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Pointer}$<$ D, P $>$\+::print\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_a7079b5f1dbddb87a7e33ffc71ebb7b92}{}\label{classListWithPointer_a7079b5f1dbddb87a7e33ffc71ebb7b92}
+
+
+Implements \hyperlink{classList_a8b34931e187e7e6b86aad86510ce4f3b}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!remove@{remove}}
+\index{remove@{remove}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{remove(\+D data)}{remove(D data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Pointer}$<$ D, P $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{D}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_ab69e83d9e92619be09f9d8dde3e6cad0}{}\label{classListWithPointer_ab69e83d9e92619be09f9d8dde3e6cad0}
+
+
+Implements \hyperlink{classList_a14fc4e853102018df78db3899aa00d71}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!sort@{sort}}
+\index{sort@{sort}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{sort()}{sort()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Pointer}$<$ D, P $>$\+::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classListWithPointer_aa46631b2da29895d1f767626fb591bc8}{}\label{classListWithPointer_aa46631b2da29895d1f767626fb591bc8}
+
+
+Implements \hyperlink{classList_ae3795939f27cf3e688cd470450e0c27a}{List$<$ D, P $>$}.
+
+\index{List\+With\+Pointer@{List\+With\+Pointer}!test\+Assign@{test\+Assign}}
+\index{test\+Assign@{test\+Assign}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{test\+Assign()}{testAssign()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ void {\bf List\+With\+Pointer}$<$ D, P $>$\+::test\+Assign (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classListWithPointer_ab9cc0d6da9b9e1d40bb57c664a6477cd}{}\label{classListWithPointer_ab9cc0d6da9b9e1d40bb57c664a6477cd}
+
+
+\subsection{Field Documentation}
+\index{List\+With\+Pointer@{List\+With\+Pointer}!first@{first}}
+\index{first@{first}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{first}{first}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P$\ast$ {\bf List\+With\+Pointer}$<$ D, P $>$\+::first}\hypertarget{classListWithPointer_a4d39ded7ea1ef992576f70a933414e12}{}\label{classListWithPointer_a4d39ded7ea1ef992576f70a933414e12}
+\index{List\+With\+Pointer@{List\+With\+Pointer}!last@{last}}
+\index{last@{last}!List\+With\+Pointer@{List\+With\+Pointer}}
+\subsubsection[{\texorpdfstring{last}{last}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ P$\ast$ {\bf List\+With\+Pointer}$<$ D, P $>$\+::last}\hypertarget{classListWithPointer_a639d3b9eba9d217b59b19aaa59b291a7}{}\label{classListWithPointer_a639d3b9eba9d217b59b19aaa59b291a7}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ListWithPointer_8h}{List\+With\+Pointer.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{classNode}{}\section{Node$<$ Data $>$ Class Template Reference}
+\label{classNode}\index{Node$<$ Data $>$@{Node$<$ Data $>$}}
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+
+
+Inheritance diagram for Node$<$ Data $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classNode__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode_a3e22ca89f75595b6020cfec6f05a8180}{Node} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\hyperlink{classNode_a69d52c1e2617398842a8fe1b009a16dd}{Node} (int \hyperlink{classNode_a672764de1b85ccfcb1c55429b5efbb1a}{order})
+\begin{DoxyCompactList}\small\item\em Constructor para crear un Nodo de un tamanno pre establecido. \end{DoxyCompactList}\item 
+\hyperlink{classNode_a0392b47c786821da7820c3a335cf9a21}{Node} (int \hyperlink{classNode_a672764de1b85ccfcb1c55429b5efbb1a}{order}, \hyperlink{classNode}{Node}$<$ \hyperlink{main_8cpp_a0c209e815d35b218025a240523b4335b}{Data} $>$ $\ast$\hyperlink{classNode_ab8b577c94add9ebf4392c82301bcc49e}{father})
+\begin{DoxyCompactList}\small\item\em Constructor por copia. \end{DoxyCompactList}\item 
+virtual \hyperlink{classNode_a726c47a8f963f9dc9e5d4b3ed3a63226}{$\sim$\+Node} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classNode_a78a7edbe6baf7950b4b937baf3a8977c}{elements}
+\item 
+int \hyperlink{classNode_a672764de1b85ccfcb1c55429b5efbb1a}{order}
+\item 
+int \hyperlink{classNode_add792264f859e503c01ad702e579c5b2}{is\+Leaf}
+\item 
+int $\ast$ \hyperlink{classNode_a89c4e4985e29c218d98bcb2dca481476}{array\+Keys}
+\item 
+\hyperlink{classNode}{Node}$<$ \hyperlink{main_8cpp_a0c209e815d35b218025a240523b4335b}{Data} $>$ $\ast$$\ast$ \hyperlink{classNode_a9dfc15b1a1835593b1061ba5d6685a20}{array\+Ptrs}
+\item 
+\hyperlink{classNode}{Node}$<$ \hyperlink{main_8cpp_a0c209e815d35b218025a240523b4335b}{Data} $>$ $\ast$ \hyperlink{classNode_ab8b577c94add9ebf4392c82301bcc49e}{father}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node()}{Node()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<$ {\bf Data} $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNode_a3e22ca89f75595b6020cfec6f05a8180}{}\label{classNode_a3e22ca89f75595b6020cfec6f05a8180}
+
+
+Constructor por defecto. 
+
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node(int order)}{Node(int order)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<$ {\bf Data} $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+\item[{int}]{order}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNode_a69d52c1e2617398842a8fe1b009a16dd}{}\label{classNode_a69d52c1e2617398842a8fe1b009a16dd}
+
+
+Constructor para crear un Nodo de un tamanno pre establecido. 
+
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node(int order, Node$<$ Data $>$ $\ast$father)}{Node(int order, Node< Data > *father)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<$ {\bf Data} $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+\item[{int}]{order, }
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{father}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNode_a0392b47c786821da7820c3a335cf9a21}{}\label{classNode_a0392b47c786821da7820c3a335cf9a21}
+
+
+Constructor por copia. 
+
+\index{Node@{Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{$\sim$\+Node()}{~Node()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ virtual {\bf Node}$<$ {\bf Data} $>$\+::$\sim${\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classNode_a726c47a8f963f9dc9e5d4b3ed3a63226}{}\label{classNode_a726c47a8f963f9dc9e5d4b3ed3a63226}
+
+
+Destructor. 
+
+
+
+\subsection{Field Documentation}
+\index{Node@{Node}!array\+Keys@{array\+Keys}}
+\index{array\+Keys@{array\+Keys}!Node@{Node}}
+\subsubsection[{\texorpdfstring{array\+Keys}{arrayKeys}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ int$\ast$ {\bf Node}$<$ {\bf Data} $>$\+::array\+Keys}\hypertarget{classNode_a89c4e4985e29c218d98bcb2dca481476}{}\label{classNode_a89c4e4985e29c218d98bcb2dca481476}
+\index{Node@{Node}!array\+Ptrs@{array\+Ptrs}}
+\index{array\+Ptrs@{array\+Ptrs}!Node@{Node}}
+\subsubsection[{\texorpdfstring{array\+Ptrs}{arrayPtrs}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$$\ast$ {\bf Node}$<$ {\bf Data} $>$\+::array\+Ptrs}\hypertarget{classNode_a9dfc15b1a1835593b1061ba5d6685a20}{}\label{classNode_a9dfc15b1a1835593b1061ba5d6685a20}
+\index{Node@{Node}!elements@{elements}}
+\index{elements@{elements}!Node@{Node}}
+\subsubsection[{\texorpdfstring{elements}{elements}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ int {\bf Node}$<$ {\bf Data} $>$\+::elements}\hypertarget{classNode_a78a7edbe6baf7950b4b937baf3a8977c}{}\label{classNode_a78a7edbe6baf7950b4b937baf3a8977c}
+\index{Node@{Node}!father@{father}}
+\index{father@{father}!Node@{Node}}
+\subsubsection[{\texorpdfstring{father}{father}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Node}$<${\bf Data}$>$$\ast$ {\bf Node}$<$ {\bf Data} $>$\+::father}\hypertarget{classNode_ab8b577c94add9ebf4392c82301bcc49e}{}\label{classNode_ab8b577c94add9ebf4392c82301bcc49e}
+\index{Node@{Node}!is\+Leaf@{is\+Leaf}}
+\index{is\+Leaf@{is\+Leaf}!Node@{Node}}
+\subsubsection[{\texorpdfstring{is\+Leaf}{isLeaf}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ int {\bf Node}$<$ {\bf Data} $>$\+::is\+Leaf}\hypertarget{classNode_add792264f859e503c01ad702e579c5b2}{}\label{classNode_add792264f859e503c01ad702e579c5b2}
+\index{Node@{Node}!order@{order}}
+\index{order@{order}!Node@{Node}}
+\subsubsection[{\texorpdfstring{order}{order}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ int {\bf Node}$<$ {\bf Data} $>$\+::order}\hypertarget{classNode_a672764de1b85ccfcb1c55429b5efbb1a}{}\label{classNode_a672764de1b85ccfcb1c55429b5efbb1a}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Node_8h}{Node.\+h}\end{DoxyCompactItemize}
